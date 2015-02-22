@@ -24,7 +24,7 @@ Algo que percebi trabalhando com várias pessoas de vários estados e países fo
 
 # Necessidades
 
-Inicialmente tudo que você precisa é ter seus instrumentos de trabalho, "computador, smartphone (caso seja desenvolvimento mobile), post-it(<3)", um lugar para plucar a tomada do seu computador e uma boa internet. Para algumas empresas também é necessário que fique sempre online em alguma ferramenta de comunicação determinada pela empresa.
+Inicialmente tudo que você precisa é ter seus instrumentos de trabalho, "computador, smartphone (caso seja desenvolvimento mobile), post-it(:heart:)", um lugar para plucar a tomada do seu computador e uma boa internet. Para algumas empresas também é necessário que fique sempre online em alguma ferramenta de comunicação determinada pela empresa.
 
 # Contratação
 
