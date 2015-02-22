@@ -4,7 +4,7 @@ Trabalhar remotamente cada vez mais vem se tornando um objetivo de todos os trab
 
 Após completar 2 anos de trabalho remoto, decidi compartilhar um pouco da minha experiência relativa a como começar a trabalhar remotamente tanto para empresas no Brasil, quanto para empresas no exterior.
 
-
+Todas as informações são inicialmente focadas a profissionais de TI, porém também podem ser aplicadas a profissionais de outras áreas.
 
 # Trabalho remoto é a coisa certa para você?
 
@@ -21,3 +21,32 @@ Algo que percebi trabalhando com várias pessoas de vários estados e países fo
 	
 - Personalidade
 	Algumas pessoas consegue trabalhar tranquilamente em sua casa, outra necessitam de um escritório específico pra isso, no qual conseguem ter contato com outros profissionais. Existem pessoas que utilizam essa oportunidade de trabalho para viajar pelo mundo virando 'nômades digitais'. 
+
+# Necessidades
+
+Inicialmente tudo que você precisa é ter seus instrumentos de trabalho, "computador, smartphone (caso seja desenvolvimento mobile), post-it(<3)", um lugar para plucar a tomada do seu computador e uma boa internet. Para algumas empresas também é necessário que fique sempre online em alguma ferramenta de comunicação determinada pela empresa.
+
+# Contratação
+
+Para empresas no Brasil, você pode continuar com o modelo CLT ou PJ normalmente, mesmo não residindo no estado da empresa, embora seja necessário ir algumas vezes visitar a empresa para resolver burocracias. Para empresas no exterior é recomendado que você tenha um contrato de prestação de serviços, já que você não é diretamente contratado no modelo formal, este contrato irá comprovar a origem e legalidade do dinheiro que você irá receber.
+
+# Formas para receber dinheiro
+
+Aqui vem uma das partes mais importantes, que além de garantirem toda a segurança do processo, podem lhe ajudar de algumas maneiras na hora de declarar todo o imposto referente ao valor recebido.
+
+## Paypall
+
+## Xoom
+
+## Bitcoins
+
+## Swift (Remersas enviadas de um banco no exterior para o seu banco no Brasil)
+
+## Payoneer
+
+## Skrill
+
+
+# Declaração de impostos
+
+# Procurando emprego no exterior
