@@ -24,7 +24,7 @@ Algo que percebi trabalhando com várias pessoas de vários estados e países fo
 
 # Necessidades
 
-Inicialmente tudo que você precisa é ter seus instrumentos de trabalho, "computador, smartphone (caso seja desenvolvimento mobile), post-it(:heart:)", um lugar para plucar a tomada do seu computador e uma boa internet. Para algumas empresas também é necessário que fique sempre online em alguma ferramenta de comunicação determinada pela empresa.
+Inicialmente tudo que você precisa é ter seus instrumentos de trabalho, "computador, smartphone (caso seja desenvolvimento mobile), post-it(<3)", um lugar para plucar a tomada do seu computador e uma boa internet. Para algumas empresas também é necessário que fique sempre online em alguma ferramenta de comunicação determinada pela empresa.
 
 # Contratação
 
@@ -38,12 +38,13 @@ Aqui vem uma das partes mais importantes, que além de garantirem toda a seguran
 
 ![paypal](paypal.jpg)
 
-
 O primeiro e mais conhecidos por todos é o [Paypal](https://www.paypal.com), embora MUITAS pessoas falem de histórias, medos ao usar para receber pagamentos do exterior, e coisas do tipo... É uma ferramenta muito boa, segura e eficiente, existem alguns relatos de pessoas que tiveram problemas e todo o seu dinheiro foi congelado sem volta. O que eu tenho a dizer sobre isso é: Tome cuidado com a empresa que você está fazendo negócio, é justamente ela que pode bloquear ou criar uma disputa pelo seu pagamento.
 
 É possível ter uma conta facilmente no Brasil. Porém você só pode cadastrar cartões Brasileiros. Caso você tenha conta nos EUA, é necessário ter uma conta extra de Paypal para trabalhar e transitar facilmente o dinheiro com mais regalias.  É necessário lembrar que tendo uma conta nos EUA não significa que você legalmente pode receber dinheiro de empresas sem permissão para trabalho, então pense duas vezes.
 
 ## Xoom
+
+![paypal](xoom.jpg)
 
 [Xoom](https://www.xoom.com) é um dos mais adorados por todosos freelancers, é tão simples que parece até não ser de verdade. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente no mesmo dia, em algumas horas. Trata-se de um intermediador de envios entre países, onde a empresa que lhe contratou paga o valor na sua moeda nacional e você recebe em reais na sua conta.
 
