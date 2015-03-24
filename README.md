@@ -37,7 +37,7 @@ Aquí viene una de las partes más importantes, que también garantizan la segur
 
 ## PayPal
 
-! [PayPal] (paypal.jpg)
+![PayPal](paypal.jpg)
 
 El primero y el más conocido de todos es el [PayPal] (https://www.paypal.com), aunque mucha gente habla historias, miedos a utilizar para recibir pagos desde el extranjero, y así sucesivamente ... Es una herramienta muy bueno, seguro y eficaz, hay algunos informes de personas que tenían problemas y todo su dinero estaba congelado no retorno. Lo que tengo que decir sobre esto es: Cuidado con la empresa que está haciendo negocio, es precisamente que puede bloquear o crear una pelea para su pago.
 
@@ -45,7 +45,7 @@ Usted puede tener una cuenta en Brasil. Pero sólo se puede registrar Brasileño
 
 ## Xoom
 
-! [PayPal] (xoom.jpg)
+![PayPal](xoom.jpg)
 
 [Xoom] (https://www.xoom.com) es uno de los más queridos por todos los profesionales independientes, es tan simple que parece no ser cierto. La compañía hace que el envío de dinero y cae directamente en su cuenta, por lo general el mismo día, en cuestión de horas. Es un intermediario entrega entre países en que la empresa que lo contrató paga el importe en moneda nacional y se obtiene en bienes en su cuenta.
 
@@ -54,7 +54,7 @@ Después de registrarse, la empresa puede enviar un máximo de $ 2,900 en un per
 Cada transacción de Xoom tiene un límite de US $ 2.999, pero la empresa puede enviar hasta $ 6,000 en un período de 30 días (hasta $ 60.000 en 180 días) para proporcionar información adicional para ayudar a asegurar una transferencia de dinero seguro, manteniendo estar de acuerdo con las regulaciones federales y estatales. Dicha información será solicitada cada vez que intente enviar una cantidad superior a su límite actual, pero usted puede ahorrar tiempo poniéndose en contacto con el equipo Xoom de revisar y proporcionar esta información por adelantado.
 
 ## Swift (Remersas enviado desde un banco fuera de su banco en Brasil)
-! [Swift] (swift.jpg)
+![Swift](swift.jpg)
 
 De acuerdo con una encuesta realizada en la comunidad, es el más común entre las personas que trabajan de forma remota para las empresas en el extranjero. Usted puede recibir dinero del extranjero a través de una transferencia bancaria aceptada en cualquier sucursal. Usted debe presentar todos los detalles de la transacción para la empresa para hacer una transacción enviando un banco fuera de un banco en el Brasil.
 
