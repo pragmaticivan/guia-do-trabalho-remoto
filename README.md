@@ -137,3 +137,9 @@ Empresas Americanas podem depositar dinheiro diretamente nesta conta, gerando cr
 - Livros
   - [Remote. Office Not Required.](http://37signals.com/remote/)
   - [The Year Without Pants: WordPress.com and the Future of Work](http://scottberkun.com/yearwithoutpants/)
+- Comunicação
+- Métrica de tempo
+- Gestão de Projetos
+- Comunidades
+- Newsletters
+- Podcasts
