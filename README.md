@@ -1,145 +1,146 @@
-# Introdução
 
-Trabalhar remotamente cada vez mais vem se tornando um objetivo de todos os trabalhadores na área de TI ao redor do mundo. Estar alinhado com suas necessidades, controlar seu horário de trabalho, dispor de mais tempo com a família, viajar e conhecer novos horizontes, e principalmente se livrar do stress causado pelo trânsito nas grandes cidades. Estes são alguns dos motivos no qual fazem um funcionário questionar sua empresa e negociar uma jornada de trabalho remoto.
+# Introducion
 
-Após completar 2 anos de trabalho remoto, decidi compartilhar um pouco da minha experiência relativa a como começar a trabalhar remotamente tanto para empresas no Brasil, quanto para empresas no exterior.
+Trabajar de forma remota cada vez más se ha convertido en un objetivo de todos los trabajadores en el campo de las TI en todo el mundo. Estar alineados con sus necesidades, controlar sus horas de trabajo, tener más tiempo con la familia, viajar y conocer nuevos horizontes, y especialmente deshacerse del estrés causado por el tráfico en las principales ciudades. Estos son algunos de los motivos en los que son una cuestión oficial su empresa y negocian un día de trabajo a distancia.
 
-Todas as informações são inicialmente focadas a profissionais de TI, porém também podem ser aplicadas a profissionais de outras áreas.
+Después de completar dos años de trabajo a distancia, he decidido compartir un poco de mi experiencia sobre cómo empezar a trabajar de forma remota para ambas empresas en Brasil, y para las empresas en el extranjero.
 
-# Trabalho remoto é a coisa certa para você?
+Toda la información se centró inicialmente profesionales de TI, pero también se puede aplicar a otras áreas de los profesionales.
 
-Algo que percebi trabalhando com várias pessoas de vários estados e países foi que cada um tem suas características no qual fazem você se dar bem ou não no trabalho remoto:
+# El teletrabajo es lo correcto para usted?
+
+Algo me di cuenta de que trabaja con varias personas de muchos estados y países es que cada uno tiene sus características ¿De dónde sacas a lo largo o no el trabajo a distancia:
 
 - Disciplina
-	É bem difícil controlar sua atenção quando se tem milhares de problemas, serviços domésticos para fazer, cachorro para dar banho, filhos para levar na escola e outras coisas do tipo. Se você é do tipo que procrastina seu trabalho para resolver seus problemas de forma desorganizada, talvez trabalho remoto seja difícil para você.
-	
-- Motivação
-	As vezes fica difícil acordar cedo, estar disponível para uma reunião, ou até mesmo se sentir lento por não ter ninguém te ajudando pessoalmente. Pessoas com auto-motivação fazem um trabalho remoto melhor. As vezes é realmente necessário um  Gestor de projetos pegando no pé para manter os funcionários focados no trabalho.
-	
-- Local de trabalho
-	O local de trabalho é muito importante para quem trabalha remoto. As vezes por achar que a liberdade é grande, você acaba caindo na tentação de trabalhar na cama, as vezes até caindo no sono, ligar a tv e trabalhar enquanto assiste, ser atrapalhado por inteferências familiares como esposa pedindo pra ir fazer compras no supermercado. As vezes é realmente necessário definir um bom local de trabalho no qual você se sinta na obrigação de ao sentar para trabalhar, estar focado no trabalho e esquecer o máximo do ambiente externo no qual pode tirar seu foco.
-	
-- Personalidade
-	Algumas pessoas consegue trabalhar tranquilamente em sua casa, outra necessitam de um escritório específico pra isso, no qual conseguem ter contato com outros profissionais. Existem pessoas que utilizam essa oportunidade de trabalho para viajar pelo mundo virando 'nômades digitais'. 
+Es muy difícil de controlar su atención cuando usted tiene miles de problemas, tareas del hogar que hacer perro para bañarse, para llevar a los niños en la escuela y cosas por el estilo. Si usted es el tipo de persona que posterga su trabajo para resolver sus problemas de una manera desorganizada, tal vez el trabajo a distancia es difícil para usted.
 
-# Necessidades
+- Motivación
+A veces es difícil levantarse temprano, estar disponible para una reunión, o incluso sentirse débil, sin nadie que le ayuda personalmente. Las personas con auto-motivación hacen un trabajo mejor a distancia. A veces es realmente necesario un director de proyecto de tomar el pie para mantener a los empleados enfocados en el trabajo.
 
-Inicialmente tudo que você precisa é ter seus instrumentos de trabalho, "computador, smartphone (caso seja desenvolvimento mobile), post-it(<3)", um lugar para plucar a tomada do seu computador e uma boa internet. Para algumas empresas também é necessário que fique sempre online em alguma ferramenta de comunicação determinada pela empresa.
+- Lugar de Trabajo
+El lugar de trabajo es muy importante para los que trabajan a distancia. A veces, para encontrar que la libertad es grande, se termina por caer en la tentación de trabajar en la cama, a veces hasta quedarse dormido, encender la televisión y el trabajo mientras se ve, se ve obstaculizada por la familia inyecta ruido como esposa pidiendo para ir de compras en el supermercado. A veces es realmente necesario definir un buen lugar de trabajo en el que se siente en la obligación de sentarse a trabajar, estar centrado en el trabajo y olvidar el máximo del entorno externo en el que llevar a su enfoque.
 
-# Contratação
+- Personalidad
+Algunas personas pueden trabajar tranquilamente en su casa, otros requieren de una oficina específica para ello, lo que puede hacer contacto con otros profesionales. Hay personas que usan esta oportunidad de trabajo para viajar por el mundo en movimiento "nómadas digitales.
 
-Para empresas no Brasil, você pode continuar com o modelo CLT ou PJ normalmente, mesmo não residindo no estado da empresa, embora seja necessário ir algumas vezes visitar a empresa para resolver burocracias. Para empresas no exterior é recomendado que você tenha um contrato de prestação de serviços, já que você não é diretamente contratado no modelo formal, este contrato irá comprovar a origem e legalidade do dinheiro que você irá receber.
+# Necesidades
 
-# Formas para receber dinheiro
+Inicialmente todo lo que necesita es tener sus herramientas ", informáticos, teléfonos inteligentes (si el desarrollo móvil), publicarlo (<3)," un lugar para plucar la toma en su ordenador y una buena conexión a Internet. Para algunas empresas, también es necesario estar siempre en línea en una herramienta de comunicación determinado por la empresa.
 
-Aqui vem uma das partes mais importantes, que além de garantirem toda a segurança do processo, podem lhe ajudar de algumas maneiras na hora de declarar todo o imposto referente ao valor recebido.
+# Contratación
 
-## Paypal
+Para las empresas en Brasil, puede continuar con el CLT o modelo PJ generalmente, aunque no resida en el estado de la empresa, si bien es necesario ir un par de veces a visitar la empresa para resolver las burocracias. Para las empresas que se recomienda en el extranjero que tiene un contrato de prestación de servicios, ya que no está involucrado directamente en el modelo formal, este contrato será probar el origen y la legalidad del dinero que recibirá.
 
-![paypal](paypal.jpg)
+# maneras de recibir dinero
 
-O primeiro e mais conhecidos por todos é o [Paypal](https://www.paypal.com), embora MUITAS pessoas falem de histórias, medos ao usar para receber pagamentos do exterior, e coisas do tipo... É uma ferramenta muito boa, segura e eficiente, existem alguns relatos de pessoas que tiveram problemas e todo o seu dinheiro foi congelado sem volta. O que eu tenho a dizer sobre isso é: Tome cuidado com a empresa que você está fazendo negócio, é justamente ela que pode bloquear ou criar uma disputa pelo seu pagamento.
+Aquí viene una de las partes más importantes, que también garantizan la seguridad de todo el proceso, usted puede ayudar de alguna manera en el momento de declarar cualquier impuesto relacionado con el valor recibido.
 
-É possível ter uma conta facilmente no Brasil. Porém você só pode cadastrar cartões Brasileiros. Caso você tenha conta nos EUA, é necessário ter uma conta extra de Paypal para trabalhar e transitar facilmente o dinheiro com mais regalias.  É necessário lembrar que tendo uma conta nos EUA não significa que você legalmente pode receber dinheiro de empresas sem permissão para trabalho, então pense duas vezes.
+## PayPal
+
+! [PayPal] (paypal.jpg)
+
+El primero y el más conocido de todos es el [PayPal] (https://www.paypal.com), aunque mucha gente habla historias, miedos a utilizar para recibir pagos desde el extranjero, y así sucesivamente ... Es una herramienta muy bueno, seguro y eficaz, hay algunos informes de personas que tenían problemas y todo su dinero estaba congelado no retorno. Lo que tengo que decir sobre esto es: Cuidado con la empresa que está haciendo negocio, es precisamente que puede bloquear o crear una pelea para su pago.
+
+Usted puede tener una cuenta en Brasil. Pero sólo se puede registrar Brasileños tarjetas. Si usted tiene cuenta en los EE.UU., se necesita una cuenta de Paypal para trabajo extra y fácil mover dinero con más beneficios. Recuerde que tener una cuenta en los EE.UU. no significa que legalmente puede recibir dinero de las compañías sin el permiso de trabajo, y luego pensar dos veces.
 
 ## Xoom
 
-![paypal](xoom.jpg)
+! [PayPal] (xoom.jpg)
 
-[Xoom](https://www.xoom.com) é um dos mais adorados por todos os freelancers, é tão simples que parece até não ser de verdade. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente no mesmo dia, em algumas horas. Trata-se de um intermediador de envios entre países, onde a empresa que lhe contratou paga o valor na sua moeda nacional e você recebe em reais na sua conta.
+[Xoom] (https://www.xoom.com) es uno de los más queridos por todos los profesionales independientes, es tan simple que parece no ser cierto. La compañía hace que el envío de dinero y cae directamente en su cuenta, por lo general el mismo día, en cuestión de horas. Es un intermediario entrega entre países en que la empresa que lo contrató paga el importe en moneda nacional y se obtiene en bienes en su cuenta.
 
-Depois de se cadastrar, a empresa pode enviar até US$ 2.900 dentro de um período de 24 horas, até US$ 6.000 dentro de 30 dias e até US$ 9.999 em 180 dias. Os limites de envio aplicam-se às atividades combinadas de todas as contas que tenham o mesmo endereço físico. Por esse motivo, a Xoom recomenda manter uma conta por família para o limite de envio ser gerenciado com mais facilidade.
+Después de registrarse, la empresa puede enviar un máximo de $ 2,900 en un período de 24 horas, a US $ 6000 en 30 días y hasta US $ 9.999 en 180 días. Los límites de envío se aplican a las actividades combinadas de todas las cuentas que tengan la misma dirección física. Por esta razón, el Xoom recomienda mantener una cuenta por familia para el envío de límite gestionarse con mayor facilidad.
 
-Cada transação da Xoom tem um limite de US$ 2.999, mas a empresa pode enviar até US$ 6.000 em um período de 30 dias (até $60.000 em 180 dias) ao fornecer informações adicionais que nos ajudem a garantir uma transferência de fundos segura, mantendo-se em conformidade com regulamentos federais e estaduais. Tais informações serão solicitadas toda vez que você tentar enviar uma quantia maior que seu limite atual, porém você pode economizar tempo contactando a Equipe do Xoom para Verificação e fornecer essas informações antecipadamente.
+Cada transacción de Xoom tiene un límite de US $ 2.999, pero la empresa puede enviar hasta $ 6,000 en un período de 30 días (hasta $ 60.000 en 180 días) para proporcionar información adicional para ayudar a asegurar una transferencia de dinero seguro, manteniendo estar de acuerdo con las regulaciones federales y estatales. Dicha información será solicitada cada vez que intente enviar una cantidad superior a su límite actual, pero usted puede ahorrar tiempo poniéndose en contacto con el equipo Xoom de revisar y proporcionar esta información por adelantado.
 
-## Swift (Remersas enviadas de um banco no exterior para o seu banco no Brasil)
-![swift](swift.jpg)
+## Swift (Remersas enviado desde un banco fuera de su banco en Brasil)
+! [Swift] (swift.jpg)
 
-Segundo um levantamento feito na comunidade, é a mais comum entre as pessoas que trabalham remotamente para empresas no exterior. É possível receber dinheiro do exterior através de uma transferência bancária aceita em qualquer agência. É necessário enviar todos os dados referentes a transação para que a empresa possa efetuar uma transação de envio de um banco no exterior para um banco no Brasil.
+De acuerdo con una encuesta realizada en la comunidad, es el más común entre las personas que trabajan de forma remota para las empresas en el extranjero. Usted puede recibir dinero del extranjero a través de una transferencia bancaria aceptada en cualquier sucursal. Usted debe presentar todos los detalles de la transacción para la empresa para hacer una transacción enviando un banco fuera de un banco en el Brasil.
 
-Ademais, ambas as instituições cobrarão pelo serviço. Assim, quem estiver no exterior desembolsará uma taxa para que o dinheiro chegue ao destino pretendido, mesmo não sendo correntista do banco contatado. A tarifa é conhecida como ordem de pagamento expedida. Uma vez no Brasil, a agência que recebeu o montante também descontará uma determinada quantia do dinheiro que irá disponibilizar ao cliente.
+Además, ambas instituciones realizarán cargos por el servicio. Entonces, ¿quiénes son enviados al extranjero pagarán una tarifa por el dinero llegue a su destino previsto, aunque no es el titular de la cuenta bancaria en contacto. La tasa se conoce como orden de pago emitida. Una vez en Brasil, la agencia que recibió el monto también deducir una cierta cantidad de dinero que proporcionará el cliente.
 
-#### Dados necessários
-Apesar de nem todos serem precisos, é legal enviar todos esses para que seu empregador tenha todas as informações necessárias:
+#### Requiere datos
+Aunque no todo sea precisa, es legal para enviar todos estos a su empleador tiene toda la información necesaria:
 
-* Nome completo
-* Documento de Identificação
-* Endereço Residencial
-* Motivo da remessa
-* Banco + Código do banco
-* Agência
-* Número da Conta
-* SWIFT Code (Referente a agência autorizada a fazer câmbio no Brasil) (Procure seu SWIFT code [aqui](http://www.theswiftcodes.com/brazil/). )
-* Sugiro que também envie o IBAN (Leia abaixo o que isso significa)
+* Nombre completo
+* Documento de Identificación
+* Dirección de la casa
+* Envío Razón
+* Banco + código de banco
+* Agencia
+* Número De Cuenta
+* Código SWIFT (En cuanto a la agencia autorizada para hacer el intercambio en Brasil) (Busque su código SWIFT [aquí] (http://www.theswiftcodes.com/brazil/).)
+* Le sugiero que también envía el IBAN (lectura por debajo de lo que eso significa)
 
 
-OBS: Para SWIFT Code, sugiro que procure o banco mais perto da sua cidade, caso precise resolver alguma burocracia.
+Nota: Para Código SWIFT, sugiero revisar el banco más cercano a tu ciudad, si usted necesita para resolver algunos burocracia.
 
 #### IBAN
 
-IBAN (International Bank Account Number) é um sistema internacional de identificação de bancos criado para facilitar a comunicação e processamento entre transações com redução de risco. Inicialmente utilizado na Europa, está cada vez mais sendo adotado por outros países, alguns bancos nos Estados Unidos por exemplo já aceitam esse tipo de código ao invés do SWIFT. Até o fim de 2014, 66 países estariam usando IBAN como sistema principal.
+IBAN (International Bank Account Number) es un sistema internacional de bancos de identificación creadas para facilitar la comunicación y el procesamiento de transacciones con la reducción del riesgo. Utilizado inicialmente en Europa, cada vez se están adoptando otros países, algunos bancos en los Estados Unidos, por ejemplo, ya aceptan este tipo de código en lugar de SWIFT. A finales de 2014, 66 países estaban usando IBAN como el sistema principal.
 
-Gere seu IBAN aqui: [http://geradordeiban.detalhado.com/#/make](http://geradordeiban.detalhado.com/#/make)
+Genere su IBAN aquí: [http://geradordeiban.detalhado.com/#/make](http://geradordeiban.detalhado.com/#/make)
 
-#### Desvantagens
+#### Desventajas
 
-A desvantagem deste tipod e operação é a cobrança de custos dos dois lados da operação. Outro ponto negativo é o tempo de espera para conseguir liquidar a remessa, dependendo do banco pode demorar até 3 dias.
+La desventaja de esto es tipod costes y de operación de la operación de recuperación de dos lados. Otro inconveniente es el tiempo de espera para conseguir resolver el envío, dependiendo del banco puede durar hasta 3 días.
 
-#### Custos cobrados pelos principais bancos
+#### Los costos cargados por los principales bancos
 
 [TODO]
 
 ## Bitcoins
 
-![bitcoin](bitcoin.jpg)
+! [Bitcoin] (bitcoin.jpg)
 
-Bitcoin é minha opção preferida, muitos profissionais de TI ainda não perceberam todas as vantagens, uma delas é trafegar dinheiro deu m país para o outro sem precisar pagar tantas taxas e passar por tantas burocracias.
+Bitcoin es mi opción preferida, muchos profesionales de TI todavía no se dan cuenta de todas las ventajas, se trata de viajes en el dinero dio m país a otro sin tener que pagar tantos impuestos y pasar por tantas burocracias.
 
-Segundo a Wikipedia, Bitcoin é uma criptomoeda cuja criação e transferência é baseada em protocolos código fonte aberto de criptografia que é independente de qualquer autoridade central. Um bitcoin pode ser transferido por um computador ou smartphone sem recurso a uma instituição financeira intermediária.
+Según Wikipedia, Bitcoin es una criptomoeda cuya creación y transferencia se basa en el cifrado de protocolo de código abierto que es independiente de cualquier autoridad central. Un bitcoin puede ser transferido por una computadora o un teléfono inteligente sin necesidad de utilizar una institución financiera intermedia.
 
-Toda a rede é sustentada pelos  usuários através de p2p, logo todo o processo de segurança, validação e "mineração" é feito através de vários computadores na grande rede.
+Toda la red está apoyada por los usuarios a través de P2P, a continuación, toda la seguridad, la validación y la "minería" se realiza a través de diversos equipos de la gran red.
 
-É necessário ter uma carteira(wallet) para guardar seus bitcoins. Abaixo segue algumas wallets que a comunidade costuma utilizar:
+Usted debe tener una cartera (cartera) para almacenar sus bitcoins. A continuación se muestra algunas carteras que la comunidad general, el uso:
 
-* Hive - [https://hivewallet.com/](https://hivewallet.com/)
+* Colmena - [https://hivewallet.com/](https://hivewallet.com/)
 * Xapo - [https://xapo.com/](https://xapo.com/)
 * Coinbase - [https://www.coinbase.com/](https://www.coinbase.com/)
 * Bitreserve - [https://bitreserve.org/](https://bitreserve.org/)
 
-O fluxo atual que se costuma utilizar é bem simples:
+El flujo de corriente que se utiliza comúnmente es bastante simple:
 
-A empresa compra bitcoins através do [Coinbase](https://www.coinbase.com/), envia para sua wallet e automaticamente você detem criptomoedas equivalentes ao valor que você costuam receber como salário. Após isso você pode trocar elas em serviços no Brasil, indico utilizar o [Mercado Bitcoin](https://www.mercadobitcoin.com.br) ou [Foxbit](https://foxbit.exchange). Você envia seus bitcoins para uma wallet em um desses serviços e solicita vender seus bitcoins, após isso é só solicitar enviar seu dinheiro em Reais para sua conta, bem rápido e no mesmo dia, e as taxas são BEM mais reduzidas que operações entre bancos, quase que insignificantes comparadas a esses outros meios.
+La empresa compra a través de bitcoins [Coinbase] (https://www.coinbase.com/), envía a su cartera y le mantiene automáticamente criptomoedas equivalentes a la cantidad que recibe como costuam salario. Después de que usted puede canjearlos por servicios en Brasil, indique utilizar el [Bitcoin Mercado] (https://www.mercadobitcoin.com.br) o [Foxbit] (https://foxbit.exchange). Usted envía tus bitcoins para una cartera en uno de estos servicios y llamadas vende sus bitcoins, después de esto sólo es el pedido de enviar dinero a su cuenta en reales, rápido y en el mismo día, y las tasas son más bajas que las transacciones BIEN entre los bancos, casi insignificante en comparación con estos otros métodos.
 
-Alguns serviços no qual você pode utilizar seus bitcoins:
+Algunos de los servicios en los que usted puede utilizar sus bitcoins:
 
-* [Gyft](http://www.gyft.com/bitcoin/) - Um dos mais interessantes, você compra vários coupons com bitcoin, bem interessante para quem viaja para os EUA e quer fazer umas compras.
-* [E-coin Card](https://www.e-coin.io/) - Fantástico sistema onde você deposita seus bitcoins e eles caem como crédito em um cartão de debito prepago, onde você pode utilizar em qualquer lugar que aceite bandeira Visa, inclusive compras online.
-* [Bitreserve](https://bitreserve.org/) - Permite enviar seus bitcoins e fazer com que eles permaneçam com o valor atual, evitando a grande volatilidade da cripto moeda.
-* [Bitpay](https://bitpay.com/) - Integração de pagamentos para aceitar bitcoin.
-* [Usecoin](http://usebitcoins.info/) -  Lista de sites no qual você pode gastar seus bitcoins.
-* [Coinbase](https://www.coinbase.com/) - Um dos pioneiros e mais seguros sistemas de compra e venda de bitcoins nos EUA.
-* [LocalBitcoins](https://localbitcoins.com/) - Um sistema de compra e venda de bitcoins com vários meios de pagamento, inclusive em dinheiro vivo. 
+* [Gyft] (http://www.gyft.com/bitcoin/) - Uno de los más interesantes, usted compra varios cupones con bitcoin, muy interesante para los viajeros a los EE.UU. y quieres hacer algunas compras.
+* [Tarjeta E-moneda] (https://www.e-coin.io/) - Fantástico sistema donde usted deposita sus bitcoins y caen como crédito en una tarjeta de débito prepagada, que se puede usar en cualquier lugar que acepte bandera Visa, incluyendo en línea.
+* [Bitreserve] (https://bitreserve.org/) - Le permite enviar sus bitcoins y hacer que se mantienen en el nivel actual, evitando gran cripto volatilidad de la moneda.
+* [Bitpay] (https://bitpay.com/) - Integración de pago para aceptar bitcoin.
+* [Usecoin] (http://usebitcoins.info/) - Lista de lugares donde se puede pasar sus bitcoins.
+* [Coinbase] (https://www.coinbase.com/) - Uno de los pioneros y de compra más segura y venta de Bitcoins sistemas estadounidenses.
+* [LocalBitcoins] (https://localbitcoins.com/) - Un sistema de compra y venta de bitcoins con diversos medios de pago, incluyendo efectivo.
 
 ## Payoneer
-![payoneer](payoneer.jpg)
+! [Payoneer] (payoneer.jpg)
 
-[Payoneer](http://www.payoneer.com/) é uma forma de receber dinheiro sem precisar trazer o valor monetário para o Brasil. É simplesmente criada uma conta no Bank of American que representa sua conta online. Você recebe um cartão de débito no qual está ligado a essa conta. 
+[Payoneer] (http://www.payoneer.com/) es una forma de recibir dinero sin tener que llevar el valor monetario de Brasil. Simplemente crea una cuenta en Bank of América en representación de su cuenta en línea. Usted recibirá una tarjeta de débito en que está vinculada a esta cuenta.
 
-Empresas Americanas podem depositar dinheiro diretamente nesta conta, gerando créditos no seu cartão de débito, que pode ser utilizado em ATMs e compras online normalmente. Bem interessante essa forma de receber, porém você não pode movimentar a conta livremente, apenas pode transferir dinheiro para outros usuários de Payoneer. É um dos principais meios de pagamentos utilizado pelo [ODesk](https://www.odesk.com/).
+Las empresas estadounidenses pueden depositar dinero directamente a esta cuenta, generando créditos a su tarjeta de débito, que se puede utilizar en cajeros automáticos y compras en línea normalmente. Muy interesante esta manera de recibir, pero no se puede mover libremente cuenta, usted sólo puede transferir dinero a otros usuarios de Payoneer. Es un medio importante de pago utilizado por [oDesk] (https://www.odesk.com/).
 
 
-# Declaração de impostos
+Declaración de Impuestos #
 [TODO]
-# Procurando emprego no exterior
+# ¿Buscas empleo en el extranjero
 [TODO]
 
-# Conteúdo
-- Livros
-  - [Remote. Office Not Required.](http://37signals.com/remote/)
-  - [The Year Without Pants: WordPress.com and the Future of Work](http://scottberkun.com/yearwithoutpants/)
-- Comunicação
-- Métrica de tempo
-- Gestão de Projetos
+# Contenido
+- Libros
+  - [Remoto. Requerido No Oficina.] (Http://37signals.com/remote/)
+  - [El Año Sin Pantalones: WordPress.com y el futuro del trabajo] (http://scottberkun.com/yearwithoutpants/)
+- Comunicación
+- Medir el tiempo
+- Gestión De Proyectos
 - Comunidades
-- Newsletters
+- Boletines
 - Podcasts
