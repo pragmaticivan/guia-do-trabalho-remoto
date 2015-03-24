@@ -46,7 +46,7 @@ O primeiro e mais conhecidos por todos é o [Paypal](https://www.paypal.com), em
 
 ![paypal](xoom.jpg)
 
-[Xoom](https://www.xoom.com) é um dos mais adorados por todosos freelancers, é tão simples que parece até não ser de verdade. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente no mesmo dia, em algumas horas. Trata-se de um intermediador de envios entre países, onde a empresa que lhe contratou paga o valor na sua moeda nacional e você recebe em reais na sua conta.
+[Xoom](https://www.xoom.com) é um dos mais adorados por todos os freelancers, é tão simples que parece até não ser de verdade. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente no mesmo dia, em algumas horas. Trata-se de um intermediador de envios entre países, onde a empresa que lhe contratou paga o valor na sua moeda nacional e você recebe em reais na sua conta.
 
 Depois de se cadastrar, a empresa pode enviar até US$ 2.900 dentro de um período de 24 horas, até US$ 6.000 dentro de 30 dias e até US$ 9.999 em 180 dias. Os limites de envio aplicam-se às atividades combinadas de todas as contas que tenham o mesmo endereço físico. Por esse motivo, a Xoom recomenda manter uma conta por família para o limite de envio ser gerenciado com mais facilidade.
 
@@ -90,6 +90,37 @@ A desvantagem deste tipod e operação é a cobrança de custos dos dois lados d
 [TODO]
 
 ## Bitcoins
+
+![bitcoin](bitcoin.jpg)
+
+Bitcoin é minha opção preferida, muitos profissionais de TI ainda não perceberam todas as vantagens, uma delas é trafegar dinheiro deu m país para o outro sem precisar pagar tantas taxas e passar por tantas burocracias.
+
+Segundo a Wikipedia, Bitcoin é uma criptomoeda cuja criação e transferência é baseada em protocolos código fonte aberto de criptografia que é independente de qualquer autoridade central. Um bitcoin pode ser transferido por um computador ou smartphone sem recurso a uma instituição financeira intermediária.
+
+Toda a rede é sustentada pelos  usuários através de p2p, logo todo o processo de segurança, validação e "mineração" é feito através de vários computadores na grande rede.
+
+É necessário ter uma carteira(wallet) para guardar seus bitcoins. Abaixo segue algumas wallets que a comunidade costuma utilizar:
+
+* Hive - [https://hivewallet.com/](https://hivewallet.com/)
+* Xapo - [https://xapo.com/](https://xapo.com/)
+* Coinbase - [https://www.coinbase.com/](https://www.coinbase.com/)
+* Bitreserve - [https://bitreserve.org/](https://bitreserve.org/)
+
+O fluxo atual que se costuma utilizar é bem simples:
+
+A empresa compra bitcoins através do [Coinbase](https://www.coinbase.com/), envia para sua wallet e automaticamente você detem criptomoedas equivalentes ao valor que você costuam receber como salário. Após isso você pode trocar elas em serviços no Brasil, indico utilizar o [Mercado Bitcoin](https://www.mercadobitcoin.com.br) ou [Foxbit](https://foxbit.exchange). Você envia seus bitcoins para uma wallet em um desses serviços e solicita vender seus bitcoins, após isso é só solicitar enviar seu dinheiro em Reais para sua conta, bem rápido e no mesmo dia, e as taxas são BEM mais reduzidas que operações entre bancos, quase que insignificantes comparadas a esses outros meios.
+
+Alguns serviços no qual você pode utilizar seus bitcoins:
+
+* [Gyft](http://www.gyft.com/bitcoin/) - Um dos mais interessantes, você compra vários coupons com bitcoin, bem interessante para quem viaja para os EUA e quer fazer umas compras.
+* [E-coin Card](https://www.e-coin.io/) - Fantástico sistema onde você deposita seus bitcoins e eles caem como crédito em um cartão de debito prepago, onde você pode utilizar em qualquer lugar que aceite bandeira Visa, inclusive compras online.
+* [Bitreserve](https://bitreserve.org/) - Permite enviar seus bitcoins e fazer com que eles permaneçam com o valor atual, evitando a grande volatilidade da cripto moeda.
+* [Bitpay](https://bitpay.com/) - Integração de pagamentos para aceitar bitcoin.
+* [Usecoin](http://usebitcoins.info/) -  Lista de sites no qual você pode gastar seus bitcoins.
+* [Coinbase](https://www.coinbase.com/) - Um dos pioneiros e mais seguros sistemas de compra e venda de bitcoins nos EUA.
+* [LocalBitcoins](https://localbitcoins.com/) - Um sistema de compra e venda de bitcoins com vários meios de pagamento, inclusive em dinheiro vivo. 
+
+
 [TODO]
 ## Western Union
 [TODO]
