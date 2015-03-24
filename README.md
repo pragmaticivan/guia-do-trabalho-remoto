@@ -120,8 +120,6 @@ Alguns serviços no qual você pode utilizar seus bitcoins:
 * [Coinbase](https://www.coinbase.com/) - Um dos pioneiros e mais seguros sistemas de compra e venda de bitcoins nos EUA.
 * [LocalBitcoins](https://localbitcoins.com/) - Um sistema de compra e venda de bitcoins com vários meios de pagamento, inclusive em dinheiro vivo. 
 
-
-[TODO]
 ## Western Union
 [TODO]
 ## Payoneer
