@@ -92,7 +92,7 @@ La desventaja de esto es tipod costes y de operación de la operación de recupe
 
 ## Bitcoins
 
-! [Bitcoin] (bitcoin.jpg)
+![Bitcoin] (bitcoin.jpg)
 
 Bitcoin es mi opción preferida, muchos profesionales de TI todavía no se dan cuenta de todas las ventajas, se trata de viajes en el dinero dio m país a otro sin tener que pagar tantos impuestos y pasar por tantas burocracias.
 
@@ -122,7 +122,7 @@ Algunos de los servicios en los que usted puede utilizar sus bitcoins:
 * [LocalBitcoins] (https://localbitcoins.com/) - Un sistema de compra y venta de bitcoins con diversos medios de pago, incluyendo efectivo.
 
 ## Payoneer
-! [Payoneer] (payoneer.jpg)
+![Payoneer] (payoneer.jpg)
 
 [Payoneer] (http://www.payoneer.com/) es una forma de recibir dinero sin tener que llevar el valor monetario de Brasil. Simplemente crea una cuenta en Bank of América en representación de su cuenta en línea. Usted recibirá una tarjeta de débito en que está vinculada a esta cuenta.
 
