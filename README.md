@@ -127,13 +127,13 @@ Alguns serviços no qual você pode utilizar seus bitcoins:
 
 Empresas Americanas podem depositar dinheiro diretamente nesta conta, gerando créditos no seu cartão de débito, que pode ser utilizado em ATMs e compras online normalmente. Bem interessante essa forma de receber, porém você não pode movimentar a conta livremente, apenas pode transferir dinheiro para outros usuários de Payoneer. É um dos principais meios de pagamentos utilizado pelo [ODesk](https://www.odesk.com/).
 
-# Livros
-
-* [Remote. Office Not Required.](http://37signals.com/remote/)
-* [The Year Without Pants: WordPress.com and the Future of Work](http://scottberkun.com/yearwithoutpants/)
-
 
 # Declaração de impostos
 [TODO]
 # Procurando emprego no exterior
 [TODO]
+
+# Conteúdo
+- Livros
+  - [Remote. Office Not Required.](http://37signals.com/remote/)
+  - [The Year Without Pants: WordPress.com and the Future of Work](http://scottberkun.com/yearwithoutpants/)
