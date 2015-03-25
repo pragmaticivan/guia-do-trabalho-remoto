@@ -143,3 +143,4 @@ Empresas Americanas podem depositar dinheiro diretamente nesta conta, gerando cr
 - Comunidades
 - Newsletters
 - Podcasts
+  - [Grok Podcast - Trabalho Remoto](http://www.grokpodcast.com/2013/04/02/episodio-86-trabalho-remoto-parte-1-de-4/)
