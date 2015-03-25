@@ -83,7 +83,7 @@ Gere seu IBAN aqui: [http://geradordeiban.detalhado.com/#/make](http://geradorde
 
 #### Desvantagens
 
-A desvantagem deste tipod e operação é a cobrança de custos dos dois lados da operação. Outro ponto negativo é o tempo de espera para conseguir liquidar a remessa, dependendo do banco pode demorar até 3 dias.
+A desvantagem deste tipo de operação é a cobrança de custos dos dois lados da operação. Outro ponto negativo é o tempo de espera para conseguir liquidar a remessa, dependendo do banco pode demorar até 3 dias.
 
 #### Custos cobrados pelos principais bancos
 
