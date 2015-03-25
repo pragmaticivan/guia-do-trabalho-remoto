@@ -149,3 +149,4 @@ Bem interessante essa forma de receber, porém você não pode movimentar a cont
 - Comunidades
 - Newsletters
 - Podcasts
+  - [Grok Podcast - Trabalho Remoto](http://www.grokpodcast.com/2013/04/02/episodio-86-trabalho-remoto-parte-1-de-4/)
