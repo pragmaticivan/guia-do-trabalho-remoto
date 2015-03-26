@@ -93,7 +93,7 @@ A desvantagem deste tipo de operação é a cobrança de custos dos dois lados d
 
 ![bitcoin](bitcoin.jpg)
 
-Bitcoin é minha opção preferida, muitos profissionais de TI ainda não perceberam todas as vantagens, uma delas é trafegar dinheiro deu m país para o outro sem precisar pagar tantas taxas e passar por tantas burocracias.
+Bitcoin é minha opção preferida, muitos profissionais de TI ainda não perceberam todas as vantagens, uma delas é trafegar dinheiro de um país para o outro sem precisar pagar tantas taxas e passar por tantas burocracias.
 
 Segundo a Wikipedia, Bitcoin é uma criptomoeda cuja criação e transferência é baseada em protocolos código fonte aberto de criptografia que é independente de qualquer autoridade central. Um bitcoin pode ser transferido por um computador ou smartphone sem recurso a uma instituição financeira intermediária.
 
