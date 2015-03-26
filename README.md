@@ -150,3 +150,5 @@ Bem interessante essa forma de receber, porém você não pode movimentar a cont
 - Newsletters
 - Podcasts
   - [Grok Podcast - Trabalho Remoto](http://www.grokpodcast.com/2013/04/02/episodio-86-trabalho-remoto-parte-1-de-4/)
+- Talks
+  - [Desafios e vantagens do trabalho remoto por Willian Fernandes](https://www.youtube.com/watch?v=IT6z7VDueF8)
