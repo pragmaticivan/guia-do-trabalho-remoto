@@ -11,15 +11,19 @@ Todas as informações são inicialmente focadas a profissionais de TI, porém t
 Algo que percebi trabalhando com várias pessoas, de vários estados e países, foi que cada um tem suas características as quais fazem você se dar bem ou não no trabalho remoto:
 
 - Disciplina
+
 	É bem difícil controlar sua atenção quando se tem milhares de problemas, serviços domésticos para fazer, cachorro para dar banho, filhos para levar na escola e outras coisas do tipo. Se você é do tipo que procrastina seu trabalho para resolver seus problemas de forma desorganizada, talvez trabalho remoto seja difícil para você.
 
 - Motivação
+
 	Às vezes fica difícil acordar cedo, estar disponível para uma reunião, ou até mesmo se sentir lento por não ter ninguém te ajudando pessoalmente. Pessoas com auto-motivação fazem um trabalho remoto melhor. Às vezes é realmente necessário um  Gestor de projetos pegando no pé para manter os funcionários focados no trabalho.
 
 - Local de trabalho
+
 	O local de trabalho é muito importante para quem trabalha remoto. Às vezes por achar que a liberdade é grande, você acaba caindo na tentação de trabalhar na cama, às vezes até caindo no sono, ligar a TV e trabalhar enquanto assiste, ser atrapalhado por inteferências familiares como esposa pedindo pra ir fazer compras no supermercado. Às vezes é realmente necessário definir um bom local de trabalho no qual você se sinta na obrigação de, ao sentar para trabalhar, estar focado e esquecer o máximo do ambiente externo que pode tirar seu foco.
 
 - Personalidade
+
 	Algumas pessoas conseguem trabalhar tranquilamente em sua casa, outras, necessitam de um escritório específico pra isso, onde conseguem ter contato com outros profissionais. Existem pessoas que utilizam essa oportunidade de trabalho para viajar pelo mundo virando 'nômades digitais'.
 
 # Necessidades
@@ -137,7 +141,17 @@ Bem interessante essa forma de receber, porém você não pode movimentar a cont
 # Declaração de impostos
 [TODO]
 # Procurando emprego no exterior
-[TODO]
+
+## Sites com ofertas remotas
+
+Aqui está uma lista de sites que oferecem empregos **principalmente** nos países de língua inglesa (EUA, Canada, Reino Unido, Austrália, etc).
+
+_Fique atento: em algumas vagas, os candidatos devem morar no mesmo país da vaga, limitando-se assim que o trabalho seja realmente remoto (nesses casos você precisa residir lá ou ter autorização para trabalhar lá)_.
+
+- [We work remotely](https://weworkremotely.com)
+- [Github Job board](https://jobs.github.com/positions?description=&location=Remote)
+- [Stackoverflow Job board](http://careers.stackoverflow.com/jobs/remote)
+- [Jobs in Tech](http://www.jobsintech.io/jobs#q=&page=0&refinements=%5B%7B%22remote%22%3A%22can_work_remote%22%7D%5D)
 
 # Conteúdo
 - Livros
