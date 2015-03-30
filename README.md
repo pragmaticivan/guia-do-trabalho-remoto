@@ -166,3 +166,6 @@ _Fique atento: em algumas vagas, os candidatos devem morar no mesmo país da vag
   - [Grok Podcast - Trabalho Remoto](http://www.grokpodcast.com/2013/04/02/episodio-86-trabalho-remoto-parte-1-de-4/)
 - Talks
   - [Desafios e vantagens do trabalho remoto por Willian Fernandes](https://www.youtube.com/watch?v=IT6z7VDueF8)
+- Diversos
+  - [Awesome Remote Job](https://github.com/lukasz-madon/awesome-remote-job) - Uma compilação de informações sobre trabalho remoto
+
