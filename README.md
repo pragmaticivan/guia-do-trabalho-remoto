@@ -139,6 +139,7 @@ Empresas Americanas podem depositar dinheiro diretamente nesta conta, gerando cr
   - [The Year Without Pants: WordPress.com and the Future of Work](http://scottberkun.com/yearwithoutpants/)
 - Comunicação
 - Métrica de tempo
+ - [WakaTime](https://wakatime.com/)
 - Gestão de Projetos
 - Comunidades
 - Newsletters
