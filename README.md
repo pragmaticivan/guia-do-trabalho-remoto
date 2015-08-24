@@ -160,6 +160,7 @@ _Fique atento: em algumas vagas, os candidatos devem morar no mesmo país da vag
 - Comunicação
   - [Slack](https://slack.com/)
 - Métrica de tempo
+ - [WakaTime](https://wakatime.com/)
 - Gestão de Projetos
 - Comunidades
 - Newsletters
