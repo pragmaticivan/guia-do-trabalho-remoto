@@ -158,6 +158,7 @@ _Fique atento: em algumas vagas, os candidatos devem morar no mesmo país da vag
   - [Remote. Office Not Required.](http://37signals.com/remote/)
   - [The Year Without Pants: WordPress.com and the Future of Work](http://scottberkun.com/yearwithoutpants/)
 - Comunicação
+  - [Slack](https://slack.com/)
 - Métrica de tempo
 - Gestão de Projetos
 - Comunidades
