@@ -170,6 +170,7 @@ _Fique atento: em algumas vagas, os candidatos devem morar no mesmo país da vag
 - Métrica de tempo
  - [WakaTime](https://wakatime.com/)
 - Gestão de Projetos
+ - [PivotalTracker](https://pivotaltracker.com)
 - Comunidades
 - Newsletters
 - Podcasts
