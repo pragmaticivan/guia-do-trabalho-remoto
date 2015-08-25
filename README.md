@@ -112,7 +112,15 @@ Toda a rede é sustentada pelos  usuários através de p2p, logo todo o processo
 
 O fluxo atual que se costuma utilizar é bem simples:
 
-A empresa compra bitcoins através do [Coinbase](https://www.coinbase.com/), envia para sua wallet e automaticamente você detem criptomoedas equivalentes ao valor que você costuam receber como salário. Após isso você pode trocar elas em serviços no Brasil, indico utilizar o [Mercado Bitcoin](https://www.mercadobitcoin.com.br) ou [Foxbit](https://foxbit.exchange). Você envia seus bitcoins para uma wallet em um desses serviços e solicita vender seus bitcoins, após isso é só solicitar enviar seu dinheiro em Reais para sua conta, bem rápido e no mesmo dia, e as taxas são BEM mais reduzidas que operações entre bancos, quase que insignificantes comparadas a esses outros meios.
+A empresa compra bitcoins através do [Coinbase](https://www.coinbase.com/) ou outro serviço disponível no país em que a empresa está localizada, envia para sua wallet e automaticamente você detem criptomoedas equivalentes ao valor que você costuam receber como salário.
+
+Após isso você pode trocar seus bitcoins em serviços no Brasil, indico utilizar o [Foxbit](https://foxbit.exchange). Você envia seus bitcoins para uma wallet em um desses serviços e solicita vender seus bitcoins, após isso é só solicitar enviar seu dinheiro em Reais para sua conta, bem rápido e no mesmo dia, e as taxas são BEM mais amiguáveis que operações entre bancos, quase que insignificantes comparadas a esses outros meios.
+
+Segue alguns tutoriais ensinando como utilizar as funcionalidades da FOXBIT:
+
+* [Criar conta na FOXBIT](https://www.youtube.com/watch?v=GCoe-thmHJk)
+* [Sacar bitcoins na FOXBIT](https://www.youtube.com/watch?v=loAJUYu9UHY)
+* [Comprar bitcoins na FOXBIT](https://www.youtube.com/watch?v=2xRDkFDyYQY)
 
 Alguns serviços no qual você pode utilizar seus bitcoins:
 
@@ -146,7 +154,7 @@ Bem interessante essa forma de receber, porém você não pode movimentar a cont
 
 Aqui está uma lista de sites que oferecem empregos **principalmente** nos países de língua inglesa (EUA, Canada, Reino Unido, Austrália, etc).
 
-_Fique atento: em algumas vagas, os candidatos devem morar no mesmo país da vaga, limitando-se assim que o trabalho seja realmente remoto (nesses casos você precisa residir lá ou ter autorização para trabalhar lá)_.
+_Fique atento: em algumas vagas, os candidatos devem morar no mesmo país da vaga, limitando-se assim que o trabalho seja realmente remoto (nesses casos você precisa residir lá ou ter autorização para trabalhar no país onde a empresa está localizada)_.
 
 - [We work remotely](https://weworkremotely.com)
 - [Github Job board](https://jobs.github.com/positions?description=&location=Remote)
@@ -170,4 +178,3 @@ _Fique atento: em algumas vagas, os candidatos devem morar no mesmo país da vag
   - [Desafios e vantagens do trabalho remoto por Willian Fernandes](https://www.youtube.com/watch?v=IT6z7VDueF8)
 - Diversos
   - [Awesome Remote Job](https://github.com/lukasz-madon/awesome-remote-job) - Uma compilação de informações sobre trabalho remoto
-
