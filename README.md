@@ -108,7 +108,7 @@ Toda a rede é sustentada pelos  usuários através de p2p, logo todo o processo
 * Hive - [https://hivewallet.com/](https://hivewallet.com/)
 * Xapo - [https://xapo.com/](https://xapo.com/)
 * Coinbase - [https://www.coinbase.com/](https://www.coinbase.com/)
-* Bitreserve - [https://bitreserve.org/](https://bitreserve.org/)
+* Bitreserve - [https://bitreserve.org/](https://bitreserve.org/signup?utm_campaign=refprog&utm_medium=pragmaticivan)
 
 O fluxo atual que se costuma utilizar é bem simples:
 
