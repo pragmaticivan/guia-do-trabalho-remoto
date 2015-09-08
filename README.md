@@ -125,7 +125,7 @@ Segue alguns tutoriais ensinando como utilizar as funcionalidades da FOXBIT:
 Alguns serviços no qual você pode utilizar seus bitcoins:
 
 * [Gyft](http://www.gyft.com/bitcoin/) - Um dos mais interessantes, você compra vários coupons com bitcoin, bem interessante para quem viaja para os EUA e quer fazer umas compras.
-* [E-coin Card](https://www.e-coin.io/) - Fantástico sistema onde você deposita seus bitcoins e eles caem como crédito em um cartão de debito prepago, onde você pode utilizar em qualquer lugar que aceite bandeira Visa, inclusive compras online.
+* [E-coin Card](https://www.e-coin.io/?ref=1070214a1100452b810918b5030a994d#sthash.JMVP7M1H.dpuf) - Fantástico sistema onde você deposita seus bitcoins e eles caem como crédito em um cartão de debito prepago, onde você pode utilizar em qualquer lugar que aceite bandeira Visa, inclusive compras online.
 * [Bitreserve](https://bitreserve.org/) - Permite enviar seus bitcoins e fazer com que eles permaneçam com o valor atual, evitando a grande volatilidade da cripto moeda.
 * [Bitpay](https://bitpay.com/) - Integração de pagamentos para aceitar bitcoin.
 * [Usecoin](http://usebitcoins.info/) -  Lista de sites no qual você pode gastar seus bitcoins.
