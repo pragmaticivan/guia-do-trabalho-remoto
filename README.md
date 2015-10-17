@@ -131,6 +131,8 @@ Alguns serviços no qual você pode utilizar seus bitcoins:
 * [Usecoin](http://usebitcoins.info/) -  Lista de sites no qual você pode gastar seus bitcoins.
 * [Coinbase](https://www.coinbase.com/) - Um dos pioneiros e mais seguros sistemas de compra e venda de bitcoins nos EUA.
 * [LocalBitcoins](https://localbitcoins.com/) - Um sistema de compra e venda de bitcoins com vários meios de pagamento, inclusive em dinheiro vivo.
+* [Pague com Bitcoin](http://www.paguecombitcoin.com) - Incrível! Pague qualquer boleto com Bitcoin. Desde compras em e-commerce, incluindo mercado livre, até fatura do cartão do seu crédito. 
+
 
 ## Payoneer
 ![payoneer](payoneer.jpg)
