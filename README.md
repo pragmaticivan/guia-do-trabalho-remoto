@@ -108,7 +108,7 @@ Toda a rede é sustentada pelos  usuários através de p2p, logo todo o processo
 * Hive - [https://hivewallet.com/](https://hivewallet.com/)
 * Xapo - [https://xapo.com/](https://xapo.com/)
 * Coinbase - [https://www.coinbase.com/](https://www.coinbase.com/)
-* Bitreserve - [https://bitreserve.org/](https://bitreserve.org/signup?utm_campaign=refprog&utm_medium=pragmaticivan)
+* Uphold - [https://uphold.com/](https://uphold.com/signup?utm_campaign=refprog&utm_medium=pragmaticivan)
 
 O fluxo atual que se costuma utilizar é bem simples:
 
@@ -126,7 +126,7 @@ Alguns serviços no qual você pode utilizar seus bitcoins:
 
 * [Gyft](http://www.gyft.com/bitcoin/) - Um dos mais interessantes, você compra vários coupons com bitcoin, bem interessante para quem viaja para os EUA e quer fazer umas compras.
 * [E-coin Card](https://www.e-coin.io/?ref=1070214a1100452b810918b5030a994d#sthash.JMVP7M1H.dpuf) - Fantástico sistema onde você deposita seus bitcoins e eles caem como crédito em um cartão de debito prepago, onde você pode utilizar em qualquer lugar que aceite bandeira Visa, inclusive compras online.
-* [Bitreserve](https://bitreserve.org/) - Permite enviar seus bitcoins e fazer com que eles permaneçam com o valor atual, evitando a grande volatilidade da cripto moeda.
+* [Uphold](https://uphold.com/) - Permite enviar seus bitcoins e fazer com que eles permaneçam com o valor atual, evitando a grande volatilidade da cripto moeda.
 * [Bitpay](https://bitpay.com/) - Integração de pagamentos para aceitar bitcoin.
 * [Usecoin](http://usebitcoins.info/) -  Lista de sites no qual você pode gastar seus bitcoins.
 * [Coinbase](https://www.coinbase.com/) - Um dos pioneiros e mais seguros sistemas de compra e venda de bitcoins nos EUA.
