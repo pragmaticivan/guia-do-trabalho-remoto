@@ -154,9 +154,12 @@ Aqui está uma lista de sites que oferecem empregos **principalmente** nos país
 _Fique atento: em algumas vagas, os candidatos devem morar no mesmo país da vaga, limitando-se assim que o trabalho seja realmente remoto (nesses casos você precisa residir lá ou ter autorização para trabalhar no país onde a empresa está localizada)_.
 
 - [We work remotely](https://weworkremotely.com)
+- [Landing Jobs](https://landing.jobs/inv/pragmaticivan)
 - [Github Job board](https://jobs.github.com/positions?description=&location=Remote)
 - [Stackoverflow Job board](http://careers.stackoverflow.com/jobs/remote)
 - [Jobs in Tech](http://www.jobsintech.io/jobs#q=&page=0&refinements=%5B%7B%22remote%22%3A%22can_work_remote%22%7D%5D)
+
+
 
 # Conteúdo
 - Livros
