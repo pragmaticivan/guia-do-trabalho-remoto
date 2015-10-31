@@ -89,9 +89,6 @@ Gere seu IBAN aqui: [http://geradordeiban.detalhado.com/#/make](http://geradorde
 
 A desvantagem deste tipo de operação é a cobrança de custos dos dois lados da operação. Outro ponto negativo é o tempo de espera para conseguir liquidar a remessa, dependendo do banco pode demorar até 3 dias.
 
-#### Custos cobrados pelos principais bancos
-
-[TODO]
 
 ## Bitcoins
 
@@ -131,7 +128,7 @@ Alguns serviços no qual você pode utilizar seus bitcoins:
 * [Usecoin](http://usebitcoins.info/) -  Lista de sites no qual você pode gastar seus bitcoins.
 * [Coinbase](https://www.coinbase.com/) - Um dos pioneiros e mais seguros sistemas de compra e venda de bitcoins nos EUA.
 * [LocalBitcoins](https://localbitcoins.com/) - Um sistema de compra e venda de bitcoins com vários meios de pagamento, inclusive em dinheiro vivo.
-* [Pague com Bitcoin](http://www.paguecombitcoin.com) - Incrível! Pague qualquer boleto com Bitcoin. Desde compras em e-commerce, incluindo mercado livre, até fatura do cartão do seu crédito. 
+* [Pague com Bitcoin](http://www.paguecombitcoin.com) - Incrível! Pague qualquer boleto com Bitcoin. Desde compras em e-commerce, incluindo mercado livre, até fatura do cartão do seu crédito.
 
 
 ## Payoneer
@@ -148,8 +145,6 @@ Outra desvantagem do Payoneer é que alguns serviços online como Dropbox e iTun
 Bem interessante essa forma de receber, porém você não pode movimentar a conta livremente, apenas pode transferir dinheiro para outros usuários de Payoneer. É um dos principais meios de pagamentos utilizado pelo [ODesk](https://www.odesk.com/).
 
 
-# Declaração de impostos
-[TODO]
 # Procurando emprego no exterior
 
 ## Sites com ofertas remotas
