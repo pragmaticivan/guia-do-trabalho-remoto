@@ -16,7 +16,7 @@ $.ajax({
 		var converter = new Markdown.Converter();
 
 		// Show html
-		$(".wrapper").html(converter.makeHtml(data));
+		$(".container").html(converter.makeHtml(data));
 
 	}
 });
