@@ -183,5 +183,6 @@ _Fique atento: em algumas vagas, os candidatos devem morar no mesmo país da vag
   - [Desafios e vantagens do trabalho remoto por Willian Fernandes](https://www.youtube.com/watch?v=IT6z7VDueF8)
 - Diversos
   - [Awesome Remote Job](https://github.com/lukasz-madon/awesome-remote-job) - Uma compilação de informações sobre trabalho remoto
+  - [Remote Jobs](https://github.com/lerrua/remote-jobs-brazil) - Lista de empresas com trabalho remoto no Brasil
 - Artigos
   - [O que eu aprendi em quase 1 ano de home-office](https://medium.com/desenvolvimento-front-end-pt-br/o-que-eu-aprendi-em-quase-1-ano-de-home-office-7ed3cfee276a)
