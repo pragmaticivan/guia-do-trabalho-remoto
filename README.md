@@ -175,6 +175,7 @@ _Fique atento: em algumas vagas, os candidatos devem morar no mesmo país da vag
 - Gestão de Projetos
  - [PivotalTracker](https://pivotaltracker.com)
 - Comunidades
+  - [Remote Workers - Belo Horizonte](http://www.meetup.com/Belo-Horizonte-Remote-Workers/)
 - Newsletters
 - Podcasts
   - [Grok Podcast - Trabalho Remoto](http://www.grokpodcast.com/2013/04/02/episodio-86-trabalho-remoto-parte-1-de-4/)
