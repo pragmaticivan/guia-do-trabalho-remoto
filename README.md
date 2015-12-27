@@ -184,5 +184,6 @@ _Fique atento: em algumas vagas, os candidatos devem morar no mesmo país da vag
 - Diversos
   - [Awesome Remote Job](https://github.com/lukasz-madon/awesome-remote-job) - Uma compilação de informações sobre trabalho remoto
   - [Remote Jobs](https://github.com/lerrua/remote-jobs-brazil) - Lista de empresas com trabalho remoto no Brasil
+  - [Remote Jobs Worldwide](https://github.com/jessicard/remote-jobs) - Lista de empresas com trabalho remoto Worldwide
 - Artigos
   - [O que eu aprendi em quase 1 ano de home-office](https://medium.com/desenvolvimento-front-end-pt-br/o-que-eu-aprendi-em-quase-1-ano-de-home-office-7ed3cfee276a)
