@@ -104,12 +104,12 @@ Toda a rede é sustentada pelos  usuários através de p2p, logo todo o processo
 
 * Hive - [https://hivewallet.com/](https://hivewallet.com/)
 * Xapo - [https://xapo.com/](https://xapo.com/)
-* Coinbase - [https://www.coinbase.com/](https://www.coinbase.com/)
+* Coinbase - [https://www.coinbase.com/](https://www.coinbase.com/join/5637f7ae01653a4452000087)
 * Uphold - [https://uphold.com/](https://uphold.com/signup?utm_campaign=refprog&utm_medium=pragmaticivan)
 
 O fluxo atual que se costuma utilizar é bem simples:
 
-A empresa compra bitcoins através do [Coinbase](https://www.coinbase.com/) ou outro serviço disponível no país em que a empresa está localizada, envia para sua wallet e automaticamente você detem criptomoedas equivalentes ao valor que você costuam receber como salário.
+A empresa compra bitcoins através do [Coinbase](https://www.coinbase.com/join/5637f7ae01653a4452000087) ou outro serviço disponível no país em que a empresa está localizada, envia para sua wallet e automaticamente você detem criptomoedas equivalentes ao valor que você costuam receber como salário.
 
 Após isso você pode trocar seus bitcoins em serviços no Brasil, indico utilizar o [Foxbit](https://foxbit.exchange). Você envia seus bitcoins para uma wallet em um desses serviços e solicita vender seus bitcoins, após isso é só solicitar enviar seu dinheiro em Reais para sua conta, bem rápido e no mesmo dia, e as taxas são BEM mais amiguáveis que operações entre bancos, quase que insignificantes comparadas a esses outros meios.
 
@@ -126,7 +126,7 @@ Alguns serviços no qual você pode utilizar seus bitcoins:
 * [Uphold](https://uphold.com/signup?utm_campaign=refprog&utm_medium=pragmaticivan) - Permite enviar seus bitcoins e fazer com que eles permaneçam com o valor atual, evitando a grande volatilidade da cripto moeda.
 * [Bitpay](https://bitpay.com/) - Integração de pagamentos para aceitar bitcoin.
 * [Usecoin](http://usebitcoins.info/) -  Lista de sites no qual você pode gastar seus bitcoins.
-* [Coinbase](https://www.coinbase.com/) - Um dos pioneiros e mais seguros sistemas de compra e venda de bitcoins nos EUA.
+* [Coinbase](https://www.coinbase.com/join/5637f7ae01653a4452000087) - Um dos pioneiros e mais seguros sistemas de compra e venda de bitcoins nos EUA.
 * [LocalBitcoins](https://localbitcoins.com/) - Um sistema de compra e venda de bitcoins com vários meios de pagamento, inclusive em dinheiro vivo.
 * [Pague com Bitcoin](http://www.paguecombitcoin.com) - Incrível! Pague qualquer boleto com Bitcoin. Desde compras em e-commerce, incluindo mercado livre, até fatura do cartão do seu crédito.
 
