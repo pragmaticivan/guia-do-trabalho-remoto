@@ -48,7 +48,7 @@ O primeiro e mais conhecido por todos é o [Paypal](https://www.paypal.com), emb
 
 ## Xoom
 
-![paypal](xoom.jpg)
+![xoom](xoom.jpg)
 
 [Xoom](https://www.xoom.com) é um dos mais adorados por todos os freelancers, é tão simples que parece até não ser de verdade. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente no mesmo dia, em algumas horas. Trata-se de um intermediador de envios entre países, onde a empresa que lhe contratou paga o valor na sua moeda nacional e você recebe em reais na sua conta.
 
