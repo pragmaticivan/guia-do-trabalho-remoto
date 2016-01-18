@@ -56,6 +56,13 @@ Depois de se cadastrar, a empresa pode enviar até US$ 2.900 dentro de um perío
 
 Cada transação da Xoom tem um limite de US$ 2.999, mas a empresa pode enviar até US$ 6.000 em um período de 30 dias (até $60.000 em 180 dias) ao fornecer informações adicionais que nos ajudem a garantir uma transferência de fundos segura, mantendo-se em conformidade com regulamentos federais e estaduais. Tais informações serão solicitadas toda vez que você tentar enviar uma quantia maior que seu limite atual, porém você pode economizar tempo contactando a Equipe do Xoom para Verificação e fornecer essas informações antecipadamente.
 
+## TransferWise
+
+![transferwise](transferwise.jpg)
+
+[TransferWise](https://transferwise.com/u/344b08) é uma nova plataforma um pouco parecida com o Xoom. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente 1 dia depois caso a empresa seja Americana. Trata-se de um intermediador de envio entre países, porém o diferencial é que esta empresa garante envio do dinheiro com cotações bem melhores. Retirando aquele monte de encargos criados por bancos. Você acaba econiomizando 90% em encargos "desnecessários".
+
+
 ## Swift (Remersas enviadas de um banco no exterior para o seu banco no Brasil)
 ![swift](swift.jpg)
 
