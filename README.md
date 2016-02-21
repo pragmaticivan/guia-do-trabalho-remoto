@@ -58,7 +58,7 @@ Cada transação da Xoom tem um limite de US$ 2.999, mas a empresa pode enviar a
 
 ## TransferWise
 
-![transferwise](transferwise.jpg)
+![transferwise](wise.jpg)
 
 [TransferWise](https://transferwise.com/u/344b08) é uma nova plataforma um pouco parecida com o Xoom. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente 1 dia depois caso a empresa seja Americana. Trata-se de um intermediador de envio entre países, porém o diferencial é que esta empresa garante envio do dinheiro com cotações bem melhores. Retirando aquele monte de encargos criados por bancos. Você acaba econiomizando 90% em encargos "desnecessários".
 
