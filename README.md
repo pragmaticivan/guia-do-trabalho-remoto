@@ -20,7 +20,7 @@ Algo que percebi trabalhando com várias pessoas, de vários estados e países, 
 
 - Local de trabalho
 
-	O local de trabalho é muito importante para quem trabalha remoto. Às vezes por achar que a liberdade é grande, você acaba caindo na tentação de trabalhar na cama, às vezes até caindo no sono, ligar a TV e trabalhar enquanto assiste, ser atrapalhado por inteferências familiares como esposa pedindo pra ir fazer compras no supermercado. Às vezes é realmente necessário definir um bom local de trabalho no qual você se sinta na obrigação de, ao sentar para trabalhar, estar focado e esquecer o máximo do ambiente externo que pode tirar seu foco.
+	O local de trabalho é muito importante para quem trabalha remoto. Às vezes por achar que a liberdade é grande, você acaba caindo na tentação de trabalhar na cama, às vezes até caindo no sono, ligar a TV e trabalhar enquanto assiste, ser atrapalhado por interferências familiares como esposa pedindo pra ir fazer compras no supermercado. Às vezes é realmente necessário definir um bom local de trabalho no qual você se sinta na obrigação de, ao sentar para trabalhar, estar focado e esquecer o máximo do ambiente externo que pode tirar seu foco.
 
 - Personalidade
 
