@@ -189,7 +189,7 @@ _Fique atento: em algumas vagas, os candidatos devem morar no mesmo país da vag
 - [WFH.io](https://www.wfh.io/)
 - [Staff.com](https://www.staff.com/)
 - [We work remotely](https://weworkremotely.com)
-- [Landing Jobs](https://landing.jobs/inv/pragmaticivan)
+- [Landing.jobs](https://landing.jobs/inv/pragmaticivan)
 - [Github Job board](https://jobs.github.com/positions?description=&location=Remote)
 - [Stackoverflow Job board](http://careers.stackoverflow.com/jobs/remote)
 - [Jobs in Tech](http://www.jobsintech.io/jobs#q=&page=0&refinements=%5B%7B%22remote%22%3A%22can_work_remote%22%7D%5D)
