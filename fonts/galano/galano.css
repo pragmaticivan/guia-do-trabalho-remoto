@@ -1,0 +1,23 @@
+@font-face {
+	font-family: "Galano Medium";
+	src: url('./galano-medium.eot');
+	src: url('./galano-medium.eot?#iefix') format('eot'),
+		url('./galano-medium.woff') format('woff'),
+		url('./galano-medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Galano Semibold";
+	src: url('./galano-semibold.eot');
+	src: url('./galano-semibold.eot?#iefix') format('eot'),
+		url('./galano-semibold.woff') format('woff'),
+		url('./galano-semibold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Galano Bold";
+	src: url('./galano-bold.eot');
+	src: url('./galano-bold.eot?#iefix') format('eot'),
+		url('./galano-bold.woff') format('woff'),
+		url('./galano-bold.ttf') format('truetype');
+}
