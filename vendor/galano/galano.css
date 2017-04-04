@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Galano";
+  src: url('./galano_medium.eot');
+  src: url('./galano_medium.eot?#iefix') format('eot'),
+    url('./galano_medium.woff') format('woff'),
+    url('./galano_medium.ttf') format('truetype'),
+    url('./galano_medium.svg#galano_grotesquemedium') format('svg');;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Galano";
+  src: url('./galano_semibold.eot');
+  src: url('./galano_semibold.eot?#iefix') format('eot'),
+    url('./galano_semibold.woff') format('woff'),
+    url('./galano_semibold.ttf') format('truetype'),
+    url('./galano_semibold.svg#galano_grotesquesemibold') format('svg');;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Galano";
+  src: url('./galano_bold.eot');
+  src: url('./galano_bold.eot?#iefix') format('eot'),
+    url('./galano_bold.woff') format('woff'),
+    url('./galano_bold.ttf') format('truetype'),
+    url('./galano_semibold.svg#galano_grotesquebold') format('svg');;
+  font-weight: 700;
+  font-style: normal;
+}

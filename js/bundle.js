@@ -1712,10 +1712,20 @@ babelHelpers;
   }
 
   this['metalNamed']['coreNamed']['isDocument'] = isDocument; /**
-                                                               * Returns true if value is a dom element.
+                                                               * Returns true if value is a document-fragment.
                                                                * @param {*} val
                                                                * @return {boolean}
                                                                */
+
+  function isDocumentFragment(val) {
+    return val && (typeof val === 'undefined' ? 'undefined' : babelHelpers.typeof(val)) === 'object' && val.nodeType === 11;
+  }
+
+  this['metalNamed']['coreNamed']['isDocumentFragment'] = isDocumentFragment; /**
+                                                                               * Returns true if value is a dom element.
+                                                                               * @param {*} val
+                                                                               * @return {boolean}
+                                                                               */
 
   function isElement(val) {
     return val && (typeof val === 'undefined' ? 'undefined' : babelHelpers.typeof(val)) === 'object' && val.nodeType === 1;
@@ -1837,6 +1847,9 @@ babelHelpers;
     * @return {boolean}
     */
 			value: function equal(arr1, arr2) {
+				if (arr1 === arr2) {
+					return true;
+				}
 				if (arr1.length !== arr2.length) {
 					return false;
 				}
@@ -2127,29 +2140,23 @@ babelHelpers;
 			};
 		}
 		if (typeof Channel !== 'undefined') {
-			var _ret = function () {
-				var channel = new Channel();
-				// Use a fifo linked list to call callbacks in the right order.
-				var head = {};
-				var tail = head;
-				channel.port1.onmessage = function () {
-					head = head.next;
-					var cb = head.cb;
-					head.cb = null;
-					cb();
+			var channel = new Channel();
+			// Use a fifo linked list to call callbacks in the right order.
+			var head = {};
+			var tail = head;
+			channel.port1.onmessage = function () {
+				head = head.next;
+				var cb = head.cb;
+				head.cb = null;
+				cb();
+			};
+			return function (cb) {
+				tail.next = {
+					cb: cb
 				};
-				return {
-					v: function v(cb) {
-						tail.next = {
-							cb: cb
-						};
-						tail = tail.next;
-						channel.port2.postMessage(0);
-					}
-				};
-			}();
-
-			if ((typeof _ret === 'undefined' ? 'undefined' : babelHelpers.typeof(_ret)) === "object") return _ret.v;
+				tail = tail.next;
+				channel.port2.postMessage(0);
+			};
 		}
 		// Implementation for IE6-8: Script elements fire an asynchronous
 		// onreadystatechange event when inserted into the DOM.
@@ -3058,23 +3065,15 @@ babelHelpers;
 		}, {
 			key: 'buildFacade_',
 			value: function buildFacade_(event) {
-				var _this2 = this;
-
 				if (this.getShouldUseFacade()) {
-					var _ret = function () {
-						var facade = {
-							preventDefault: function preventDefault() {
-								facade.preventedDefault = true;
-							},
-							target: _this2,
-							type: event
-						};
-						return {
-							v: facade
-						};
-					}();
-
-					if ((typeof _ret === 'undefined' ? 'undefined' : babelHelpers.typeof(_ret)) === "object") return _ret.v;
+					var facade = {
+						preventDefault: function preventDefault() {
+							facade.preventedDefault = true;
+						},
+						target: this,
+						type: event
+					};
+					return facade;
 				}
 			}
 
@@ -3873,6 +3872,7 @@ babelHelpers;
 (function () {
 	var isDef = this['metalNamed']['metal']['isDef'];
 	var isDocument = this['metalNamed']['metal']['isDocument'];
+	var isDocumentFragment = this['metalNamed']['metal']['isDocumentFragment'];
 	var isElement = this['metalNamed']['metal']['isElement'];
 	var isObject = this['metalNamed']['metal']['isObject'];
 	var isString = this['metalNamed']['metal']['isString'];
@@ -4561,7 +4561,7 @@ babelHelpers;
   * @return {Element} The converted element, or null if none was found.
   */
 	function toElement(selectorOrElement) {
-		if (isElement(selectorOrElement) || isDocument(selectorOrElement)) {
+		if (isElement(selectorOrElement) || isDocument(selectorOrElement) || isDocumentFragment(selectorOrElement)) {
 			return selectorOrElement;
 		} else if (isString(selectorOrElement)) {
 			if (selectorOrElement[0] === '#' && selectorOrElement.indexOf(' ') === -1) {
@@ -5681,6 +5681,20 @@ babelHelpers;
 
 	var Config = {
 		/**
+   * Adds the `internal` flag to the `State` configuration.
+   * @param {boolean} required Flag to set "internal" to. True by default.
+   * @return {!Object} `State` configuration object.
+   */
+		internal: function internal() {
+			var _internal = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+
+			return mergeConfig(this, {
+				internal: _internal
+			});
+		},
+
+
+		/**
    * Adds the `required` flag to the `State` configuration.
    * @param {boolean} required Flag to set "required" to. True by default.
    * @return {!Object} `State` configuration object.
@@ -5862,7 +5876,30 @@ babelHelpers;
 					var info = this.getStateInfo(name);
 					var value = info.state === State.KeyStates.INITIALIZED ? this.get(name) : this.initialValues_[name];
 					if (!isDefAndNotNull(value)) {
-						console.error('The property called "' + name + '" is required but didn\'t receive a value.');
+						var errorMessage = 'The property called "' + name + '" is required but didn\'t receive a value.';
+						if (this.shouldThrowValidationError()) {
+							throw new Error(errorMessage);
+						} else {
+							console.error(errorMessage);
+						}
+					}
+				}
+			}
+
+			/**
+    * Logs an error if the `validatorReturn` is instance of `Error`.
+    * @param {*} validatorReturn
+    * @protected
+    */
+
+		}, {
+			key: 'assertValidatorReturnInstanceOfError_',
+			value: function assertValidatorReturnInstanceOfError_(validatorReturn) {
+				if (validatorReturn instanceof Error) {
+					if (this.shouldThrowValidationError()) {
+						throw validatorReturn;
+					} else {
+						console.error('Warning: ' + validatorReturn);
 					}
 				}
 			}
@@ -5959,10 +5996,7 @@ babelHelpers;
 				var config = this.stateConfigs_[name];
 				if (config.validator) {
 					var validatorReturn = this.callFunction_(config.validator, [value, name, this.context_]);
-
-					if (validatorReturn instanceof Error) {
-						console.error('Warning: ' + validatorReturn);
-					}
+					this.assertValidatorReturnInstanceOfError_(validatorReturn);
 					return validatorReturn;
 				}
 				return true;
@@ -6457,6 +6491,18 @@ babelHelpers;
 			value: function shouldInformChange_(name, prevVal) {
 				var info = this.getStateInfo(name);
 				return info.state === State.KeyStates.INITIALIZED && (isObject(prevVal) || prevVal !== this.get(name));
+			}
+
+			/**
+    * Returns a boolean that determines whether or not should throw error when
+    * vaildator functions returns an `Error` instance.
+    * @return {boolean} By default returns false.
+    */
+
+		}, {
+			key: 'shouldThrowValidationError',
+			value: function shouldThrowValidationError() {
+				return false;
 			}
 
 			/**
@@ -8413,37 +8459,35 @@ babelHelpers;
   */
 	function renderFunction(renderer, fnOrCtor, opt_dataOrElement, opt_parent) {
 		if (!Component.isComponentCtor(fnOrCtor)) {
-			(function () {
-				var fn = fnOrCtor;
+			var fn = fnOrCtor;
 
-				var TempComponent = function (_Component) {
-					babelHelpers.inherits(TempComponent, _Component);
+			var TempComponent = function (_Component) {
+				babelHelpers.inherits(TempComponent, _Component);
 
-					function TempComponent() {
-						babelHelpers.classCallCheck(this, TempComponent);
-						return babelHelpers.possibleConstructorReturn(this, (TempComponent.__proto__ || Object.getPrototypeOf(TempComponent)).apply(this, arguments));
+				function TempComponent() {
+					babelHelpers.classCallCheck(this, TempComponent);
+					return babelHelpers.possibleConstructorReturn(this, (TempComponent.__proto__ || Object.getPrototypeOf(TempComponent)).apply(this, arguments));
+				}
+
+				babelHelpers.createClass(TempComponent, [{
+					key: 'created',
+					value: function created() {
+						var parent = getComponentBeingRendered();
+						if (parent) {
+							updateContext_(this, parent);
+						}
 					}
+				}, {
+					key: 'render',
+					value: function render() {
+						fn(this.getInitialConfig());
+					}
+				}]);
+				return TempComponent;
+			}(Component);
 
-					babelHelpers.createClass(TempComponent, [{
-						key: 'created',
-						value: function created() {
-							var parent = getComponentBeingRendered();
-							if (parent) {
-								updateContext_(this, parent);
-							}
-						}
-					}, {
-						key: 'render',
-						value: function render() {
-							fn(this.getInitialConfig());
-						}
-					}]);
-					return TempComponent;
-				}(Component);
-
-				TempComponent.RENDERER = renderer;
-				fnOrCtor = TempComponent;
-			})();
+			TempComponent.RENDERER = renderer;
+			fnOrCtor = TempComponent;
 		}
 		return Component.render(fnOrCtor, opt_dataOrElement, opt_parent);
 	}
@@ -13969,11 +14013,13 @@ babelHelpers;
 'use strict';
 
 (function () {
+	var ComponentRegistry = this['metalNamed']['component']['ComponentRegistry'];
 	var isFunction = this['metalNamed']['metal']['isFunction'];
 	var isObject = this['metalNamed']['metal']['isObject'];
 	var isString = this['metalNamed']['metal']['isString'];
 	var object = this['metalNamed']['metal']['object'];
-	var ComponentRegistry = this['metalNamed']['component']['ComponentRegistry'];
+	var validators = this['metalNamed']['state']['validators'];
+	var Config = this['metalNamed']['state']['Config'];
 	var HTML2IncDom = this['metal']['withParser'];
 	var IncrementalDomRenderer = this['metal']['IncrementalDomRenderer'];
 	var SoyAop = this['metal']['SoyAop'];
@@ -14241,8 +14287,10 @@ babelHelpers;
 
 	this['metal']['Soy'] = soyRenderer_;
 	this['metalNamed']['Soy'] = this['metalNamed']['Soy'] || {};
+	this['metalNamed']['Soy']['Config'] = Config;
 	this['metalNamed']['Soy']['Soy'] = soyRenderer_;
 	this['metalNamed']['Soy']['SoyAop'] = SoyAop;
+	this['metalNamed']['Soy']['validators'] = validators;
 }).call(this);
 'use strict';
 
@@ -15050,12 +15098,23 @@ babelHelpers;
     * @param {Align.Top|Align.Right|Align.Bottom|Align.Left} pos
     *     The initial position to try. Options `Align.Top`, `Align.Right`,
     *     `Align.Bottom`, `Align.Left`.
+    * @param {boolean} autoBestAlign Option to suggest or not the best region
+    *      to align.
     * @return {string} The final chosen position for the aligned element.
     * @static
     */
 			value: function align(element, alignElement, position) {
-				var suggestion = this.suggestAlignBestRegion(element, alignElement, position);
-				var bestRegion = suggestion.region;
+				var autoBestAlign = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : true;
+
+				var bestRegion;
+
+				if (autoBestAlign) {
+					var suggestion = this.suggestAlignBestRegion(element, alignElement, position);
+					position = suggestion.position;
+					bestRegion = suggestion.region;
+				} else {
+					bestRegion = this.getAlignRegion(element, alignElement, position);
+				}
 
 				var computedStyle = window.getComputedStyle(element, null);
 				if (computedStyle.getPropertyValue('position') !== 'fixed') {
@@ -15071,7 +15130,7 @@ babelHelpers;
 
 				element.style.top = bestRegion.top + 'px';
 				element.style.left = bestRegion.left + 'px';
-				return suggestion.position;
+				return position;
 			}
 
 			/**
@@ -15849,6 +15908,862 @@ babelHelpers;
 	;
 
 	this['metal']['ElectricCode'] = ElectricCode;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from Tabs.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace Tabs.
+     * @public
+     */
+
+    goog.module('Tabs.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var $$temp;
+      if (opt_data.tabs.length > 0) {
+        ie_open('ul', null, null, 'class', 'nav ' + (opt_data.type != 'none' ? 'nav-' + opt_data.type : '') + ' ' + (($$temp = opt_data.elementClasses) == null ? '' : $$temp), 'role', 'tablist');
+        var currentTabList37 = opt_data.tabs;
+        var currentTabListLen37 = currentTabList37.length;
+        for (var currentTabIndex37 = 0; currentTabIndex37 < currentTabListLen37; currentTabIndex37++) {
+          var currentTabData37 = currentTabList37[currentTabIndex37];
+          var isDisabled__soy10 = opt_data.disabled != null && opt_data.disabled || currentTabData37.disabled;
+          var isCurrentTab__soy11 = opt_data.tab == currentTabIndex37;
+          ie_open_start('li');
+          iattr('class', (isDisabled__soy10 ? 'disabled' : '') + ' ' + (isCurrentTab__soy11 ? 'active' : ''));
+          iattr('data-index', currentTabIndex37);
+          if (!isDisabled__soy10 && !isCurrentTab__soy11) {
+            iattr('data-onclick', 'onClickItem');
+          }
+          iattr('role', 'presentation');
+          ie_open_end();
+          ie_open_start('a');
+          iattr('aria-expanded', isCurrentTab__soy11 ? 'true' : 'false');
+          iattr('data-toggle', 'tab');
+          iattr('data-unfocusable', isDisabled__soy10 ? 'true' : 'false');
+          if (!isDisabled__soy10) {
+            iattr('href', '#');
+          }
+          iattr('ref', 'tab-' + currentTabIndex37);
+          iattr('role', 'tab');
+          iattr('tabindex', isCurrentTab__soy11 ? '0' : '-1');
+          ie_open_end();
+          var dyn0 = currentTabData37.label;
+          if (typeof dyn0 == 'function') dyn0();else if (dyn0 != null) itext(dyn0);
+          ie_close('a');
+          ie_close('li');
+        }
+        ie_close('ul');
+      }
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'Tabs.render';
+    }
+
+    exports.render.params = ["tab", "tabs", "disabled", "elementClasses", "type"];
+    exports.render.types = { "tab": "any", "tabs": "any", "disabled": "any", "elementClasses": "any", "type": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var Tabs = function (_Component) {
+    babelHelpers.inherits(Tabs, _Component);
+
+    function Tabs() {
+      babelHelpers.classCallCheck(this, Tabs);
+      return babelHelpers.possibleConstructorReturn(this, (Tabs.__proto__ || Object.getPrototypeOf(Tabs)).apply(this, arguments));
+    }
+
+    return Tabs;
+  }(Component);
+
+  Soy.register(Tabs, templates);
+  this['metalNamed']['Tabs'] = this['metalNamed']['Tabs'] || {};
+  this['metalNamed']['Tabs']['Tabs'] = Tabs;
+  this['metalNamed']['Tabs']['templates'] = templates;
+  this['metal']['Tabs'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+	var core = this['metal']['metal'];
+	var EventEmitter = this['metal']['events'];
+
+	/**
+  * Listens to keyboard events and uses them to move focus between different
+  * elements from a component (via the arrow keys for example).
+  * By default `KeyboardFocusManager` will assume that all focusable elements
+  * in the component will have refs that follow the pattern in
+  * KeyboardFocusManager.REF_REGEX, which includes a position number. The arrow
+  * keys will then automatically move between elements by
+  * incrementing/decrementing this position.
+  * It's possible to fully customize this behavior by passing a function to
+  * `setFocusHandler`. For more details check this function's docs.
+  */
+
+	var KeyboardFocusManager = function (_EventEmitter) {
+		babelHelpers.inherits(KeyboardFocusManager, _EventEmitter);
+
+		/**
+   * Constructor for `KeyboardFocusManager`.
+   * @param {!Component} component
+   * @param {string=} opt_selector
+   */
+		function KeyboardFocusManager(component, opt_selector) {
+			babelHelpers.classCallCheck(this, KeyboardFocusManager);
+
+			var _this = babelHelpers.possibleConstructorReturn(this, (KeyboardFocusManager.__proto__ || Object.getPrototypeOf(KeyboardFocusManager)).call(this));
+
+			_this.component_ = component;
+			_this.selector_ = opt_selector || '*';
+			_this.handleKey_ = _this.handleKey_.bind(_this);
+			return _this;
+		}
+
+		/**
+   * Builds a ref string for the given position.
+   * @param {string} prefix
+   * @param {number|string} position
+   * @return {string}
+   * @protected
+   */
+
+
+		babelHelpers.createClass(KeyboardFocusManager, [{
+			key: 'buildRef_',
+			value: function buildRef_(prefix, position) {
+				return prefix + position;
+			}
+
+			/**
+    * @inheritDoc
+    */
+
+		}, {
+			key: 'disposeInternal',
+			value: function disposeInternal() {
+				babelHelpers.get(KeyboardFocusManager.prototype.__proto__ || Object.getPrototypeOf(KeyboardFocusManager.prototype), 'disposeInternal', this).call(this);
+				this.stop();
+				this.component_ = null;
+				this.selector_ = null;
+			}
+
+			/**
+    * Gets the next focusable element, that is, the next element that doesn't
+    * have the `data-unfocusable` attribute set to `true`.
+    * @param {string} prefix
+    * @param {number} position
+    * @param {number} increment
+    * @return {string}
+    * @protected
+    */
+
+		}, {
+			key: 'getNextFocusable_',
+			value: function getNextFocusable_(prefix, position, increment) {
+				var initialPosition = position;
+				var element = void 0;
+				var ref = void 0;
+				do {
+					position = this.increment_(position, increment);
+					ref = this.buildRef_(prefix, position);
+					element = this.component_.refs[ref];
+				} while (this.isFocusable_(element) && position !== initialPosition);
+				return element ? ref : null;
+			}
+
+			/**
+    * Handles a `keydown` event. Decides if a new element should be focused
+    * according to the key that was pressed.
+    * @param {!Event} event
+    * @protected
+    */
+
+		}, {
+			key: 'handleKey_',
+			value: function handleKey_(event) {
+				var element = this.focusHandler_ && this.focusHandler_(event);
+				if (!this.focusHandler_ || element === true) {
+					element = this.handleKeyDefault_(event);
+				}
+
+				var originalValue = element;
+				if (!core.isElement(element)) {
+					element = this.component_.refs[element];
+				}
+				if (element) {
+					element.focus();
+					this.emit(KeyboardFocusManager.EVENT_FOCUSED, {
+						element: element,
+						ref: core.isString(originalValue) ? originalValue : null
+					});
+				}
+			}
+
+			/**
+    * Handles a key press according to the default behavior. Assumes that all
+    * focusable elements in the component will have refs that follow the pattern
+    * in KeyboardFocusManager.REF_REGEX, which includes a position number. The
+    * arrow keys will then automatically move between elements by
+    * incrementing/decrementing the position.
+    * @param {!Event} event
+    * @protected
+    */
+
+		}, {
+			key: 'handleKeyDefault_',
+			value: function handleKeyDefault_(event) {
+				var ref = event.delegateTarget.getAttribute('ref');
+				var matches = KeyboardFocusManager.REF_REGEX.exec(ref);
+				if (!matches) {
+					return;
+				}
+
+				var position = parseInt(matches[1], 10);
+				var prefix = ref.substr(0, ref.length - matches[1].length);
+				switch (event.keyCode) {
+					case 37:
+					case 38:
+						// Left/up arrow keys will focus the previous element.
+						return this.getNextFocusable_(prefix, position, -1);
+					case 39:
+					case 40:
+						// Right/down arrow keys will focus the next element.
+						return this.getNextFocusable_(prefix, position, 1);
+				}
+			}
+
+			/**
+    * Increments the given position, making sure to follow circular rules if
+    * enabled.
+    * @param {number} position
+    * @param {number} increment
+    * @return {number}
+    * @protected
+    */
+
+		}, {
+			key: 'increment_',
+			value: function increment_(position, increment) {
+				var size = this.circularLength_;
+				position += increment;
+				if (core.isNumber(size)) {
+					if (position < 0) {
+						position = size - 1;
+					} else if (position >= size) {
+						position = 0;
+					}
+				}
+				return position;
+			}
+
+			/**
+    * Checks if the given element is focusable.
+    * @param {Element} element
+    * @return {boolean}
+    * @protected
+    */
+
+		}, {
+			key: 'isFocusable_',
+			value: function isFocusable_(element) {
+				return element && element.getAttribute('data-unfocusable') === 'true';
+			}
+
+			/**
+    * Sets the length of the focusable elements. If a number is passed, the
+    * default focusing behavior will follow a circular pattern, going from the
+    * last to the first element, and vice versa.
+    * @param {?number} circularLength
+    * @chainable
+    */
+
+		}, {
+			key: 'setCircularLength',
+			value: function setCircularLength(circularLength) {
+				this.circularLength_ = circularLength;
+				return this;
+			}
+
+			/**
+    * Sets a handler function that will be called to decide which element should
+    * be focused according to the key that was pressed. It will receive the key
+    * event and should return one of the following:
+    *   - `true`, if the default behavior should be triggered instead.
+    *   - A string, representing a `ref` to the component element that should be
+    *       focused.
+    *   - The element itself that should be focused.
+    *   - Anything else, if nothing should be focused (skipping default behavior
+    *       too).
+    * @param {function(key: string)} focusHandler
+    * @chainable
+    */
+
+		}, {
+			key: 'setFocusHandler',
+			value: function setFocusHandler(focusHandler) {
+				this.focusHandler_ = focusHandler;
+				return this;
+			}
+
+			/**
+    * Starts listening to keyboard events and handling element focus.
+    * @chainable
+    */
+
+		}, {
+			key: 'start',
+			value: function start() {
+				if (!this.handle_) {
+					this.handle_ = this.component_.delegate('keydown', this.selector_, this.handleKey_);
+				}
+				return this;
+			}
+
+			/**
+    * Stops listening to keyboard events and handling element focus.
+    * @chainable
+    */
+
+		}, {
+			key: 'stop',
+			value: function stop() {
+				if (this.handle_) {
+					this.handle_.removeListener();
+					this.handle_ = null;
+				}
+				return this;
+			}
+		}]);
+		return KeyboardFocusManager;
+	}(EventEmitter);
+
+	// Event emitted when a selected element was focused via the keyboard.
+
+
+	KeyboardFocusManager.EVENT_FOCUSED = 'focused';
+
+	// The regex used to extract the position from an element's ref.
+	KeyboardFocusManager.REF_REGEX = /.+-(\d+)$/;
+
+	this['metal']['KeyboardFocusManager'] = KeyboardFocusManager;
+}).call(this);
+'use strict';
+
+(function () {
+	var core = this['metal']['metal'];
+	var templates = this['metal']['Tabs'];
+	var Component = this['metal']['component'];
+	var KeyboardFocusManager = this['metal']['KeyboardFocusManager'];
+	var Soy = this['metal']['Soy'];
+
+	/**
+  * UI Component to navigate through tabbed data.
+  */
+
+	var Tabs = function (_Component) {
+		babelHelpers.inherits(Tabs, _Component);
+
+		function Tabs() {
+			babelHelpers.classCallCheck(this, Tabs);
+			return babelHelpers.possibleConstructorReturn(this, (Tabs.__proto__ || Object.getPrototypeOf(Tabs)).apply(this, arguments));
+		}
+
+		babelHelpers.createClass(Tabs, [{
+			key: 'attached',
+
+			/**
+    * @inheritDoc
+    */
+			value: function attached() {
+				this.keyboardFocusManager_ = new KeyboardFocusManager(this, 'a').setCircularLength(this.tabs.length).start();
+			}
+
+			/**
+    * Adds a tab to the tabs array at the specified index if given or
+    * appends it at the end.
+    * @param {Object} tab
+    * @param {number} index
+    */
+
+		}, {
+			key: 'addTab',
+			value: function addTab(tab, index) {
+				if (core.isNumber(index)) {
+					this.tabs.splice(index, 0, tab);
+				} else {
+					this.tabs.push(tab);
+				}
+
+				this.tabs = this.tabs;
+			}
+
+			/**
+    * Adds a tab to the tabs array at the specified index if given or
+    * appends it at the end.
+    * @param {string} label
+    * @param {boolean} disabled
+    * @param {number} index
+    */
+
+		}, {
+			key: 'addTabByName',
+			value: function addTabByName(label, disabled, index) {
+				if (core.isString(label)) {
+					var tab = {
+						label: label,
+						disabled: disabled
+					};
+
+					if (!core.isDef(disabled)) {
+						tab.disabled = false;
+					}
+
+					this.addTab(tab, index);
+				}
+			}
+
+			/**
+    * @inheritDoc
+    */
+
+		}, {
+			key: 'created',
+			value: function created() {
+				this.lastState_ = {
+					tab: this.tab
+				};
+
+				this.on(Tabs.Events.CHANGE_REQUEST, this.defaultChangeRequestFn_, true);
+			}
+
+			/**
+    * Default `changeRequest` function, sets new state of tabs.
+    * @param {EventFacade} event
+    * @protected
+    */
+
+		}, {
+			key: 'defaultChangeRequestFn_',
+			value: function defaultChangeRequestFn_(event) {
+				this.setState_(event.state);
+			}
+
+			/**
+    * Fires `changeRequest` event.
+    * @param {Object} state
+    * @protected
+    */
+
+		}, {
+			key: 'dispatchRequest_',
+			value: function dispatchRequest_(state) {
+				this.emit(Tabs.Events.CHANGE_REQUEST, {
+					lastState: this.lastState_,
+					state: state,
+					totalTabs: this.tabs.length
+				});
+			}
+
+			/**
+    * @inheritDoc
+    */
+
+		}, {
+			key: 'disposed',
+			value: function disposed() {
+				this.keyboardFocusManager_.dispose();
+				this.keyboardFocusManager_ = null;
+			}
+
+			/**
+    * Removes the tab at the given index from the tabs array.
+    * @return {number} Returns the index of the first tab which is not disabled.
+    */
+
+		}, {
+			key: 'findFirstAvailableIndex_',
+			value: function findFirstAvailableIndex_() {
+				if (!this.disabled) {
+					for (var i = 0; i < this.tabs.length; i++) {
+						if (!this.tabs[i].disabled) {
+							return i;
+						}
+					}
+				}
+
+				return -1;
+			}
+
+			/**
+    * `onClick` handler for tab items.
+    * @param {EventFacade} event
+    */
+
+		}, {
+			key: 'onClickItem',
+			value: function onClickItem(event) {
+				var item = event.delegateTarget;
+
+				event.preventDefault();
+
+				var index = parseInt(item.getAttribute('data-index'));
+
+				this.dispatchRequest_({
+					tab: index
+				});
+			}
+
+			/**
+    * Removes the tab at the given index from the tabs array.
+    * @param  {number} index
+    * @return {Object} Returns the removed tab.
+    */
+
+		}, {
+			key: 'removeTab',
+			value: function removeTab(index) {
+				if (core.isNumber(index) && index > -1 && index < this.tabs.length) {
+					var tabs = this.tabs.splice(index, 1);
+
+					this.tabs = this.tabs;
+
+					return tabs[0];
+				}
+			}
+
+			/**
+    * Set the new tabs state. The state is a payload object
+    * containing the tab number, e.g. `{tab:1}`.
+    * @param {Object} state
+    * @protected
+    */
+
+		}, {
+			key: 'setState_',
+			value: function setState_(state) {
+				this.tab = state.tab;
+
+				this.lastState_ = state;
+			}
+
+			/**
+    * Disables the tab at the given index in the tabs array.
+    * @param  {number} index
+    * @return {boolean} disabled
+    */
+
+		}, {
+			key: 'setTabDisabled',
+			value: function setTabDisabled(index, disabled) {
+				if (core.isNumber(index) && core.isBoolean(disabled)) {
+					this.tabs[index].disabled = disabled;
+
+					this.tabs = this.tabs;
+				}
+			}
+
+			/**
+    * Synchronizes the component with the current value of the `tabs` state
+    * property. Updates the length of the circular focus handling for tabs.
+    */
+
+		}, {
+			key: 'syncTabs',
+			value: function syncTabs() {
+				if (this.keyboardFocusManager_) {
+					this.keyboardFocusManager_.setCircularLength(this.tabs.length);
+				}
+			}
+
+			/**
+    * Toggles the disabled state of the tab at the given index in the tabs array.
+    * If the tab at the given index is active, then the next nearest enabled tab
+    * will become the new active tab.
+    * @param  {number} index
+    */
+
+		}, {
+			key: 'toggleTabDisabled',
+			value: function toggleTabDisabled(index) {
+				if (core.isNumber(index) && index >= 0 && index < this.tabs.length) {
+					this.tabs[index].disabled = !this.tabs[index].disabled;
+
+					if (index === this.tab) {
+						this.tab = this.findFirstAvailableIndex_();
+					}
+
+					this.tabs = this.tabs;
+				}
+			}
+		}]);
+		return Tabs;
+	}(Component);
+
+	Soy.register(Tabs, templates);
+
+	Tabs.Events = {
+		CHANGE_REQUEST: 'changeRequest'
+	};
+
+	/**
+  * Default types used to style the tabs component.
+  */
+	Tabs.TYPES = {
+		NONE: 'none',
+		PILLS: 'pills',
+		TABS: 'tabs'
+	};
+
+	/**
+  * State definition.
+  * @type {!Object}
+  * @static
+  */
+	Tabs.STATE = {
+		/**
+   * Determines if the whole component should be disabled or not.
+   * @type {boolean}
+   * @default false
+   */
+		disabled: {
+			validator: core.isBoolean,
+			value: false
+		},
+
+		/**
+   * Tab to display on initial paint. It has two attributes, 'label', which is
+   * required and 'disabled' which is optional.
+   * @type {number}
+   * @default Default will be set by the valueFn.
+   */
+		tab: {
+			validator: core.isNumber,
+			valueFn: 'findFirstAvailableIndex_'
+		},
+
+		/**
+   * Tabs array, holding the actual tabs.
+   * @type {Array}
+   * @default []
+   */
+		tabs: {
+			validator: function validator(value) {
+				return value.every(function (item) {
+					return !!item.label;
+				});
+			},
+			value: []
+		},
+
+		/**
+   * Type currently being used to style the tabs component.
+   * @type {string}
+   * @default {string}
+   */
+		type: {
+			validator: function validator(value) {
+				return value.toUpperCase() in Tabs.TYPES;
+			},
+			value: Tabs.TYPES.TABS
+		}
+	};
+
+	this['metal']['Tabs'] = Tabs;
+}).call(this);
+'use strict';
+
+(function () {
+  var Tabs = this['metal']['Tabs'];
+  var dom = this['metal']['dom'];
+  var State = this['metal']['state'];
+
+  /**
+   * Class the identity sibling rendered "Code Mirror" components on the
+   * page and make them tab navigable.
+   */
+
+  var ElectricCodeTabs = function (_State) {
+    babelHelpers.inherits(ElectricCodeTabs, _State);
+
+    function ElectricCodeTabs(opt) {
+      babelHelpers.classCallCheck(this, ElectricCodeTabs);
+
+      var _this = babelHelpers.possibleConstructorReturn(this, (ElectricCodeTabs.__proto__ || Object.getPrototypeOf(ElectricCodeTabs)).call(this, opt));
+
+      var tabGroupsData = [];
+      document.querySelectorAll('.' + _this.className).forEach(function (element) {
+        tabGroupsData.push({
+          label: _this.getTabLabelFromElement_(element),
+          element: element
+        });
+        if (!element.nextElementSibling || !dom.hasClass(element.nextElementSibling, _this.className)) {
+          if (tabGroupsData.length > 1) {
+            _this.renderTabs_(tabGroupsData);
+          }
+          tabGroupsData = [];
+        }
+      });
+      return _this;
+    }
+
+    /**
+     * Extracts the tab label from a given code mirror element.
+     * @param  {element} element
+     * @return {string} The title from the element or the matched map value.
+     * @private
+     */
+
+
+    babelHelpers.createClass(ElectricCodeTabs, [{
+      key: 'getTabLabelFromElement_',
+      value: function getTabLabelFromElement_(element) {
+        var tabLabel = element.querySelector('.code').dataset.mode;
+        return this.dictionary[tabLabel] || tabLabel;
+      }
+
+      /**
+       * Hides a given element by adding the hide CSS class.
+       * @param  {element} element
+       * @private
+       */
+
+    }, {
+      key: 'hide_',
+      value: function hide_(element) {
+        dom.addClasses(element, 'hide');
+      }
+
+      /**
+       * Hides all code mirror elements related to a tab navigation.
+       * @param  {Array<element>} tabs
+       * @private
+       */
+
+    }, {
+      key: 'hideAll_',
+      value: function hideAll_(tabs) {
+        var _this2 = this;
+
+        tabs.forEach(function (tab) {
+          _this2.hide_(tab.element);
+        });
+      }
+
+      /**
+       * Renders a tab navigations for a given tab content group.
+       * @param  {Array<Object>} data
+       * @private
+       */
+
+    }, {
+      key: 'renderTabs_',
+      value: function renderTabs_(data) {
+        var _this3 = this;
+
+        var container = dom.buildFragment('<div class="tabContainer"></div>');
+        var tabsComponent = new Tabs({
+          elementClasses: 'nav-code-tabs',
+          tabs: data
+        }, container);
+
+        tabsComponent.on('changeRequest', function (event) {
+          var currentTab = event.state.tab;
+          _this3.hideAll_(tabsComponent.tabs);
+          _this3.show_(tabsComponent.tabs[currentTab].element);
+        });
+
+        this.hideAll_(tabsComponent.tabs);
+        this.show_(tabsComponent.tabs[0].element);
+
+        data[0].element.parentNode.insertBefore(container, data[0].element);
+      }
+
+      /**
+       * Shows a given code mirror element by removing the hide CSS class.
+       * @param  {Array<Object>} data
+       */
+
+    }, {
+      key: 'show_',
+      value: function show_(element) {
+        dom.removeClasses(element, 'hide');
+      }
+    }]);
+    return ElectricCodeTabs;
+  }(State);
+
+  /**
+   * State definition.
+   * @type {!Object}
+   * @static
+   */
+
+
+  ElectricCodeTabs.STATE = {
+    /**
+    * The code mirror container CSS class name used for looking for elements and
+     * group them to build tabs.
+    * @type {string}
+    * @default {string}
+    */
+    className: {
+      value: 'code-container'
+    },
+
+    /**
+    * A dictionary of languages label
+    * @type {Object}
+    * @default {}
+    */
+    dictionary: {
+      value: {
+        'text/html': 'HTML',
+        'text/x-java': 'Java',
+        'application/json': 'JSON'
+      }
+    }
+  };
+
+  this['metal']['ElectricCodeTabs'] = ElectricCodeTabs;
 }).call(this);
 'use strict';
 
@@ -16868,6 +17783,7 @@ babelHelpers;
 				var articleContainer = this.articleContainer,
 				    articleSelector = this.articleSelector,
 				    element = this.element,
+				    offsetBottom = this.offsetBottom,
 				    offsetTop = this.offsetTop,
 				    titleSelector = this.titleSelector;
 
@@ -16879,7 +17795,7 @@ babelHelpers;
 						return '#' + article.id;
 					});
 
-					this.progress = new metal.ReadingProgress({
+					this.progress = new ReadingProgress({
 						items: articleIds,
 						titleSelector: titleSelector,
 						trackerConfig: {
@@ -16888,10 +17804,26 @@ babelHelpers;
 						}
 					}, this.refs.readingContainer);
 
-					this.affix = new metal.Affix({
+					this.affix = new Affix({
 						element: element,
+						offsetBottom: offsetBottom,
 						offsetTop: offsetTop
 					});
+				}
+			}
+		}, {
+			key: 'disposed',
+			value: function disposed() {
+				var affix = this.affix,
+				    progress = this.progress;
+
+
+				if (affix) {
+					affix.dispose();
+				}
+
+				if (progress) {
+					progress.dispose();
 				}
 			}
 		}]);
@@ -16909,6 +17841,10 @@ babelHelpers;
 		articleSelector: {
 			validator: core.isString,
 			value: 'article'
+		},
+
+		offsetBottom: {
+			validator: core.isNumber
 		},
 
 		offsetTop: {
@@ -19165,7 +20101,8 @@ babelHelpers;
 			value: function filterResults_(data, query) {
 				var _this2 = this;
 
-				var children = data.children;
+				var children = data.children,
+				    childIds = data.childIds;
 
 
 				var results = [];
@@ -19175,7 +20112,9 @@ babelHelpers;
 				}
 
 				if (children) {
-					children.forEach(function (child) {
+					childIds.forEach(function (childId) {
+						var child = children[childId];
+
 						results = results.concat(_this2.filterResults_(child, query));
 					});
 				}
@@ -20108,7 +21047,7 @@ babelHelpers;
 			key: 'align',
 			value: function align() {
 				this.element.style.width = this.inputElement.offsetWidth + 'px';
-				var position = Align.align(this.element, this.inputElement, Align.Bottom);
+				var position = Align.align(this.element, this.inputElement, Align.Bottom, this.autoBestAlign);
 
 				dom.removeClasses(this.element, this.positionCss_);
 				switch (position) {
@@ -20414,6 +21353,18 @@ babelHelpers;
   */
 	Autocomplete.STATE = {
 		/**
+   * Activate or Deactivate the suggestion of the best align region. If true,
+   * the component will try to find a better region to align, otherwise,
+   * it will keep the position at the bottom.
+   * @type {boolean}
+   * @default true.
+   */
+		autoBestAlign: {
+			value: true,
+			validator: core.isBoolean
+		},
+
+		/**
    * Function that converts a given item to the format that should be used by
    * the autocomplete.
    * @type {!function()}
@@ -20468,7 +21419,8 @@ babelHelpers;
 
 
 				if (input) {
-					var autocomplete = new Autocomplete({
+					this.autocomplete = new Autocomplete({
+						autoBestAlign: false,
 						data: this.search_.bind(this),
 						format: this.format_.bind(this),
 						inputElement: input,
@@ -20496,6 +21448,16 @@ babelHelpers;
 					textPrimary: '<a class="autocomplete-link" href="' + url + '">\n\t\t\t\t<div class="autocomplete-result">\n\t\t\t\t\t<p class="autocomplete-title">' + title + '</p>\n\t\t\t\t\t<p class="autocomplete-text">' + description + '</p>\n\t\t\t\t</div>\n\t\t\t</a>',
 					url: url
 				};
+			}
+		}, {
+			key: 'disposed',
+			value: function disposed() {
+				var autocomplete = this.autocomplete;
+
+
+				if (autocomplete) {
+					autocomplete.dispose();
+				}
 			}
 		}]);
 		return ElectricSearchAutocomplete;
@@ -20541,6 +21503,7 @@ babelHelpers;
 
 (function () {
 	var ElectricCode = this['metal']['ElectricCode'];
+	var ElectricCodeTabs = this['metal']['ElectricCodeTabs'];
 	var ElectricNavigation = this['metal']['ElectricNavigation'];
 	var ElectricReadingProgress = this['metal']['ElectricReadingProgress'];
 	var ElectricSearch = this['metal']['ElectricSearch'];
@@ -20549,6 +21512,7 @@ babelHelpers;
 	var ElectricUpdates = this['metal']['ElectricUpdates'];
 	this['metalNamed']['components'] = this['metalNamed']['components'] || {};
 	this['metalNamed']['components']['ElectricCode'] = ElectricCode;
+	this['metalNamed']['components']['ElectricCodeTabs'] = ElectricCodeTabs;
 	this['metalNamed']['components']['ElectricNavigation'] = ElectricNavigation;
 	this['metalNamed']['components']['ElectricReadingProgress'] = ElectricReadingProgress;
 	this['metalNamed']['components']['ElectricSearch'] = ElectricSearch;
@@ -20712,15 +21676,16 @@ babelHelpers;
       var localListItemActiveClasses__soy14 = ($$temp = opt_data.listItemActiveClasses) == null ? 'active' : $$temp;
       if (opt_data.section.children) {
         ie_open('ul', null, null, 'class', ($$temp = opt_data.elementClasses) == null ? '' : $$temp);
-        var pageList41 = opt_data.section.children;
-        var pageListLen41 = pageList41.length;
-        for (var pageIndex41 = 0; pageIndex41 < pageListLen41; pageIndex41++) {
-          var pageData41 = pageList41[pageIndex41];
-          if (!pageData41.hidden) {
-            ie_open('li', null, null, 'class', (($$temp = opt_data.listItemClasses) == null ? '' : $$temp) + (pageData41.active ? ' ' + localListItemActiveClasses__soy14 : ''));
-            soy.$$getDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), localAnchorVariant__soy12, false)(soy.$$assignDefaults({ page: pageData41 }, opt_data), null, opt_ijData);
+        var childIdList43 = opt_data.section.childIds;
+        var childIdListLen43 = childIdList43.length;
+        for (var childIdIndex43 = 0; childIdIndex43 < childIdListLen43; childIdIndex43++) {
+          var childIdData43 = childIdList43[childIdIndex43];
+          var page__soy20 = opt_data.section.children[childIdData43];
+          if (!page__soy20.hidden) {
+            ie_open('li', null, null, 'class', (($$temp = opt_data.listItemClasses) == null ? '' : $$temp) + (page__soy20.active ? ' ' + localListItemActiveClasses__soy14 : ''));
+            soy.$$getDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), localAnchorVariant__soy12, false)(soy.$$assignDefaults({ index: childIdIndex43, page: page__soy20 }, opt_data), null, opt_ijData);
             if (!opt_data.depth || localCurrentDepth__soy13 + 1 < opt_data.depth) {
-              $render({ anchorVariant: localAnchorVariant__soy12, currentDepth: localCurrentDepth__soy13 + 1, currentURL: opt_data.currentURL, depth: opt_data.depth, elementClasses: opt_data.elementClasses, linkClasses: opt_data.linkClasses, listItemActiveClasses: opt_data.listItemActiveClasses, listItemClasses: opt_data.listItemClasses, section: pageData41 }, null, opt_ijData);
+              $render({ anchorVariant: localAnchorVariant__soy12, currentDepth: localCurrentDepth__soy13 + 1, currentURL: opt_data.currentURL, depth: opt_data.depth, elementClasses: opt_data.elementClasses, linkClasses: opt_data.linkClasses, listItemActiveClasses: opt_data.listItemActiveClasses, listItemClasses: opt_data.listItemClasses, section: page__soy20 }, null, opt_ijData);
             }
             ie_close('li');
           }
@@ -20740,7 +21705,7 @@ babelHelpers;
      * @return {void}
      * @suppress {checkTypes}
      */
-    function __deltemplate_s44_b83841ac(opt_data, opt_ignored, opt_ijData) {
+    function __deltemplate_s46_b83841ac(opt_data, opt_ignored, opt_ijData) {
       var $$temp;
       if (opt_data.page.url || opt_data.page.redirect) {
         ie_open('a', null, null, 'class', ($$temp = opt_data.linkClasses) == null ? '' : $$temp, 'href', ($$temp = opt_data.page.redirect) == null ? opt_data.page.url : $$temp);
@@ -20756,11 +21721,11 @@ babelHelpers;
         ie_close('span');
       }
     }
-    exports.__deltemplate_s44_b83841ac = __deltemplate_s44_b83841ac;
+    exports.__deltemplate_s46_b83841ac = __deltemplate_s46_b83841ac;
     if (goog.DEBUG) {
-      __deltemplate_s44_b83841ac.soyTemplateName = 'ElectricNavigation.__deltemplate_s44_b83841ac';
+      __deltemplate_s46_b83841ac.soyTemplateName = 'ElectricNavigation.__deltemplate_s46_b83841ac';
     }
-    soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), 'basic', 0, __deltemplate_s44_b83841ac);
+    soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), 'basic', 0, __deltemplate_s46_b83841ac);
 
     exports.render.params = ["section", "anchorVariant", "currentDepth", "currentURL", "depth", "elementClasses", "linkClasses", "listItemActiveClasses", "listItemClasses"];
     exports.render.types = { "section": "any", "anchorVariant": "any", "currentDepth": "any", "currentURL": "any", "depth": "any", "elementClasses": "any", "linkClasses": "any", "listItemActiveClasses": "any", "listItemClasses": "any" };
@@ -21007,22 +21972,22 @@ babelHelpers;
         ie_close('p');
       }
       if (opt_data.results) {
-        var resultList103 = opt_data.results;
-        var resultListLen103 = resultList103.length;
-        for (var resultIndex103 = 0; resultIndex103 < resultListLen103; resultIndex103++) {
-          var resultData103 = resultList103[resultIndex103];
+        var resultList105 = opt_data.results;
+        var resultListLen105 = resultList105.length;
+        for (var resultIndex105 = 0; resultIndex105 < resultListLen105; resultIndex105++) {
+          var resultData105 = resultList105[resultIndex105];
           ie_open('div', null, null, 'class', 'search-result');
-          if (resultData103.icon) {
+          if (resultData105.icon) {
             ie_open('div', null, null, 'class', 'search-result-icon');
-            ie_void('span', null, null, 'class', 'icon-16-' + resultData103.icon);
+            ie_void('span', null, null, 'class', 'icon-16-' + resultData105.icon);
             ie_close('div');
           }
-          ie_open('a', null, null, 'class', 'search-result-link', 'href', resultData103.url);
-          var dyn5 = resultData103.title;
+          ie_open('a', null, null, 'class', 'search-result-link', 'href', resultData105.url);
+          var dyn5 = resultData105.title;
           if (typeof dyn5 == 'function') dyn5();else if (dyn5 != null) itext(dyn5);
           ie_close('a');
           ie_open('p', null, null, 'class', 'search-result-text');
-          var dyn6 = resultData103.description;
+          var dyn6 = resultData105.description;
           if (typeof dyn6 == 'function') dyn6();else if (dyn6 != null) itext(dyn6);
           ie_close('p');
           ie_close('div');
@@ -21246,20 +22211,20 @@ babelHelpers;
       ie_open('div', null, null, 'class', 'row');
       ie_open('div', null, null, 'class', 'col-lg-10 col-lg-offset-3 col-md-16 col-md-offset-0');
       if (opt_data.updates) {
-        var updateList128 = opt_data.updates;
-        var updateListLen128 = updateList128.length;
-        for (var updateIndex128 = 0; updateIndex128 < updateListLen128; updateIndex128++) {
-          var updateData128 = updateList128[updateIndex128];
+        var updateList130 = opt_data.updates;
+        var updateListLen130 = updateList130.length;
+        for (var updateIndex130 = 0; updateIndex130 < updateListLen130; updateIndex130++) {
+          var updateData130 = updateList130[updateIndex130];
           ie_open('section', null, null, 'class', 'update');
           ie_open('div', null, null, 'class', 'row update-row');
-          ie_open('div', null, null, 'class', 'col-sm-3 ' + (updateData128.major ? 'major' : 'minor') + '-update update-timeline');
+          ie_open('div', null, null, 'class', 'col-sm-3 ' + (updateData130.major ? 'major' : 'minor') + '-update update-timeline');
           ie_open('div', null, null, 'class', 'update-point');
-          var dyn7 = updateData128.version;
+          var dyn7 = updateData130.version;
           if (typeof dyn7 == 'function') dyn7();else if (dyn7 != null) itext(dyn7);
           ie_close('div');
           ie_close('div');
           ie_open('div', null, null, 'class', 'col-sm-13 update-features');
-          $features(soy.$$assignDefaults({ features: updateData128.features }, opt_data), null, opt_ijData);
+          $features(soy.$$assignDefaults({ features: updateData130.features }, opt_data), null, opt_ijData);
           ie_close('div');
           ie_close('div');
           ie_close('section');
@@ -21282,13 +22247,13 @@ babelHelpers;
      */
     function $features(opt_data, opt_ignored, opt_ijData) {
       var $$temp;
-      var localFeatureVariant__soy132 = ($$temp = opt_data.featureVariant) == null ? 'basic' : $$temp;
+      var localFeatureVariant__soy134 = ($$temp = opt_data.featureVariant) == null ? 'basic' : $$temp;
       ie_open('div', null, null, 'class', 'row');
-      var featureList136 = opt_data.features;
-      var featureListLen136 = featureList136.length;
-      for (var featureIndex136 = 0; featureIndex136 < featureListLen136; featureIndex136++) {
-        var featureData136 = featureList136[featureIndex136];
-        soy.$$getDelegateFn(soy.$$getDelTemplateId('ElectricUpdates.feature.idom'), localFeatureVariant__soy132, false)(soy.$$assignDefaults({ feature: featureData136 }, opt_data), null, opt_ijData);
+      var featureList138 = opt_data.features;
+      var featureListLen138 = featureList138.length;
+      for (var featureIndex138 = 0; featureIndex138 < featureListLen138; featureIndex138++) {
+        var featureData138 = featureList138[featureIndex138];
+        soy.$$getDelegateFn(soy.$$getDelTemplateId('ElectricUpdates.feature.idom'), localFeatureVariant__soy134, false)(soy.$$assignDefaults({ feature: featureData138 }, opt_data), null, opt_ijData);
       }
       ie_close('div');
     }
@@ -21304,7 +22269,7 @@ babelHelpers;
      * @return {void}
      * @suppress {checkTypes}
      */
-    function __deltemplate_s139_5080d024(opt_data, opt_ignored, opt_ijData) {
+    function __deltemplate_s141_5080d024(opt_data, opt_ignored, opt_ijData) {
       ie_open('div', null, null, 'class', 'col-xs-16 col-sm-8 update-feature');
       ie_open('div', null, null, 'class', 'feature-topper');
       ie_void('span', null, null, 'class', 'feature-icon icon-16-' + opt_data.feature.icon);
@@ -21326,11 +22291,11 @@ babelHelpers;
       ie_close('div');
       ie_close('div');
     }
-    exports.__deltemplate_s139_5080d024 = __deltemplate_s139_5080d024;
+    exports.__deltemplate_s141_5080d024 = __deltemplate_s141_5080d024;
     if (goog.DEBUG) {
-      __deltemplate_s139_5080d024.soyTemplateName = 'ElectricUpdates.__deltemplate_s139_5080d024';
+      __deltemplate_s141_5080d024.soyTemplateName = 'ElectricUpdates.__deltemplate_s141_5080d024';
     }
-    soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricUpdates.feature.idom'), 'basic', 0, __deltemplate_s139_5080d024);
+    soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricUpdates.feature.idom'), 'basic', 0, __deltemplate_s141_5080d024);
 
     exports.render.params = ["featureVariant", "updates"];
     exports.render.types = { "featureVariant": "any", "updates": "any" };
@@ -21393,6 +22358,434 @@ babelHelpers;
 'use strict';
 
 (function () {}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from index.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace pageIndex.
+     * @public
+     */
+
+    goog.module('pageIndex.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('main.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param40 = function param40() {
+        $header(opt_data, null, opt_ijData);
+        $footer(null, null, opt_ijData);
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param40 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'pageIndex.render';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $header(opt_data, opt_ignored, opt_ijData) {
+      ie_open('header', null, null, 'class', 'header');
+      ie_open('div', null, null, 'class', 'container');
+      ie_open('h1', null, null, 'class', 'header-title');
+      var dyn3 = opt_data.site.title;
+      if (typeof dyn3 == 'function') dyn3();else if (dyn3 != null) itext(dyn3);
+      ie_close('h1');
+      ie_open('h2', null, null, 'class', 'header-subtitle');
+      var dyn4 = opt_data.site.index.description;
+      if (typeof dyn4 == 'function') dyn4();else if (dyn4 != null) itext(dyn4);
+      ie_close('h2');
+      ie_open('div', null, null, 'class', 'header-cta');
+      ie_open('a', null, null, 'href', '/docs/introducao', 'class', 'btn btn-accent');
+      itext('Aprenda');
+      ie_close('a');
+      ie_close('div');
+      ie_close('div');
+      ie_close('header');
+    }
+    exports.header = $header;
+    if (goog.DEBUG) {
+      $header.soyTemplateName = 'pageIndex.header';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $footer(opt_data, opt_ignored, opt_ijData) {
+      ie_open('footer', null, null, 'class', 'footer');
+      ie_open('div', null, null, 'class', 'container');
+      ie_open('div', null, null, 'class', 'row');
+      ie_open('p', null, null, 'class', 'footer-description col-md-6 col-md-offset-2');
+      itext('Copyright \xA9 2017 - Current | ');
+      ie_open('a', null, null, 'href', 'https://nomadsonrails.com');
+      itext('Nomads on rails');
+      ie_close('a');
+      ie_close('p');
+      ie_open('p', null, null, 'class', 'footer-description col-md-6');
+      itext('Powered by ');
+      ie_open('a', null, null, 'href', 'http://nomadsonrails.com');
+      itext('Nomads on rails');
+      ie_close('a');
+      ie_close('p');
+      ie_close('div');
+      ie_close('div');
+      ie_close('footer');
+    }
+    exports.footer = $footer;
+    if (goog.DEBUG) {
+      $footer.soyTemplateName = 'pageIndex.footer';
+    }
+
+    exports.render.params = ["site"];
+    exports.render.types = { "site": "any" };
+    exports.header.params = ["site"];
+    exports.header.types = { "site": "any" };
+    exports.footer.params = [];
+    exports.footer.types = {};
+    templates = exports;
+    return exports;
+  });
+
+  var pageIndex = function (_Component) {
+    babelHelpers.inherits(pageIndex, _Component);
+
+    function pageIndex() {
+      babelHelpers.classCallCheck(this, pageIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
+    }
+
+    return pageIndex;
+  }(Component);
+
+  Soy.register(pageIndex, templates);
+  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
+  this['metalNamed']['index']['pageIndex'] = pageIndex;
+  this['metalNamed']['index']['templates'] = templates;
+  this['metal']['index'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['index'];
+
+  var pageIndex = function (_Component) {
+    babelHelpers.inherits(pageIndex, _Component);
+
+    function pageIndex() {
+      babelHelpers.classCallCheck(this, pageIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
+    }
+
+    return pageIndex;
+  }(Component);
+
+  ;
+
+  Soy.register(pageIndex, templates);
+
+  this['metal']['pageIndex'] = pageIndex;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from guide.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace guide.
+     * @public
+     */
+
+    goog.module('guide.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias3 = Soy.getTemplate('ElectricReadingProgress.incrementaldom', 'render');
+
+    var $templateAlias2 = Soy.getTemplate('Sidebar.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('Topbar.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'class', 'main');
+      ie_open('main', null, null, 'class', 'guide');
+      ie_open('div', null, null, 'class', 'docs');
+      $templateAlias1(soy.$$assignDefaults({ elementClasses: 'topbar-docs' }, opt_data), null, opt_ijData);
+      $templateAlias2({ section: opt_data.site.index.children['docs'] }, null, opt_ijData);
+      $guide(opt_data, null, opt_ijData);
+      ie_close('div');
+      ie_close('main');
+      ie_close('div');
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'guide.render';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $guide(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'class', 'sidebar-offset');
+      ie_open('header', null, null, 'class', 'guide-header');
+      ie_open('div', null, null, 'class', 'container-hybrid');
+      ie_open('h1', null, null, 'class', 'title');
+      var dyn0 = opt_data.page.title;
+      if (typeof dyn0 == 'function') dyn0();else if (dyn0 != null) itext(dyn0);
+      ie_close('h1');
+      ie_close('div');
+      ie_close('header');
+      ie_open('div', null, null, 'class', 'container-hybrid');
+      ie_open('div', null, null, 'class', 'docs-guide row');
+      ie_open('div', null, null, 'class', 'docs-content col-xs-16 col-md-9');
+      ie_open('div', null, null, 'class', 'guide-content');
+      var dyn1 = opt_data.content;
+      if (typeof dyn1 == 'function') dyn1();else if (dyn1 != null) itext(dyn1);
+      ie_close('div');
+      if (opt_data.site.githubRepo) {
+        $contribute(opt_data, null, opt_ijData);
+      }
+      ie_close('div');
+      ie_open('nav', null, null, 'class', 'col-xs-16 col-md-offset-2 col-md-5');
+      ie_open('div', null, null, 'class', 'docs-nav-container');
+      $templateAlias3({ elementClasses: 'docs-nav', offsetTop: 200 }, null, opt_ijData);
+      ie_close('div');
+      ie_close('nav');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.guide = $guide;
+    if (goog.DEBUG) {
+      $guide.soyTemplateName = 'guide.guide';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $contribute(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'class', 'contribute');
+      ie_open('div', null, null, 'class', 'contribute-img');
+      ie_void('span', null, null, 'class', 'icon-16-github');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'contribute-text');
+      ie_open('p');
+      itext('Contribua no Github! ');
+      ie_open('a', null, null, 'href', 'https://github.com/' + opt_data.site.githubRepo + '/tree/master/' + opt_data.page.srcFilePath, 'class', 'contribute-link', 'target', '_blank');
+      itext('Edite este conte\xFAdo');
+      ie_close('a');
+      itext('.');
+      ie_close('p');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.contribute = $contribute;
+    if (goog.DEBUG) {
+      $contribute.soyTemplateName = 'guide.contribute';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    exports.guide.params = ["page", "site", "content"];
+    exports.guide.types = { "page": "any", "site": "any", "content": "any" };
+    exports.contribute.params = ["page", "site"];
+    exports.contribute.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var guide = function (_Component) {
+    babelHelpers.inherits(guide, _Component);
+
+    function guide() {
+      babelHelpers.classCallCheck(this, guide);
+      return babelHelpers.possibleConstructorReturn(this, (guide.__proto__ || Object.getPrototypeOf(guide)).apply(this, arguments));
+    }
+
+    return guide;
+  }(Component);
+
+  Soy.register(guide, templates);
+  this['metalNamed']['guide'] = this['metalNamed']['guide'] || {};
+  this['metalNamed']['guide']['guide'] = guide;
+  this['metalNamed']['guide']['templates'] = templates;
+  this['metal']['guide'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from main.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace main.
+     * @public
+     */
+
+    goog.module('main.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('Topbar.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var $$temp;
+      ie_open('div', null, null, 'class', ($$temp = opt_data.elementClasses) == null ? 'main' : $$temp);
+      ie_open('main', null, null, 'class', 'content');
+      $templateAlias1(opt_data, null, opt_ijData);
+      var dyn2 = opt_data.content;
+      if (typeof dyn2 == 'function') dyn2();else if (dyn2 != null) itext(dyn2);
+      ie_close('main');
+      ie_close('div');
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'main.render';
+    }
+
+    exports.render.params = ["content", "elementClasses"];
+    exports.render.types = { "content": "any", "elementClasses": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var main = function (_Component) {
+    babelHelpers.inherits(main, _Component);
+
+    function main() {
+      babelHelpers.classCallCheck(this, main);
+      return babelHelpers.possibleConstructorReturn(this, (main.__proto__ || Object.getPrototypeOf(main)).apply(this, arguments));
+    }
+
+    return main;
+  }(Component);
+
+  Soy.register(main, templates);
+  this['metalNamed']['main'] = this['metalNamed']['main'] || {};
+  this['metalNamed']['main']['main'] = main;
+  this['metalNamed']['main']['templates'] = templates;
+  this['metal']['main'] = templates;
+  /* jshint ignore:end */
+}).call(this);
 'use strict';
 
 (function () {
@@ -21646,7 +23039,7 @@ babelHelpers;
       ie_open('a', null, null, 'class', 'sidebar-header toggler-header-collapsed');
       ie_void('span', null, null, 'class', 'sidebar-icon icon-16-menu');
       ie_open('span');
-      itext('Menu');
+      itext('Docs Menu');
       ie_close('span');
       ie_open('span', null, null, 'class', 'sidebar-icon-right');
       ie_void('span', null, null, 'class', 'icon-12-arrow-down-short');
@@ -21673,20 +23066,22 @@ babelHelpers;
      * @return {void}
      * @suppress {checkTypes}
      */
-    function __deltemplate_s15_d34389eb(opt_data, opt_ignored, opt_ijData) {
+    function __deltemplate_s66_d34389eb(opt_data, opt_ignored, opt_ijData) {
       ie_open('a', null, null, 'class', 'sidebar-link ' + (opt_data.page.active ? 'sidebar-link-selected' : ''), 'href', opt_data.page.url);
-      ie_void('span', null, null, 'class', 'sidebar-icon icon-16-' + opt_data.page.icon);
+      if (opt_data.page.icon) {
+        ie_void('span', null, null, 'class', 'sidebar-icon icon-16-' + opt_data.page.icon);
+      }
       ie_open('span');
-      var dyn0 = opt_data.page.title;
-      if (typeof dyn0 == 'function') dyn0();else if (dyn0 != null) itext(dyn0);
+      var dyn5 = opt_data.page.title;
+      if (typeof dyn5 == 'function') dyn5();else if (dyn5 != null) itext(dyn5);
       ie_close('span');
       ie_close('a');
     }
-    exports.__deltemplate_s15_d34389eb = __deltemplate_s15_d34389eb;
+    exports.__deltemplate_s66_d34389eb = __deltemplate_s66_d34389eb;
     if (goog.DEBUG) {
-      __deltemplate_s15_d34389eb.soyTemplateName = 'Sidebar.__deltemplate_s15_d34389eb';
+      __deltemplate_s66_d34389eb.soyTemplateName = 'Sidebar.__deltemplate_s66_d34389eb';
     }
-    soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), 'sidebar', 0, __deltemplate_s15_d34389eb);
+    soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), 'sidebar', 0, __deltemplate_s66_d34389eb);
 
     exports.render.params = ["section"];
     exports.render.types = { "section": "any" };
@@ -21731,10 +23126,15 @@ babelHelpers;
 		babelHelpers.createClass(Sidebar, [{
 			key: 'attached',
 			value: function attached() {
-				new Toggler({
+				this._toggler = new Toggler({
 					content: '.sidebar-toggler-content',
 					header: '.sidebar-header'
 				});
+			}
+		}, {
+			key: 'disposed',
+			value: function disposed() {
+				this._toggler.dispose();
 			}
 		}]);
 		return Sidebar;
@@ -21756,200 +23156,15 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from docs.soy.
+    // This file was automatically generated from Topbar.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace docs.
+     * @fileoverview Templates in namespace Topbar.
      * @public
      */
 
-    goog.module('docs.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias3 = Soy.getTemplate('ElectricReadingProgress.incrementaldom', 'render');
-
-    var $templateAlias2 = Soy.getTemplate('Sidebar.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('main.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param40 = function param40() {
-        $templateAlias2(soy.$$assignDefaults({ section: opt_data.site.index.children[0] }, opt_data), null, opt_ijData);
-        $guide(opt_data, null, opt_ijData);
-      };
-      $templateAlias1(soy.$$assignDefaults({ elementClasses: 'docs', content: param40 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'docs.render';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $guide(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'class', 'sidebar-offset');
-      ie_open('header', null, null, 'class', 'guide-header');
-      ie_open('div', null, null, 'class', 'container-hybrid');
-      ie_open('h1', null, null, 'class', 'guide-header-title');
-      var dyn2 = opt_data.page.title;
-      if (typeof dyn2 == 'function') dyn2();else if (dyn2 != null) itext(dyn2);
-      ie_close('h1');
-      ie_close('div');
-      ie_close('header');
-      ie_open('div', null, null, 'class', 'container-hybrid');
-      ie_open('div', null, null, 'class', 'docs-guide row');
-      ie_open('div', null, null, 'class', 'docs-content col-xs-16 col-md-9');
-      var dyn3 = opt_data.content;
-      if (typeof dyn3 == 'function') dyn3();else if (dyn3 != null) itext(dyn3);
-      $feedback(opt_data, null, opt_ijData);
-      ie_close('div');
-      ie_open('nav', null, null, 'class', 'col-xs-16 col-md-offset-2 col-md-5');
-      ie_open('div', null, null, 'class', 'docs-nav-container');
-      $templateAlias3({ elementClasses: 'docs-nav topbar-is-fixed', offsetTop: 200 }, null, opt_ijData);
-      ie_close('div');
-      ie_close('nav');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.guide = $guide;
-    if (goog.DEBUG) {
-      $guide.soyTemplateName = 'docs.guide';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $feedback(opt_data, opt_ignored, opt_ijData) {
-      var $$temp;
-      ie_open('div');
-      ie_open('div', null, null, 'class', 'guide-github');
-      ie_open('div', null, null, 'class', 'guide-github-img');
-      ie_void('span', null, null, 'class', 'icon-16-github');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'guide-github-text');
-      ie_open('p');
-      itext('Contribua no Github! ');
-      ie_open('a', null, null, 'href', 'https://github.com/' + (($$temp = opt_data.site.repo) == null ? '' : $$temp) + '/tree/master/' + opt_data.page.srcFilePath, 'class', 'docs-github-link', 'target', '_blank');
-      itext('Edite este conte\xFAdo');
-      ie_close('a');
-      itext('.');
-      ie_close('p');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.feedback = $feedback;
-    if (goog.DEBUG) {
-      $feedback.soyTemplateName = 'docs.feedback';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    exports.guide.params = ["page", "content"];
-    exports.guide.types = { "page": "any", "content": "any" };
-    exports.feedback.params = ["page", "site"];
-    exports.feedback.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var docs = function (_Component) {
-    babelHelpers.inherits(docs, _Component);
-
-    function docs() {
-      babelHelpers.classCallCheck(this, docs);
-      return babelHelpers.possibleConstructorReturn(this, (docs.__proto__ || Object.getPrototypeOf(docs)).apply(this, arguments));
-    }
-
-    return docs;
-  }(Component);
-
-  Soy.register(docs, templates);
-  this['metalNamed']['docs'] = this['metalNamed']['docs'] || {};
-  this['metalNamed']['docs']['docs'] = docs;
-  this['metalNamed']['docs']['templates'] = templates;
-  this['metal']['docs'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['docs'];
-
-  var docs = function (_Component) {
-    babelHelpers.inherits(docs, _Component);
-
-    function docs() {
-      babelHelpers.classCallCheck(this, docs);
-      return babelHelpers.possibleConstructorReturn(this, (docs.__proto__ || Object.getPrototypeOf(docs)).apply(this, arguments));
-    }
-
-    return docs;
-  }(Component);
-
-  ;
-
-  Soy.register(docs, templates);
-
-  this['metal']['docs'] = docs;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from main.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace main.
-     * @public
-     */
-
-    goog.module('main.incrementaldom');
+    goog.module('Topbar.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -21980,36 +23195,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var $$temp;
-      ie_open('div', null, null, 'class', ($$temp = opt_data.elementClasses) == null ? 'main' : $$temp);
-      ie_open('main', null, null, 'class', 'content');
-      $topbar(opt_data, null, opt_ijData);
-      var dyn4 = opt_data.content;
-      if (typeof dyn4 == 'function') dyn4();else if (dyn4 != null) itext(dyn4);
-      ie_close('main');
-      ie_close('div');
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'main.render';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $topbar(opt_data, opt_ignored, opt_ijData) {
-      ie_open('nav', null, null, 'class', 'topbar topbar-fixed');
+      ie_open('nav', null, null, 'class', 'topbar topbar-light ' + (opt_data.elementClasses ? ' ' + opt_data.elementClasses : ''));
       $logo(opt_data, null, opt_ijData);
       $menu(opt_data, null, opt_ijData);
       ie_close('nav');
     }
-    exports.topbar = $topbar;
+    exports.render = $render;
     if (goog.DEBUG) {
-      $topbar.soyTemplateName = 'main.topbar';
+      $render.soyTemplateName = 'Topbar.render';
     }
 
     /**
@@ -22022,19 +23215,17 @@ babelHelpers;
     function $logo(opt_data, opt_ignored, opt_ijData) {
       ie_open('div', null, null, 'class', 'topbar-logo');
       ie_open('a', null, null, 'class', 'topbar-logo-link', 'href', '/');
-      ie_void('span', null, null, 'class', 'icon icon-16-globe');
-      ie_open('span', null, null, 'class', 'name');
-      itext('Guia do trabalho remoto');
-      ie_close('span');
-      ie_open('span', null, null, 'class', 'by');
-      itext('by Nomads on Rails');
+      ie_void('span', null, null, 'class', 'topbar-logo-icon icon-16-hammer');
+      ie_open('span', null, null, 'class', 'topbar-logo-text');
+      var dyn6 = opt_data.site.title;
+      if (typeof dyn6 == 'function') dyn6();else if (dyn6 != null) itext(dyn6);
       ie_close('span');
       ie_close('a');
       ie_close('div');
     }
     exports.logo = $logo;
     if (goog.DEBUG) {
-      $logo.soyTemplateName = 'main.logo';
+      $logo.soyTemplateName = 'Topbar.logo';
     }
 
     /**
@@ -22049,239 +23240,36 @@ babelHelpers;
     }
     exports.menu = $menu;
     if (goog.DEBUG) {
-      $menu.soyTemplateName = 'main.menu';
+      $menu.soyTemplateName = 'Topbar.menu';
     }
 
-    exports.render.params = ["content", "elementClasses"];
-    exports.render.types = { "content": "any", "elementClasses": "any" };
-    exports.topbar.params = ["site"];
-    exports.topbar.types = { "site": "any" };
-    exports.logo.params = [];
-    exports.logo.types = {};
+    exports.render.params = ["elementClasses", "site"];
+    exports.render.types = { "elementClasses": "any", "site": "any" };
+    exports.logo.params = ["site"];
+    exports.logo.types = { "site": "any" };
     exports.menu.params = ["site"];
     exports.menu.types = { "site": "any" };
     templates = exports;
     return exports;
   });
 
-  var main = function (_Component) {
-    babelHelpers.inherits(main, _Component);
+  var Topbar = function (_Component) {
+    babelHelpers.inherits(Topbar, _Component);
 
-    function main() {
-      babelHelpers.classCallCheck(this, main);
-      return babelHelpers.possibleConstructorReturn(this, (main.__proto__ || Object.getPrototypeOf(main)).apply(this, arguments));
+    function Topbar() {
+      babelHelpers.classCallCheck(this, Topbar);
+      return babelHelpers.possibleConstructorReturn(this, (Topbar.__proto__ || Object.getPrototypeOf(Topbar)).apply(this, arguments));
     }
 
-    return main;
+    return Topbar;
   }(Component);
 
-  Soy.register(main, templates);
-  this['metalNamed']['main'] = this['metalNamed']['main'] || {};
-  this['metalNamed']['main']['main'] = main;
-  this['metalNamed']['main']['templates'] = templates;
-  this['metal']['main'] = templates;
+  Soy.register(Topbar, templates);
+  this['metalNamed']['Topbar'] = this['metalNamed']['Topbar'] || {};
+  this['metalNamed']['Topbar']['Topbar'] = Topbar;
+  this['metalNamed']['Topbar']['templates'] = templates;
+  this['metal']['Topbar'] = templates;
   /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['main'];
-
-  var main = function (_Component) {
-    babelHelpers.inherits(main, _Component);
-
-    function main() {
-      babelHelpers.classCallCheck(this, main);
-      return babelHelpers.possibleConstructorReturn(this, (main.__proto__ || Object.getPrototypeOf(main)).apply(this, arguments));
-    }
-
-    return main;
-  }(Component);
-
-  ;
-
-  Soy.register(main, templates);
-
-  this['metal']['main'] = main;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from index.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace pageIndex.
-     * @public
-     */
-
-    goog.module('pageIndex.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('main.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param27 = function param27() {
-        $header(opt_data, null, opt_ijData);
-        $footer(null, null, opt_ijData);
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param27 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'pageIndex.render';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $header(opt_data, opt_ignored, opt_ijData) {
-      ie_open('header', null, null, 'class', 'header');
-      ie_open('div', null, null, 'class', 'container');
-      ie_open('h1', null, null, 'class', 'header-title');
-      ie_void('span', null, null, 'class', 'icon-16-globe');
-      itext(' Guia do trabalho remoto');
-      ie_close('h1');
-      ie_open('h2', null, null, 'class', 'header-subtitle');
-      var dyn1 = opt_data.site.index.description;
-      if (typeof dyn1 == 'function') dyn1();else if (dyn1 != null) itext(dyn1);
-      ie_close('h2');
-      ie_open('div', null, null, 'class', 'header-cta');
-      ie_open('a', null, null, 'href', '/docs/introducao', 'class', 'btn btn-accent');
-      ie_void('span', null, null, 'class', 'icon-16-circle-arrow');
-      itext('Aprenda');
-      ie_close('a');
-      ie_close('div');
-      ie_close('div');
-      ie_open('p', null, null, 'class', 'gh-btns');
-      ie_void('iframe', null, null, 'src', 'http://ghbtns.com/github-btn.html?user=pragmaticivan&repo=guia-do-trabalho-remoto&type=watch&count=true&size=large', 'allowtransparency', 'true', 'frameborder', '0', 'scrolling', '0', 'width', '150', 'height', '30');
-      ie_void('iframe', null, null, 'src', 'http://ghbtns.com/github-btn.html?user=pragmaticivan&repo=guia-do-trabalho-remoto&type=fork&count=true&size=large', 'allowtransparency', 'true', 'frameborder', '0', 'scrolling', '0', 'width', '150', 'height', '30');
-      ie_close('p');
-      ie_close('header');
-    }
-    exports.header = $header;
-    if (goog.DEBUG) {
-      $header.soyTemplateName = 'pageIndex.header';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $footer(opt_data, opt_ignored, opt_ijData) {
-      ie_open('footer', null, null, 'class', 'footer');
-      ie_open('div', null, null, 'class', 'container');
-      ie_open('div', null, null, 'class', 'row');
-      ie_open('p', null, null, 'class', 'footer-description col-md-6 col-md-offset-2');
-      itext('Copyright \xA9 2015 - Current');
-      ie_close('p');
-      ie_open('p', null, null, 'class', 'footer-description col-md-6');
-      itext('Powered by ');
-      ie_open('a', null, null, 'href', 'http://nomadsonrails.com');
-      itext('Nomads on rails');
-      ie_close('a');
-      ie_close('p');
-      ie_close('div');
-      ie_close('div');
-      ie_close('footer');
-    }
-    exports.footer = $footer;
-    if (goog.DEBUG) {
-      $footer.soyTemplateName = 'pageIndex.footer';
-    }
-
-    exports.render.params = ["site"];
-    exports.render.types = { "site": "any" };
-    exports.header.params = ["site"];
-    exports.header.types = { "site": "any" };
-    exports.footer.params = [];
-    exports.footer.types = {};
-    templates = exports;
-    return exports;
-  });
-
-  var pageIndex = function (_Component) {
-    babelHelpers.inherits(pageIndex, _Component);
-
-    function pageIndex() {
-      babelHelpers.classCallCheck(this, pageIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
-    }
-
-    return pageIndex;
-  }(Component);
-
-  Soy.register(pageIndex, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['pageIndex'] = pageIndex;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
-
-  var pageIndex = function (_Component) {
-    babelHelpers.inherits(pageIndex, _Component);
-
-    function pageIndex() {
-      babelHelpers.classCallCheck(this, pageIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
-    }
-
-    return pageIndex;
-  }(Component);
-
-  ;
-
-  Soy.register(pageIndex, templates);
-
-  this['metal']['pageIndex'] = pageIndex;
 }).call(this);
 'use strict';
 
@@ -22326,7 +23314,7 @@ babelHelpers;
 
     var $templateAlias2 = Soy.getTemplate('Sidebar.incrementaldom', 'render');
 
-    var $templateAlias1 = Soy.getTemplate('main.incrementaldom', 'render');
+    var $templateAlias1 = Soy.getTemplate('Topbar.incrementaldom', 'render');
 
     /**
      * @param {Object<string, *>=} opt_data
@@ -22336,11 +23324,15 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param87 = function param87() {
-        $templateAlias2({ section: opt_data.site.index.children[0] }, null, opt_ijData);
-        $topics(opt_data, null, opt_ijData);
-      };
-      $templateAlias1(soy.$$assignDefaults({ elementClasses: 'docs', content: param87 }, opt_data), null, opt_ijData);
+      ie_open('div', null, null, 'class', 'main');
+      ie_open('main', null, null, 'class', 'content');
+      ie_open('div', null, null, 'class', 'docs');
+      $templateAlias1(soy.$$assignDefaults({ elementClasses: 'topbar-docs' }, opt_data), null, opt_ijData);
+      $templateAlias2({ section: opt_data.site.index.children['docs'] }, null, opt_ijData);
+      $topics(opt_data, null, opt_ijData);
+      ie_close('div');
+      ie_close('main');
+      ie_close('div');
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -22363,7 +23355,7 @@ babelHelpers;
       itext('Guia do trabalho remoto');
       ie_close('h1');
       ie_open('p', null, null, 'class', 'docs-home-top-description');
-      itext('Conjunto de informa\xE7\xF5es, experi\xEAncias e burocracias para poder trabalhar remotamente para empresas do mundo todo ');
+      itext('Conjunto de informa\xE7\xF5es, experi\xEAncias e burocracias para poder trabalhar remotamente para empresas do mundo todo.');
       ie_close('p');
       ie_close('div');
       ie_close('div');
@@ -22371,13 +23363,10 @@ babelHelpers;
       ie_open('div', null, null, 'class', 'container-hybrid docs-home-top-form');
       ie_open('form', null, null, 'action', '/docs/search.html', 'method', 'GET', 'enctype', 'multipart/form-data');
       ie_open('div', null, null, 'class', 'row');
-      ie_open('div', null, null, 'class', 'col-md-7 col-md-offset-3 col-xs-16');
-      $templateAlias3({ maxResults: 3, path: '/docs/', placeholder: 'Busca' }, null, opt_ijData);
+      ie_open('div', null, null, 'class', 'col-xs-14 col-xs-offset-1 col-md-10 col-md-offset-3 col-lg-6 col-lg-offset-5');
+      ie_open('div', null, null, 'class', 'search');
+      $templateAlias3({ maxResults: 3, path: '/docs/', placeholder: 'Buscar' }, null, opt_ijData);
       ie_close('div');
-      ie_open('div', null, null, 'class', 'col-md-3 col-xs-16');
-      ie_open('button', null, null, 'class', 'btn btn-accent btn-block', 'type', 'submit');
-      itext('Buscar');
-      ie_close('button');
       ie_close('div');
       ie_close('div');
       ie_close('form');
@@ -22387,7 +23376,7 @@ babelHelpers;
       ie_open('div', null, null, 'class', 'docs-home-topics');
       ie_open('div', null, null, 'class', 'container-hybrid');
       ie_open('div', null, null, 'class', 'row');
-      ie_open('div', null, null, 'class', 'col-xs-16');
+      ie_open('div', null, null, 'class', 'col-xs-14 col-xs-offset-1 ');
       ie_open('section', null, null, 'class', 'docs-home-middle');
       ie_open('h2', null, null, 'class', 'docs-home-middle-subtitle');
       itext('Escolha um guia');
@@ -22396,21 +23385,22 @@ babelHelpers;
       ie_close('div');
       ie_close('div');
       ie_open('div', null, null, 'class', 'row');
-      ie_open('div', null, null, 'class', 'col-md-13 col-md-offset-3 col-xs-16');
+      ie_open('div', null, null, 'class', 'col-md-12 col-md-offset-2 col-xs-16');
       ie_open('div', null, null, 'class', 'row');
-      var topicList108 = opt_data.site.index.children[0].children;
-      var topicListLen108 = topicList108.length;
-      for (var topicIndex108 = 0; topicIndex108 < topicListLen108; topicIndex108++) {
-        var topicData108 = topicList108[topicIndex108];
-        if (!topicData108.hidden) {
-          ie_open('div', null, null, 'class', 'col-md-6 col-xs-16');
-          ie_open('a', null, null, 'class', 'topic radial-out', 'href', topicData108.url);
+      var childIdList125 = opt_data.page.childIds;
+      var childIdListLen125 = childIdList125.length;
+      for (var childIdIndex125 = 0; childIdIndex125 < childIdListLen125; childIdIndex125++) {
+        var childIdData125 = childIdList125[childIdIndex125];
+        var topic__soy115 = opt_data.page.children[childIdData125];
+        if (!topic__soy115.hidden) {
+          ie_open('div', null, null, 'class', 'col-md-8 col-md-offset-0 col-xs-14 col-xs-offset-1');
+          ie_open('a', null, null, 'class', 'topic radial-out', 'href', topic__soy115.url);
           ie_open('div', null, null, 'class', 'topic-icon');
-          ie_void('span', null, null, 'class', 'icon-16-' + topicData108.icon);
+          ie_void('span', null, null, 'class', 'icon-16-' + topic__soy115.icon);
           ie_close('div');
           ie_open('h3', null, null, 'class', 'topic-title');
-          var dyn5 = topicData108.title;
-          if (typeof dyn5 == 'function') dyn5();else if (dyn5 != null) itext(dyn5);
+          var dyn7 = topic__soy115.title;
+          if (typeof dyn7 == 'function') dyn7();else if (dyn7 != null) itext(dyn7);
           ie_close('h3');
           ie_close('a');
           ie_close('div');
@@ -22430,8 +23420,8 @@ babelHelpers;
 
     exports.render.params = ["site"];
     exports.render.types = { "site": "any" };
-    exports.topics.params = ["site"];
-    exports.topics.types = { "site": "any" };
+    exports.topics.params = ["page"];
+    exports.topics.types = { "page": "any" };
     templates = exports;
     return exports;
   });
@@ -22531,17 +23521,23 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param114 = function param114() {
-        $templateAlias2({ section: opt_data.site.index.children[0] }, null, opt_ijData);
+      var param131 = function param131() {
+        $templateAlias2({ section: opt_data.site.index.children['docs'] }, null, opt_ijData);
         ie_open('div', null, null, 'class', 'sidebar-offset');
         ie_open('div', null, null, 'class', 'container-hybrid docs-home-top');
         ie_open('div', null, null, 'class', 'row');
         ie_open('div', null, null, 'class', 'col-xs-16');
         ie_open('h1', null, null, 'class', 'docs-home-top-title');
-        itext('Guia do trabalho remoto');
+        ie_open('span');
+        itext('Electric');
+        ie_close('span');
+        itext(' Docs');
         ie_close('h1');
         ie_open('p', null, null, 'class', 'docs-home-top-description');
-        itext('Conjunto de informa\xE7\xF5es, experi\xEAncias e burocracias para poder trabalhar remotamente para empresas do mundo todo ');
+        itext('Start learning how to leverage the power of ');
+        var dyn8 = opt_data.site.title;
+        if (typeof dyn8 == 'function') dyn8();else if (dyn8 != null) itext(dyn8);
+        itext('.');
         ie_close('p');
         ie_close('div');
         ie_close('div');
@@ -22553,7 +23549,7 @@ babelHelpers;
         ie_close('div');
         ie_close('div');
       };
-      $templateAlias1(soy.$$assignDefaults({ elementClasses: 'docs', content: param114 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ elementClasses: 'docs', content: param131 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -22618,15 +23614,15 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from index.soy.
+    // This file was automatically generated from necessidades.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace docsAprenda.
+     * @fileoverview Templates in namespace RirUb.
      * @public
      */
 
-    goog.module('docsAprenda.incrementaldom');
+    goog.module('RirUb.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -22647,7 +23643,7 @@ babelHelpers;
     var itext = IncrementalDom.text;
     var iattr = IncrementalDom.attr;
 
-    var $templateAlias1 = Soy.getTemplate('docs.incrementaldom', 'render');
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
 
     /**
      * @param {Object<string, *>=} opt_data
@@ -22657,161 +23653,49 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      opt_data = opt_data || {};
-      var param126 = function param126() {
-        ie_open('article', null, null, 'id', 'intro');
+      var param163 = function param163() {
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
-        itext('Conte\xFAdo');
+        itext('Necessidades b\xE1sicas');
         ie_close('h2');
-        ie_open('ul');
-        ie_open('li');
-        itext('Livros');
-        ie_open('ul');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'http://37signals.com/remote/');
-        itext('Remote. Office Not Required.');
-        ie_close('a');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'http://scottberkun.com/yearwithoutpants/');
-        itext('The Year Without Pants: WordPress.com and the Future of Work');
-        ie_close('a');
-        ie_close('li');
-        ie_close('ul');
-        ie_close('li');
-        ie_open('li');
-        itext('Comunica\xE7\xE3o');
-        ie_open('ul');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://slack.com/');
-        itext('Slack');
-        ie_close('a');
-        ie_close('li');
-        ie_close('ul');
-        ie_close('li');
-        ie_open('li');
-        itext('M\xE9trica de tempo');
-        ie_open('ul');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://wakatime.com/');
-        itext('WakaTime');
-        ie_close('a');
-        ie_close('li');
-        ie_close('ul');
-        ie_close('li');
-        ie_open('li');
-        itext('Gest\xE3o de Projetos');
-        ie_open('ul');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://pivotaltracker.com');
-        itext('PivotalTracker');
-        ie_close('a');
-        ie_close('li');
-        ie_close('ul');
-        ie_close('li');
-        ie_open('li');
-        itext('Comunidades');
-        ie_open('ul');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'http://www.meetup.com/Belo-Horizonte-Remote-Workers/');
-        itext('Remote Workers - Belo Horizonte');
-        ie_close('a');
-        ie_close('li');
-        ie_close('ul');
-        ie_close('li');
-        ie_open('li');
-        itext('Newsletters');
-        ie_close('li');
-        ie_open('li');
-        itext('Podcasts');
-        ie_open('ul');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'http://www.grokpodcast.com/2013/04/02/episodio-86-trabalho-remoto-parte-1-de-4/');
-        itext('Grok Podcast - Trabalho Remoto');
-        ie_close('a');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'http://devnaestrada.com.br/2015/12/25/devnaestrada-remoto-da-depressao.html');
-        itext('DevNaEstrada - Remoto da depress\xE3o');
-        ie_close('a');
-        ie_close('li');
-        ie_close('ul');
-        ie_close('li');
-        ie_open('li');
-        itext('Talks');
-        ie_open('ul');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://www.youtube.com/watch?v=IT6z7VDueF8');
-        itext('Desafios e vantagens do trabalho remoto por Willian Fernandes');
-        ie_close('a');
-        ie_close('li');
-        ie_close('ul');
-        ie_close('li');
-        ie_open('li');
-        itext('Diversos');
-        ie_open('ul');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://github.com/lukasz-madon/awesome-remote-job');
-        itext('Awesome Remote Job');
-        ie_close('a');
-        itext(' - Uma compila\xE7\xE3o de informa\xE7\xF5es sobre trabalho remoto');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://github.com/lerrua/remote-jobs-brazil');
-        itext('Remote Jobs');
-        ie_close('a');
-        itext(' - Lista de empresas com trabalho remoto no Brasil');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://github.com/jessicard/remote-jobs');
-        itext('Remote Jobs Worldwide');
-        ie_close('a');
-        itext(' - Lista de empresas com trabalho remoto Worldwide');
-        ie_close('li');
-        ie_close('ul');
-        ie_close('li');
-        ie_open('li');
-        itext('Artigos');
-        ie_open('ul');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://medium.com/desenvolvimento-front-end-pt-br/o-que-eu-aprendi-em-quase-1-ano-de-home-office-7ed3cfee276a');
-        itext('O que eu aprendi em quase 1 ano de home-office');
-        ie_close('a');
-        ie_close('li');
-        ie_close('ul');
-        ie_close('li');
-        ie_close('ul');
+        ie_open('p');
+        itext('Inicialmente tudo que voc\xEA precisa \xE9 ter seus instrumentos de trabalho, "computador, smartphone (caso seja desenvolvimento mobile), post-it(<3)", um lugar para plugar a tomada do seu computador e uma boa internet. Para algumas empresas tamb\xE9m \xE9 necess\xE1rio que fique sempre online em alguma ferramenta de comunica\xE7\xE3o determinada pela empresa.');
+        ie_close('p');
         ie_close('article');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param126 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param163 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'docsAprenda.render';
+      $render.soyTemplateName = 'RirUb.render';
     }
 
-    exports.render.params = [];
-    exports.render.types = {};
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
     templates = exports;
     return exports;
   });
 
-  var docsAprenda = function (_Component) {
-    babelHelpers.inherits(docsAprenda, _Component);
+  var RirUb = function (_Component) {
+    babelHelpers.inherits(RirUb, _Component);
 
-    function docsAprenda() {
-      babelHelpers.classCallCheck(this, docsAprenda);
-      return babelHelpers.possibleConstructorReturn(this, (docsAprenda.__proto__ || Object.getPrototypeOf(docsAprenda)).apply(this, arguments));
+    function RirUb() {
+      babelHelpers.classCallCheck(this, RirUb);
+      return babelHelpers.possibleConstructorReturn(this, (RirUb.__proto__ || Object.getPrototypeOf(RirUb)).apply(this, arguments));
     }
 
-    return docsAprenda;
+    return RirUb;
   }(Component);
 
-  Soy.register(docsAprenda, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['docsAprenda'] = docsAprenda;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
+  Soy.register(RirUb, templates);
+  this['metalNamed']['necessidades'] = this['metalNamed']['necessidades'] || {};
+  this['metalNamed']['necessidades']['RirUb'] = RirUb;
+  this['metalNamed']['necessidades']['templates'] = templates;
+  this['metal']['necessidades'] = templates;
   /* jshint ignore:end */
 }).call(this);
 'use strict';
@@ -22819,24 +23703,24 @@ babelHelpers;
 (function () {
   var Component = this['metal']['component'];
   var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
+  var templates = this['metal']['necessidades'];
 
-  var docsAprenda = function (_Component) {
-    babelHelpers.inherits(docsAprenda, _Component);
+  var RirUb = function (_Component) {
+    babelHelpers.inherits(RirUb, _Component);
 
-    function docsAprenda() {
-      babelHelpers.classCallCheck(this, docsAprenda);
-      return babelHelpers.possibleConstructorReturn(this, (docsAprenda.__proto__ || Object.getPrototypeOf(docsAprenda)).apply(this, arguments));
+    function RirUb() {
+      babelHelpers.classCallCheck(this, RirUb);
+      return babelHelpers.possibleConstructorReturn(this, (RirUb.__proto__ || Object.getPrototypeOf(RirUb)).apply(this, arguments));
     }
 
-    return docsAprenda;
+    return RirUb;
   }(Component);
 
   ;
 
-  Soy.register(docsAprenda, templates);
+  Soy.register(RirUb, templates);
 
-  this['metal']['docsAprenda'] = docsAprenda;
+  this['metal']['RirUb'] = RirUb;
 }).call(this);
 'use strict';
 
@@ -22852,11 +23736,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace docsContrato.
+     * @fileoverview Templates in namespace RlETC.
      * @public
      */
 
-    goog.module('docsContrato.incrementaldom');
+    goog.module('RlETC.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -22877,7 +23761,7 @@ babelHelpers;
     var itext = IncrementalDom.text;
     var iattr = IncrementalDom.attr;
 
-    var $templateAlias1 = Soy.getTemplate('docs.incrementaldom', 'render');
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
 
     /**
      * @param {Object<string, *>=} opt_data
@@ -22887,44 +23771,53 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      opt_data = opt_data || {};
-      var param131 = function param131() {
-        ie_open('article', null, null, 'id', 'intro');
+      var param154 = function param154() {
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
-        itext('Contrata\xE7\xE3o');
+        itext('Por onde come\xE7ar?');
         ie_close('h2');
         ie_open('p');
-        itext('Para empresas no Brasil, voc\xEA pode continuar com o modelo CLT ou PJ normalmente, mesmo n\xE3o residindo no estado da empresa, embora seja necess\xE1rio ir algumas vezes visitar a empresa para resolver burocracias. Para empresas no exterior \xE9 recomendado que voc\xEA tenha um contrato de presta\xE7\xE3o de servi\xE7os, j\xE1 que voc\xEA n\xE3o \xE9 diretamente contratado no modelo formal. Este contrato ir\xE1 comprovar a origem e legalidade do dinheiro que voc\xEA ir\xE1 receber.');
+        itext('Trabalhar remotamente vem se tornando cada vez mais um objetivo de todos os trabalhadores na \xE1rea de TI ao redor do mundo. Estar alinhado com suas necessidades, controlar seu hor\xE1rio de trabalho, dispor de mais tempo com a fam\xEDlia, viajar e conhecer novos horizontes e principalmente se livrar do stress causado pelo tr\xE2nsito nas grandes cidades. Estes s\xE3o alguns dos motivos que fazem um funcion\xE1rio questionar sua empresa e negociar uma jornada de trabalho remoto.');
+        ie_close('p');
+        ie_open('p');
+        itext('Ap\xF3s completar 2 anos de trabalho remoto, decidi compartilhar um pouco da minha experi\xEAncia relativa a como come\xE7ar a trabalhar remotamente tanto para empresas no Brasil, quanto para empresas no exterior.');
+        ie_close('p');
+        ie_open('p');
+        itext('Todas as informa\xE7\xF5es s\xE3o inicialmente focadas a profissionais de TI, por\xE9m tamb\xE9m podem ser aplicadas a profissionais de outras \xE1reas.');
         ie_close('p');
         ie_close('article');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param131 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param154 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'docsContrato.render';
+      $render.soyTemplateName = 'RlETC.render';
     }
 
-    exports.render.params = [];
-    exports.render.types = {};
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
     templates = exports;
     return exports;
   });
 
-  var docsContrato = function (_Component) {
-    babelHelpers.inherits(docsContrato, _Component);
+  var RlETC = function (_Component) {
+    babelHelpers.inherits(RlETC, _Component);
 
-    function docsContrato() {
-      babelHelpers.classCallCheck(this, docsContrato);
-      return babelHelpers.possibleConstructorReturn(this, (docsContrato.__proto__ || Object.getPrototypeOf(docsContrato)).apply(this, arguments));
+    function RlETC() {
+      babelHelpers.classCallCheck(this, RlETC);
+      return babelHelpers.possibleConstructorReturn(this, (RlETC.__proto__ || Object.getPrototypeOf(RlETC)).apply(this, arguments));
     }
 
-    return docsContrato;
+    return RlETC;
   }(Component);
 
-  Soy.register(docsContrato, templates);
+  Soy.register(RlETC, templates);
   this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['docsContrato'] = docsContrato;
+  this['metalNamed']['index']['RlETC'] = RlETC;
   this['metalNamed']['index']['templates'] = templates;
   this['metal']['index'] = templates;
   /* jshint ignore:end */
@@ -22936,22 +23829,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['index'];
 
-  var docsContrato = function (_Component) {
-    babelHelpers.inherits(docsContrato, _Component);
+  var RlETC = function (_Component) {
+    babelHelpers.inherits(RlETC, _Component);
 
-    function docsContrato() {
-      babelHelpers.classCallCheck(this, docsContrato);
-      return babelHelpers.possibleConstructorReturn(this, (docsContrato.__proto__ || Object.getPrototypeOf(docsContrato)).apply(this, arguments));
+    function RlETC() {
+      babelHelpers.classCallCheck(this, RlETC);
+      return babelHelpers.possibleConstructorReturn(this, (RlETC.__proto__ || Object.getPrototypeOf(RlETC)).apply(this, arguments));
     }
 
-    return docsContrato;
+    return RlETC;
   }(Component);
 
   ;
 
-  Soy.register(docsContrato, templates);
+  Soy.register(RlETC, templates);
 
-  this['metal']['docsContrato'] = docsContrato;
+  this['metal']['RlETC'] = RlETC;
 }).call(this);
 'use strict';
 
@@ -22967,11 +23860,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace docsIntroducaoCoisaCertaHtml.
+     * @fileoverview Templates in namespace oxlUM.
      * @public
      */
 
-    goog.module('docsIntroducaoCoisaCertaHtml.incrementaldom');
+    goog.module('oxlUM.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -22992,7 +23885,7 @@ babelHelpers;
     var itext = IncrementalDom.text;
     var iattr = IncrementalDom.attr;
 
-    var $templateAlias1 = Soy.getTemplate('docs.incrementaldom', 'render');
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
 
     /**
      * @param {Object<string, *>=} opt_data
@@ -23002,9 +23895,8 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      opt_data = opt_data || {};
-      var param136 = function param136() {
-        ie_open('article', null, null, 'id', 'intro');
+      var param145 = function param145() {
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Trabalho remoto \xE9 a coisa certa para voc\xEA?');
         ie_close('h2');
@@ -23044,158 +23936,41 @@ babelHelpers;
         itext('Algumas pessoas conseguem trabalhar tranquilamente em sua casa, outras, necessitam de um escrit\xF3rio espec\xEDfico pra isso, onde conseguem ter contato com outros profissionais. Existem pessoas que utilizam essa oportunidade de trabalho para viajar pelo mundo virando \'n\xF4mades digitais\'.');
         ie_close('p');
         ie_close('article');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param136 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param145 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'docsIntroducaoCoisaCertaHtml.render';
+      $render.soyTemplateName = 'oxlUM.render';
     }
 
-    exports.render.params = [];
-    exports.render.types = {};
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
     templates = exports;
     return exports;
   });
 
-  var docsIntroducaoCoisaCertaHtml = function (_Component) {
-    babelHelpers.inherits(docsIntroducaoCoisaCertaHtml, _Component);
+  var oxlUM = function (_Component) {
+    babelHelpers.inherits(oxlUM, _Component);
 
-    function docsIntroducaoCoisaCertaHtml() {
-      babelHelpers.classCallCheck(this, docsIntroducaoCoisaCertaHtml);
-      return babelHelpers.possibleConstructorReturn(this, (docsIntroducaoCoisaCertaHtml.__proto__ || Object.getPrototypeOf(docsIntroducaoCoisaCertaHtml)).apply(this, arguments));
+    function oxlUM() {
+      babelHelpers.classCallCheck(this, oxlUM);
+      return babelHelpers.possibleConstructorReturn(this, (oxlUM.__proto__ || Object.getPrototypeOf(oxlUM)).apply(this, arguments));
     }
 
-    return docsIntroducaoCoisaCertaHtml;
+    return oxlUM;
   }(Component);
 
-  Soy.register(docsIntroducaoCoisaCertaHtml, templates);
+  Soy.register(oxlUM, templates);
   this['metalNamed']['coisa-certa'] = this['metalNamed']['coisa-certa'] || {};
-  this['metalNamed']['coisa-certa']['docsIntroducaoCoisaCertaHtml'] = docsIntroducaoCoisaCertaHtml;
+  this['metalNamed']['coisa-certa']['oxlUM'] = oxlUM;
   this['metalNamed']['coisa-certa']['templates'] = templates;
   this['metal']['coisa-certa'] = templates;
   /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from index.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace docsIntroducao.
-     * @public
-     */
-
-    goog.module('docsIntroducao.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('docs.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      opt_data = opt_data || {};
-      var param141 = function param141() {
-        ie_open('article', null, null, 'id', 'intro');
-        ie_open('h2');
-        itext('Introdu\xE7\xE3o');
-        ie_close('h2');
-        ie_open('p');
-        itext('Trabalhar remotamente vem se tornando cada vez mais um objetivo de todos os trabalhadores na \xE1rea de TI ao redor do mundo. Estar alinhado com suas necessidades, controlar seu hor\xE1rio de trabalho, dispor de mais tempo com a fam\xEDlia, viajar e conhecer novos horizontes e principalmente se livrar do stress causado pelo tr\xE2nsito nas grandes cidades. Estes s\xE3o alguns dos motivos que fazem um funcion\xE1rio questionar sua empresa e negociar uma jornada de trabalho remoto.');
-        ie_close('p');
-        ie_open('p');
-        itext('Ap\xF3s completar 2 anos de trabalho remoto, decidi compartilhar um pouco da minha experi\xEAncia relativa a como come\xE7ar a trabalhar remotamente tanto para empresas no Brasil, quanto para empresas no exterior.');
-        ie_close('p');
-        ie_open('p');
-        itext('Todas as informa\xE7\xF5es s\xE3o inicialmente focadas a profissionais de TI, por\xE9m tamb\xE9m podem ser aplicadas a profissionais de outras \xE1reas.');
-        ie_close('p');
-        ie_close('article');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param141 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'docsIntroducao.render';
-    }
-
-    exports.render.params = [];
-    exports.render.types = {};
-    templates = exports;
-    return exports;
-  });
-
-  var docsIntroducao = function (_Component) {
-    babelHelpers.inherits(docsIntroducao, _Component);
-
-    function docsIntroducao() {
-      babelHelpers.classCallCheck(this, docsIntroducao);
-      return babelHelpers.possibleConstructorReturn(this, (docsIntroducao.__proto__ || Object.getPrototypeOf(docsIntroducao)).apply(this, arguments));
-    }
-
-    return docsIntroducao;
-  }(Component);
-
-  Soy.register(docsIntroducao, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['docsIntroducao'] = docsIntroducao;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
-
-  var docsIntroducao = function (_Component) {
-    babelHelpers.inherits(docsIntroducao, _Component);
-
-    function docsIntroducao() {
-      babelHelpers.classCallCheck(this, docsIntroducao);
-      return babelHelpers.possibleConstructorReturn(this, (docsIntroducao.__proto__ || Object.getPrototypeOf(docsIntroducao)).apply(this, arguments));
-    }
-
-    return docsIntroducao;
-  }(Component);
-
-  ;
-
-  Soy.register(docsIntroducao, templates);
-
-  this['metal']['docsIntroducao'] = docsIntroducao;
 }).call(this);
 'use strict';
 
@@ -23204,769 +23979,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['coisa-certa'];
 
-  var docsIntroducaoCoisaCertaHtml = function (_Component) {
-    babelHelpers.inherits(docsIntroducaoCoisaCertaHtml, _Component);
+  var oxlUM = function (_Component) {
+    babelHelpers.inherits(oxlUM, _Component);
 
-    function docsIntroducaoCoisaCertaHtml() {
-      babelHelpers.classCallCheck(this, docsIntroducaoCoisaCertaHtml);
-      return babelHelpers.possibleConstructorReturn(this, (docsIntroducaoCoisaCertaHtml.__proto__ || Object.getPrototypeOf(docsIntroducaoCoisaCertaHtml)).apply(this, arguments));
+    function oxlUM() {
+      babelHelpers.classCallCheck(this, oxlUM);
+      return babelHelpers.possibleConstructorReturn(this, (oxlUM.__proto__ || Object.getPrototypeOf(oxlUM)).apply(this, arguments));
     }
 
-    return docsIntroducaoCoisaCertaHtml;
+    return oxlUM;
   }(Component);
 
   ;
 
-  Soy.register(docsIntroducaoCoisaCertaHtml, templates);
+  Soy.register(oxlUM, templates);
 
-  this['metal']['docsIntroducaoCoisaCertaHtml'] = docsIntroducaoCoisaCertaHtml;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from necessidades.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace docsIntroducaoNecessidadesHtml.
-     * @public
-     */
-
-    goog.module('docsIntroducaoNecessidadesHtml.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('docs.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      opt_data = opt_data || {};
-      var param146 = function param146() {
-        ie_open('article', null, null, 'id', 'intro');
-        ie_open('h2');
-        itext('Necessidades');
-        ie_close('h2');
-        ie_open('p');
-        itext('Inicialmente tudo que voc\xEA precisa \xE9 ter seus instrumentos de trabalho, "computador, smartphone (caso seja desenvolvimento mobile), post-it(<3)", um lugar para plugar a tomada do seu computador e uma boa internet. Para algumas empresas tamb\xE9m \xE9 necess\xE1rio que fique sempre online em alguma ferramenta de comunica\xE7\xE3o determinada pela empresa.');
-        ie_close('p');
-        ie_close('article');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param146 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'docsIntroducaoNecessidadesHtml.render';
-    }
-
-    exports.render.params = [];
-    exports.render.types = {};
-    templates = exports;
-    return exports;
-  });
-
-  var docsIntroducaoNecessidadesHtml = function (_Component) {
-    babelHelpers.inherits(docsIntroducaoNecessidadesHtml, _Component);
-
-    function docsIntroducaoNecessidadesHtml() {
-      babelHelpers.classCallCheck(this, docsIntroducaoNecessidadesHtml);
-      return babelHelpers.possibleConstructorReturn(this, (docsIntroducaoNecessidadesHtml.__proto__ || Object.getPrototypeOf(docsIntroducaoNecessidadesHtml)).apply(this, arguments));
-    }
-
-    return docsIntroducaoNecessidadesHtml;
-  }(Component);
-
-  Soy.register(docsIntroducaoNecessidadesHtml, templates);
-  this['metalNamed']['necessidades'] = this['metalNamed']['necessidades'] || {};
-  this['metalNamed']['necessidades']['docsIntroducaoNecessidadesHtml'] = docsIntroducaoNecessidadesHtml;
-  this['metalNamed']['necessidades']['templates'] = templates;
-  this['metal']['necessidades'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['necessidades'];
-
-  var docsIntroducaoNecessidadesHtml = function (_Component) {
-    babelHelpers.inherits(docsIntroducaoNecessidadesHtml, _Component);
-
-    function docsIntroducaoNecessidadesHtml() {
-      babelHelpers.classCallCheck(this, docsIntroducaoNecessidadesHtml);
-      return babelHelpers.possibleConstructorReturn(this, (docsIntroducaoNecessidadesHtml.__proto__ || Object.getPrototypeOf(docsIntroducaoNecessidadesHtml)).apply(this, arguments));
-    }
-
-    return docsIntroducaoNecessidadesHtml;
-  }(Component);
-
-  ;
-
-  Soy.register(docsIntroducaoNecessidadesHtml, templates);
-
-  this['metal']['docsIntroducaoNecessidadesHtml'] = docsIntroducaoNecessidadesHtml;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from index.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace docsPagamento.
-     * @public
-     */
-
-    goog.module('docsPagamento.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('docs.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      opt_data = opt_data || {};
-      var param151 = function param151() {
-        ie_open('article', null, null, 'id', 'intro');
-        ie_open('h2');
-        itext('Introdu\xE7\xE3o');
-        ie_close('h2');
-        ie_open('p');
-        itext('Aqui vem uma das partes mais importantes, que al\xE9m de garantirem toda a seguran\xE7a do processo, podem lhe ajudar de algumas maneiras na hora de declarar todo o imposto referente ao valor recebido.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', 'paypal');
-        ie_open('h2');
-        itext('Paypal');
-        ie_close('h2');
-        ie_open('p');
-        itext('O primeiro e mais conhecido por todos \xE9 o ');
-        ie_open('a', null, null, 'href', 'https://www.paypal.com/');
-        itext('Paypal');
-        ie_close('a');
-        itext(', embora MUITAS pessoas falem de hist\xF3rias, medos ao usar para receber pagamentos do exterior e coisas do tipo... \xC9 uma ferramenta muito boa, segura e eficiente. Existem alguns relatos de pessoas que tiveram problemas e todo o seu dinheiro foi congelado sem volta. O que eu tenho a dizer sobre isso \xE9: Tome cuidado com a empresa que voc\xEA est\xE1 fazendo neg\xF3cio, \xE9 justamente ela que pode bloquear ou criar uma disputa pelo seu pagamento.');
-        ie_close('p');
-        ie_open('p');
-        itext('\xC9 poss\xEDvel ter uma conta facilmente no Brasil. Por\xE9m voc\xEA s\xF3 pode cadastrar cart\xF5es Brasileiros. Caso voc\xEA tenha conta nos EUA, \xE9 necess\xE1rio ter uma conta extra de Paypal para trabalhar e transitar facilmente o dinheiro com mais regalias. \xC9 necess\xE1rio lembrar que ter uma conta nos EUA n\xE3o significa que voc\xEA legalmente pode receber dinheiro de empresas sem permiss\xE3o para trabalho, ent\xE3o pense duas vezes.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', 'xoom');
-        ie_open('h2');
-        itext('Xoom');
-        ie_close('h2');
-        ie_open('p');
-        ie_open('a', null, null, 'href', 'https://www.xoom.com/');
-        itext('Xoom');
-        ie_close('a');
-        itext(' \xE9 um dos mais adorados por todos os freelancers, \xE9 t\xE3o simples que parece at\xE9 n\xE3o ser de verdade. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente no mesmo dia, em algumas horas. Trata-se de um intermediador de envios entre pa\xEDses, onde a empresa que lhe contratou paga o valor na sua moeda nacional e voc\xEA recebe em reais na sua conta.');
-        ie_close('p');
-        ie_open('p');
-        itext('Depois de se cadastrar, a empresa pode enviar at\xE9 US$ 2.900 dentro de um per\xEDodo de 24 horas, at\xE9 US$ 6.000 dentro de 30 dias e at\xE9 US$ 9.999 em 180 dias. Os limites de envio aplicam-se \xE0s atividades combinadas de todas as contas que tenham o mesmo endere\xE7o f\xEDsico. Por esse motivo, a Xoom recomenda manter uma conta por fam\xEDlia para o limite de envio ser gerenciado com mais facilidade.');
-        ie_close('p');
-        ie_open('p');
-        itext('Cada transa\xE7\xE3o da Xoom tem um limite de US$ 2.999, mas a empresa pode enviar at\xE9 US$ 6.000 em um per\xEDodo de 30 dias (at\xE9 $60.000 em 180 dias) ao fornecer informa\xE7\xF5es adicionais que nos ajudem a garantir uma transfer\xEAncia de fundos segura, mantendo-se em conformidade com regulamentos federais e estaduais. Tais informa\xE7\xF5es ser\xE3o solicitadas toda vez que voc\xEA tentar enviar uma quantia maior que seu limite atual, por\xE9m voc\xEA pode economizar tempo contactando a Equipe do Xoom para Verifica\xE7\xE3o e fornecer essas informa\xE7\xF5es antecipadamente.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', 'transferwise');
-        ie_open('h2');
-        itext('TransferWise');
-        ie_close('h2');
-        ie_open('p');
-        ie_open('a', null, null, 'href', 'https://transferwise.com/u/344b08');
-        itext('TransferWise');
-        ie_close('a');
-        itext(' \xE9 uma nova plataforma um pouco parecida com o Xoom. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente 1 dia depois caso a empresa seja Americana. Trata-se de um intermediador de envio entre pa\xEDses, por\xE9m o diferencial \xE9 que esta empresa garante envio do dinheiro com cota\xE7\xF5es bem melhores. Retirando aquele monte de encargos criados por bancos. Voc\xEA acaba econiomizando 90% em encargos "desnecess\xE1rios".');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', 'swift');
-        ie_open('h2');
-        itext('Swift');
-        ie_close('h2');
-        ie_open('p');
-        itext('Segundo um levantamento feito na comunidade, \xE9 a mais comum entre as pessoas que trabalham remotamente para empresas no exterior. \xC9 poss\xEDvel receber dinheiro do exterior atrav\xE9s de uma transfer\xEAncia banc\xE1ria aceita em qualquer ag\xEAncia. \xC9 necess\xE1rio enviar todos os dados referentes a transa\xE7\xE3o para que a empresa possa efetuar uma transa\xE7\xE3o de envio de um banco no exterior para um banco no Brasil.');
-        ie_close('p');
-        ie_open('p');
-        itext('Ademais, ambas as institui\xE7\xF5es cobrar\xE3o pelo servi\xE7o. Assim, quem estiver no exterior desembolsar\xE1 uma taxa para que o dinheiro chegue ao destino pretendido, mesmo n\xE3o sendo correntista do banco contatado. A tarifa \xE9 conhecida como ordem de pagamento expedida. Uma vez no Brasil, a ag\xEAncia que recebeu o montante tamb\xE9m descontar\xE1 uma determinada quantia do dinheiro que ir\xE1 disponibilizar ao cliente.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('Dados necess\xE1rios');
-        ie_close('strong');
-        ie_close('p');
-        ie_open('p');
-        itext('Apesar de nem todos serem precisos, \xE9 legal enviar todos esses para que seu empregador tenha todas as informa\xE7\xF5es necess\xE1rias:');
-        ie_close('p');
-        ie_open('ul');
-        ie_open('li');
-        ie_open('p');
-        itext('Nome completo');
-        ie_close('p');
-        ie_close('li');
-        ie_open('li');
-        ie_open('p');
-        itext('Documento de Identifica\xE7\xE3o');
-        ie_close('p');
-        ie_close('li');
-        ie_open('li');
-        ie_open('p');
-        itext('Endere\xE7o Residencial');
-        ie_close('p');
-        ie_close('li');
-        ie_open('li');
-        ie_open('p');
-        itext('Motivo da remessa');
-        ie_close('p');
-        ie_close('li');
-        ie_open('li');
-        ie_open('p');
-        itext('Banco + C\xF3digo do banco');
-        ie_close('p');
-        ie_close('li');
-        ie_open('li');
-        ie_open('p');
-        itext('Ag\xEAncia');
-        ie_close('p');
-        ie_close('li');
-        ie_open('li');
-        ie_open('p');
-        itext('N\xFAmero da Conta');
-        ie_close('p');
-        ie_close('li');
-        ie_open('li');
-        ie_open('p');
-        itext('SWIFT Code (Referente a ag\xEAncia autorizada a fazer c\xE2mbio no Brasil) (Procure seu SWIFT code ');
-        ie_open('a', null, null, 'href', 'http://www.theswiftcodes.com/brazil/');
-        itext('aqui');
-        ie_close('a');
-        itext('. )');
-        ie_close('p');
-        ie_close('li');
-        ie_open('li');
-        ie_open('p');
-        itext('Sugiro que tamb\xE9m envie o IBAN (Leia abaixo o que isso significa)');
-        ie_close('p');
-        ie_close('li');
-        ie_close('ul');
-        ie_open('p');
-        itext('OBS: Para SWIFT Code, sugiro que procure o banco mais perto da sua cidade, caso precise resolver alguma burocracia.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('IBAN');
-        ie_close('strong');
-        ie_close('p');
-        ie_open('p');
-        itext('IBAN (International Bank Account Number) \xE9 um sistema internacional de identifica\xE7\xE3o de bancos criado para facilitar a comunica\xE7\xE3o e processamento entre transa\xE7\xF5es com redu\xE7\xE3o de risco. Inicialmente utilizado na Europa, est\xE1 cada vez mais sendo adotado por outros pa\xEDses, alguns bancos nos Estados Unidos por exemplo j\xE1 aceitam esse tipo de c\xF3digo ao inv\xE9s do SWIFT. At\xE9 o fim de 2014, 66 pa\xEDses estariam usando IBAN como sistema principal.');
-        ie_close('p');
-        ie_open('p');
-        itext('Gere seu IBAN aqui: ');
-        ie_open('a', null, null, 'href', 'http://geradordeiban.detalhado.com/#/make');
-        itext('http://geradordeiban.detalhado.com/#/make');
-        ie_close('a');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('Desvantagens');
-        ie_close('strong');
-        ie_close('p');
-        ie_open('p');
-        itext('A desvantagem deste tipo de opera\xE7\xE3o \xE9 a cobran\xE7a de custos dos dois lados da opera\xE7\xE3o. Outro ponto negativo \xE9 o tempo de espera para conseguir liquidar a remessa, dependendo do banco pode demorar at\xE9 3 dias.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', 'bitcoin');
-        ie_open('h2');
-        itext('Bitcoin');
-        ie_close('h2');
-        ie_open('p');
-        itext('Bitcoin \xE9 minha op\xE7\xE3o preferida, muitos profissionais de TI ainda n\xE3o perceberam todas as vantagens, uma delas \xE9 trafegar dinheiro de um pa\xEDs para o outro sem precisar pagar tantas taxas e passar por tantas burocracias.');
-        ie_close('p');
-        ie_open('p');
-        itext('Segundo a Wikipedia, Bitcoin \xE9 uma criptomoeda cuja cria\xE7\xE3o e transfer\xEAncia \xE9 baseada em protocolos c\xF3digo fonte aberto de criptografia que \xE9 independente de qualquer autoridade central. Um bitcoin pode ser transferido por um computador ou smartphone sem recurso a uma institui\xE7\xE3o financeira intermedi\xE1ria.');
-        ie_close('p');
-        ie_open('p');
-        itext('Toda a rede \xE9 sustentada pelos usu\xE1rios atrav\xE9s de p2p, logo todo o processo de seguran\xE7a, valida\xE7\xE3o e "minera\xE7\xE3o" \xE9 feito atrav\xE9s de v\xE1rios computadores na grande rede.');
-        ie_close('p');
-        ie_open('p');
-        itext('\xC9 necess\xE1rio ter uma carteira(wallet) para guardar seus bitcoins. Abaixo segue algumas wallets que a comunidade costuma utilizar:');
-        ie_close('p');
-        ie_open('p');
-        itext('Hive - ');
-        ie_open('a', null, null, 'href', 'https://hivewallet.com/');
-        itext('https://hivewallet.com/');
-        ie_close('a');
-        ie_close('p');
-        ie_open('p');
-        itext('Xapo - ');
-        ie_open('a', null, null, 'href', 'https://xapo.com/');
-        itext('https://xapo.com/');
-        ie_close('a');
-        ie_close('p');
-        ie_open('p');
-        itext('Coinbase - ');
-        ie_open('a', null, null, 'href', 'https://www.coinbase.com/join/5637f7ae01653a4452000087');
-        itext('https://www.coinbase.com/');
-        ie_close('a');
-        ie_close('p');
-        ie_open('p');
-        itext('Uphold - ');
-        ie_open('a', null, null, 'href', 'https://uphold.com/signup?utm_campaign=refprog&utm_medium=pragmaticivan');
-        itext('https://uphold.com/');
-        ie_close('a');
-        ie_close('p');
-        ie_open('p');
-        itext('O fluxo atual que se costuma utilizar \xE9 bem simples:');
-        ie_close('p');
-        ie_open('p');
-        itext('A empresa compra bitcoins atrav\xE9s do ');
-        ie_open('a', null, null, 'href', 'https://www.coinbase.com/join/5637f7ae01653a4452000087');
-        itext('Coinbase');
-        ie_close('a');
-        itext(' ou outro servi\xE7o dispon\xEDvel no pa\xEDs em que a empresa est\xE1 localizada, envia para sua wallet e automaticamente voc\xEA detem criptomoedas equivalentes ao valor que voc\xEA costuam receber como sal\xE1rio.');
-        ie_close('p');
-        ie_open('p');
-        itext('Ap\xF3s isso voc\xEA pode trocar seus bitcoins em servi\xE7os no Brasil, indico utilizar o ');
-        ie_open('a', null, null, 'href', 'https://foxbit.exchange/');
-        itext('Foxbit');
-        ie_close('a');
-        itext('. Voc\xEA envia seus bitcoins para uma wallet em um desses servi\xE7os e solicita vender seus bitcoins, ap\xF3s isso \xE9 s\xF3 solicitar enviar seu dinheiro em Reais para sua conta, bem r\xE1pido e no mesmo dia, e as taxas s\xE3o BEM mais amigu\xE1veis que opera\xE7\xF5es entre bancos, quase que insignificantes comparadas a esses outros meios.');
-        ie_close('p');
-        ie_open('p');
-        itext('Segue alguns tutoriais ensinando como utilizar as funcionalidades da FOXBIT:');
-        ie_close('p');
-        ie_open('p');
-        ie_open('a', null, null, 'href', 'https://www.youtube.com/watch?v=GCoe-thmHJk');
-        itext('Criar conta na FOXBIT');
-        ie_close('a');
-        ie_close('p');
-        ie_open('p');
-        ie_open('a', null, null, 'href', 'https://www.youtube.com/watch?v=loAJUYu9UHY');
-        itext('Sacar bitcoins na FOXBIT');
-        ie_close('a');
-        ie_close('p');
-        ie_open('p');
-        ie_open('a', null, null, 'href', 'https://www.youtube.com/watch?v=2xRDkFDyYQY');
-        itext('Comprar bitcoins na FOXBIT');
-        ie_close('a');
-        ie_close('p');
-        ie_open('p');
-        itext('Alguns servi\xE7os no qual voc\xEA pode utilizar seus bitcoins:');
-        ie_close('p');
-        ie_open('ul');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'http://www.gyft.com/bitcoin/');
-        itext('Gyft');
-        ie_close('a');
-        itext(' - Um dos mais interessantes, voc\xEA compra v\xE1rios coupons com bitcoin, bem interessante para quem viaja para os EUA e quer fazer umas compras.');
-        ie_close('li');
-        ie_close('ul');
-        ie_open('p');
-        ie_open('a', null, null, 'href', 'https://www.e-coin.io/?ref=1070214a1100452b810918b5030a994d#sthash.JMVP7M1H.dpuf');
-        itext('E-coin Card');
-        ie_close('a');
-        itext(' - Fant\xE1stico sistema onde voc\xEA deposita seus bitcoins e eles caem como cr\xE9dito em um cart\xE3o de debito prepago, onde voc\xEA pode utilizar em qualquer lugar que aceite bandeira Visa, inclusive compras online.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('a', null, null, 'href', 'https://uphold.com/signup?utm_campaign=refprog&utm_medium=pragmaticivan');
-        itext('Uphold');
-        ie_close('a');
-        itext(' - Permite enviar seus bitcoins e fazer com que eles permane\xE7am com o valor atual, evitando a grande volatilidade da cripto moeda.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('a', null, null, 'href', 'https://bitpay.com/');
-        itext('Bitpay');
-        ie_close('a');
-        itext(' - Integra\xE7\xE3o de pagamentos para aceitar bitcoin.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('a', null, null, 'href', 'http://usebitcoins.info/');
-        itext('Usecoin');
-        ie_close('a');
-        itext(' - Lista de sites no qual voc\xEA pode gastar seus bitcoins.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('a', null, null, 'href', 'https://www.coinbase.com/join/5637f7ae01653a4452000087');
-        itext('Coinbase');
-        ie_close('a');
-        itext(' - Um dos pioneiros e mais seguros sistemas de compra e venda de bitcoins nos EUA.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('a', null, null, 'href', 'https://localbitcoins.com/');
-        itext('LocalBitcoins');
-        ie_close('a');
-        itext(' - Um sistema de compra e venda de bitcoins com v\xE1rios meios de pagamento, inclusive em dinheiro vivo.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('a', null, null, 'href', 'http://www.paguecombitcoin.com/');
-        itext('Pague com Bitcoin');
-        ie_close('a');
-        itext(' - Incr\xEDvel! Pague qualquer boleto com Bitcoin. Desde compras em e-commerce, incluindo mercado livre, at\xE9 fatura do cart\xE3o do seu cr\xE9dito.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', 'bitwage');
-        ie_open('h2');
-        itext('Bitwage');
-        ie_close('h2');
-        ie_open('p');
-        ie_open('a', null, null, 'href', 'https://www.bitwage.com/referral/XZUSDRB366TE');
-        itext('Bitwage');
-        ie_close('a');
-        itext(' \xE9 um servi\xE7o que permite o recebimento de pagamentos em Bitcoins de forma indireta ao empregador, ou seja, o empregador n\xE3o compra Bitcoins e nem precisa ter conta na Bitwage, ele apenas deposita o pagamento em uma conta banc\xE1ria dos EUA, do Canad\xE1 e/ou da Europa e em aproximadamente 2 dias este montante, com uma redu\xE7\xE3o de apenas 1% por transa\xE7\xE3o, estar\xE1 em sua carteira Bitcoin.');
-        ie_close('p');
-        ie_open('p');
-        itext('O fluxo para utiliza\xE7\xE3o \xE9 bem simples, veja s\xF3:');
-        ie_close('p');
-        ie_open('p');
-        itext('1] Voc\xEA faz o cadastro no site da ');
-        ie_open('a', null, null, 'href', 'https://www.bitwage.com/referral/XZUSDRB366TE');
-        itext('Bitwage');
-        ie_close('a');
-        itext('.');
-        ie_close('p');
-        ie_open('p');
-        itext('2] Ap\xF3s o cadastro, voc\xEA precisa fazer o Set Up como um Worker. Neste momento voc\xEA ir\xE1 passar informa\xE7\xF5es pessoais para an\xE1lise e aprova\xE7\xE3o dos seus dados, isso basicamente serve para segura\xE7a da ferramenta.');
-        ie_close('p');
-        ie_open('p');
-        itext('3] Ap\xF3s ser aprovado como um Worker, voc\xEA ir\xE1 cadastrar o seu Employer e tamb\xE9m um Distribution, que basicamente \xE9 a sua carteira Bitcoin.');
-        ie_close('p');
-        ie_open('p');
-        itext('4] E finalmente, ap\xF3s finalizar este processo de Set Up, que geralmente leva entre 2 e 3 dias \xFAteis para ser finalizado completamente, voc\xEA ir\xE1 receber os dados de uma conta banc\xE1ria criada para voc\xEA, nos EUA, no Canad\xE1 ou na Europa, e basicamente, ser\xE3o estes os dados que voc\xEA vai passar para seu empregador depositar os pagamentos.');
-        ie_close('p');
-        ie_open('p');
-        itext('Outra coisa legal \xE9 que eles d\xE3o bastante aten\xE7\xE3o para o p\xFAblico do Brasil, sendo assim, basta solicitar atrav\xE9s dos canais de comunica\xE7\xE3o deles para que o di\xE1logo seja em Portugu\xEAs, e prontamente ir\xE3o colocar voc\xEA em contato com o atendimento brasileiro.');
-        ie_close('p');
-        ie_open('p');
-        itext('E s\xF3 para finalizar, segue abaixo alguns v\xEDdeos explicativos:');
-        ie_close('p');
-        ie_open('ul');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://www.youtube.com/watch?v=_JqTHW7X13Q');
-        itext('Bitwage & the future of payroll using bitcoin - YouTube');
-        ie_close('a');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://www.youtube.com/watch?v=2ln6AiLrUjo');
-        itext('Recebendo pagamentos f\xE1cil com a Bitwage! - YouTube');
-        ie_close('a');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://www.youtube.com/watch?v=VqepklppjUU');
-        itext('O que \xE9 a Bitwage - YouTube - Legendado');
-        ie_close('a');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://www.youtube.com/watch?v=0v3Oe7spihs');
-        itext('Como trampar como freelancer nos EUA - YouTube');
-        ie_close('a');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://www.youtube.com/watch?v=fxP0lc42xIY');
-        itext('Receba pagamentos do exterior por Bitcoin');
-        ie_close('a');
-        ie_close('li');
-        ie_close('ul');
-        ie_close('article');
-        ie_open('article', null, null, 'id', 'payoneer');
-        ie_open('h2');
-        itext('Payoneer');
-        ie_close('h2');
-        ie_open('p');
-        ie_open('a', null, null, 'href', 'http://www.payoneer.com/');
-        itext('Payoneer');
-        ie_close('a');
-        itext(' \xE9 uma forma de receber dinheiro sem precisar trazer o valor monet\xE1rio para o Brasil. \xC9 simplesmente criada uma conta no Bank of American que representa sua conta online. Voc\xEA recebe um cart\xE3o de cr\xE9dito pr\xE9-pago no qual est\xE1 ligado a essa conta.');
-        ie_close('p');
-        ie_open('p');
-        itext('Empresas Americanas podem depositar dinheiro diretamente nesta conta, gerando cr\xE9ditos no seu cart\xE3o, que pode ser utilizado em ATMs e compras online.');
-        ie_close('p');
-        ie_open('p');
-        itext('Ao realizar saques em ATMs lhe ser\xE1 cobrado uma taxa de conveni\xEAncia, que nada mais \xE9 que uma taxa de convers\xE3o cambial. Esta taxa varia de acordo com o ATM no qual voc\xEA est\xE1 sacando, mas fica entre 12 a 20 reais por saque, fora que alguns ATMs tamb\xE9m limitam o saque di\xE1rio.');
-        ie_close('p');
-        ie_open('p');
-        itext('Outra desvantagem do Payoneer \xE9 que alguns servi\xE7os online como Dropbox e iTunes v\xE3o rejeitar seu cart\xE3o, nesses casos voc\xEA pode vincul\xE1-lo ao Paypal para contornar o problema.');
-        ie_close('p');
-        ie_open('p');
-        itext('Bem interessante essa forma de receber, por\xE9m voc\xEA n\xE3o pode movimentar a conta livremente, apenas pode transferir dinheiro para outros usu\xE1rios de Payoneer. \xC9 um dos principais meios de pagamentos utilizado pelo ');
-        ie_open('a', null, null, 'href', 'https://www.odesk.com/');
-        itext('ODesk');
-        ie_close('a');
-        itext('.');
-        ie_close('p');
-        ie_close('article');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param151 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'docsPagamento.render';
-    }
-
-    exports.render.params = [];
-    exports.render.types = {};
-    templates = exports;
-    return exports;
-  });
-
-  var docsPagamento = function (_Component) {
-    babelHelpers.inherits(docsPagamento, _Component);
-
-    function docsPagamento() {
-      babelHelpers.classCallCheck(this, docsPagamento);
-      return babelHelpers.possibleConstructorReturn(this, (docsPagamento.__proto__ || Object.getPrototypeOf(docsPagamento)).apply(this, arguments));
-    }
-
-    return docsPagamento;
-  }(Component);
-
-  Soy.register(docsPagamento, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['docsPagamento'] = docsPagamento;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
-
-  var docsPagamento = function (_Component) {
-    babelHelpers.inherits(docsPagamento, _Component);
-
-    function docsPagamento() {
-      babelHelpers.classCallCheck(this, docsPagamento);
-      return babelHelpers.possibleConstructorReturn(this, (docsPagamento.__proto__ || Object.getPrototypeOf(docsPagamento)).apply(this, arguments));
-    }
-
-    return docsPagamento;
-  }(Component);
-
-  ;
-
-  Soy.register(docsPagamento, templates);
-
-  this['metal']['docsPagamento'] = docsPagamento;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from index.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace docsProcurandoEmprego.
-     * @public
-     */
-
-    goog.module('docsProcurandoEmprego.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('docs.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      opt_data = opt_data || {};
-      var param156 = function param156() {
-        ie_open('article', null, null, 'id', 'intro');
-        ie_open('h2');
-        itext('Sites com ofertas remotas');
-        ie_close('h2');
-        ie_open('p');
-        itext('Aqui est\xE1 uma lista de sites que oferecem empregos principalmente nos pa\xEDses de l\xEDngua inglesa (EUA, Canada, Reino Unido, Austr\xE1lia, etc).');
-        ie_close('p');
-        ie_open('p');
-        itext('Fique atento: em algumas vagas, os candidatos devem morar no mesmo pa\xEDs da vaga, limitando-se assim que o trabalho seja realmente remoto (nesses casos voc\xEA precisa residir l\xE1 ou ter autoriza\xE7\xE3o para trabalhar no pa\xEDs onde a empresa est\xE1 localizada).');
-        ie_close('p');
-        ie_open('ul');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://remoteok.io/remote-jobs');
-        itext('Remote Ok');
-        ie_close('a');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://www.wfh.io/');
-        itext('WFH.io');
-        ie_close('a');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://www.staff.com/');
-        itext('Staff.com');
-        ie_close('a');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://weworkremotely.com');
-        itext('We work remotely');
-        ie_close('a');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://landing.jobs/inv/pragmaticivan');
-        itext('Landing.jobs');
-        ie_close('a');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://jobs.github.com/positions?description=&location=Remote');
-        itext('Github Job board');
-        ie_close('a');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'http://careers.stackoverflow.com/jobs/remote');
-        itext('Stackoverflow Job board');
-        ie_close('a');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'http://www.jobsintech.io/jobs#q=&page=0&refinements=%5B%7B%22remote%22%3A%22can_work_remote%22%7D%5D');
-        itext('Jobs in Tech');
-        ie_close('a');
-        ie_close('li');
-        ie_close('ul');
-        ie_close('article');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param156 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'docsProcurandoEmprego.render';
-    }
-
-    exports.render.params = [];
-    exports.render.types = {};
-    templates = exports;
-    return exports;
-  });
-
-  var docsProcurandoEmprego = function (_Component) {
-    babelHelpers.inherits(docsProcurandoEmprego, _Component);
-
-    function docsProcurandoEmprego() {
-      babelHelpers.classCallCheck(this, docsProcurandoEmprego);
-      return babelHelpers.possibleConstructorReturn(this, (docsProcurandoEmprego.__proto__ || Object.getPrototypeOf(docsProcurandoEmprego)).apply(this, arguments));
-    }
-
-    return docsProcurandoEmprego;
-  }(Component);
-
-  Soy.register(docsProcurandoEmprego, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['docsProcurandoEmprego'] = docsProcurandoEmprego;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
-
-  var docsProcurandoEmprego = function (_Component) {
-    babelHelpers.inherits(docsProcurandoEmprego, _Component);
-
-    function docsProcurandoEmprego() {
-      babelHelpers.classCallCheck(this, docsProcurandoEmprego);
-      return babelHelpers.possibleConstructorReturn(this, (docsProcurandoEmprego.__proto__ || Object.getPrototypeOf(docsProcurandoEmprego)).apply(this, arguments));
-    }
-
-    return docsProcurandoEmprego;
-  }(Component);
-
-  ;
-
-  Soy.register(docsProcurandoEmprego, templates);
-
-  this['metal']['docsProcurandoEmprego'] = docsProcurandoEmprego;
+  this['metal']['oxlUM'] = oxlUM;
 }).call(this);
 }).call(this);
 //# sourceMappingURL=bundle.js.map
