@@ -22368,181 +22368,6 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from index.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace pageIndex.
-     * @public
-     */
-
-    goog.module('pageIndex.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('main.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param40 = function param40() {
-        $header(opt_data, null, opt_ijData);
-        $footer(null, null, opt_ijData);
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param40 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'pageIndex.render';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $header(opt_data, opt_ignored, opt_ijData) {
-      ie_open('header', null, null, 'class', 'header');
-      ie_open('div', null, null, 'class', 'container');
-      ie_open('h1', null, null, 'class', 'header-title');
-      var dyn3 = opt_data.site.title;
-      if (typeof dyn3 == 'function') dyn3();else if (dyn3 != null) itext(dyn3);
-      ie_close('h1');
-      ie_open('h2', null, null, 'class', 'header-subtitle');
-      var dyn4 = opt_data.site.index.description;
-      if (typeof dyn4 == 'function') dyn4();else if (dyn4 != null) itext(dyn4);
-      ie_close('h2');
-      ie_open('div', null, null, 'class', 'header-cta');
-      ie_open('a', null, null, 'href', '/docs/introducao', 'class', 'btn btn-accent');
-      itext('Aprenda');
-      ie_close('a');
-      ie_close('div');
-      ie_close('div');
-      ie_close('header');
-    }
-    exports.header = $header;
-    if (goog.DEBUG) {
-      $header.soyTemplateName = 'pageIndex.header';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $footer(opt_data, opt_ignored, opt_ijData) {
-      ie_open('footer', null, null, 'class', 'footer');
-      ie_open('div', null, null, 'class', 'container');
-      ie_open('div', null, null, 'class', 'row');
-      ie_open('p', null, null, 'class', 'footer-description col-md-6 col-md-offset-2');
-      itext('Copyright \xA9 2017 - Current | ');
-      ie_open('a', null, null, 'href', 'https://nomadsonrails.com');
-      itext('Nomads on rails');
-      ie_close('a');
-      ie_close('p');
-      ie_open('p', null, null, 'class', 'footer-description col-md-6');
-      itext('Powered by ');
-      ie_open('a', null, null, 'href', 'http://nomadsonrails.com');
-      itext('Nomads on rails');
-      ie_close('a');
-      ie_close('p');
-      ie_close('div');
-      ie_close('div');
-      ie_close('footer');
-    }
-    exports.footer = $footer;
-    if (goog.DEBUG) {
-      $footer.soyTemplateName = 'pageIndex.footer';
-    }
-
-    exports.render.params = ["site"];
-    exports.render.types = { "site": "any" };
-    exports.header.params = ["site"];
-    exports.header.types = { "site": "any" };
-    exports.footer.params = [];
-    exports.footer.types = {};
-    templates = exports;
-    return exports;
-  });
-
-  var pageIndex = function (_Component) {
-    babelHelpers.inherits(pageIndex, _Component);
-
-    function pageIndex() {
-      babelHelpers.classCallCheck(this, pageIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
-    }
-
-    return pageIndex;
-  }(Component);
-
-  Soy.register(pageIndex, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['pageIndex'] = pageIndex;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
-
-  var pageIndex = function (_Component) {
-    babelHelpers.inherits(pageIndex, _Component);
-
-    function pageIndex() {
-      babelHelpers.classCallCheck(this, pageIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
-    }
-
-    return pageIndex;
-  }(Component);
-
-  ;
-
-  Soy.register(pageIndex, templates);
-
-  this['metal']['pageIndex'] = pageIndex;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
     // This file was automatically generated from guide.soy.
     // Please don't edit this file by hand.
 
@@ -23285,6 +23110,181 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
+     * @fileoverview Templates in namespace pageIndex.
+     * @public
+     */
+
+    goog.module('pageIndex.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('main.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param40 = function param40() {
+        $header(opt_data, null, opt_ijData);
+        $footer(null, null, opt_ijData);
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param40 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'pageIndex.render';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $header(opt_data, opt_ignored, opt_ijData) {
+      ie_open('header', null, null, 'class', 'header');
+      ie_open('div', null, null, 'class', 'container');
+      ie_open('h1', null, null, 'class', 'header-title');
+      var dyn3 = opt_data.site.title;
+      if (typeof dyn3 == 'function') dyn3();else if (dyn3 != null) itext(dyn3);
+      ie_close('h1');
+      ie_open('h2', null, null, 'class', 'header-subtitle');
+      var dyn4 = opt_data.site.index.description;
+      if (typeof dyn4 == 'function') dyn4();else if (dyn4 != null) itext(dyn4);
+      ie_close('h2');
+      ie_open('div', null, null, 'class', 'header-cta');
+      ie_open('a', null, null, 'href', '/docs/introducao', 'class', 'btn btn-accent');
+      itext('Aprenda');
+      ie_close('a');
+      ie_close('div');
+      ie_close('div');
+      ie_close('header');
+    }
+    exports.header = $header;
+    if (goog.DEBUG) {
+      $header.soyTemplateName = 'pageIndex.header';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $footer(opt_data, opt_ignored, opt_ijData) {
+      ie_open('footer', null, null, 'class', 'footer');
+      ie_open('div', null, null, 'class', 'container');
+      ie_open('div', null, null, 'class', 'row');
+      ie_open('p', null, null, 'class', 'footer-description col-md-6 col-md-offset-2');
+      itext('Copyright \xA9 2017 - Current | ');
+      ie_open('a', null, null, 'href', 'https://nomadsonrails.com');
+      itext('Nomads on rails');
+      ie_close('a');
+      ie_close('p');
+      ie_open('p', null, null, 'class', 'footer-description col-md-6');
+      itext('Powered by ');
+      ie_open('a', null, null, 'href', 'http://nomadsonrails.com');
+      itext('Nomads on rails');
+      ie_close('a');
+      ie_close('p');
+      ie_close('div');
+      ie_close('div');
+      ie_close('footer');
+    }
+    exports.footer = $footer;
+    if (goog.DEBUG) {
+      $footer.soyTemplateName = 'pageIndex.footer';
+    }
+
+    exports.render.params = ["site"];
+    exports.render.types = { "site": "any" };
+    exports.header.params = ["site"];
+    exports.header.types = { "site": "any" };
+    exports.footer.params = [];
+    exports.footer.types = {};
+    templates = exports;
+    return exports;
+  });
+
+  var pageIndex = function (_Component) {
+    babelHelpers.inherits(pageIndex, _Component);
+
+    function pageIndex() {
+      babelHelpers.classCallCheck(this, pageIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
+    }
+
+    return pageIndex;
+  }(Component);
+
+  Soy.register(pageIndex, templates);
+  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
+  this['metalNamed']['index']['pageIndex'] = pageIndex;
+  this['metalNamed']['index']['templates'] = templates;
+  this['metal']['index'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['index'];
+
+  var pageIndex = function (_Component) {
+    babelHelpers.inherits(pageIndex, _Component);
+
+    function pageIndex() {
+      babelHelpers.classCallCheck(this, pageIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
+    }
+
+    return pageIndex;
+  }(Component);
+
+  ;
+
+  Soy.register(pageIndex, templates);
+
+  this['metal']['pageIndex'] = pageIndex;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from index.soy.
+    // Please don't edit this file by hand.
+
+    /**
      * @fileoverview Templates in namespace pageDocsIndex.
      * @public
      */
@@ -23614,257 +23614,15 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from necessidades.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace RirUb.
-     * @public
-     */
-
-    goog.module('RirUb.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param163 = function param163() {
-        ie_open('article', null, null, 'id', '1');
-        ie_open('h2');
-        itext('Necessidades b\xE1sicas');
-        ie_close('h2');
-        ie_open('p');
-        itext('Inicialmente tudo que voc\xEA precisa \xE9 ter seus instrumentos de trabalho, "computador, smartphone (caso seja desenvolvimento mobile), post-it(<3)", um lugar para plugar a tomada do seu computador e uma boa internet. Para algumas empresas tamb\xE9m \xE9 necess\xE1rio que fique sempre online em alguma ferramenta de comunica\xE7\xE3o determinada pela empresa.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param163 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'RirUb.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var RirUb = function (_Component) {
-    babelHelpers.inherits(RirUb, _Component);
-
-    function RirUb() {
-      babelHelpers.classCallCheck(this, RirUb);
-      return babelHelpers.possibleConstructorReturn(this, (RirUb.__proto__ || Object.getPrototypeOf(RirUb)).apply(this, arguments));
-    }
-
-    return RirUb;
-  }(Component);
-
-  Soy.register(RirUb, templates);
-  this['metalNamed']['necessidades'] = this['metalNamed']['necessidades'] || {};
-  this['metalNamed']['necessidades']['RirUb'] = RirUb;
-  this['metalNamed']['necessidades']['templates'] = templates;
-  this['metal']['necessidades'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['necessidades'];
-
-  var RirUb = function (_Component) {
-    babelHelpers.inherits(RirUb, _Component);
-
-    function RirUb() {
-      babelHelpers.classCallCheck(this, RirUb);
-      return babelHelpers.possibleConstructorReturn(this, (RirUb.__proto__ || Object.getPrototypeOf(RirUb)).apply(this, arguments));
-    }
-
-    return RirUb;
-  }(Component);
-
-  ;
-
-  Soy.register(RirUb, templates);
-
-  this['metal']['RirUb'] = RirUb;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from index.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace RlETC.
-     * @public
-     */
-
-    goog.module('RlETC.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param154 = function param154() {
-        ie_open('article', null, null, 'id', '1');
-        ie_open('h2');
-        itext('Por onde come\xE7ar?');
-        ie_close('h2');
-        ie_open('p');
-        itext('Trabalhar remotamente vem se tornando cada vez mais um objetivo de todos os trabalhadores na \xE1rea de TI ao redor do mundo. Estar alinhado com suas necessidades, controlar seu hor\xE1rio de trabalho, dispor de mais tempo com a fam\xEDlia, viajar e conhecer novos horizontes e principalmente se livrar do stress causado pelo tr\xE2nsito nas grandes cidades. Estes s\xE3o alguns dos motivos que fazem um funcion\xE1rio questionar sua empresa e negociar uma jornada de trabalho remoto.');
-        ie_close('p');
-        ie_open('p');
-        itext('Ap\xF3s completar 2 anos de trabalho remoto, decidi compartilhar um pouco da minha experi\xEAncia relativa a como come\xE7ar a trabalhar remotamente tanto para empresas no Brasil, quanto para empresas no exterior.');
-        ie_close('p');
-        ie_open('p');
-        itext('Todas as informa\xE7\xF5es s\xE3o inicialmente focadas a profissionais de TI, por\xE9m tamb\xE9m podem ser aplicadas a profissionais de outras \xE1reas.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param154 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'RlETC.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var RlETC = function (_Component) {
-    babelHelpers.inherits(RlETC, _Component);
-
-    function RlETC() {
-      babelHelpers.classCallCheck(this, RlETC);
-      return babelHelpers.possibleConstructorReturn(this, (RlETC.__proto__ || Object.getPrototypeOf(RlETC)).apply(this, arguments));
-    }
-
-    return RlETC;
-  }(Component);
-
-  Soy.register(RlETC, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['RlETC'] = RlETC;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
-
-  var RlETC = function (_Component) {
-    babelHelpers.inherits(RlETC, _Component);
-
-    function RlETC() {
-      babelHelpers.classCallCheck(this, RlETC);
-      return babelHelpers.possibleConstructorReturn(this, (RlETC.__proto__ || Object.getPrototypeOf(RlETC)).apply(this, arguments));
-    }
-
-    return RlETC;
-  }(Component);
-
-  ;
-
-  Soy.register(RlETC, templates);
-
-  this['metal']['RlETC'] = RlETC;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
     // This file was automatically generated from coisa-certa.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace oxlUM.
+     * @fileoverview Templates in namespace FCiXs.
      * @public
      */
 
-    goog.module('oxlUM.incrementaldom');
+    goog.module('FCiXs.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -23945,7 +23703,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'oxlUM.render';
+      $render.soyTemplateName = 'FCiXs.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -23954,20 +23712,20 @@ babelHelpers;
     return exports;
   });
 
-  var oxlUM = function (_Component) {
-    babelHelpers.inherits(oxlUM, _Component);
+  var FCiXs = function (_Component) {
+    babelHelpers.inherits(FCiXs, _Component);
 
-    function oxlUM() {
-      babelHelpers.classCallCheck(this, oxlUM);
-      return babelHelpers.possibleConstructorReturn(this, (oxlUM.__proto__ || Object.getPrototypeOf(oxlUM)).apply(this, arguments));
+    function FCiXs() {
+      babelHelpers.classCallCheck(this, FCiXs);
+      return babelHelpers.possibleConstructorReturn(this, (FCiXs.__proto__ || Object.getPrototypeOf(FCiXs)).apply(this, arguments));
     }
 
-    return oxlUM;
+    return FCiXs;
   }(Component);
 
-  Soy.register(oxlUM, templates);
+  Soy.register(FCiXs, templates);
   this['metalNamed']['coisa-certa'] = this['metalNamed']['coisa-certa'] || {};
-  this['metalNamed']['coisa-certa']['oxlUM'] = oxlUM;
+  this['metalNamed']['coisa-certa']['FCiXs'] = FCiXs;
   this['metalNamed']['coisa-certa']['templates'] = templates;
   this['metal']['coisa-certa'] = templates;
   /* jshint ignore:end */
@@ -23979,22 +23737,264 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['coisa-certa'];
 
-  var oxlUM = function (_Component) {
-    babelHelpers.inherits(oxlUM, _Component);
+  var FCiXs = function (_Component) {
+    babelHelpers.inherits(FCiXs, _Component);
 
-    function oxlUM() {
-      babelHelpers.classCallCheck(this, oxlUM);
-      return babelHelpers.possibleConstructorReturn(this, (oxlUM.__proto__ || Object.getPrototypeOf(oxlUM)).apply(this, arguments));
+    function FCiXs() {
+      babelHelpers.classCallCheck(this, FCiXs);
+      return babelHelpers.possibleConstructorReturn(this, (FCiXs.__proto__ || Object.getPrototypeOf(FCiXs)).apply(this, arguments));
     }
 
-    return oxlUM;
+    return FCiXs;
   }(Component);
 
   ;
 
-  Soy.register(oxlUM, templates);
+  Soy.register(FCiXs, templates);
 
-  this['metal']['oxlUM'] = oxlUM;
+  this['metal']['FCiXs'] = FCiXs;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from index.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace xbamR.
+     * @public
+     */
+
+    goog.module('xbamR.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param154 = function param154() {
+        ie_open('article', null, null, 'id', '1');
+        ie_open('h2');
+        itext('Por onde come\xE7ar?');
+        ie_close('h2');
+        ie_open('p');
+        itext('Trabalhar remotamente vem se tornando cada vez mais um objetivo de todos os trabalhadores na \xE1rea de TI ao redor do mundo. Estar alinhado com suas necessidades, controlar seu hor\xE1rio de trabalho, dispor de mais tempo com a fam\xEDlia, viajar e conhecer novos horizontes e principalmente se livrar do stress causado pelo tr\xE2nsito nas grandes cidades. Estes s\xE3o alguns dos motivos que fazem um funcion\xE1rio questionar sua empresa e negociar uma jornada de trabalho remoto.');
+        ie_close('p');
+        ie_open('p');
+        itext('Ap\xF3s completar 2 anos de trabalho remoto, decidi compartilhar um pouco da minha experi\xEAncia relativa a como come\xE7ar a trabalhar remotamente tanto para empresas no Brasil, quanto para empresas no exterior.');
+        ie_close('p');
+        ie_open('p');
+        itext('Todas as informa\xE7\xF5es s\xE3o inicialmente focadas a profissionais de TI, por\xE9m tamb\xE9m podem ser aplicadas a profissionais de outras \xE1reas.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param154 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'xbamR.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var xbamR = function (_Component) {
+    babelHelpers.inherits(xbamR, _Component);
+
+    function xbamR() {
+      babelHelpers.classCallCheck(this, xbamR);
+      return babelHelpers.possibleConstructorReturn(this, (xbamR.__proto__ || Object.getPrototypeOf(xbamR)).apply(this, arguments));
+    }
+
+    return xbamR;
+  }(Component);
+
+  Soy.register(xbamR, templates);
+  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
+  this['metalNamed']['index']['xbamR'] = xbamR;
+  this['metalNamed']['index']['templates'] = templates;
+  this['metal']['index'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from necessidades.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace pmxrv.
+     * @public
+     */
+
+    goog.module('pmxrv.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param163 = function param163() {
+        ie_open('article', null, null, 'id', '1');
+        ie_open('h2');
+        itext('Necessidades b\xE1sicas');
+        ie_close('h2');
+        ie_open('p');
+        itext('Inicialmente tudo que voc\xEA precisa \xE9 ter seus instrumentos de trabalho, "computador, smartphone (caso seja desenvolvimento mobile), post-it(<3)", um lugar para plugar a tomada do seu computador e uma boa internet. Para algumas empresas tamb\xE9m \xE9 necess\xE1rio que fique sempre online em alguma ferramenta de comunica\xE7\xE3o determinada pela empresa.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param163 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'pmxrv.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var pmxrv = function (_Component) {
+    babelHelpers.inherits(pmxrv, _Component);
+
+    function pmxrv() {
+      babelHelpers.classCallCheck(this, pmxrv);
+      return babelHelpers.possibleConstructorReturn(this, (pmxrv.__proto__ || Object.getPrototypeOf(pmxrv)).apply(this, arguments));
+    }
+
+    return pmxrv;
+  }(Component);
+
+  Soy.register(pmxrv, templates);
+  this['metalNamed']['necessidades'] = this['metalNamed']['necessidades'] || {};
+  this['metalNamed']['necessidades']['pmxrv'] = pmxrv;
+  this['metalNamed']['necessidades']['templates'] = templates;
+  this['metal']['necessidades'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['necessidades'];
+
+  var pmxrv = function (_Component) {
+    babelHelpers.inherits(pmxrv, _Component);
+
+    function pmxrv() {
+      babelHelpers.classCallCheck(this, pmxrv);
+      return babelHelpers.possibleConstructorReturn(this, (pmxrv.__proto__ || Object.getPrototypeOf(pmxrv)).apply(this, arguments));
+    }
+
+    return pmxrv;
+  }(Component);
+
+  ;
+
+  Soy.register(pmxrv, templates);
+
+  this['metal']['pmxrv'] = pmxrv;
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['index'];
+
+  var xbamR = function (_Component) {
+    babelHelpers.inherits(xbamR, _Component);
+
+    function xbamR() {
+      babelHelpers.classCallCheck(this, xbamR);
+      return babelHelpers.possibleConstructorReturn(this, (xbamR.__proto__ || Object.getPrototypeOf(xbamR)).apply(this, arguments));
+    }
+
+    return xbamR;
+  }(Component);
+
+  ;
+
+  Soy.register(xbamR, templates);
+
+  this['metal']['xbamR'] = xbamR;
 }).call(this);
 }).call(this);
 //# sourceMappingURL=bundle.js.map
