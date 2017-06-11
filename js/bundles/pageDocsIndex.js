@@ -2659,8 +2659,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn13 = opt_data.site.title;
-        if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
+        var dyn11 = opt_data.site.title;
+        if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
       ie_close('span');
     ie_close('a');
   ie_close('div');

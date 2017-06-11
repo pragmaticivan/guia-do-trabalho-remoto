@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([4],[
+webpackJsonppageComponent([5],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2659,8 +2659,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn13 = opt_data.site.title;
-        if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
+        var dyn11 = opt_data.site.title;
+        if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11816,13 +11816,12 @@ module.exports = function(module) {
 /* 101 */,
 /* 102 */,
 /* 103 */,
-/* 104 */,
-/* 105 */
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SGSFX", function() { return SGSFX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ztkdX", function() { return ztkdX; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11838,11 +11837,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace SGSFX.
+ * @fileoverview Templates in namespace ztkdX.
  * @public
  */
 
-goog.module('SGSFX.incrementaldom');
+goog.module('ztkdX.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11892,10 +11891,10 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       ie_open('p');
         itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
       ie_close('p');
-      $templateAlias2({code: 'console.info(\'Hola Mundo\');', mode: 'javascript'}, null, opt_ijData);
       ie_open('p');
         itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
       ie_close('p');
+      $templateAlias2({code: 'alert(\'Hello World\');', mode: 'javascript'}, null, opt_ijData);
       ie_open('p');
         itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
       ie_close('p');
@@ -11949,7 +11948,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'SGSFX.render';
+  $render.soyTemplateName = 'ztkdX.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11959,14 +11958,15 @@ return exports;
 
 });
 
-class SGSFX extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(SGSFX, templates);
+class ztkdX extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ztkdX, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 105 */,
 /* 106 */,
 /* 107 */,
 /* 108 */,
@@ -12011,8 +12011,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(SGSFX, templates);
 /* 147 */,
 /* 148 */,
 /* 149 */,
-/* 150 */,
-/* 151 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12042,7 +12041,7 @@ __webpack_require__(20);
 
 __webpack_require__(18);
 
-var _indexSoy = __webpack_require__(105);
+var _indexSoy = __webpack_require__(104);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -12054,23 +12053,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var SGSFX = function (_Component) {
-  _inherits(SGSFX, _Component);
+var ztkdX = function (_Component) {
+  _inherits(ztkdX, _Component);
 
-  function SGSFX() {
-    _classCallCheck(this, SGSFX);
+  function ztkdX() {
+    _classCallCheck(this, ztkdX);
 
-    return _possibleConstructorReturn(this, (SGSFX.__proto__ || Object.getPrototypeOf(SGSFX)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ztkdX.__proto__ || Object.getPrototypeOf(ztkdX)).apply(this, arguments));
   }
 
-  return SGSFX;
+  return ztkdX;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(SGSFX, _indexSoy2.default);
+_metalSoy2.default.register(ztkdX, _indexSoy2.default);
 
-exports.default = SGSFX;
+exports.default = ztkdX;
 
 /***/ })
-],[151]);
+],[150]);
