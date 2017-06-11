@@ -109,7 +109,6 @@ Toda a rede é sustentada pelos  usuários através de p2p, logo todo o processo
 
 É necessário ter uma carteira(wallet) para guardar seus bitcoins. Abaixo segue algumas wallets que a comunidade costuma utilizar:
 
-* Hive - [https://hivewallet.com/](https://hivewallet.com/)
 * Xapo - [https://xapo.com/](https://xapo.com/)
 * Coinbase - [https://www.coinbase.com/](https://www.coinbase.com/join/5637f7ae01653a4452000087)
 * Uphold - [https://uphold.com/](https://uphold.com/signup?utm_campaign=refprog&utm_medium=pragmaticivan)
