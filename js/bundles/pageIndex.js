@@ -2659,8 +2659,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn11 = opt_data.site.title;
-        if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
+        var dyn13 = opt_data.site.title;
+        if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11877,7 +11877,7 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param122 = function() {
+  var param75 = function() {
     $header(opt_data, null, opt_ijData);
     $why(null, null, opt_ijData);
     $features(null, null, opt_ijData);
@@ -11885,7 +11885,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
     $highlights(null, null, opt_ijData);
     $footer(null, null, opt_ijData);
   };
-  $templateAlias1(soy.$$assignDefaults({content: param122}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param75}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
@@ -11907,13 +11907,13 @@ function $header(opt_data, opt_ignored, opt_ijData) {
         'class', 'container');
       ie_open('h1', null, null,
           'class', 'header-title');
-        var dyn12 = opt_data.site.title;
-        if (typeof dyn12 == 'function') dyn12(); else if (dyn12 != null) itext(dyn12);
+        var dyn10 = opt_data.site.title;
+        if (typeof dyn10 == 'function') dyn10(); else if (dyn10 != null) itext(dyn10);
       ie_close('h1');
       ie_open('h2', null, null,
           'class', 'header-subtitle');
-        var dyn13 = opt_data.site.index.description;
-        if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
+        var dyn11 = opt_data.site.index.description;
+        if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
       ie_close('h2');
       ie_open('div', null, null,
           'class', 'header-cta');

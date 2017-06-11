@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([6],[
+webpackJsonppageComponent([8],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2659,8 +2659,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn11 = opt_data.site.title;
-        if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
+        var dyn13 = opt_data.site.title;
+        if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11813,14 +11813,12 @@ module.exports = function(module) {
 /* 98 */,
 /* 99 */,
 /* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VwlEC", function() { return VwlEC; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsJsV", function() { return IsJsV; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11832,15 +11830,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from nula.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace VwlEC.
+ * @fileoverview Templates in namespace IsJsV.
  * @public
  */
 
-goog.module('VwlEC.incrementaldom');
+goog.module('IsJsV.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11874,7 +11872,7 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param282 = function() {
+  var param278 = function() {
     ie_open('h6');
       var dyn24 = opt_data.page.description;
       if (typeof dyn24 == 'function') dyn24(); else if (dyn24 != null) itext(dyn24);
@@ -11885,11 +11883,12 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         itext('Lorem ipsum dolor sit amet');
       ie_close('h2');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('Mauris iaculis, lectus sagittis consequat accumsan, tellus neque blandit justo, a consectetur odio turpis a magna. In ac euismod diam. Praesent non elementum turpis. Aliquam vitae vestibulum arcu. Praesent eleifend turpis arcu.');
       ie_close('p');
-      $templateAlias2({code: 'var oi = function() {\n    console.log(\'Oi mundo\');\n};', mode: 'javascript'}, null, opt_ijData);
+      $templateAlias2({code: 'var hi = function() {\n    console.log(\'Hello, World!\');\n};', mode: 'javascript'}, null, opt_ijData);
+      $templateAlias2({code: '.hi:before {\n    content: \'Hello, World\';\n}', mode: 'css'}, null, opt_ijData);
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('Nunc eros risus, scelerisque sit amet magna at, venenatis mattis metus. Pellentesque scelerisque facilisis sagittis. Integer at eleifend urna, nec vehicula nibh. Morbi a fermentum purus. Mauris augue erat, consectetur quis massa ac, commodo vehicula augue. Cras in odio volutpat, maximus nunc eleifend, scelerisque erat. In hac habitasse platea dictumst.');
       ie_close('p');
       ie_open('p');
         itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
@@ -11943,11 +11942,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param282}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param278}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'VwlEC.render';
+  $render.soyTemplateName = 'IsJsV.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11957,14 +11956,16 @@ return exports;
 
 });
 
-class VwlEC extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(VwlEC, templates);
+class IsJsV extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(IsJsV, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 102 */,
+/* 103 */,
 /* 104 */,
 /* 105 */,
 /* 106 */,
@@ -12007,8 +12008,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(VwlEC, templates);
 /* 143 */,
 /* 144 */,
 /* 145 */,
-/* 146 */,
-/* 147 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12038,9 +12038,9 @@ __webpack_require__(20);
 
 __webpack_require__(18);
 
-var _nulaSoy = __webpack_require__(103);
+var _indexSoy = __webpack_require__(101);
 
-var _nulaSoy2 = _interopRequireDefault(_nulaSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12050,23 +12050,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var VwlEC = function (_Component) {
-  _inherits(VwlEC, _Component);
+var IsJsV = function (_Component) {
+  _inherits(IsJsV, _Component);
 
-  function VwlEC() {
-    _classCallCheck(this, VwlEC);
+  function IsJsV() {
+    _classCallCheck(this, IsJsV);
 
-    return _possibleConstructorReturn(this, (VwlEC.__proto__ || Object.getPrototypeOf(VwlEC)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (IsJsV.__proto__ || Object.getPrototypeOf(IsJsV)).apply(this, arguments));
   }
 
-  return VwlEC;
+  return IsJsV;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(VwlEC, _nulaSoy2.default);
+_metalSoy2.default.register(IsJsV, _indexSoy2.default);
 
-exports.default = VwlEC;
+exports.default = IsJsV;
 
 /***/ })
-],[147]);
+],[146]);
