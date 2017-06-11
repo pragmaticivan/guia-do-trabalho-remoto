@@ -63,7 +63,7 @@ Cada transação da Xoom tem um limite de US$ 2.999, mas a empresa pode enviar a
 [TransferWise](https://transferwise.com/u/344b08) é uma nova plataforma um pouco parecida com o Xoom. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente 1 dia depois caso a empresa seja Americana. Trata-se de um intermediador de envio entre países, porém o diferencial é que esta empresa garante envio do dinheiro com cotações bem melhores. Retirando aquele monte de encargos criados por bancos. Você acaba econiomizando 90% em encargos "desnecessários".
 
 
-## Swift (Remersas enviadas de um banco no exterior para o seu banco no Brasil)
+## Swift (Remessas enviadas de um banco no exterior para o seu banco no Brasil)
 ![swift](swift.jpg)
 
 Segundo um levantamento feito na comunidade, é a mais comum entre as pessoas que trabalham remotamente para empresas no exterior. É possível receber dinheiro do exterior através de uma transferência bancária aceita em qualquer agência. É necessário enviar todos os dados referentes a transação para que a empresa possa efetuar uma transação de envio de um banco no exterior para um banco no Brasil.
