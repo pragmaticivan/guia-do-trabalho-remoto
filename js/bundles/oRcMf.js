@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([5],[
+webpackJsonppageComponent([8],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11813,15 +11813,12 @@ module.exports = function(module) {
 /* 98 */,
 /* 99 */,
 /* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dAGQR", function() { return dAGQR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "oRcMf", function() { return oRcMf; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11837,11 +11834,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace dAGQR.
+ * @fileoverview Templates in namespace oRcMf.
  * @public
  */
 
-goog.module('dAGQR.incrementaldom');
+goog.module('oRcMf.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11886,15 +11883,16 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         itext('Lorem ipsum dolor sit amet');
       ie_close('h2');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('Mauris iaculis, lectus sagittis consequat accumsan, tellus neque blandit justo, a consectetur odio turpis a magna. In ac euismod diam. Praesent non elementum turpis. Aliquam vitae vestibulum arcu. Praesent eleifend turpis arcu.');
+      ie_close('p');
+      $templateAlias2({code: 'var hi = function() {\n    console.log(\'Hello, World!\');\n};', mode: 'javascript'}, null, opt_ijData);
+      $templateAlias2({code: '.hi:before {\n    content: \'Hello, World\';\n}', mode: 'css'}, null, opt_ijData);
+      ie_open('p');
+        itext('Nunc eros risus, scelerisque sit amet magna at, venenatis mattis metus. Pellentesque scelerisque facilisis sagittis. Integer at eleifend urna, nec vehicula nibh. Morbi a fermentum purus. Mauris augue erat, consectetur quis massa ac, commodo vehicula augue. Cras in odio volutpat, maximus nunc eleifend, scelerisque erat. In hac habitasse platea dictumst.');
       ie_close('p');
       ie_open('p');
         itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
       ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      $templateAlias2({code: 'alert(\'Hello World\');', mode: 'javascript'}, null, opt_ijData);
       ie_open('p');
         itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
       ie_close('p');
@@ -11948,7 +11946,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'dAGQR.render';
+  $render.soyTemplateName = 'oRcMf.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11958,14 +11956,17 @@ return exports;
 
 });
 
-class dAGQR extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(dAGQR, templates);
+class oRcMf extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(oRcMf, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 102 */,
+/* 103 */,
+/* 104 */,
 /* 105 */,
 /* 106 */,
 /* 107 */,
@@ -12010,8 +12011,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(dAGQR, templates);
 /* 146 */,
 /* 147 */,
 /* 148 */,
-/* 149 */,
-/* 150 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12041,7 +12041,7 @@ __webpack_require__(20);
 
 __webpack_require__(18);
 
-var _indexSoy = __webpack_require__(104);
+var _indexSoy = __webpack_require__(101);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -12053,23 +12053,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var dAGQR = function (_Component) {
-  _inherits(dAGQR, _Component);
+var oRcMf = function (_Component) {
+  _inherits(oRcMf, _Component);
 
-  function dAGQR() {
-    _classCallCheck(this, dAGQR);
+  function oRcMf() {
+    _classCallCheck(this, oRcMf);
 
-    return _possibleConstructorReturn(this, (dAGQR.__proto__ || Object.getPrototypeOf(dAGQR)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (oRcMf.__proto__ || Object.getPrototypeOf(oRcMf)).apply(this, arguments));
   }
 
-  return dAGQR;
+  return oRcMf;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(dAGQR, _indexSoy2.default);
+_metalSoy2.default.register(oRcMf, _indexSoy2.default);
 
-exports.default = dAGQR;
+exports.default = oRcMf;
 
 /***/ })
-],[150]);
+],[149]);
