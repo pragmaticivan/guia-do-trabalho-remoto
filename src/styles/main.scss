@@ -1,4 +1,4 @@
-$accent: #4285F4;
+$accent: #5F49AE;
 
 @import "marble";
 
@@ -7,6 +7,13 @@ $accent: #4285F4;
 
 // Landing
 @import "templates/landing";
+
+@media (min-width: 960px) {
+  .footer-description:last-child {
+      text-align: center;
+  }
+}
+
 
 // Docs
 @import "templates/docs";
