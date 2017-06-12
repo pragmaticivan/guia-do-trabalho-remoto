@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "guia-do-trabalho-remoto",
+  "version": "0.0.0",
+  "devDependencies": {
+    "electric-marble-components": "alpha",
+    "marble": "~2.7.0",
+    "metal-toggler": "^2.0.0"
+  }
+}

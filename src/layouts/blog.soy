@@ -1,0 +1,56 @@
+{namespace blog}
+
+/**
+ *
+ */
+{template .render}
+	{call main.render data="all"}
+		{param content kind="html"}
+			<div class="blog">
+				{call .mainPost data="all" /}
+				{call .olderPosts data="all" /}
+			</div>
+		{/param}
+	{/call}
+{/template}
+
+/**
+ * @param content
+ * @param page
+ */
+{template .mainPost}
+	<article class="container">
+		<header>
+			<small>By {$page.author} <span>| {$page.date}</span></small>
+
+			<h3>{$page.title}</h3>
+		</header>
+
+		<div class="content">
+			{$content}
+		</div>
+	</article>
+{/template}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .olderPosts}
+	<div class="posts-list">
+		<div class="container">
+			{foreach $childId in $site.index.children['blog'].childIds}
+				{let $childPage: $site.index.children['blog'].children[$childId] /}
+
+				{if $page.url != $childPage.url}
+					<div class="post-item container-blog">
+						<a class="post-item__link" href="{$childPage.url}">
+							<small>By {$childPage.author} <span>| {$childPage.date}</span></small>
+							<h4 class="post-item__title">{$childPage.title}</h4>
+						</a>
+					</div>
+				{/if}
+			{/foreach}
+		</div>
+	</div>
+{/template}
