@@ -11,8 +11,9 @@
 				{call Topbar.render data="all"}
 					{param elementClasses: 'topbar-docs' /}
 				{/call}
-        {$site.index.children}
-
+				{call Sidebar.render}
+					{param section: $site.index.children['guia'] /}
+				{/call}
 				{call .guide data="all" /}
 			</div>
 		</main>
