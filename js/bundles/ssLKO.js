@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([13],[
+webpackJsonppageComponent([10],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2475,8 +2475,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11625,12 +11625,15 @@ module.exports = function(module) {
 /* 93 */,
 /* 94 */,
 /* 95 */,
-/* 96 */
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "xFaWQ", function() { return xFaWQ; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ssLKO", function() { return ssLKO; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11642,15 +11645,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from bitwage.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace xFaWQ.
+ * @fileoverview Templates in namespace ssLKO.
  * @public
  */
 
-goog.module('xFaWQ.incrementaldom');
+goog.module('ssLKO.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11682,19 +11685,91 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param158 = function() {
+  var param180 = function() {
     ie_open('h6');
-      var dyn11 = opt_data.page.description;
-      if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
+      var dyn13 = opt_data.page.description;
+      if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('CLT ou Pessoa Jur\u00EDdica');
+        itext('Recebendo pagamentos com Bitwage');
       ie_close('h2');
       ie_open('p');
-        itext('Para empresas no Brasil, voc\u00EA pode continuar com o modelo CLT ou PJ normalmente, mesmo n\u00E3o residindo no estado da empresa, embora seja necess\u00E1rio ir algumas vezes visitar a empresa para resolver burocracias. Para empresas no exterior \u00E9 recomendado que voc\u00EA tenha um contrato de presta\u00E7\u00E3o de servi\u00E7os, j\u00E1 que voc\u00EA n\u00E3o \u00E9 diretamente contratado no modelo formal. Este contrato ir\u00E1 comprovar a origem e legalidade do dinheiro que voc\u00EA ir\u00E1 receber.');
+        ie_open('a', null, null,
+            'href', 'https://www.bitwage.com/referral/XZUSDRB366TE');
+          itext('Bitwage');
+        ie_close('a');
+        itext(' \u00E9 um servi\u00E7o que permite o recebimento de pagamentos em Bitcoins de forma indireta ao empregador, ou seja, o empregador n\u00E3o compra Bitcoins e nem precisa ter conta na Bitwage, ele apenas deposita o pagamento em uma conta banc\u00E1ria dos EUA, do Canad\u00E1 e/ou da Europa e em aproximadamente 2 dias este montante, com uma redu\u00E7\u00E3o de apenas 1% por transa\u00E7\u00E3o, estar\u00E1 em sua ');
+        ie_open('a', null, null,
+            'href', '#bitcoins');
+          itext('carteira Bitcoin');
+        ie_close('a');
+        itext('.');
       ie_close('p');
+      ie_open('p');
+        itext('O fluxo para utiliza\u00E7\u00E3o \u00E9 bem simples, veja s\u00F3:');
+      ie_close('p');
+      ie_open('p');
+        itext('1] Voc\u00EA faz o cadastro no site da ');
+        ie_open('a', null, null,
+            'href', 'https://www.bitwage.com/referral/XZUSDRB366TE');
+          itext('Bitwage');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('2] Ap\u00F3s o cadastro, voc\u00EA precisa fazer o Set Up como um Worker. Neste momento voc\u00EA ir\u00E1 passar informa\u00E7\u00F5es pessoais para an\u00E1lise e aprova\u00E7\u00E3o dos seus dados, isso basicamente serve para segura\u00E7a da ferramenta.');
+      ie_close('p');
+      ie_open('p');
+        itext('3] Ap\u00F3s ser aprovado como um Worker, voc\u00EA ir\u00E1 cadastrar o seu Employer e tamb\u00E9m um Distribution, que basicamente \u00E9 a sua ');
+        ie_open('a', null, null,
+            'href', '#bitcoins');
+          itext('carteira Bitcoin');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('4] E finalmente, ap\u00F3s finalizar este processo de Set Up, que geralmente leva entre 2 e 3 dias \u00FAteis para ser finalizado completamente, voc\u00EA ir\u00E1 receber os dados de uma conta banc\u00E1ria criada para voc\u00EA, nos EUA, no Canad\u00E1 ou na Europa, e basicamente, ser\u00E3o estes os dados que voc\u00EA vai passar para seu empregador depositar os pagamentos.');
+      ie_close('p');
+      ie_open('p');
+        itext('Outra coisa legal \u00E9 que eles d\u00E3o bastante aten\u00E7\u00E3o para o p\u00FAblico do Brasil, sendo assim, basta solicitar atrav\u00E9s dos canais de comunica\u00E7\u00E3o deles para que o di\u00E1logo seja em Portugu\u00EAs, e prontamente ir\u00E3o colocar voc\u00EA em contato com o atendimento brasileiro.');
+      ie_close('p');
+      ie_open('p');
+        itext('E s\u00F3 para finalizar, segue abaixo alguns v\u00EDdeos explicativos:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=_JqTHW7X13Q');
+            itext('Bitwage & the future of payroll using bitcoin - YouTube');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=2ln6AiLrUjo');
+            itext('Recebendo pagamentos f\u00E1cil com a Bitwage! - YouTube');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=VqepklppjUU');
+            itext('O que \u00E9 a Bitwage - YouTube - Legendado');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=0v3Oe7spihs');
+            itext('Como trampar como freelancer nos EUA - YouTube');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=fxP0lc42xIY');
+            itext('Receba pagamentos do exterior por Bitcoin');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11705,11 +11780,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param158}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param180}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'xFaWQ.render';
+  $render.soyTemplateName = 'ssLKO.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11719,17 +11794,14 @@ return exports;
 
 });
 
-class xFaWQ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(xFaWQ, templates);
+class ssLKO extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ssLKO, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 97 */,
-/* 98 */,
-/* 99 */,
 /* 100 */,
 /* 101 */,
 /* 102 */,
@@ -11773,7 +11845,14 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(xFaWQ, templates);
 /* 140 */,
 /* 141 */,
 /* 142 */,
-/* 143 */
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11801,9 +11880,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(96);
+var _bitwageSoy = __webpack_require__(99);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _bitwageSoy2 = _interopRequireDefault(_bitwageSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11813,23 +11892,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var xFaWQ = function (_Component) {
-  _inherits(xFaWQ, _Component);
+var ssLKO = function (_Component) {
+  _inherits(ssLKO, _Component);
 
-  function xFaWQ() {
-    _classCallCheck(this, xFaWQ);
+  function ssLKO() {
+    _classCallCheck(this, ssLKO);
 
-    return _possibleConstructorReturn(this, (xFaWQ.__proto__ || Object.getPrototypeOf(xFaWQ)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ssLKO.__proto__ || Object.getPrototypeOf(ssLKO)).apply(this, arguments));
   }
 
-  return xFaWQ;
+  return ssLKO;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(xFaWQ, _indexSoy2.default);
+_metalSoy2.default.register(ssLKO, _bitwageSoy2.default);
 
-exports.default = xFaWQ;
+exports.default = ssLKO;
 
 /***/ })
-],[143]);
+],[150]);
