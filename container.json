@@ -1,4 +1,4 @@
 {
-    "id": "www",
-    "type": "wedeploy/hosting"
+	"id": "hosting",
+	"type": "wedeploy/hosting:beta"
 }
