@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([13],[
+webpackJsonppageComponent([7],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11625,12 +11625,18 @@ module.exports = function(module) {
 /* 93 */,
 /* 94 */,
 /* 95 */,
-/* 96 */
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MtPZA", function() { return MtPZA; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OWcWU", function() { return OWcWU; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11642,15 +11648,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from paypal.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace MtPZA.
+ * @fileoverview Templates in namespace OWcWU.
  * @public
  */
 
-goog.module('MtPZA.incrementaldom');
+goog.module('OWcWU.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11682,18 +11688,26 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param158 = function() {
+  var param213 = function() {
     ie_open('h6');
-      var dyn11 = opt_data.page.description;
-      if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
+      var dyn16 = opt_data.page.description;
+      if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('CLT ou Pessoa Jur\u00EDdica');
+        itext('Recebendo pagamentos com Paypal');
       ie_close('h2');
       ie_open('p');
-        itext('Para empresas no Brasil, voc\u00EA pode continuar com o modelo CLT ou PJ normalmente, mesmo n\u00E3o residindo no estado da empresa, embora seja necess\u00E1rio ir algumas vezes visitar a empresa para resolver burocracias. Para empresas no exterior \u00E9 recomendado que voc\u00EA tenha um contrato de presta\u00E7\u00E3o de servi\u00E7os, j\u00E1 que voc\u00EA n\u00E3o \u00E9 diretamente contratado no modelo formal. Este contrato ir\u00E1 comprovar a origem e legalidade do dinheiro que voc\u00EA ir\u00E1 receber.');
+        itext('O primeiro e mais conhecido por todos \u00E9 o ');
+        ie_open('a', null, null,
+            'href', 'https://www.paypal.com');
+          itext('Paypal');
+        ie_close('a');
+        itext(', embora MUITAS pessoas falem de hist\u00F3rias, medos ao usar para receber pagamentos do exterior e coisas do tipo... \u00C9 uma ferramenta muito boa, segura e eficiente. Existem alguns relatos de pessoas que tiveram problemas e todo o seu dinheiro foi congelado sem volta. O que eu tenho a dizer sobre isso \u00E9: Tome cuidado com a empresa que voc\u00EA est\u00E1 fazendo neg\u00F3cio, \u00E9 justamente ela que pode bloquear ou criar uma disputa pelo seu pagamento.');
+      ie_close('p');
+      ie_open('p');
+        itext('\u00C9 poss\u00EDvel ter uma conta facilmente no Brasil. Por\u00E9m voc\u00EA s\u00F3 pode cadastrar cart\u00F5es Brasileiros. Caso voc\u00EA tenha conta nos EUA, \u00E9 necess\u00E1rio ter uma conta extra de Paypal para trabalhar e transitar facilmente o dinheiro com mais regalias.  \u00C9 necess\u00E1rio lembrar que ter uma conta nos EUA n\u00E3o significa que voc\u00EA legalmente pode receber dinheiro de empresas sem permiss\u00E3o para trabalho, ent\u00E3o pense duas vezes.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11705,11 +11719,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param158}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param213}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'MtPZA.render';
+  $render.soyTemplateName = 'OWcWU.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11719,20 +11733,14 @@ return exports;
 
 });
 
-class MtPZA extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(MtPZA, templates);
+class OWcWU extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(OWcWU, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
 /* 103 */,
 /* 104 */,
 /* 105 */,
@@ -11773,7 +11781,8 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(MtPZA, templates);
 /* 140 */,
 /* 141 */,
 /* 142 */,
-/* 143 */
+/* 143 */,
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11801,9 +11810,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(96);
+var _paypalSoy = __webpack_require__(102);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _paypalSoy2 = _interopRequireDefault(_paypalSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11813,23 +11822,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var MtPZA = function (_Component) {
-  _inherits(MtPZA, _Component);
+var OWcWU = function (_Component) {
+  _inherits(OWcWU, _Component);
 
-  function MtPZA() {
-    _classCallCheck(this, MtPZA);
+  function OWcWU() {
+    _classCallCheck(this, OWcWU);
 
-    return _possibleConstructorReturn(this, (MtPZA.__proto__ || Object.getPrototypeOf(MtPZA)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (OWcWU.__proto__ || Object.getPrototypeOf(OWcWU)).apply(this, arguments));
   }
 
-  return MtPZA;
+  return OWcWU;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(MtPZA, _indexSoy2.default);
+_metalSoy2.default.register(OWcWU, _paypalSoy2.default);
 
-exports.default = MtPZA;
+exports.default = OWcWU;
 
 /***/ })
-],[143]);
+],[144]);
