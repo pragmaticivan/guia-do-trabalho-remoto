@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([1],[
+webpackJsonppageComponent([4],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2475,8 +2475,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11634,15 +11634,12 @@ module.exports = function(module) {
 /* 102 */,
 /* 103 */,
 /* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NPfjM", function() { return NPfjM; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Idhiz", function() { return Idhiz; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11654,15 +11651,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from xoom.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace NPfjM.
+ * @fileoverview Templates in namespace Idhiz.
  * @public
  */
 
-goog.module('NPfjM.incrementaldom');
+goog.module('Idhiz.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11694,66 +11691,28 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param268 = function() {
+  var param257 = function() {
     ie_open('h6');
-      var dyn21 = opt_data.page.description;
-      if (typeof dyn21 == 'function') dyn21(); else if (dyn21 != null) itext(dyn21);
+      var dyn20 = opt_data.page.description;
+      if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Introdu\u00E7\u00E3o');
+        itext('Recebendo pagamentos com Xoom');
       ie_close('h2');
       ie_open('p');
-        itext('Trabalhar remotamente vem se tornando cada vez mais um objetivo de todos os trabalhadores na \u00E1rea de TI ao redor do mundo. Estar alinhado com suas necessidades, controlar seu hor\u00E1rio de trabalho, dispor de mais tempo com a fam\u00EDlia, viajar e conhecer novos horizontes e principalmente se livrar do stress causado pelo tr\u00E2nsito nas grandes cidades. Estes s\u00E3o alguns dos motivos que fazem um funcion\u00E1rio questionar sua empresa e negociar uma jornada de trabalho remoto.');
+        ie_open('a', null, null,
+            'href', 'https://www.xoom.com');
+          itext('Xoom');
+        ie_close('a');
+        itext(' \u00E9 um dos mais adorados por todos os freelancers, \u00E9 t\u00E3o simples que parece at\u00E9 n\u00E3o ser de verdade. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente no mesmo dia, em algumas horas. Trata-se de um intermediador de envios entre pa\u00EDses, onde a empresa que lhe contratou paga o valor na sua moeda nacional e voc\u00EA recebe em reais na sua conta.');
       ie_close('p');
       ie_open('p');
-        itext('Ap\u00F3s completar 2 anos de trabalho remoto, decidi compartilhar um pouco da minha experi\u00EAncia relativa a como come\u00E7ar a trabalhar remotamente tanto para empresas no Brasil, quanto para empresas no exterior.');
+        itext('Depois de se cadastrar, a empresa pode enviar at\u00E9 US$ 2.900 dentro de um per\u00EDodo de 24 horas, at\u00E9 US$ 6.000 dentro de 30 dias e at\u00E9 US$ 9.999 em 180 dias. Os limites de envio aplicam-se \u00E0s atividades combinadas de todas as contas que tenham o mesmo endere\u00E7o f\u00EDsico. Por esse motivo, a Xoom recomenda manter uma conta por fam\u00EDlia para o limite de envio ser gerenciado com mais facilidade.');
       ie_close('p');
       ie_open('p');
-        itext('Todas as informa\u00E7\u00F5es s\u00E3o inicialmente focadas a profissionais de TI, por\u00E9m tamb\u00E9m podem ser aplicadas a profissionais de outras \u00E1reas.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '2');
-      ie_open('h2');
-        itext('Trabalho remoto \u00E9 a coisa certa para voc\u00EA?');
-      ie_close('h2');
-      ie_open('p');
-        itext('Algo que percebi trabalhando com v\u00E1rias pessoas, de v\u00E1rios estados e pa\u00EDses, foi que cada um tem suas caracter\u00EDsticas as quais fazem voc\u00EA se dar bem ou n\u00E3o no trabalho remoto:');
-      ie_close('p');
-      ie_open('h4');
-        itext('Disciplina');
-      ie_close('h4');
-      ie_open('p');
-        itext('\u00C9 bem dif\u00EDcil controlar sua aten\u00E7\u00E3o quando se tem milhares de problemas, servi\u00E7os dom\u00E9sticos para fazer, cachorro para dar banho, filhos para levar na escola e outras coisas do tipo. Se voc\u00EA \u00E9 do tipo que procrastina seu trabalho para resolver seus problemas de forma desorganizada, talvez trabalho remoto seja dif\u00EDcil para voc\u00EA.');
-      ie_close('p');
-      ie_open('h4');
-        itext('Motiva\u00E7\u00E3o');
-      ie_close('h4');
-      ie_open('p');
-        itext('\u00C0s vezes fica dif\u00EDcil acordar cedo, estar dispon\u00EDvel para uma reuni\u00E3o, ou at\u00E9 mesmo se sentir lento por n\u00E3o ter ningu\u00E9m te ajudando pessoalmente. Pessoas com auto-motiva\u00E7\u00E3o fazem um trabalho remoto melhor. \u00C0s vezes \u00E9 realmente necess\u00E1rio um Gestor de projetos pegando no p\u00E9 para manter os funcion\u00E1rios focados no trabalho.');
-      ie_close('p');
-      ie_open('h4');
-        itext('Local de trabalho');
-      ie_close('h4');
-      ie_open('p');
-        itext('O local de trabalho \u00E9 muito importante para quem trabalha remoto. \u00C0s vezes por achar que a liberdade \u00E9 grande, voc\u00EA acaba caindo na tenta\u00E7\u00E3o de trabalhar na cama, \u00E0s vezes at\u00E9 caindo no sono, ligar a TV e trabalhar enquanto assiste, ser atrapalhado por interfer\u00EAncias familiares como esposa pedindo pra ir fazer compras no supermercado. \u00C0s vezes \u00E9 realmente necess\u00E1rio definir um bom local de trabalho no qual voc\u00EA se sinta na obriga\u00E7\u00E3o de, ao sentar para trabalhar, estar focado e esquecer o m\u00E1ximo do ambiente externo que pode tirar seu foco.');
-      ie_close('p');
-      ie_open('h4');
-        itext('Personalidade');
-      ie_close('h4');
-      ie_open('p');
-        itext('Algumas pessoas conseguem trabalhar tranquilamente em sua casa, outras, necessitam de um escrit\u00F3rio espec\u00EDfico pra isso, onde conseguem ter contato com outros profissionais. Existem pessoas que utilizam essa oportunidade de trabalho para viajar pelo mundo virando \'n\u00F4mades digitais\'.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '3');
-      ie_open('h2');
-        itext('Necessidades');
-      ie_close('h2');
-      ie_open('p');
-        itext('Inicialmente tudo que voc\u00EA precisa \u00E9 ter seus instrumentos de trabalho, "computador, smartphone (caso seja desenvolvimento mobile), post-it(<3)", um lugar para plugar a tomada do seu computador e uma boa internet. Para algumas empresas tamb\u00E9m \u00E9 necess\u00E1rio que fique sempre online em alguma ferramenta de comunica\u00E7\u00E3o determinada pela empresa.');
+        itext('Cada transa\u00E7\u00E3o da Xoom tem um limite de US$ 2.999, mas a empresa pode enviar at\u00E9 US$ 6.000 em um per\u00EDodo de 30 dias (at\u00E9 $60.000 em 180 dias) ao fornecer informa\u00E7\u00F5es adicionais que nos ajudem a garantir uma transfer\u00EAncia de fundos segura, mantendo-se em conformidade com regulamentos federais e estaduais. Tais informa\u00E7\u00F5es ser\u00E3o solicitadas toda vez que voc\u00EA tentar enviar uma quantia maior que seu limite atual, por\u00E9m voc\u00EA pode economizar tempo contactando a Equipe do Xoom para Verifica\u00E7\u00E3o e fornecer essas informa\u00E7\u00F5es antecipadamente.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11765,11 +11724,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param268}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param257}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'NPfjM.render';
+  $render.soyTemplateName = 'Idhiz.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11779,14 +11738,17 @@ return exports;
 
 });
 
-class NPfjM extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(NPfjM, templates);
+class Idhiz extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Idhiz, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 106 */,
+/* 107 */,
+/* 108 */,
 /* 109 */,
 /* 110 */,
 /* 111 */,
@@ -11823,17 +11785,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(NPfjM, templates);
 /* 142 */,
 /* 143 */,
 /* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */,
-/* 155 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11861,9 +11813,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(108);
+var _xoomSoy = __webpack_require__(105);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _xoomSoy2 = _interopRequireDefault(_xoomSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11873,23 +11825,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var NPfjM = function (_Component) {
-  _inherits(NPfjM, _Component);
+var Idhiz = function (_Component) {
+  _inherits(Idhiz, _Component);
 
-  function NPfjM() {
-    _classCallCheck(this, NPfjM);
+  function Idhiz() {
+    _classCallCheck(this, Idhiz);
 
-    return _possibleConstructorReturn(this, (NPfjM.__proto__ || Object.getPrototypeOf(NPfjM)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Idhiz.__proto__ || Object.getPrototypeOf(Idhiz)).apply(this, arguments));
   }
 
-  return NPfjM;
+  return Idhiz;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(NPfjM, _indexSoy2.default);
+_metalSoy2.default.register(Idhiz, _xoomSoy2.default);
 
-exports.default = NPfjM;
+exports.default = Idhiz;
 
 /***/ })
-],[155]);
+],[145]);

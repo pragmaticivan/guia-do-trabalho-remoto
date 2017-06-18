@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([8],[
+webpackJsonppageComponent([14],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2475,8 +2475,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11624,18 +11624,12 @@ module.exports = function(module) {
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lOwek", function() { return lOwek; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mjPMx", function() { return mjPMx; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11647,15 +11641,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from payoneer.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace lOwek.
+ * @fileoverview Templates in namespace mjPMx.
  * @public
  */
 
-goog.module('lOwek.incrementaldom');
+goog.module('mjPMx.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11687,40 +11681,142 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param202 = function() {
+  var param147 = function() {
     ie_open('h6');
-      var dyn15 = opt_data.page.description;
-      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+      var dyn10 = opt_data.page.description;
+      if (typeof dyn10 == 'function') dyn10(); else if (dyn10 != null) itext(dyn10);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com Payoneer');
+        itext('Recursos sobre trabalho remoto');
       ie_close('h2');
-      ie_open('p');
-        ie_open('a', null, null,
-            'href', 'http://www.payoneer.com/');
-          itext('Payoneer');
-        ie_close('a');
-        itext(' \u00E9 uma forma de receber dinheiro sem precisar trazer o valor monet\u00E1rio para o Brasil. \u00C9 simplesmente criada uma conta no Bank of American que representa sua conta online. Voc\u00EA recebe um cart\u00E3o de cr\u00E9dito pr\u00E9-pago no qual est\u00E1 ligado a essa conta.');
-      ie_close('p');
-      ie_open('p');
-        itext('Empresas Americanas podem depositar dinheiro diretamente nesta conta, gerando cr\u00E9ditos no seu cart\u00E3o, que pode ser utilizado em ATMs e compras online.');
-      ie_close('p');
-      ie_open('p');
-        itext('Ao realizar saques em ATMs lhe ser\u00E1 cobrado uma taxa de conveni\u00EAncia, que nada mais \u00E9 que uma taxa de convers\u00E3o cambial. Esta taxa varia de acordo com o ATM no qual voc\u00EA est\u00E1 sacando, mas fica entre 12 a 20 reais por saque, fora que alguns ATMs tamb\u00E9m limitam o saque di\u00E1rio.');
-      ie_close('p');
-      ie_open('p');
-        itext('Outra desvantagem do Payoneer \u00E9 que alguns servi\u00E7os online como Dropbox e iTunes v\u00E3o rejeitar seu cart\u00E3o, nesses casos voc\u00EA pode vincul\u00E1-lo ao Paypal para contornar o problema.');
-      ie_close('p');
-      ie_open('p');
-        itext('Bem interessante essa forma de receber, por\u00E9m voc\u00EA n\u00E3o pode movimentar a conta livremente, apenas pode transferir dinheiro para outros usu\u00E1rios de Payoneer. \u00C9 um dos principais meios de pagamentos utilizado pelo ');
-        ie_open('a', null, null,
-            'href', 'https://www.odesk.com/');
-          itext('ODesk');
-        ie_close('a');
-        itext('.');
-      ie_close('p');
+      ie_open('h4');
+        itext('Artigos');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://medium.com/desenvolvimento-front-end-pt-br/o-que-eu-aprendi-em-quase-1-ano-de-home-office-7ed3cfee276a');
+            itext('O que eu aprendi em quase 1 ano de home-office');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Comunica\u00E7\u00E3o');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://slack.com/');
+            itext('Slack');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Comunidades');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://www.meetup.com/Belo-Horizonte-Remote-Workers/');
+            itext('Remote Workers - Belo Horizonte');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Diversos');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://github.com/lukasz-madon/awesome-remote-job');
+            itext('Awesome Remote Job');
+          ie_close('a');
+          itext(' - Uma compila\u00E7\u00E3o de informa\u00E7\u00F5es sobre trabalho remoto');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://github.com/lerrua/remote-jobs-brazil');
+            itext('Remote Jobs');
+          ie_close('a');
+          itext(' - Lista de empresas com trabalho remoto no Brasil');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://github.com/jessicard/remote-jobs');
+            itext('Remote Jobs Worldwide');
+          ie_close('a');
+          itext(' - Lista de empresas com trabalho remoto Worldwide');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Livros');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://37signals.com/remote/');
+            itext('Remote. Office Not Required.');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://scottberkun.com/yearwithoutpants/');
+            itext('The Year Without Pants: WordPress.com and the Future of Work');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Gest\u00E3o de Projetos');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://pivotaltracker.com');
+            itext('PivotalTracker');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('M\u00E9trica de tempo');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://wakatime.com/');
+            itext('WakaTime');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Podcasts');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://www.grokpodcast.com/2013/04/02/episodio-86-trabalho-remoto-parte-1-de-4/');
+            itext('Grok Podcast - Trabalho Remoto');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://devnaestrada.com.br/2015/12/25/devnaestrada-remoto-da-depressao.html');
+            itext('DevNaEstrada - Remoto da depress\u00E3o');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Talks');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=IT6z7VDueF8');
+            itext('Desafios e vantagens do trabalho remoto por Willian Fernandes');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11731,11 +11827,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param202}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param147}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'lOwek.render';
+  $render.soyTemplateName = 'mjPMx.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11745,14 +11841,20 @@ return exports;
 
 });
 
-class lOwek extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(lOwek, templates);
+class mjPMx extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(mjPMx, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
 /* 102 */,
 /* 103 */,
 /* 104 */,
@@ -11793,14 +11895,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(lOwek, templates);
 /* 139 */,
 /* 140 */,
 /* 141 */,
-/* 142 */,
-/* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11828,9 +11923,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _payoneerSoy = __webpack_require__(101);
+var _indexSoy = __webpack_require__(95);
 
-var _payoneerSoy2 = _interopRequireDefault(_payoneerSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11840,23 +11935,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var lOwek = function (_Component) {
-  _inherits(lOwek, _Component);
+var mjPMx = function (_Component) {
+  _inherits(mjPMx, _Component);
 
-  function lOwek() {
-    _classCallCheck(this, lOwek);
+  function mjPMx() {
+    _classCallCheck(this, mjPMx);
 
-    return _possibleConstructorReturn(this, (lOwek.__proto__ || Object.getPrototypeOf(lOwek)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (mjPMx.__proto__ || Object.getPrototypeOf(mjPMx)).apply(this, arguments));
   }
 
-  return lOwek;
+  return mjPMx;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(lOwek, _payoneerSoy2.default);
+_metalSoy2.default.register(mjPMx, _indexSoy2.default);
 
-exports.default = lOwek;
+exports.default = mjPMx;
 
 /***/ })
-],[149]);
+],[142]);

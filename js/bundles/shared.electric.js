@@ -16639,7 +16639,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'class', 'sidebar-toggler-content toggler-collapsed');
       ie_open('div', null, null,
           'class', 'sidebar-search');
-        $templateAlias1({maxResults: 3, path: '/docs/', placeholder: 'Search Docs'}, null, opt_ijData);
+        $templateAlias1({maxResults: 3, path: '/guia/', placeholder: 'Search Docs'}, null, opt_ijData);
       ie_close('div');
       $templateAlias2({elementClasses: 'sidebar-list sidebar-list-1', listItemClasses: 'sidebar-item', anchorVariant: 'sidebar', section: opt_data.section}, null, opt_ijData);
     ie_close('div');
@@ -16658,7 +16658,7 @@ if (goog.DEBUG) {
  * @return {void}
  * @suppress {checkTypes}
  */
-function __deltemplate_s52_d34389eb(opt_data, opt_ignored, opt_ijData) {
+function __deltemplate_s66_d34389eb(opt_data, opt_ignored, opt_ijData) {
   ie_open('a', null, null,
       'class', 'sidebar-link ' + (opt_data.page.active ? 'sidebar-link-selected' : ''),
       'href', opt_data.page.url);
@@ -16667,16 +16667,16 @@ function __deltemplate_s52_d34389eb(opt_data, opt_ignored, opt_ijData) {
           'class', 'sidebar-icon icon-16-' + opt_data.page.icon);
     }
     ie_open('span');
-      var dyn3 = opt_data.page.title;
-      if (typeof dyn3 == 'function') dyn3(); else if (dyn3 != null) itext(dyn3);
+      var dyn5 = opt_data.page.title;
+      if (typeof dyn5 == 'function') dyn5(); else if (dyn5 != null) itext(dyn5);
     ie_close('span');
   ie_close('a');
 }
-exports.__deltemplate_s52_d34389eb = __deltemplate_s52_d34389eb;
+exports.__deltemplate_s66_d34389eb = __deltemplate_s66_d34389eb;
 if (goog.DEBUG) {
-  __deltemplate_s52_d34389eb.soyTemplateName = 'Sidebar.__deltemplate_s52_d34389eb';
+  __deltemplate_s66_d34389eb.soyTemplateName = 'Sidebar.__deltemplate_s66_d34389eb';
 }
-soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), 'sidebar', 0, __deltemplate_s52_d34389eb);
+soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), 'sidebar', 0, __deltemplate_s66_d34389eb);
 
 exports.render.params = ["section"];
 exports.render.types = {"section":"any"};

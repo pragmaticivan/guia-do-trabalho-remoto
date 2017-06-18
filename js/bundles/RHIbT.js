@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([5],[
+webpackJsonppageComponent([6],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2475,8 +2475,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11632,13 +11632,12 @@ module.exports = function(module) {
 /* 100 */,
 /* 101 */,
 /* 102 */,
-/* 103 */,
-/* 104 */
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wcVKt", function() { return wcVKt; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RHIbT", function() { return RHIbT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11650,15 +11649,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from transferwise.soy.
+// This file was automatically generated from swift.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace wcVKt.
+ * @fileoverview Templates in namespace RHIbT.
  * @public
  */
 
-goog.module('wcVKt.incrementaldom');
+goog.module('RHIbT.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11698,14 +11697,75 @@ function $render(opt_data, opt_ignored, opt_ijData) {
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com TransferWise');
+        itext('Recebendo pagamentos com Swift');
       ie_close('h2');
       ie_open('p');
+        itext('Segundo um levantamento feito na comunidade, \u00E9 a mais comum entre as pessoas que trabalham remotamente para empresas no exterior. \u00C9 poss\u00EDvel receber dinheiro do exterior atrav\u00E9s de uma transfer\u00EAncia banc\u00E1ria aceita em qualquer ag\u00EAncia. \u00C9 necess\u00E1rio enviar todos os dados referentes a transa\u00E7\u00E3o para que a empresa possa efetuar uma transa\u00E7\u00E3o de envio de um banco no exterior para um banco no Brasil.');
+      ie_close('p');
+      ie_open('p');
+        itext('Ademais, ambas as institui\u00E7\u00F5es cobrar\u00E3o pelo servi\u00E7o. Assim, quem estiver no exterior desembolsar\u00E1 uma taxa para que o dinheiro chegue ao destino pretendido, mesmo n\u00E3o sendo correntista do banco contatado. A tarifa \u00E9 conhecida como ordem de pagamento expedida. Uma vez no Brasil, a ag\u00EAncia que recebeu o montante tamb\u00E9m descontar\u00E1 uma determinada quantia do dinheiro que ir\u00E1 disponibilizar ao cliente.');
+      ie_close('p');
+      ie_open('h4');
+        itext('Dados necess\u00E1rios');
+      ie_close('h4');
+      ie_open('p');
+        itext('Apesar de nem todos serem precisos, \u00E9 legal enviar todos esses para que seu empregador tenha todas as informa\u00E7\u00F5es necess\u00E1rias:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Nome completo');
+        ie_close('li');
+        ie_open('li');
+          itext('Documento de Identifica\u00E7\u00E3o');
+        ie_close('li');
+        ie_open('li');
+          itext('Endere\u00E7o Residencial');
+        ie_close('li');
+        ie_open('li');
+          itext('Motivo da remessa');
+        ie_close('li');
+        ie_open('li');
+          itext('Banco + C\u00F3digo do banco');
+        ie_close('li');
+        ie_open('li');
+          itext('Ag\u00EAncia');
+        ie_close('li');
+        ie_open('li');
+          itext('N\u00FAmero da Conta');
+        ie_close('li');
+        ie_open('li');
+          itext('SWIFT Code (Referente a ag\u00EAncia autorizada a fazer c\u00E2mbio no Brasil) (Procure seu SWIFT code ');
+          ie_open('a', null, null,
+              'href', 'http://www.theswiftcodes.com/brazil/');
+            itext('aqui');
+          ie_close('a');
+          itext('. )');
+        ie_close('li');
+        ie_open('li');
+          itext('Sugiro que tamb\u00E9m envie o IBAN (Leia abaixo o que isso significa)');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('OBS: Para SWIFT Code, sugiro que procure o banco mais perto da sua cidade, caso precise resolver alguma burocracia.');
+      ie_close('p');
+      ie_open('h4');
+        itext('IBAN');
+      ie_close('h4');
+      ie_open('p');
+        itext('IBAN (International Bank Account Number) \u00E9 um sistema internacional de identifica\u00E7\u00E3o de bancos criado para facilitar a comunica\u00E7\u00E3o e processamento entre transa\u00E7\u00F5es com redu\u00E7\u00E3o de risco. Inicialmente utilizado na Europa, est\u00E1 cada vez mais sendo adotado por outros pa\u00EDses, alguns bancos nos Estados Unidos por exemplo j\u00E1 aceitam esse tipo de c\u00F3digo ao inv\u00E9s do SWIFT. At\u00E9 o fim de 2014, 66 pa\u00EDses estariam usando IBAN como sistema principal.');
+      ie_close('p');
+      ie_open('p');
+        itext('Gere seu IBAN aqui: ');
         ie_open('a', null, null,
-            'href', 'https://transferwise.com/u/344b08');
-          itext('TransferWise');
+            'href', 'http://geradordeiban.detalhado.com/#/make');
+          itext('http://geradordeiban.detalhado.com/#/make');
         ie_close('a');
-        itext(' \u00E9 uma nova plataforma um pouco parecida com o Xoom. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente 1 dia depois caso a empresa seja Americana. Trata-se de um intermediador de envio entre pa\u00EDses, por\u00E9m o diferencial \u00E9 que esta empresa garante envio do dinheiro com cota\u00E7\u00F5es bem melhores. Retirando aquele monte de encargos criados por bancos. Voc\u00EA acaba econiomizando 90% em encargos "desnecess\u00E1rios".');
+      ie_close('p');
+      ie_open('h4');
+        itext('Desvantagens');
+      ie_close('h4');
+      ie_open('p');
+        itext('A desvantagem deste tipo de opera\u00E7\u00E3o \u00E9 a cobran\u00E7a de custos dos dois lados da opera\u00E7\u00E3o. Outro ponto negativo \u00E9 o tempo de espera para conseguir liquidar a remessa, dependendo do banco pode demorar at\u00E9 3 dias.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11721,7 +11781,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'wcVKt.render';
+  $render.soyTemplateName = 'RHIbT.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11731,14 +11791,15 @@ return exports;
 
 });
 
-class wcVKt extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(wcVKt, templates);
+class RHIbT extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(RHIbT, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 104 */,
 /* 105 */,
 /* 106 */,
 /* 107 */,
@@ -11781,11 +11842,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(wcVKt, templates);
 /* 144 */,
 /* 145 */,
 /* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11813,9 +11870,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _transferwiseSoy = __webpack_require__(104);
+var _swiftSoy = __webpack_require__(103);
 
-var _transferwiseSoy2 = _interopRequireDefault(_transferwiseSoy);
+var _swiftSoy2 = _interopRequireDefault(_swiftSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11825,23 +11882,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var wcVKt = function (_Component) {
-  _inherits(wcVKt, _Component);
+var RHIbT = function (_Component) {
+  _inherits(RHIbT, _Component);
 
-  function wcVKt() {
-    _classCallCheck(this, wcVKt);
+  function RHIbT() {
+    _classCallCheck(this, RHIbT);
 
-    return _possibleConstructorReturn(this, (wcVKt.__proto__ || Object.getPrototypeOf(wcVKt)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (RHIbT.__proto__ || Object.getPrototypeOf(RHIbT)).apply(this, arguments));
   }
 
-  return wcVKt;
+  return RHIbT;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(wcVKt, _transferwiseSoy2.default);
+_metalSoy2.default.register(RHIbT, _swiftSoy2.default);
 
-exports.default = wcVKt;
+exports.default = RHIbT;
 
 /***/ })
-],[151]);
+],[147]);

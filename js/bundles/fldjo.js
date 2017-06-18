@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([11],[
+webpackJsonppageComponent([1],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2475,8 +2475,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11627,12 +11627,22 @@ module.exports = function(module) {
 /* 95 */,
 /* 96 */,
 /* 97 */,
-/* 98 */
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "jdflj", function() { return jdflj; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fldjo", function() { return fldjo; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11644,15 +11654,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from bitcoin.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace jdflj.
+ * @fileoverview Templates in namespace fldjo.
  * @public
  */
 
-goog.module('jdflj.incrementaldom');
+goog.module('fldjo.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11684,154 +11694,67 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param169 = function() {
+  var param268 = function() {
     ie_open('h6');
-      var dyn12 = opt_data.page.description;
-      if (typeof dyn12 == 'function') dyn12(); else if (dyn12 != null) itext(dyn12);
+      var dyn21 = opt_data.page.description;
+      if (typeof dyn21 == 'function') dyn21(); else if (dyn21 != null) itext(dyn21);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com Bitcoin');
+        itext('Introdu\u00E7\u00E3o');
       ie_close('h2');
       ie_open('p');
-        itext('Bitcoin \u00E9 minha op\u00E7\u00E3o preferida, muitos profissionais de TI ainda n\u00E3o perceberam todas as vantagens, uma delas \u00E9 trafegar dinheiro de um pa\u00EDs para o outro sem precisar pagar tantas taxas e passar por tantas burocracias.');
+        itext('Trabalhar remotamente vem se tornando cada vez mais um objetivo de todos os trabalhadores na \u00E1rea de TI ao redor do mundo. Estar alinhado com suas necessidades, controlar seu hor\u00E1rio de trabalho, dispor de mais tempo com a fam\u00EDlia, viajar e conhecer novos horizontes e principalmente se livrar do stress causado pelo tr\u00E2nsito nas grandes cidades. Estes s\u00E3o alguns dos motivos que fazem um funcion\u00E1rio questionar sua empresa e negociar uma jornada de trabalho remoto.');
       ie_close('p');
       ie_open('p');
-        itext('Segundo a Wikipedia, Bitcoin \u00E9 uma criptomoeda cuja cria\u00E7\u00E3o e transfer\u00EAncia \u00E9 baseada em protocolos c\u00F3digo fonte aberto de criptografia que \u00E9 independente de qualquer autoridade central. Um bitcoin pode ser transferido por um computador ou smartphone sem recurso a uma institui\u00E7\u00E3o financeira intermedi\u00E1ria.');
+        itext('Ap\u00F3s completar 2 anos de trabalho remoto, decidi compartilhar um pouco da minha experi\u00EAncia relativa a como come\u00E7ar a trabalhar remotamente tanto para empresas no Brasil, quanto para empresas no exterior.');
       ie_close('p');
       ie_open('p');
-        itext('Toda a rede \u00E9 sustentada pelos  usu\u00E1rios atrav\u00E9s de p2p, logo todo o processo de seguran\u00E7a, valida\u00E7\u00E3o e "minera\u00E7\u00E3o" \u00E9 feito atrav\u00E9s de v\u00E1rios computadores na grande rede.');
+        itext('Todas as informa\u00E7\u00F5es s\u00E3o inicialmente focadas a profissionais de TI, por\u00E9m tamb\u00E9m podem ser aplicadas a profissionais de outras \u00E1reas.');
       ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '2');
+      ie_open('h2');
+        itext('Trabalho remoto \u00E9 a coisa certa para voc\u00EA?');
+      ie_close('h2');
       ie_open('p');
-        itext('\u00C9 necess\u00E1rio ter uma carteira(wallet) para guardar seus bitcoins. Abaixo segue algumas wallets que a comunidade costuma utilizar:');
+        itext('Algo que percebi trabalhando com v\u00E1rias pessoas, de v\u00E1rios estados e pa\u00EDses, foi que cada um tem suas caracter\u00EDsticas as quais fazem voc\u00EA se dar bem ou n\u00E3o no trabalho remoto:');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('Xapo - ');
-          ie_open('a', null, null,
-              'href', 'https://xapo.com/');
-            itext('https://xapo.com/');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          itext('Coinbase - ');
-          ie_open('a', null, null,
-              'href', 'https://www.coinbase.com/join/5637f7ae01653a4452000087');
-            itext('https://www.coinbase.com/');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          itext('Uphold - ');
-          ie_open('a', null, null,
-              'href', 'https://uphold.com/signup?utm_campaign=refprog&utm_medium=pragmaticivan');
-            itext('https://uphold.com/');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
+      ie_open('h4');
+        itext('Disciplina');
+      ie_close('h4');
       ie_open('p');
-        itext('O fluxo atual que se costuma utilizar \u00E9 bem simples:');
+        itext('\u00C9 bem dif\u00EDcil controlar sua aten\u00E7\u00E3o quando se tem milhares de problemas, servi\u00E7os dom\u00E9sticos para fazer, cachorro para dar banho, filhos para levar na escola e outras coisas do tipo. Se voc\u00EA \u00E9 do tipo que procrastina seu trabalho para resolver seus problemas de forma desorganizada, talvez trabalho remoto seja dif\u00EDcil para voc\u00EA.');
       ie_close('p');
+      ie_open('h4');
+        itext('Motiva\u00E7\u00E3o');
+      ie_close('h4');
       ie_open('p');
-        itext('A empresa compra bitcoins atrav\u00E9s do ');
-        ie_open('a', null, null,
-            'href', 'https://www.coinbase.com/join/5637f7ae01653a4452000087');
-          itext('Coinbase');
-        ie_close('a');
-        itext(' ou outro servi\u00E7o dispon\u00EDvel no pa\u00EDs em que a empresa est\u00E1 localizada, envia para sua wallet e automaticamente voc\u00EA detem criptomoedas equivalentes ao valor que voc\u00EA costuam receber como sal\u00E1rio.');
+        itext('\u00C0s vezes fica dif\u00EDcil acordar cedo, estar dispon\u00EDvel para uma reuni\u00E3o, ou at\u00E9 mesmo se sentir lento por n\u00E3o ter ningu\u00E9m te ajudando pessoalmente. Pessoas com auto-motiva\u00E7\u00E3o fazem um trabalho remoto melhor. \u00C0s vezes \u00E9 realmente necess\u00E1rio um Gestor de projetos pegando no p\u00E9 para manter os funcion\u00E1rios focados no trabalho.');
       ie_close('p');
+      ie_open('h4');
+        itext('Local de trabalho');
+      ie_close('h4');
       ie_open('p');
-        itext('Ap\u00F3s isso voc\u00EA pode trocar seus bitcoins em servi\u00E7os no Brasil, indico utilizar o ');
-        ie_open('a', null, null,
-            'href', 'https://foxbit.exchange');
-          itext('Foxbit');
-        ie_close('a');
-        itext('. Voc\u00EA envia seus bitcoins para uma wallet em um desses servi\u00E7os e solicita vender seus bitcoins, ap\u00F3s isso \u00E9 s\u00F3 solicitar enviar seu dinheiro em Reais para sua conta, bem r\u00E1pido e no mesmo dia, e as taxas s\u00E3o BEM mais amigu\u00E1veis que opera\u00E7\u00F5es entre bancos, quase que insignificantes comparadas a esses outros meios.');
+        itext('O local de trabalho \u00E9 muito importante para quem trabalha remoto. \u00C0s vezes por achar que a liberdade \u00E9 grande, voc\u00EA acaba caindo na tenta\u00E7\u00E3o de trabalhar na cama, \u00E0s vezes at\u00E9 caindo no sono, ligar a TV e trabalhar enquanto assiste, ser atrapalhado por interfer\u00EAncias familiares como esposa pedindo pra ir fazer compras no supermercado. \u00C0s vezes \u00E9 realmente necess\u00E1rio definir um bom local de trabalho no qual voc\u00EA se sinta na obriga\u00E7\u00E3o de, ao sentar para trabalhar, estar focado e esquecer o m\u00E1ximo do ambiente externo que pode tirar seu foco.');
       ie_close('p');
+      ie_open('h4');
+        itext('Personalidade');
+      ie_close('h4');
       ie_open('p');
-        itext('Segue alguns tutoriais ensinando como utilizar as funcionalidades da FOXBIT:');
+        itext('Algumas pessoas conseguem trabalhar tranquilamente em sua casa, outras, necessitam de um escrit\u00F3rio espec\u00EDfico pra isso, onde conseguem ter contato com outros profissionais. Existem pessoas que utilizam essa oportunidade de trabalho para viajar pelo mundo virando \'n\u00F4mades digitais\'.');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://www.youtube.com/watch?v=GCoe-thmHJk');
-            itext('Criar conta na FOXBIT');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://www.youtube.com/watch?v=loAJUYu9UHY');
-            itext('Sacar bitcoins na FOXBIT');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://www.youtube.com/watch?v=2xRDkFDyYQY');
-            itext('Comprar bitcoins na FOXBIT');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '3');
+      ie_open('h2');
+        itext('Necessidades');
+      ie_close('h2');
       ie_open('p');
-        itext('Alguns servi\u00E7os no qual voc\u00EA pode utilizar seus bitcoins:');
+        itext('Inicialmente tudo que voc\u00EA precisa \u00E9 ter seus instrumentos de trabalho, "computador, smartphone (caso seja desenvolvimento mobile), post-it(<3)", um lugar para plugar a tomada do seu computador e uma boa internet. Para algumas empresas tamb\u00E9m \u00E9 necess\u00E1rio que fique sempre online em alguma ferramenta de comunica\u00E7\u00E3o determinada pela empresa.');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://www.gyft.com/bitcoin/');
-            itext('Gyft');
-          ie_close('a');
-          itext(' - Um dos mais interessantes, voc\u00EA compra v\u00E1rios coupons com bitcoin, bem interessante para quem viaja para os EUA e quer fazer umas compras.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://www.e-coin.io/?ref=1070214a1100452b810918b5030a994d#sthash.JMVP7M1H.dpuf');
-            itext('E-coin Card');
-          ie_close('a');
-          itext(' - Fant\u00E1stico sistema onde voc\u00EA deposita seus bitcoins e eles caem como cr\u00E9dito em um cart\u00E3o de debito prepago, onde voc\u00EA pode utilizar em qualquer lugar que aceite bandeira Visa, inclusive compras online.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://uphold.com/signup?utm_campaign=refprog&utm_medium=pragmaticivan');
-            itext('Uphold');
-          ie_close('a');
-          itext(' - Permite enviar seus bitcoins e fazer com que eles permane\u00E7am com o valor atual, evitando a grande volatilidade da cripto moeda.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://bitpay.com/');
-            itext('Bitpay');
-          ie_close('a');
-          itext(' - Integra\u00E7\u00E3o de pagamentos para aceitar bitcoin.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://usebitcoins.info/');
-            itext('Usecoin');
-          ie_close('a');
-          itext(' -  Lista de sites no qual voc\u00EA pode gastar seus bitcoins.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://www.coinbase.com/join/5637f7ae01653a4452000087');
-            itext('Coinbase');
-          ie_close('a');
-          itext(' - Um dos pioneiros e mais seguros sistemas de compra e venda de bitcoins nos EUA.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://localbitcoins.com/');
-            itext('LocalBitcoins');
-          ie_close('a');
-          itext(' - Um sistema de compra e venda de bitcoins com v\u00E1rios meios de pagamento, inclusive em dinheiro vivo.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://www.paguecombitcoin.com');
-            itext('Pague com Bitcoin');
-          ie_close('a');
-          itext(' - Incr\u00EDvel! Pague qualquer boleto com Bitcoin. Desde compras em e-commerce, incluindo mercado livre, at\u00E9 fatura do cart\u00E3o do seu cr\u00E9dito.');
-        ie_close('li');
-      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11842,11 +11765,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param169}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param268}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'jdflj.render';
+  $render.soyTemplateName = 'fldjo.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11856,24 +11779,14 @@ return exports;
 
 });
 
-class jdflj extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(jdflj, templates);
+class fldjo extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(fldjo, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
 /* 109 */,
 /* 110 */,
 /* 111 */,
@@ -11912,7 +11825,15 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(jdflj, templates);
 /* 144 */,
 /* 145 */,
 /* 146 */,
-/* 147 */
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11940,9 +11861,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _bitcoinSoy = __webpack_require__(98);
+var _indexSoy = __webpack_require__(108);
 
-var _bitcoinSoy2 = _interopRequireDefault(_bitcoinSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11952,23 +11873,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var jdflj = function (_Component) {
-  _inherits(jdflj, _Component);
+var fldjo = function (_Component) {
+  _inherits(fldjo, _Component);
 
-  function jdflj() {
-    _classCallCheck(this, jdflj);
+  function fldjo() {
+    _classCallCheck(this, fldjo);
 
-    return _possibleConstructorReturn(this, (jdflj.__proto__ || Object.getPrototypeOf(jdflj)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (fldjo.__proto__ || Object.getPrototypeOf(fldjo)).apply(this, arguments));
   }
 
-  return jdflj;
+  return fldjo;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(jdflj, _bitcoinSoy2.default);
+_metalSoy2.default.register(fldjo, _indexSoy2.default);
 
-exports.default = jdflj;
+exports.default = fldjo;
 
 /***/ })
-],[147]);
+],[155]);
