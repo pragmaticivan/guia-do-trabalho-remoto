@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([8],[
+webpackJsonppageComponent([4],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11630,12 +11630,16 @@ module.exports = function(module) {
 /* 98 */,
 /* 99 */,
 /* 100 */,
-/* 101 */
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "kzwLq", function() { return kzwLq; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "nfaKT", function() { return nfaKT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11647,15 +11651,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from payoneer.soy.
+// This file was automatically generated from xoom.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace kzwLq.
+ * @fileoverview Templates in namespace nfaKT.
  * @public
  */
 
-goog.module('kzwLq.incrementaldom');
+goog.module('nfaKT.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11687,39 +11691,28 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param202 = function() {
+  var param235 = function() {
     ie_open('h6');
-      var dyn15 = opt_data.page.description;
-      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+      var dyn18 = opt_data.page.description;
+      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com Payoneer');
+        itext('Recebendo pagamentos com Xoom');
       ie_close('h2');
       ie_open('p');
         ie_open('a', null, null,
-            'href', 'http://www.payoneer.com/');
-          itext('Payoneer');
+            'href', 'https://www.xoom.com');
+          itext('Xoom');
         ie_close('a');
-        itext(' \u00E9 uma forma de receber dinheiro sem precisar trazer o valor monet\u00E1rio para o Brasil. \u00C9 simplesmente criada uma conta no Bank of American que representa sua conta online. Voc\u00EA recebe um cart\u00E3o de cr\u00E9dito pr\u00E9-pago no qual est\u00E1 ligado a essa conta.');
+        itext(' \u00E9 um dos mais adorados por todos os freelancers, \u00E9 t\u00E3o simples que parece at\u00E9 n\u00E3o ser de verdade. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente no mesmo dia, em algumas horas. Trata-se de um intermediador de envios entre pa\u00EDses, onde a empresa que lhe contratou paga o valor na sua moeda nacional e voc\u00EA recebe em reais na sua conta.');
       ie_close('p');
       ie_open('p');
-        itext('Empresas Americanas podem depositar dinheiro diretamente nesta conta, gerando cr\u00E9ditos no seu cart\u00E3o, que pode ser utilizado em ATMs e compras online.');
+        itext('Depois de se cadastrar, a empresa pode enviar at\u00E9 US$ 2.900 dentro de um per\u00EDodo de 24 horas, at\u00E9 US$ 6.000 dentro de 30 dias e at\u00E9 US$ 9.999 em 180 dias. Os limites de envio aplicam-se \u00E0s atividades combinadas de todas as contas que tenham o mesmo endere\u00E7o f\u00EDsico. Por esse motivo, a Xoom recomenda manter uma conta por fam\u00EDlia para o limite de envio ser gerenciado com mais facilidade.');
       ie_close('p');
       ie_open('p');
-        itext('Ao realizar saques em ATMs lhe ser\u00E1 cobrado uma taxa de conveni\u00EAncia, que nada mais \u00E9 que uma taxa de convers\u00E3o cambial. Esta taxa varia de acordo com o ATM no qual voc\u00EA est\u00E1 sacando, mas fica entre 12 a 20 reais por saque, fora que alguns ATMs tamb\u00E9m limitam o saque di\u00E1rio.');
-      ie_close('p');
-      ie_open('p');
-        itext('Outra desvantagem do Payoneer \u00E9 que alguns servi\u00E7os online como Dropbox e iTunes v\u00E3o rejeitar seu cart\u00E3o, nesses casos voc\u00EA pode vincul\u00E1-lo ao Paypal para contornar o problema.');
-      ie_close('p');
-      ie_open('p');
-        itext('Bem interessante essa forma de receber, por\u00E9m voc\u00EA n\u00E3o pode movimentar a conta livremente, apenas pode transferir dinheiro para outros usu\u00E1rios de Payoneer. \u00C9 um dos principais meios de pagamentos utilizado pelo ');
-        ie_open('a', null, null,
-            'href', 'https://www.odesk.com/');
-          itext('ODesk');
-        ie_close('a');
-        itext('.');
+        itext('Cada transa\u00E7\u00E3o da Xoom tem um limite de US$ 2.999, mas a empresa pode enviar at\u00E9 US$ 6.000 em um per\u00EDodo de 30 dias (at\u00E9 $60.000 em 180 dias) ao fornecer informa\u00E7\u00F5es adicionais que nos ajudem a garantir uma transfer\u00EAncia de fundos segura, mantendo-se em conformidade com regulamentos federais e estaduais. Tais informa\u00E7\u00F5es ser\u00E3o solicitadas toda vez que voc\u00EA tentar enviar uma quantia maior que seu limite atual, por\u00E9m voc\u00EA pode economizar tempo contactando a Equipe do Xoom para Verifica\u00E7\u00E3o e fornecer essas informa\u00E7\u00F5es antecipadamente.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11731,11 +11724,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param202}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param235}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'kzwLq.render';
+  $render.soyTemplateName = 'nfaKT.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11745,18 +11738,14 @@ return exports;
 
 });
 
-class kzwLq extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(kzwLq, templates);
+class nfaKT extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(nfaKT, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
 /* 106 */,
 /* 107 */,
 /* 108 */,
@@ -11801,7 +11790,8 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(kzwLq, templates);
 /* 147 */,
 /* 148 */,
 /* 149 */,
-/* 150 */
+/* 150 */,
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11829,9 +11819,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _payoneerSoy = __webpack_require__(101);
+var _xoomSoy = __webpack_require__(105);
 
-var _payoneerSoy2 = _interopRequireDefault(_payoneerSoy);
+var _xoomSoy2 = _interopRequireDefault(_xoomSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11841,23 +11831,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var kzwLq = function (_Component) {
-  _inherits(kzwLq, _Component);
+var nfaKT = function (_Component) {
+  _inherits(nfaKT, _Component);
 
-  function kzwLq() {
-    _classCallCheck(this, kzwLq);
+  function nfaKT() {
+    _classCallCheck(this, nfaKT);
 
-    return _possibleConstructorReturn(this, (kzwLq.__proto__ || Object.getPrototypeOf(kzwLq)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (nfaKT.__proto__ || Object.getPrototypeOf(nfaKT)).apply(this, arguments));
   }
 
-  return kzwLq;
+  return nfaKT;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(kzwLq, _payoneerSoy2.default);
+_metalSoy2.default.register(nfaKT, _xoomSoy2.default);
 
-exports.default = kzwLq;
+exports.default = nfaKT;
 
 /***/ })
-],[150]);
+],[151]);
