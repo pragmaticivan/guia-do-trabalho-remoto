@@ -30,7 +30,7 @@ npm i
 electric run
 ```
 
-* Deploy to production (send build files to `wedeploy` branch):
+* Deploy to production (send build files to `gh-pages` branch):
 
 ```
 electric deploy
