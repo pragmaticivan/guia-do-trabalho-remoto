@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([7],[
+webpackJsonppageComponent([8],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2475,8 +2475,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11630,13 +11630,12 @@ module.exports = function(module) {
 /* 98 */,
 /* 99 */,
 /* 100 */,
-/* 101 */,
-/* 102 */
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PKJTn", function() { return PKJTn; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lOwek", function() { return lOwek; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11648,15 +11647,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from paypal.soy.
+// This file was automatically generated from payoneer.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace PKJTn.
+ * @fileoverview Templates in namespace lOwek.
  * @public
  */
 
-goog.module('PKJTn.incrementaldom');
+goog.module('lOwek.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11696,18 +11695,31 @@ function $render(opt_data, opt_ignored, opt_ijData) {
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com Paypal');
+        itext('Recebendo pagamentos com Payoneer');
       ie_close('h2');
       ie_open('p');
-        itext('O primeiro e mais conhecido por todos \u00E9 o ');
         ie_open('a', null, null,
-            'href', 'https://www.paypal.com');
-          itext('Paypal');
+            'href', 'http://www.payoneer.com/');
+          itext('Payoneer');
         ie_close('a');
-        itext(', embora MUITAS pessoas falem de hist\u00F3rias, medos ao usar para receber pagamentos do exterior e coisas do tipo... \u00C9 uma ferramenta muito boa, segura e eficiente. Existem alguns relatos de pessoas que tiveram problemas e todo o seu dinheiro foi congelado sem volta. O que eu tenho a dizer sobre isso \u00E9: Tome cuidado com a empresa que voc\u00EA est\u00E1 fazendo neg\u00F3cio, \u00E9 justamente ela que pode bloquear ou criar uma disputa pelo seu pagamento.');
+        itext(' \u00E9 uma forma de receber dinheiro sem precisar trazer o valor monet\u00E1rio para o Brasil. \u00C9 simplesmente criada uma conta no Bank of American que representa sua conta online. Voc\u00EA recebe um cart\u00E3o de cr\u00E9dito pr\u00E9-pago no qual est\u00E1 ligado a essa conta.');
       ie_close('p');
       ie_open('p');
-        itext('\u00C9 poss\u00EDvel ter uma conta facilmente no Brasil. Por\u00E9m voc\u00EA s\u00F3 pode cadastrar cart\u00F5es Brasileiros. Caso voc\u00EA tenha conta nos EUA, \u00E9 necess\u00E1rio ter uma conta extra de Paypal para trabalhar e transitar facilmente o dinheiro com mais regalias.  \u00C9 necess\u00E1rio lembrar que ter uma conta nos EUA n\u00E3o significa que voc\u00EA legalmente pode receber dinheiro de empresas sem permiss\u00E3o para trabalho, ent\u00E3o pense duas vezes.');
+        itext('Empresas Americanas podem depositar dinheiro diretamente nesta conta, gerando cr\u00E9ditos no seu cart\u00E3o, que pode ser utilizado em ATMs e compras online.');
+      ie_close('p');
+      ie_open('p');
+        itext('Ao realizar saques em ATMs lhe ser\u00E1 cobrado uma taxa de conveni\u00EAncia, que nada mais \u00E9 que uma taxa de convers\u00E3o cambial. Esta taxa varia de acordo com o ATM no qual voc\u00EA est\u00E1 sacando, mas fica entre 12 a 20 reais por saque, fora que alguns ATMs tamb\u00E9m limitam o saque di\u00E1rio.');
+      ie_close('p');
+      ie_open('p');
+        itext('Outra desvantagem do Payoneer \u00E9 que alguns servi\u00E7os online como Dropbox e iTunes v\u00E3o rejeitar seu cart\u00E3o, nesses casos voc\u00EA pode vincul\u00E1-lo ao Paypal para contornar o problema.');
+      ie_close('p');
+      ie_open('p');
+        itext('Bem interessante essa forma de receber, por\u00E9m voc\u00EA n\u00E3o pode movimentar a conta livremente, apenas pode transferir dinheiro para outros usu\u00E1rios de Payoneer. \u00C9 um dos principais meios de pagamentos utilizado pelo ');
+        ie_open('a', null, null,
+            'href', 'https://www.odesk.com/');
+          itext('ODesk');
+        ie_close('a');
+        itext('.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11723,7 +11735,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'PKJTn.render';
+  $render.soyTemplateName = 'lOwek.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11733,14 +11745,15 @@ return exports;
 
 });
 
-class PKJTn extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(PKJTn, templates);
+class lOwek extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(lOwek, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 102 */,
 /* 103 */,
 /* 104 */,
 /* 105 */,
@@ -11783,7 +11796,11 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(PKJTn, templates);
 /* 142 */,
 /* 143 */,
 /* 144 */,
-/* 145 */
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11811,9 +11828,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _paypalSoy = __webpack_require__(102);
+var _payoneerSoy = __webpack_require__(101);
 
-var _paypalSoy2 = _interopRequireDefault(_paypalSoy);
+var _payoneerSoy2 = _interopRequireDefault(_payoneerSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11823,23 +11840,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PKJTn = function (_Component) {
-  _inherits(PKJTn, _Component);
+var lOwek = function (_Component) {
+  _inherits(lOwek, _Component);
 
-  function PKJTn() {
-    _classCallCheck(this, PKJTn);
+  function lOwek() {
+    _classCallCheck(this, lOwek);
 
-    return _possibleConstructorReturn(this, (PKJTn.__proto__ || Object.getPrototypeOf(PKJTn)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (lOwek.__proto__ || Object.getPrototypeOf(lOwek)).apply(this, arguments));
   }
 
-  return PKJTn;
+  return lOwek;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(PKJTn, _paypalSoy2.default);
+_metalSoy2.default.register(lOwek, _payoneerSoy2.default);
 
-exports.default = PKJTn;
+exports.default = lOwek;
 
 /***/ })
-],[145]);
+],[149]);

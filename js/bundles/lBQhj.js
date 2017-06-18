@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([5],[
+webpackJsonppageComponent([4],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2475,8 +2475,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11633,12 +11633,13 @@ module.exports = function(module) {
 /* 101 */,
 /* 102 */,
 /* 103 */,
-/* 104 */
+/* 104 */,
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ajBhx", function() { return ajBhx; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lBQhj", function() { return lBQhj; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11650,15 +11651,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from transferwise.soy.
+// This file was automatically generated from xoom.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace ajBhx.
+ * @fileoverview Templates in namespace lBQhj.
  * @public
  */
 
-goog.module('ajBhx.incrementaldom');
+goog.module('lBQhj.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11690,22 +11691,28 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param224 = function() {
+  var param246 = function() {
     ie_open('h6');
-      var dyn17 = opt_data.page.description;
-      if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
+      var dyn19 = opt_data.page.description;
+      if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com TransferWise');
+        itext('Recebendo pagamentos com Xoom');
       ie_close('h2');
       ie_open('p');
         ie_open('a', null, null,
-            'href', 'https://transferwise.com/u/344b08');
-          itext('TransferWise');
+            'href', 'https://www.xoom.com');
+          itext('Xoom');
         ie_close('a');
-        itext(' \u00E9 uma nova plataforma um pouco parecida com o Xoom. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente 1 dia depois caso a empresa seja Americana. Trata-se de um intermediador de envio entre pa\u00EDses, por\u00E9m o diferencial \u00E9 que esta empresa garante envio do dinheiro com cota\u00E7\u00F5es bem melhores. Retirando aquele monte de encargos criados por bancos. Voc\u00EA acaba econiomizando 90% em encargos "desnecess\u00E1rios".');
+        itext(' \u00E9 um dos mais adorados por todos os freelancers, \u00E9 t\u00E3o simples que parece at\u00E9 n\u00E3o ser de verdade. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente no mesmo dia, em algumas horas. Trata-se de um intermediador de envios entre pa\u00EDses, onde a empresa que lhe contratou paga o valor na sua moeda nacional e voc\u00EA recebe em reais na sua conta.');
+      ie_close('p');
+      ie_open('p');
+        itext('Depois de se cadastrar, a empresa pode enviar at\u00E9 US$ 2.900 dentro de um per\u00EDodo de 24 horas, at\u00E9 US$ 6.000 dentro de 30 dias e at\u00E9 US$ 9.999 em 180 dias. Os limites de envio aplicam-se \u00E0s atividades combinadas de todas as contas que tenham o mesmo endere\u00E7o f\u00EDsico. Por esse motivo, a Xoom recomenda manter uma conta por fam\u00EDlia para o limite de envio ser gerenciado com mais facilidade.');
+      ie_close('p');
+      ie_open('p');
+        itext('Cada transa\u00E7\u00E3o da Xoom tem um limite de US$ 2.999, mas a empresa pode enviar at\u00E9 US$ 6.000 em um per\u00EDodo de 30 dias (at\u00E9 $60.000 em 180 dias) ao fornecer informa\u00E7\u00F5es adicionais que nos ajudem a garantir uma transfer\u00EAncia de fundos segura, mantendo-se em conformidade com regulamentos federais e estaduais. Tais informa\u00E7\u00F5es ser\u00E3o solicitadas toda vez que voc\u00EA tentar enviar uma quantia maior que seu limite atual, por\u00E9m voc\u00EA pode economizar tempo contactando a Equipe do Xoom para Verifica\u00E7\u00E3o e fornecer essas informa\u00E7\u00F5es antecipadamente.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11717,11 +11724,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param224}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param246}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'ajBhx.render';
+  $render.soyTemplateName = 'lBQhj.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11731,15 +11738,14 @@ return exports;
 
 });
 
-class ajBhx extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ajBhx, templates);
+class lBQhj extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(lBQhj, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 105 */,
 /* 106 */,
 /* 107 */,
 /* 108 */,
@@ -11782,8 +11788,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ajBhx, templates);
 /* 145 */,
 /* 146 */,
 /* 147 */,
-/* 148 */,
-/* 149 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11811,9 +11816,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _transferwiseSoy = __webpack_require__(104);
+var _xoomSoy = __webpack_require__(105);
 
-var _transferwiseSoy2 = _interopRequireDefault(_transferwiseSoy);
+var _xoomSoy2 = _interopRequireDefault(_xoomSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11823,23 +11828,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ajBhx = function (_Component) {
-  _inherits(ajBhx, _Component);
+var lBQhj = function (_Component) {
+  _inherits(lBQhj, _Component);
 
-  function ajBhx() {
-    _classCallCheck(this, ajBhx);
+  function lBQhj() {
+    _classCallCheck(this, lBQhj);
 
-    return _possibleConstructorReturn(this, (ajBhx.__proto__ || Object.getPrototypeOf(ajBhx)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (lBQhj.__proto__ || Object.getPrototypeOf(lBQhj)).apply(this, arguments));
   }
 
-  return ajBhx;
+  return lBQhj;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(ajBhx, _transferwiseSoy2.default);
+_metalSoy2.default.register(lBQhj, _xoomSoy2.default);
 
-exports.default = ajBhx;
+exports.default = lBQhj;
 
 /***/ })
-],[149]);
+],[148]);
