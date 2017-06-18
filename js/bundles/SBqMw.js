@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([5],[
+webpackJsonppageComponent([3],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2475,8 +2475,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11633,12 +11633,14 @@ module.exports = function(module) {
 /* 101 */,
 /* 102 */,
 /* 103 */,
-/* 104 */
+/* 104 */,
+/* 105 */,
+/* 106 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "nNrCE", function() { return nNrCE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SBqMw", function() { return SBqMw; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11650,15 +11652,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from transferwise.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace nNrCE.
+ * @fileoverview Templates in namespace SBqMw.
  * @public
  */
 
-goog.module('nNrCE.incrementaldom');
+goog.module('SBqMw.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11690,23 +11692,69 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param235 = function() {
+  var param257 = function() {
     ie_open('h6');
-      var dyn18 = opt_data.page.description;
-      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
+      var dyn20 = opt_data.page.description;
+      if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com TransferWise');
+        itext('Sites com ofertas remotas');
       ie_close('h2');
       ie_open('p');
-        ie_open('a', null, null,
-            'href', 'https://transferwise.com/u/344b08');
-          itext('TransferWise');
-        ie_close('a');
-        itext(' \u00E9 uma nova plataforma um pouco parecida com o Xoom. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente 1 dia depois caso a empresa seja Americana. Trata-se de um intermediador de envio entre pa\u00EDses, por\u00E9m o diferencial \u00E9 que esta empresa garante envio do dinheiro com cota\u00E7\u00F5es bem melhores. Retirando aquele monte de encargos criados por bancos. Voc\u00EA acaba econiomizando 90% em encargos "desnecess\u00E1rios".');
+        itext('Fique atento: em algumas vagas, os candidatos devem morar no mesmo pa\u00EDs da vaga, limitando-se assim que o trabalho seja realmente remoto (nesses casos voc\u00EA precisa residir l\u00E1 ou ter autoriza\u00E7\u00E3o para trabalhar no pa\u00EDs onde a empresa est\u00E1 localizada).');
       ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://jobs.github.com/positions?description=&location=Remote');
+            itext('Github Job board');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://www.jobsintech.io/jobs#q=&page=0&refinements=%5B%7B%22remote%22%3A%22can_work_remote%22%7D%5D');
+            itext('Jobs in Tech');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://landing.jobs/?custom_inviter=pragmaticivan');
+            itext('Landing.jobs');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://remoteok.io/remote-jobs');
+            itext('Remote Ok');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://stackoverflow.com/jobs/remote-developer-jobs');
+            itext('Stackoverflow Job board');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://staff.com/');
+            itext('Staff.com');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://weworkremotely.com/');
+            itext('We work remotely');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.wfh.io/');
+            itext('WFH.io');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11717,11 +11765,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param235}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param257}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'nNrCE.render';
+  $render.soyTemplateName = 'SBqMw.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11731,16 +11779,14 @@ return exports;
 
 });
 
-class nNrCE extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(nNrCE, templates);
+class SBqMw extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(SBqMw, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 105 */,
-/* 106 */,
 /* 107 */,
 /* 108 */,
 /* 109 */,
@@ -11784,7 +11830,11 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(nNrCE, templates);
 /* 147 */,
 /* 148 */,
 /* 149 */,
-/* 150 */
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11812,9 +11862,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _transferwiseSoy = __webpack_require__(104);
+var _indexSoy = __webpack_require__(106);
 
-var _transferwiseSoy2 = _interopRequireDefault(_transferwiseSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11824,23 +11874,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var nNrCE = function (_Component) {
-  _inherits(nNrCE, _Component);
+var SBqMw = function (_Component) {
+  _inherits(SBqMw, _Component);
 
-  function nNrCE() {
-    _classCallCheck(this, nNrCE);
+  function SBqMw() {
+    _classCallCheck(this, SBqMw);
 
-    return _possibleConstructorReturn(this, (nNrCE.__proto__ || Object.getPrototypeOf(nNrCE)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (SBqMw.__proto__ || Object.getPrototypeOf(SBqMw)).apply(this, arguments));
   }
 
-  return nNrCE;
+  return SBqMw;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(nNrCE, _transferwiseSoy2.default);
+_metalSoy2.default.register(SBqMw, _indexSoy2.default);
 
-exports.default = nNrCE;
+exports.default = SBqMw;
 
 /***/ })
-],[150]);
+],[154]);

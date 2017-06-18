@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([1],[
+webpackJsonppageComponent([10],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2475,8 +2475,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11628,21 +11628,12 @@ module.exports = function(module) {
 /* 96 */,
 /* 97 */,
 /* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FkJFg", function() { return FkJFg; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GkjNp", function() { return GkjNp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11654,15 +11645,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from bitwage.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace FkJFg.
+ * @fileoverview Templates in namespace GkjNp.
  * @public
  */
 
-goog.module('FkJFg.incrementaldom');
+goog.module('GkjNp.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11694,67 +11685,91 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param268 = function() {
+  var param180 = function() {
     ie_open('h6');
-      var dyn21 = opt_data.page.description;
-      if (typeof dyn21 == 'function') dyn21(); else if (dyn21 != null) itext(dyn21);
+      var dyn13 = opt_data.page.description;
+      if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Introdu\u00E7\u00E3o');
+        itext('Recebendo pagamentos com Bitwage');
       ie_close('h2');
       ie_open('p');
-        itext('Trabalhar remotamente vem se tornando cada vez mais um objetivo de todos os trabalhadores na \u00E1rea de TI ao redor do mundo. Estar alinhado com suas necessidades, controlar seu hor\u00E1rio de trabalho, dispor de mais tempo com a fam\u00EDlia, viajar e conhecer novos horizontes e principalmente se livrar do stress causado pelo tr\u00E2nsito nas grandes cidades. Estes s\u00E3o alguns dos motivos que fazem um funcion\u00E1rio questionar sua empresa e negociar uma jornada de trabalho remoto.');
+        ie_open('a', null, null,
+            'href', 'https://www.bitwage.com/referral/XZUSDRB366TE');
+          itext('Bitwage');
+        ie_close('a');
+        itext(' \u00E9 um servi\u00E7o que permite o recebimento de pagamentos em Bitcoins de forma indireta ao empregador, ou seja, o empregador n\u00E3o compra Bitcoins e nem precisa ter conta na Bitwage, ele apenas deposita o pagamento em uma conta banc\u00E1ria dos EUA, do Canad\u00E1 e/ou da Europa e em aproximadamente 2 dias este montante, com uma redu\u00E7\u00E3o de apenas 1% por transa\u00E7\u00E3o, estar\u00E1 em sua ');
+        ie_open('a', null, null,
+            'href', '#bitcoins');
+          itext('carteira Bitcoin');
+        ie_close('a');
+        itext('.');
       ie_close('p');
       ie_open('p');
-        itext('Ap\u00F3s completar 2 anos de trabalho remoto, decidi compartilhar um pouco da minha experi\u00EAncia relativa a como come\u00E7ar a trabalhar remotamente tanto para empresas no Brasil, quanto para empresas no exterior.');
+        itext('O fluxo para utiliza\u00E7\u00E3o \u00E9 bem simples, veja s\u00F3:');
       ie_close('p');
       ie_open('p');
-        itext('Todas as informa\u00E7\u00F5es s\u00E3o inicialmente focadas a profissionais de TI, por\u00E9m tamb\u00E9m podem ser aplicadas a profissionais de outras \u00E1reas.');
+        itext('1] Voc\u00EA faz o cadastro no site da ');
+        ie_open('a', null, null,
+            'href', 'https://www.bitwage.com/referral/XZUSDRB366TE');
+          itext('Bitwage');
+        ie_close('a');
+        itext('.');
       ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '2');
-      ie_open('h2');
-        itext('Trabalho remoto \u00E9 a coisa certa para voc\u00EA?');
-      ie_close('h2');
       ie_open('p');
-        itext('Algo que percebi trabalhando com v\u00E1rias pessoas, de v\u00E1rios estados e pa\u00EDses, foi que cada um tem suas caracter\u00EDsticas as quais fazem voc\u00EA se dar bem ou n\u00E3o no trabalho remoto:');
+        itext('2] Ap\u00F3s o cadastro, voc\u00EA precisa fazer o Set Up como um Worker. Neste momento voc\u00EA ir\u00E1 passar informa\u00E7\u00F5es pessoais para an\u00E1lise e aprova\u00E7\u00E3o dos seus dados, isso basicamente serve para segura\u00E7a da ferramenta.');
       ie_close('p');
-      ie_open('h4');
-        itext('Disciplina');
-      ie_close('h4');
       ie_open('p');
-        itext('\u00C9 bem dif\u00EDcil controlar sua aten\u00E7\u00E3o quando se tem milhares de problemas, servi\u00E7os dom\u00E9sticos para fazer, cachorro para dar banho, filhos para levar na escola e outras coisas do tipo. Se voc\u00EA \u00E9 do tipo que procrastina seu trabalho para resolver seus problemas de forma desorganizada, talvez trabalho remoto seja dif\u00EDcil para voc\u00EA.');
+        itext('3] Ap\u00F3s ser aprovado como um Worker, voc\u00EA ir\u00E1 cadastrar o seu Employer e tamb\u00E9m um Distribution, que basicamente \u00E9 a sua ');
+        ie_open('a', null, null,
+            'href', '#bitcoins');
+          itext('carteira Bitcoin');
+        ie_close('a');
+        itext('.');
       ie_close('p');
-      ie_open('h4');
-        itext('Motiva\u00E7\u00E3o');
-      ie_close('h4');
       ie_open('p');
-        itext('\u00C0s vezes fica dif\u00EDcil acordar cedo, estar dispon\u00EDvel para uma reuni\u00E3o, ou at\u00E9 mesmo se sentir lento por n\u00E3o ter ningu\u00E9m te ajudando pessoalmente. Pessoas com auto-motiva\u00E7\u00E3o fazem um trabalho remoto melhor. \u00C0s vezes \u00E9 realmente necess\u00E1rio um Gestor de projetos pegando no p\u00E9 para manter os funcion\u00E1rios focados no trabalho.');
+        itext('4] E finalmente, ap\u00F3s finalizar este processo de Set Up, que geralmente leva entre 2 e 3 dias \u00FAteis para ser finalizado completamente, voc\u00EA ir\u00E1 receber os dados de uma conta banc\u00E1ria criada para voc\u00EA, nos EUA, no Canad\u00E1 ou na Europa, e basicamente, ser\u00E3o estes os dados que voc\u00EA vai passar para seu empregador depositar os pagamentos.');
       ie_close('p');
-      ie_open('h4');
-        itext('Local de trabalho');
-      ie_close('h4');
       ie_open('p');
-        itext('O local de trabalho \u00E9 muito importante para quem trabalha remoto. \u00C0s vezes por achar que a liberdade \u00E9 grande, voc\u00EA acaba caindo na tenta\u00E7\u00E3o de trabalhar na cama, \u00E0s vezes at\u00E9 caindo no sono, ligar a TV e trabalhar enquanto assiste, ser atrapalhado por interfer\u00EAncias familiares como esposa pedindo pra ir fazer compras no supermercado. \u00C0s vezes \u00E9 realmente necess\u00E1rio definir um bom local de trabalho no qual voc\u00EA se sinta na obriga\u00E7\u00E3o de, ao sentar para trabalhar, estar focado e esquecer o m\u00E1ximo do ambiente externo que pode tirar seu foco.');
+        itext('Outra coisa legal \u00E9 que eles d\u00E3o bastante aten\u00E7\u00E3o para o p\u00FAblico do Brasil, sendo assim, basta solicitar atrav\u00E9s dos canais de comunica\u00E7\u00E3o deles para que o di\u00E1logo seja em Portugu\u00EAs, e prontamente ir\u00E3o colocar voc\u00EA em contato com o atendimento brasileiro.');
       ie_close('p');
-      ie_open('h4');
-        itext('Personalidade');
-      ie_close('h4');
       ie_open('p');
-        itext('Algumas pessoas conseguem trabalhar tranquilamente em sua casa, outras, necessitam de um escrit\u00F3rio espec\u00EDfico pra isso, onde conseguem ter contato com outros profissionais. Existem pessoas que utilizam essa oportunidade de trabalho para viajar pelo mundo virando \'n\u00F4mades digitais\'.');
+        itext('E s\u00F3 para finalizar, segue abaixo alguns v\u00EDdeos explicativos:');
       ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '3');
-      ie_open('h2');
-        itext('Necessidades');
-      ie_close('h2');
-      ie_open('p');
-        itext('Inicialmente tudo que voc\u00EA precisa \u00E9 ter seus instrumentos de trabalho, "computador, smartphone (caso seja desenvolvimento mobile), post-it(<3)", um lugar para plugar a tomada do seu computador e uma boa internet. Para algumas empresas tamb\u00E9m \u00E9 necess\u00E1rio que fique sempre online em alguma ferramenta de comunica\u00E7\u00E3o determinada pela empresa.');
-      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=_JqTHW7X13Q');
+            itext('Bitwage & the future of payroll using bitcoin - YouTube');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=2ln6AiLrUjo');
+            itext('Recebendo pagamentos f\u00E1cil com a Bitwage! - YouTube');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=VqepklppjUU');
+            itext('O que \u00E9 a Bitwage - YouTube - Legendado');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=0v3Oe7spihs');
+            itext('Como trampar como freelancer nos EUA - YouTube');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=fxP0lc42xIY');
+            itext('Receba pagamentos do exterior por Bitcoin');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11765,11 +11780,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param268}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param180}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'FkJFg.render';
+  $render.soyTemplateName = 'GkjNp.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11779,14 +11794,23 @@ return exports;
 
 });
 
-class FkJFg extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(FkJFg, templates);
+class GkjNp extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(GkjNp, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
 /* 109 */,
 /* 110 */,
 /* 111 */,
@@ -11822,18 +11846,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(FkJFg, templates);
 /* 141 */,
 /* 142 */,
 /* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */,
-/* 155 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11861,9 +11874,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(108);
+var _bitwageSoy = __webpack_require__(99);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _bitwageSoy2 = _interopRequireDefault(_bitwageSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11873,23 +11886,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var FkJFg = function (_Component) {
-  _inherits(FkJFg, _Component);
+var GkjNp = function (_Component) {
+  _inherits(GkjNp, _Component);
 
-  function FkJFg() {
-    _classCallCheck(this, FkJFg);
+  function GkjNp() {
+    _classCallCheck(this, GkjNp);
 
-    return _possibleConstructorReturn(this, (FkJFg.__proto__ || Object.getPrototypeOf(FkJFg)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (GkjNp.__proto__ || Object.getPrototypeOf(GkjNp)).apply(this, arguments));
   }
 
-  return FkJFg;
+  return GkjNp;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(FkJFg, _indexSoy2.default);
+_metalSoy2.default.register(GkjNp, _bitwageSoy2.default);
 
-exports.default = FkJFg;
+exports.default = GkjNp;
 
 /***/ })
-],[155]);
+],[144]);

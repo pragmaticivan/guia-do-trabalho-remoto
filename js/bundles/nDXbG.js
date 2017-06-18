@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([8],[
+webpackJsonppageComponent([9],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2475,8 +2475,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11629,13 +11629,12 @@ module.exports = function(module) {
 /* 97 */,
 /* 98 */,
 /* 99 */,
-/* 100 */,
-/* 101 */
+/* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeBRb", function() { return HeBRb; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "nDXbG", function() { return nDXbG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11647,15 +11646,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from payoneer.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace HeBRb.
+ * @fileoverview Templates in namespace nDXbG.
  * @public
  */
 
-goog.module('HeBRb.incrementaldom');
+goog.module('nDXbG.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11687,39 +11686,18 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param202 = function() {
+  var param191 = function() {
     ie_open('h6');
-      var dyn15 = opt_data.page.description;
-      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+      var dyn14 = opt_data.page.description;
+      if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com Payoneer');
+        itext('Recebendo pagamentos');
       ie_close('h2');
       ie_open('p');
-        ie_open('a', null, null,
-            'href', 'http://www.payoneer.com/');
-          itext('Payoneer');
-        ie_close('a');
-        itext(' \u00E9 uma forma de receber dinheiro sem precisar trazer o valor monet\u00E1rio para o Brasil. \u00C9 simplesmente criada uma conta no Bank of American que representa sua conta online. Voc\u00EA recebe um cart\u00E3o de cr\u00E9dito pr\u00E9-pago no qual est\u00E1 ligado a essa conta.');
-      ie_close('p');
-      ie_open('p');
-        itext('Empresas Americanas podem depositar dinheiro diretamente nesta conta, gerando cr\u00E9ditos no seu cart\u00E3o, que pode ser utilizado em ATMs e compras online.');
-      ie_close('p');
-      ie_open('p');
-        itext('Ao realizar saques em ATMs lhe ser\u00E1 cobrado uma taxa de conveni\u00EAncia, que nada mais \u00E9 que uma taxa de convers\u00E3o cambial. Esta taxa varia de acordo com o ATM no qual voc\u00EA est\u00E1 sacando, mas fica entre 12 a 20 reais por saque, fora que alguns ATMs tamb\u00E9m limitam o saque di\u00E1rio.');
-      ie_close('p');
-      ie_open('p');
-        itext('Outra desvantagem do Payoneer \u00E9 que alguns servi\u00E7os online como Dropbox e iTunes v\u00E3o rejeitar seu cart\u00E3o, nesses casos voc\u00EA pode vincul\u00E1-lo ao Paypal para contornar o problema.');
-      ie_close('p');
-      ie_open('p');
-        itext('Bem interessante essa forma de receber, por\u00E9m voc\u00EA n\u00E3o pode movimentar a conta livremente, apenas pode transferir dinheiro para outros usu\u00E1rios de Payoneer. \u00C9 um dos principais meios de pagamentos utilizado pelo ');
-        ie_open('a', null, null,
-            'href', 'https://www.odesk.com/');
-          itext('ODesk');
-        ie_close('a');
-        itext('.');
+        itext('Uma das partes mais importantes, que al\u00E9m de garantir toda a seguran\u00E7a do processo, podem lhe ajudar de algumas maneiras na hora de declarar todo o imposto referente ao valor recebido.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11731,11 +11709,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param202}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param191}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'HeBRb.render';
+  $render.soyTemplateName = 'nDXbG.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11745,14 +11723,15 @@ return exports;
 
 });
 
-class HeBRb extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(HeBRb, templates);
+class nDXbG extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(nDXbG, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 101 */,
 /* 102 */,
 /* 103 */,
 /* 104 */,
@@ -11796,7 +11775,11 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(HeBRb, templates);
 /* 142 */,
 /* 143 */,
 /* 144 */,
-/* 145 */
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11824,9 +11807,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _payoneerSoy = __webpack_require__(101);
+var _indexSoy = __webpack_require__(100);
 
-var _payoneerSoy2 = _interopRequireDefault(_payoneerSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11836,23 +11819,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var HeBRb = function (_Component) {
-  _inherits(HeBRb, _Component);
+var nDXbG = function (_Component) {
+  _inherits(nDXbG, _Component);
 
-  function HeBRb() {
-    _classCallCheck(this, HeBRb);
+  function nDXbG() {
+    _classCallCheck(this, nDXbG);
 
-    return _possibleConstructorReturn(this, (HeBRb.__proto__ || Object.getPrototypeOf(HeBRb)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (nDXbG.__proto__ || Object.getPrototypeOf(nDXbG)).apply(this, arguments));
   }
 
-  return HeBRb;
+  return nDXbG;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(HeBRb, _payoneerSoy2.default);
+_metalSoy2.default.register(nDXbG, _indexSoy2.default);
 
-exports.default = HeBRb;
+exports.default = nDXbG;
 
 /***/ })
-],[145]);
+],[149]);

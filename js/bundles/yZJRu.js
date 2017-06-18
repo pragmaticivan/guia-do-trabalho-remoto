@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([9],[
+webpackJsonppageComponent([5],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2475,8 +2475,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11629,12 +11629,16 @@ module.exports = function(module) {
 /* 97 */,
 /* 98 */,
 /* 99 */,
-/* 100 */
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TnhpZ", function() { return TnhpZ; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "yZJRu", function() { return yZJRu; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11646,15 +11650,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from transferwise.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace TnhpZ.
+ * @fileoverview Templates in namespace yZJRu.
  * @public
  */
 
-goog.module('TnhpZ.incrementaldom');
+goog.module('yZJRu.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11686,18 +11690,22 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param191 = function() {
+  var param235 = function() {
     ie_open('h6');
-      var dyn14 = opt_data.page.description;
-      if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
+      var dyn18 = opt_data.page.description;
+      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos');
+        itext('Recebendo pagamentos com TransferWise');
       ie_close('h2');
       ie_open('p');
-        itext('Uma das partes mais importantes, que al\u00E9m de garantir toda a seguran\u00E7a do processo, podem lhe ajudar de algumas maneiras na hora de declarar todo o imposto referente ao valor recebido.');
+        ie_open('a', null, null,
+            'href', 'https://transferwise.com/u/344b08');
+          itext('TransferWise');
+        ie_close('a');
+        itext(' \u00E9 uma nova plataforma um pouco parecida com o Xoom. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente 1 dia depois caso a empresa seja Americana. Trata-se de um intermediador de envio entre pa\u00EDses, por\u00E9m o diferencial \u00E9 que esta empresa garante envio do dinheiro com cota\u00E7\u00F5es bem melhores. Retirando aquele monte de encargos criados por bancos. Voc\u00EA acaba econiomizando 90% em encargos "desnecess\u00E1rios".');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11709,11 +11717,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param191}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param235}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'TnhpZ.render';
+  $render.soyTemplateName = 'yZJRu.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11723,18 +11731,14 @@ return exports;
 
 });
 
-class TnhpZ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(TnhpZ, templates);
+class yZJRu extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(yZJRu, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
 /* 105 */,
 /* 106 */,
 /* 107 */,
@@ -11777,7 +11781,11 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(TnhpZ, templates);
 /* 144 */,
 /* 145 */,
 /* 146 */,
-/* 147 */
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11805,9 +11813,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(100);
+var _transferwiseSoy = __webpack_require__(104);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _transferwiseSoy2 = _interopRequireDefault(_transferwiseSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11817,23 +11825,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var TnhpZ = function (_Component) {
-  _inherits(TnhpZ, _Component);
+var yZJRu = function (_Component) {
+  _inherits(yZJRu, _Component);
 
-  function TnhpZ() {
-    _classCallCheck(this, TnhpZ);
+  function yZJRu() {
+    _classCallCheck(this, yZJRu);
 
-    return _possibleConstructorReturn(this, (TnhpZ.__proto__ || Object.getPrototypeOf(TnhpZ)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (yZJRu.__proto__ || Object.getPrototypeOf(yZJRu)).apply(this, arguments));
   }
 
-  return TnhpZ;
+  return yZJRu;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(TnhpZ, _indexSoy2.default);
+_metalSoy2.default.register(yZJRu, _transferwiseSoy2.default);
 
-exports.default = TnhpZ;
+exports.default = yZJRu;
 
 /***/ })
-],[147]);
+],[151]);
