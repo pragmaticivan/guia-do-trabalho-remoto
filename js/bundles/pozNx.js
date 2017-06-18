@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([0],[
+webpackJsonppageComponent([3],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11635,15 +11635,12 @@ module.exports = function(module) {
 /* 103 */,
 /* 104 */,
 /* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */
+/* 106 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageIndex", function() { return pageIndex; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pozNx", function() { return pozNx; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11659,11 +11656,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace pageIndex.
+ * @fileoverview Templates in namespace pozNx.
  * @public
  */
 
-goog.module('pageIndex.incrementaldom');
+goog.module('pozNx.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11684,7 +11681,7 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('main.incrementaldom', 'render');
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
 /**
@@ -11695,107 +11692,104 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param40 = function() {
-    $header(opt_data, null, opt_ijData);
-    $footer(null, null, opt_ijData);
+  var param257 = function() {
+    ie_open('h6');
+      var dyn20 = opt_data.page.description;
+      if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
+    ie_close('h6');
+    ie_open('article', null, null,
+        'id', '1');
+      ie_open('h2');
+        itext('Sites com ofertas remotas');
+      ie_close('h2');
+      ie_open('p');
+        itext('Fique atento: em algumas vagas, os candidatos devem morar no mesmo pa\u00EDs da vaga, limitando-se assim que o trabalho seja realmente remoto (nesses casos voc\u00EA precisa residir l\u00E1 ou ter autoriza\u00E7\u00E3o para trabalhar no pa\u00EDs onde a empresa est\u00E1 localizada).');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://jobs.github.com/positions?description=&location=Remote');
+            itext('Github Job board');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://www.jobsintech.io/jobs#q=&page=0&refinements=%5B%7B%22remote%22%3A%22can_work_remote%22%7D%5D');
+            itext('Jobs in Tech');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://landing.jobs/?custom_inviter=pragmaticivan');
+            itext('Landing.jobs');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://remoteok.io/remote-jobs');
+            itext('Remote Ok');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://stackoverflow.com/jobs/remote-developer-jobs');
+            itext('Stackoverflow Job board');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://staff.com/');
+            itext('Staff.com');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://weworkremotely.com/');
+            itext('We work remotely');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.wfh.io/');
+            itext('WFH.io');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.page.title);
+    ie_close('input');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.site.title);
+    ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param40}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param257}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'pageIndex.render';
+  $render.soyTemplateName = 'pozNx.render';
 }
 
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $header(opt_data, opt_ignored, opt_ijData) {
-  ie_open('header', null, null,
-      'class', 'header');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('h1', null, null,
-          'class', 'header-title');
-        var dyn3 = opt_data.site.title;
-        if (typeof dyn3 == 'function') dyn3(); else if (dyn3 != null) itext(dyn3);
-      ie_close('h1');
-      ie_open('h2', null, null,
-          'class', 'header-subtitle');
-        var dyn4 = opt_data.site.index.description;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
-      ie_close('h2');
-      ie_open('div', null, null,
-          'class', 'header-cta');
-        ie_open('a', null, null,
-            'href', '/guia/',
-            'class', 'btn btn-accent');
-          itext('Aprenda');
-        ie_close('a');
-      ie_close('div');
-    ie_close('div');
-  ie_close('header');
-}
-exports.header = $header;
-if (goog.DEBUG) {
-  $header.soyTemplateName = 'pageIndex.header';
-}
-
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $footer(opt_data, opt_ignored, opt_ijData) {
-  ie_open('footer', null, null,
-      'class', 'footer');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('div', null, null,
-          'class', 'row');
-        ie_open('p', null, null,
-            'class', 'footer-description col-xs-16');
-          itext('Copyright \u00A9 2017 ');
-          ie_open('a', null, null,
-              'href', 'https://nomadsonrails.com');
-            itext('Nomads on Rails');
-          ie_close('a');
-        ie_close('p');
-      ie_close('div');
-    ie_close('div');
-  ie_close('footer');
-}
-exports.footer = $footer;
-if (goog.DEBUG) {
-  $footer.soyTemplateName = 'pageIndex.footer';
-}
-
-exports.render.params = ["site"];
-exports.render.types = {"site":"any"};
-exports.header.params = ["site"];
-exports.header.types = {"site":"any"};
-exports.footer.params = [];
-exports.footer.types = {};
+exports.render.params = ["page","site"];
+exports.render.types = {"page":"any","site":"any"};
 templates = exports;
 return exports;
 
 });
 
-class pageIndex extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageIndex, templates);
+class pozNx extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pozNx, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 107 */,
+/* 108 */,
+/* 109 */,
 /* 110 */,
 /* 111 */,
 /* 112 */,
@@ -11840,9 +11834,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageIndex, templates)
 /* 151 */,
 /* 152 */,
 /* 153 */,
-/* 154 */,
-/* 155 */,
-/* 156 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11870,7 +11862,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(109);
+var _indexSoy = __webpack_require__(106);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -11882,23 +11874,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var pageIndex = function (_Component) {
-  _inherits(pageIndex, _Component);
+var pozNx = function (_Component) {
+  _inherits(pozNx, _Component);
 
-  function pageIndex() {
-    _classCallCheck(this, pageIndex);
+  function pozNx() {
+    _classCallCheck(this, pozNx);
 
-    return _possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (pozNx.__proto__ || Object.getPrototypeOf(pozNx)).apply(this, arguments));
   }
 
-  return pageIndex;
+  return pozNx;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(pageIndex, _indexSoy2.default);
+_metalSoy2.default.register(pozNx, _indexSoy2.default);
 
-exports.default = pageIndex;
+exports.default = pozNx;
 
 /***/ })
-],[156]);
+],[154]);

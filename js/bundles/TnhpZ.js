@@ -2212,7 +2212,6 @@ function $guide(opt_data, opt_ignored, opt_ijData) {
             'class', 'title');
           var dyn0 = opt_data.page.title;
           if (typeof dyn0 == 'function') dyn0(); else if (dyn0 != null) itext(dyn0);
-          itext(' Guide');
         ie_close('h1');
       ie_close('div');
     ie_close('header');
@@ -2266,12 +2265,12 @@ function $contribute(opt_data, opt_ignored, opt_ijData) {
     ie_open('div', null, null,
         'class', 'contribute-text');
       ie_open('p');
-        itext('Contribute on Github! ');
+        itext('Contribua no Github! ');
         ie_open('a', null, null,
             'href', 'https://github.com/' + opt_data.site.githubRepo + '/tree/master/' + opt_data.page.srcFilePath,
             'class', 'contribute-link',
             'target', '_blank');
-          itext('Edit this section');
+          itext('Edite esta p\u00E1gina');
         ie_close('a');
         itext('.');
       ie_close('p');
@@ -11625,12 +11624,17 @@ module.exports = function(module) {
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IEqkL", function() { return IEqkL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TnhpZ", function() { return TnhpZ; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11646,11 +11650,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace IEqkL.
+ * @fileoverview Templates in namespace TnhpZ.
  * @public
  */
 
-goog.module('IEqkL.incrementaldom');
+goog.module('TnhpZ.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11671,8 +11675,6 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
-
 var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
@@ -11684,64 +11686,18 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param147 = function() {
+  var param191 = function() {
     ie_open('h6');
-      var dyn10 = opt_data.page.description;
-      if (typeof dyn10 == 'function') dyn10(); else if (dyn10 != null) itext(dyn10);
+      var dyn14 = opt_data.page.description;
+      if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
-      ie_close('h2');
-      $templateAlias2({code: 'var hello = function() {\n    console.log(\'Hello, World!\');\n};', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '2');
-      ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
+        itext('Recebendo pagamentos');
       ie_close('h2');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '3');
-      ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
-      ie_close('h2');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('Uma das partes mais importantes, que al\u00E9m de garantir toda a seguran\u00E7a do processo, podem lhe ajudar de algumas maneiras na hora de declarar todo o imposto referente ao valor recebido.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11753,11 +11709,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param147}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param191}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'IEqkL.render';
+  $render.soyTemplateName = 'TnhpZ.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11767,19 +11723,14 @@ return exports;
 
 });
 
-class IEqkL extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(IEqkL, templates);
+class TnhpZ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(TnhpZ, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
 /* 101 */,
 /* 102 */,
 /* 103 */,
@@ -11816,7 +11767,17 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(IEqkL, templates);
 /* 134 */,
 /* 135 */,
 /* 136 */,
-/* 137 */
+/* 137 */,
+/* 138 */,
+/* 139 */,
+/* 140 */,
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11844,7 +11805,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(95);
+var _indexSoy = __webpack_require__(100);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -11856,23 +11817,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var IEqkL = function (_Component) {
-  _inherits(IEqkL, _Component);
+var TnhpZ = function (_Component) {
+  _inherits(TnhpZ, _Component);
 
-  function IEqkL() {
-    _classCallCheck(this, IEqkL);
+  function TnhpZ() {
+    _classCallCheck(this, TnhpZ);
 
-    return _possibleConstructorReturn(this, (IEqkL.__proto__ || Object.getPrototypeOf(IEqkL)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (TnhpZ.__proto__ || Object.getPrototypeOf(TnhpZ)).apply(this, arguments));
   }
 
-  return IEqkL;
+  return TnhpZ;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(IEqkL, _indexSoy2.default);
+_metalSoy2.default.register(TnhpZ, _indexSoy2.default);
 
-exports.default = IEqkL;
+exports.default = TnhpZ;
 
 /***/ })
-],[137]);
+],[147]);

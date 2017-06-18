@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([1],[
+webpackJsonppageComponent([2],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2212,7 +2212,6 @@ function $guide(opt_data, opt_ignored, opt_ijData) {
             'class', 'title');
           var dyn0 = opt_data.page.title;
           if (typeof dyn0 == 'function') dyn0(); else if (dyn0 != null) itext(dyn0);
-          itext(' Guide');
         ie_close('h1');
       ie_close('div');
     ie_close('header');
@@ -2266,12 +2265,12 @@ function $contribute(opt_data, opt_ignored, opt_ijData) {
     ie_open('div', null, null,
         'class', 'contribute-text');
       ie_open('p');
-        itext('Contribute on Github! ');
+        itext('Contribua no Github! ');
         ie_open('a', null, null,
             'href', 'https://github.com/' + opt_data.site.githubRepo + '/tree/master/' + opt_data.page.srcFilePath,
             'class', 'contribute-link',
             'target', '_blank');
-          itext('Edit this section');
+          itext('Edite esta p\u00E1gina');
         ie_close('a');
         itext('.');
       ie_close('p');
@@ -11633,7 +11632,11 @@ module.exports = function(module) {
 /* 100 */,
 /* 101 */,
 /* 102 */,
-/* 103 */
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11707,17 +11710,10 @@ function $render(opt_data, opt_ignored, opt_ijData) {
             ie_open('h1', null, null,
                 'class', 'docs-home-top-title');
               ie_open('span');
-                itext('Electric');
+                var dyn9 = opt_data.site.title;
+                if (typeof dyn9 == 'function') dyn9(); else if (dyn9 != null) itext(dyn9);
               ie_close('span');
-              itext(' Docs');
             ie_close('h1');
-            ie_open('p', null, null,
-                'class', 'docs-home-top-description');
-              itext('Start learning how to leverage the power of ');
-              var dyn9 = opt_data.site.title;
-              if (typeof dyn9 == 'function') dyn9(); else if (dyn9 != null) itext(dyn9);
-              itext('.');
-            ie_close('p');
           ie_close('div');
         ie_close('div');
         ie_open('div', null, null,
@@ -11752,10 +11748,6 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsSearch, templ
 
 
 /***/ }),
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
 /* 108 */,
 /* 109 */,
 /* 110 */,
@@ -11793,7 +11785,15 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsSearch, templ
 /* 142 */,
 /* 143 */,
 /* 144 */,
-/* 145 */
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11821,7 +11821,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _searchSoy = __webpack_require__(103);
+var _searchSoy = __webpack_require__(107);
 
 var _searchSoy2 = _interopRequireDefault(_searchSoy);
 
@@ -11852,4 +11852,4 @@ _metalSoy2.default.register(pageDocsSearch, _searchSoy2.default);
 exports.default = pageDocsSearch;
 
 /***/ })
-],[145]);
+],[153]);

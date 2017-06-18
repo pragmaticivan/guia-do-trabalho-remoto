@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([6],[
+webpackJsonppageComponent([7],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2212,7 +2212,6 @@ function $guide(opt_data, opt_ignored, opt_ijData) {
             'class', 'title');
           var dyn0 = opt_data.page.title;
           if (typeof dyn0 == 'function') dyn0(); else if (dyn0 != null) itext(dyn0);
-          itext(' Guide');
         ie_close('h1');
       ie_close('div');
     ie_close('header');
@@ -2266,12 +2265,12 @@ function $contribute(opt_data, opt_ignored, opt_ijData) {
     ie_open('div', null, null,
         'class', 'contribute-text');
       ie_open('p');
-        itext('Contribute on Github! ');
+        itext('Contribua no Github! ');
         ie_open('a', null, null,
             'href', 'https://github.com/' + opt_data.site.githubRepo + '/tree/master/' + opt_data.page.srcFilePath,
             'class', 'contribute-link',
             'target', '_blank');
-          itext('Edit this section');
+          itext('Edite esta p\u00E1gina');
         ie_close('a');
         itext('.');
       ie_close('p');
@@ -11628,12 +11627,16 @@ module.exports = function(module) {
 /* 95 */,
 /* 96 */,
 /* 97 */,
-/* 98 */
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "zvKTB", function() { return zvKTB; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FvFzp", function() { return FvFzp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11645,15 +11648,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from lorem.soy.
+// This file was automatically generated from paypal.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace zvKTB.
+ * @fileoverview Templates in namespace FvFzp.
  * @public
  */
 
-goog.module('zvKTB.incrementaldom');
+goog.module('FvFzp.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11674,8 +11677,6 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
-
 var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
@@ -11687,61 +11688,26 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param199 = function() {
+  var param213 = function() {
     ie_open('h6');
-      var dyn13 = opt_data.page.description;
-      if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
+      var dyn16 = opt_data.page.description;
+      if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
-      ie_close('h2');
-      $templateAlias2({code: '<p>Test, test, test</p>', mode: 'xml'}, null, opt_ijData);
-      ie_open('p');
-        itext('Nam eu lobortis ipsum. Sed iaculis, lectus pharetra vehicula luctus, lacus sapien malesuada lacus, non convallis dui mauris a magna. Donec accumsan mi lorem, quis mollis sem tempor vel. Fusce iaculis facilisis accumsan. Sed tempus aliquam nisi, eget commodo quam sodales ut. Duis lacus velit, fringilla congue aliquet nec, vulputate vitae nulla. Aenean ultricies risus vel sapien tincidunt, nec hendrerit purus aliquam. Quisque varius accumsan condimentum. Aliquam erat volutpat.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '2');
-      ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
+        itext('Recebendo pagamentos com Paypal');
       ie_close('h2');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('O primeiro e mais conhecido por todos \u00E9 o ');
+        ie_open('a', null, null,
+            'href', 'https://www.paypal.com');
+          itext('Paypal');
+        ie_close('a');
+        itext(', embora MUITAS pessoas falem de hist\u00F3rias, medos ao usar para receber pagamentos do exterior e coisas do tipo... \u00C9 uma ferramenta muito boa, segura e eficiente. Existem alguns relatos de pessoas que tiveram problemas e todo o seu dinheiro foi congelado sem volta. O que eu tenho a dizer sobre isso \u00E9: Tome cuidado com a empresa que voc\u00EA est\u00E1 fazendo neg\u00F3cio, \u00E9 justamente ela que pode bloquear ou criar uma disputa pelo seu pagamento.');
       ie_close('p');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '3');
-      ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
-      ie_close('h2');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('\u00C9 poss\u00EDvel ter uma conta facilmente no Brasil. Por\u00E9m voc\u00EA s\u00F3 pode cadastrar cart\u00F5es Brasileiros. Caso voc\u00EA tenha conta nos EUA, \u00E9 necess\u00E1rio ter uma conta extra de Paypal para trabalhar e transitar facilmente o dinheiro com mais regalias.  \u00C9 necess\u00E1rio lembrar que ter uma conta nos EUA n\u00E3o significa que voc\u00EA legalmente pode receber dinheiro de empresas sem permiss\u00E3o para trabalho, ent\u00E3o pense duas vezes.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11753,11 +11719,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param199}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param213}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'zvKTB.render';
+  $render.soyTemplateName = 'FvFzp.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11767,18 +11733,14 @@ return exports;
 
 });
 
-class zvKTB extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(zvKTB, templates);
+class FvFzp extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(FvFzp, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
 /* 103 */,
 /* 104 */,
 /* 105 */,
@@ -11817,7 +11779,10 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(zvKTB, templates);
 /* 138 */,
 /* 139 */,
 /* 140 */,
-/* 141 */
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11845,9 +11810,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _loremSoy = __webpack_require__(98);
+var _paypalSoy = __webpack_require__(102);
 
-var _loremSoy2 = _interopRequireDefault(_loremSoy);
+var _paypalSoy2 = _interopRequireDefault(_paypalSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11857,23 +11822,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var zvKTB = function (_Component) {
-  _inherits(zvKTB, _Component);
+var FvFzp = function (_Component) {
+  _inherits(FvFzp, _Component);
 
-  function zvKTB() {
-    _classCallCheck(this, zvKTB);
+  function FvFzp() {
+    _classCallCheck(this, FvFzp);
 
-    return _possibleConstructorReturn(this, (zvKTB.__proto__ || Object.getPrototypeOf(zvKTB)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (FvFzp.__proto__ || Object.getPrototypeOf(FvFzp)).apply(this, arguments));
   }
 
-  return zvKTB;
+  return FvFzp;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(zvKTB, _loremSoy2.default);
+_metalSoy2.default.register(FvFzp, _paypalSoy2.default);
 
-exports.default = zvKTB;
+exports.default = FvFzp;
 
 /***/ })
-],[141]);
+],[144]);

@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([4],[
+webpackJsonppageComponent([10],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2212,7 +2212,6 @@ function $guide(opt_data, opt_ignored, opt_ijData) {
             'class', 'title');
           var dyn0 = opt_data.page.title;
           if (typeof dyn0 == 'function') dyn0(); else if (dyn0 != null) itext(dyn0);
-          itext(' Guide');
         ie_close('h1');
       ie_close('div');
     ie_close('header');
@@ -2266,12 +2265,12 @@ function $contribute(opt_data, opt_ignored, opt_ijData) {
     ie_open('div', null, null,
         'class', 'contribute-text');
       ie_open('p');
-        itext('Contribute on Github! ');
+        itext('Contribua no Github! ');
         ie_open('a', null, null,
             'href', 'https://github.com/' + opt_data.site.githubRepo + '/tree/master/' + opt_data.page.srcFilePath,
             'class', 'contribute-link',
             'target', '_blank');
-          itext('Edit this section');
+          itext('Edite esta p\u00E1gina');
         ie_close('a');
         itext('.');
       ie_close('p');
@@ -11629,13 +11628,12 @@ module.exports = function(module) {
 /* 96 */,
 /* 97 */,
 /* 98 */,
-/* 99 */,
-/* 100 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GhBYh", function() { return GhBYh; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Yrogm", function() { return Yrogm; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11647,15 +11645,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from bitwage.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace GhBYh.
+ * @fileoverview Templates in namespace Yrogm.
  * @public
  */
 
-goog.module('GhBYh.incrementaldom');
+goog.module('Yrogm.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11676,8 +11674,6 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
-
 var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
@@ -11689,65 +11685,91 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param231 = function() {
+  var param180 = function() {
     ie_open('h6');
-      var dyn15 = opt_data.page.description;
-      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+      var dyn13 = opt_data.page.description;
+      if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
+        itext('Recebendo pagamentos com Bitwage');
       ie_close('h2');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        ie_open('a', null, null,
+            'href', 'https://www.bitwage.com/referral/XZUSDRB366TE');
+          itext('Bitwage');
+        ie_close('a');
+        itext(' \u00E9 um servi\u00E7o que permite o recebimento de pagamentos em Bitcoins de forma indireta ao empregador, ou seja, o empregador n\u00E3o compra Bitcoins e nem precisa ter conta na Bitwage, ele apenas deposita o pagamento em uma conta banc\u00E1ria dos EUA, do Canad\u00E1 e/ou da Europa e em aproximadamente 2 dias este montante, com uma redu\u00E7\u00E3o de apenas 1% por transa\u00E7\u00E3o, estar\u00E1 em sua ');
+        ie_open('a', null, null,
+            'href', '#bitcoins');
+          itext('carteira Bitcoin');
+        ie_close('a');
+        itext('.');
       ie_close('p');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('O fluxo para utiliza\u00E7\u00E3o \u00E9 bem simples, veja s\u00F3:');
       ie_close('p');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      $templateAlias2({code: 'alert(\'Hello World\');', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '2');
-      ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
-      ie_close('h2');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('1] Voc\u00EA faz o cadastro no site da ');
+        ie_open('a', null, null,
+            'href', 'https://www.bitwage.com/referral/XZUSDRB366TE');
+          itext('Bitwage');
+        ie_close('a');
+        itext('.');
       ie_close('p');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('2] Ap\u00F3s o cadastro, voc\u00EA precisa fazer o Set Up como um Worker. Neste momento voc\u00EA ir\u00E1 passar informa\u00E7\u00F5es pessoais para an\u00E1lise e aprova\u00E7\u00E3o dos seus dados, isso basicamente serve para segura\u00E7a da ferramenta.');
       ie_close('p');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('3] Ap\u00F3s ser aprovado como um Worker, voc\u00EA ir\u00E1 cadastrar o seu Employer e tamb\u00E9m um Distribution, que basicamente \u00E9 a sua ');
+        ie_open('a', null, null,
+            'href', '#bitcoins');
+          itext('carteira Bitcoin');
+        ie_close('a');
+        itext('.');
       ie_close('p');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '3');
-      ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
-      ie_close('h2');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('4] E finalmente, ap\u00F3s finalizar este processo de Set Up, que geralmente leva entre 2 e 3 dias \u00FAteis para ser finalizado completamente, voc\u00EA ir\u00E1 receber os dados de uma conta banc\u00E1ria criada para voc\u00EA, nos EUA, no Canad\u00E1 ou na Europa, e basicamente, ser\u00E3o estes os dados que voc\u00EA vai passar para seu empregador depositar os pagamentos.');
       ie_close('p');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('Outra coisa legal \u00E9 que eles d\u00E3o bastante aten\u00E7\u00E3o para o p\u00FAblico do Brasil, sendo assim, basta solicitar atrav\u00E9s dos canais de comunica\u00E7\u00E3o deles para que o di\u00E1logo seja em Portugu\u00EAs, e prontamente ir\u00E3o colocar voc\u00EA em contato com o atendimento brasileiro.');
       ie_close('p');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('E s\u00F3 para finalizar, segue abaixo alguns v\u00EDdeos explicativos:');
       ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=_JqTHW7X13Q');
+            itext('Bitwage & the future of payroll using bitcoin - YouTube');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=2ln6AiLrUjo');
+            itext('Recebendo pagamentos f\u00E1cil com a Bitwage! - YouTube');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=VqepklppjUU');
+            itext('O que \u00E9 a Bitwage - YouTube - Legendado');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=0v3Oe7spihs');
+            itext('Como trampar como freelancer nos EUA - YouTube');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=fxP0lc42xIY');
+            itext('Receba pagamentos do exterior por Bitcoin');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11758,11 +11780,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param231}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param180}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'GhBYh.render';
+  $render.soyTemplateName = 'Yrogm.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11772,14 +11794,15 @@ return exports;
 
 });
 
-class GhBYh extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(GhBYh, templates);
+class Yrogm extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Yrogm, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 100 */,
 /* 101 */,
 /* 102 */,
 /* 103 */,
@@ -11821,7 +11844,13 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(GhBYh, templates);
 /* 139 */,
 /* 140 */,
 /* 141 */,
-/* 142 */
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11849,9 +11878,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(100);
+var _bitwageSoy = __webpack_require__(99);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _bitwageSoy2 = _interopRequireDefault(_bitwageSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11861,23 +11890,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var GhBYh = function (_Component) {
-  _inherits(GhBYh, _Component);
+var Yrogm = function (_Component) {
+  _inherits(Yrogm, _Component);
 
-  function GhBYh() {
-    _classCallCheck(this, GhBYh);
+  function Yrogm() {
+    _classCallCheck(this, Yrogm);
 
-    return _possibleConstructorReturn(this, (GhBYh.__proto__ || Object.getPrototypeOf(GhBYh)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Yrogm.__proto__ || Object.getPrototypeOf(Yrogm)).apply(this, arguments));
   }
 
-  return GhBYh;
+  return Yrogm;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(GhBYh, _indexSoy2.default);
+_metalSoy2.default.register(Yrogm, _bitwageSoy2.default);
 
-exports.default = GhBYh;
+exports.default = Yrogm;
 
 /***/ })
-],[142]);
+],[148]);

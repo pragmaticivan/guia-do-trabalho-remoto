@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([5],[
+webpackJsonppageComponent([14],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2212,7 +2212,6 @@ function $guide(opt_data, opt_ignored, opt_ijData) {
             'class', 'title');
           var dyn0 = opt_data.page.title;
           if (typeof dyn0 == 'function') dyn0(); else if (dyn0 != null) itext(dyn0);
-          itext(' Guide');
         ie_close('h1');
       ie_close('div');
     ie_close('header');
@@ -2266,12 +2265,12 @@ function $contribute(opt_data, opt_ignored, opt_ijData) {
     ie_open('div', null, null,
         'class', 'contribute-text');
       ie_open('p');
-        itext('Contribute on Github! ');
+        itext('Contribua no Github! ');
         ie_open('a', null, null,
             'href', 'https://github.com/' + opt_data.site.githubRepo + '/tree/master/' + opt_data.page.srcFilePath,
             'class', 'contribute-link',
             'target', '_blank');
-          itext('Edit this section');
+          itext('Edite esta p\u00E1gina');
         ie_close('a');
         itext('.');
       ie_close('p');
@@ -11625,16 +11624,12 @@ module.exports = function(module) {
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gFmtJ", function() { return gFmtJ; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GueYm", function() { return GueYm; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11646,15 +11641,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from nula.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace gFmtJ.
+ * @fileoverview Templates in namespace GueYm.
  * @public
  */
 
-goog.module('gFmtJ.incrementaldom');
+goog.module('GueYm.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11675,8 +11670,6 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
-
 var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
@@ -11688,65 +11681,142 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param215 = function() {
+  var param147 = function() {
     ie_open('h6');
-      var dyn14 = opt_data.page.description;
-      if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
+      var dyn10 = opt_data.page.description;
+      if (typeof dyn10 == 'function') dyn10(); else if (dyn10 != null) itext(dyn10);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
+        itext('Recursos sobre trabalho remoto');
       ie_close('h2');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      $templateAlias2({code: 'var oi = function() {\n    console.log(\'Oi mundo\');\n};', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '2');
-      ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
-      ie_close('h2');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '3');
-      ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
-      ie_close('h2');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
+      ie_open('h4');
+        itext('Artigos');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://medium.com/desenvolvimento-front-end-pt-br/o-que-eu-aprendi-em-quase-1-ano-de-home-office-7ed3cfee276a');
+            itext('O que eu aprendi em quase 1 ano de home-office');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Comunica\u00E7\u00E3o');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://slack.com/');
+            itext('Slack');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Comunidades');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://www.meetup.com/Belo-Horizonte-Remote-Workers/');
+            itext('Remote Workers - Belo Horizonte');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Diversos');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://github.com/lukasz-madon/awesome-remote-job');
+            itext('Awesome Remote Job');
+          ie_close('a');
+          itext(' - Uma compila\u00E7\u00E3o de informa\u00E7\u00F5es sobre trabalho remoto');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://github.com/lerrua/remote-jobs-brazil');
+            itext('Remote Jobs');
+          ie_close('a');
+          itext(' - Lista de empresas com trabalho remoto no Brasil');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://github.com/jessicard/remote-jobs');
+            itext('Remote Jobs Worldwide');
+          ie_close('a');
+          itext(' - Lista de empresas com trabalho remoto Worldwide');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Livros');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://37signals.com/remote/');
+            itext('Remote. Office Not Required.');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://scottberkun.com/yearwithoutpants/');
+            itext('The Year Without Pants: WordPress.com and the Future of Work');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Gest\u00E3o de Projetos');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://pivotaltracker.com');
+            itext('PivotalTracker');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('M\u00E9trica de tempo');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://wakatime.com/');
+            itext('WakaTime');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Podcasts');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://www.grokpodcast.com/2013/04/02/episodio-86-trabalho-remoto-parte-1-de-4/');
+            itext('Grok Podcast - Trabalho Remoto');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://devnaestrada.com.br/2015/12/25/devnaestrada-remoto-da-depressao.html');
+            itext('DevNaEstrada - Remoto da depress\u00E3o');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Talks');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=IT6z7VDueF8');
+            itext('Desafios e vantagens do trabalho remoto por Willian Fernandes');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11757,11 +11827,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param215}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param147}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'gFmtJ.render';
+  $render.soyTemplateName = 'GueYm.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11771,14 +11841,18 @@ return exports;
 
 });
 
-class gFmtJ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(gFmtJ, templates);
+class GueYm extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(GueYm, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
 /* 100 */,
 /* 101 */,
 /* 102 */,
@@ -11818,7 +11892,10 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(gFmtJ, templates);
 /* 136 */,
 /* 137 */,
 /* 138 */,
-/* 139 */
+/* 139 */,
+/* 140 */,
+/* 141 */,
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11846,9 +11923,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _nulaSoy = __webpack_require__(99);
+var _indexSoy = __webpack_require__(95);
 
-var _nulaSoy2 = _interopRequireDefault(_nulaSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11858,23 +11935,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var gFmtJ = function (_Component) {
-  _inherits(gFmtJ, _Component);
+var GueYm = function (_Component) {
+  _inherits(GueYm, _Component);
 
-  function gFmtJ() {
-    _classCallCheck(this, gFmtJ);
+  function GueYm() {
+    _classCallCheck(this, GueYm);
 
-    return _possibleConstructorReturn(this, (gFmtJ.__proto__ || Object.getPrototypeOf(gFmtJ)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (GueYm.__proto__ || Object.getPrototypeOf(GueYm)).apply(this, arguments));
   }
 
-  return gFmtJ;
+  return GueYm;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(gFmtJ, _nulaSoy2.default);
+_metalSoy2.default.register(GueYm, _indexSoy2.default);
 
-exports.default = gFmtJ;
+exports.default = GueYm;
 
 /***/ })
-],[139]);
+],[142]);

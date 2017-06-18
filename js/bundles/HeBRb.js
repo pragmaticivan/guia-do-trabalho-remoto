@@ -2212,7 +2212,6 @@ function $guide(opt_data, opt_ignored, opt_ijData) {
             'class', 'title');
           var dyn0 = opt_data.page.title;
           if (typeof dyn0 == 'function') dyn0(); else if (dyn0 != null) itext(dyn0);
-          itext(' Guide');
         ie_close('h1');
       ie_close('div');
     ie_close('header');
@@ -2266,12 +2265,12 @@ function $contribute(opt_data, opt_ignored, opt_ijData) {
     ie_open('div', null, null,
         'class', 'contribute-text');
       ie_open('p');
-        itext('Contribute on Github! ');
+        itext('Contribua no Github! ');
         ie_open('a', null, null,
             'href', 'https://github.com/' + opt_data.site.githubRepo + '/tree/master/' + opt_data.page.srcFilePath,
             'class', 'contribute-link',
             'target', '_blank');
-          itext('Edit this section');
+          itext('Edite esta p\u00E1gina');
         ie_close('a');
         itext('.');
       ie_close('p');
@@ -11626,12 +11625,17 @@ module.exports = function(module) {
 /* 93 */,
 /* 94 */,
 /* 95 */,
-/* 96 */
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TotDJ", function() { return TotDJ; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeBRb", function() { return HeBRb; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11643,15 +11647,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from etiam.soy.
+// This file was automatically generated from payoneer.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace TotDJ.
+ * @fileoverview Templates in namespace HeBRb.
  * @public
  */
 
-goog.module('TotDJ.incrementaldom');
+goog.module('HeBRb.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11672,8 +11676,6 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
-
 var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
@@ -11685,64 +11687,39 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param163 = function() {
+  var param202 = function() {
     ie_open('h6');
-      var dyn11 = opt_data.page.description;
-      if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
+      var dyn15 = opt_data.page.description;
+      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
+        itext('Recebendo pagamentos com Payoneer');
       ie_close('h2');
       ie_open('p');
-        itext('Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque varius mattis mollis. Praesent rutrum tempor libero sit amet blandit. Integer ante nisl, rutrum ut volutpat ut, rutrum id tortor. Duis placerat ut ipsum id aliquam. Nunc venenatis sem ac urna viverra, eu euismod sapien porttitor.');
-      ie_close('p');
-      $templateAlias2({code: 'body {\n    overflow: hidden;\n}', mode: 'css'}, null, opt_ijData);
-      ie_open('p');
-        itext('Nulla a suscipit nibh. Duis tincidunt elit tellus, ut volutpat lectus pharetra at. Nulla quis nisi ante. Maecenas vulputate convallis lorem. Vestibulum at ex id sapien faucibus vehicula. Sed porta dui in velit semper blandit. Ut in commodo magna. Morbi luctus enim et lectus luctus ullamcorper. Proin tellus erat, convallis vitae metus vitae, lacinia consectetur turpis.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        ie_open('a', null, null,
+            'href', 'http://www.payoneer.com/');
+          itext('Payoneer');
+        ie_close('a');
+        itext(' \u00E9 uma forma de receber dinheiro sem precisar trazer o valor monet\u00E1rio para o Brasil. \u00C9 simplesmente criada uma conta no Bank of American que representa sua conta online. Voc\u00EA recebe um cart\u00E3o de cr\u00E9dito pr\u00E9-pago no qual est\u00E1 ligado a essa conta.');
       ie_close('p');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '2');
-      ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
-      ie_close('h2');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('Empresas Americanas podem depositar dinheiro diretamente nesta conta, gerando cr\u00E9ditos no seu cart\u00E3o, que pode ser utilizado em ATMs e compras online.');
       ie_close('p');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('Ao realizar saques em ATMs lhe ser\u00E1 cobrado uma taxa de conveni\u00EAncia, que nada mais \u00E9 que uma taxa de convers\u00E3o cambial. Esta taxa varia de acordo com o ATM no qual voc\u00EA est\u00E1 sacando, mas fica entre 12 a 20 reais por saque, fora que alguns ATMs tamb\u00E9m limitam o saque di\u00E1rio.');
       ie_close('p');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('Outra desvantagem do Payoneer \u00E9 que alguns servi\u00E7os online como Dropbox e iTunes v\u00E3o rejeitar seu cart\u00E3o, nesses casos voc\u00EA pode vincul\u00E1-lo ao Paypal para contornar o problema.');
       ie_close('p');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '3');
-      ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
-      ie_close('h2');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('Bem interessante essa forma de receber, por\u00E9m voc\u00EA n\u00E3o pode movimentar a conta livremente, apenas pode transferir dinheiro para outros usu\u00E1rios de Payoneer. \u00C9 um dos principais meios de pagamentos utilizado pelo ');
+        ie_open('a', null, null,
+            'href', 'https://www.odesk.com/');
+          itext('ODesk');
+        ie_close('a');
+        itext('.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11754,11 +11731,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param163}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param202}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'TotDJ.render';
+  $render.soyTemplateName = 'HeBRb.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11768,19 +11745,14 @@ return exports;
 
 });
 
-class TotDJ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(TotDJ, templates);
+class HeBRb extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(HeBRb, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
 /* 102 */,
 /* 103 */,
 /* 104 */,
@@ -11817,7 +11789,14 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(TotDJ, templates);
 /* 135 */,
 /* 136 */,
 /* 137 */,
-/* 138 */
+/* 138 */,
+/* 139 */,
+/* 140 */,
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11845,9 +11824,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _etiamSoy = __webpack_require__(96);
+var _payoneerSoy = __webpack_require__(101);
 
-var _etiamSoy2 = _interopRequireDefault(_etiamSoy);
+var _payoneerSoy2 = _interopRequireDefault(_payoneerSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11857,23 +11836,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var TotDJ = function (_Component) {
-  _inherits(TotDJ, _Component);
+var HeBRb = function (_Component) {
+  _inherits(HeBRb, _Component);
 
-  function TotDJ() {
-    _classCallCheck(this, TotDJ);
+  function HeBRb() {
+    _classCallCheck(this, HeBRb);
 
-    return _possibleConstructorReturn(this, (TotDJ.__proto__ || Object.getPrototypeOf(TotDJ)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (HeBRb.__proto__ || Object.getPrototypeOf(HeBRb)).apply(this, arguments));
   }
 
-  return TotDJ;
+  return HeBRb;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(TotDJ, _etiamSoy2.default);
+_metalSoy2.default.register(HeBRb, _payoneerSoy2.default);
 
-exports.default = TotDJ;
+exports.default = HeBRb;
 
 /***/ })
-],[138]);
+],[145]);

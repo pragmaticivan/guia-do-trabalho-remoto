@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([7],[
+webpackJsonppageComponent([6],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2212,7 +2212,6 @@ function $guide(opt_data, opt_ignored, opt_ijData) {
             'class', 'title');
           var dyn0 = opt_data.page.title;
           if (typeof dyn0 == 'function') dyn0(); else if (dyn0 != null) itext(dyn0);
-          itext(' Guide');
         ie_close('h1');
       ie_close('div');
     ie_close('header');
@@ -2266,12 +2265,12 @@ function $contribute(opt_data, opt_ignored, opt_ijData) {
     ie_open('div', null, null,
         'class', 'contribute-text');
       ie_open('p');
-        itext('Contribute on Github! ');
+        itext('Contribua no Github! ');
         ie_open('a', null, null,
             'href', 'https://github.com/' + opt_data.site.githubRepo + '/tree/master/' + opt_data.page.srcFilePath,
             'class', 'contribute-link',
             'target', '_blank');
-          itext('Edit this section');
+          itext('Edite esta p\u00E1gina');
         ie_close('a');
         itext('.');
       ie_close('p');
@@ -11627,12 +11626,18 @@ module.exports = function(module) {
 /* 94 */,
 /* 95 */,
 /* 96 */,
-/* 97 */
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "yOEaq", function() { return yOEaq; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RBsIX", function() { return RBsIX; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11644,15 +11649,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from swift.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace yOEaq.
+ * @fileoverview Templates in namespace RBsIX.
  * @public
  */
 
-goog.module('yOEaq.incrementaldom');
+goog.module('RBsIX.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11673,8 +11678,6 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
-
 var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
@@ -11686,65 +11689,83 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param179 = function() {
+  var param224 = function() {
     ie_open('h6');
-      var dyn12 = opt_data.page.description;
-      if (typeof dyn12 == 'function') dyn12(); else if (dyn12 != null) itext(dyn12);
+      var dyn17 = opt_data.page.description;
+      if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
+        itext('Recebendo pagamentos com Swift');
       ie_close('h2');
       ie_open('p');
-        itext('Mauris iaculis, lectus sagittis consequat accumsan, tellus neque blandit justo, a consectetur odio turpis a magna. In ac euismod diam. Praesent non elementum turpis. Aliquam vitae vestibulum arcu. Praesent eleifend turpis arcu.');
-      ie_close('p');
-      $templateAlias2({code: 'var hi = function() {\n    console.log(\'Hello, World!\');\n};', mode: 'javascript'}, null, opt_ijData);
-      $templateAlias2({code: '.hi:before {\n    content: \'Hello, World\';\n}', mode: 'css'}, null, opt_ijData);
-      ie_open('p');
-        itext('Nunc eros risus, scelerisque sit amet magna at, venenatis mattis metus. Pellentesque scelerisque facilisis sagittis. Integer at eleifend urna, nec vehicula nibh. Morbi a fermentum purus. Mauris augue erat, consectetur quis massa ac, commodo vehicula augue. Cras in odio volutpat, maximus nunc eleifend, scelerisque erat. In hac habitasse platea dictumst.');
+        itext('Segundo um levantamento feito na comunidade, \u00E9 a mais comum entre as pessoas que trabalham remotamente para empresas no exterior. \u00C9 poss\u00EDvel receber dinheiro do exterior atrav\u00E9s de uma transfer\u00EAncia banc\u00E1ria aceita em qualquer ag\u00EAncia. \u00C9 necess\u00E1rio enviar todos os dados referentes a transa\u00E7\u00E3o para que a empresa possa efetuar uma transa\u00E7\u00E3o de envio de um banco no exterior para um banco no Brasil.');
       ie_close('p');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('Ademais, ambas as institui\u00E7\u00F5es cobrar\u00E3o pelo servi\u00E7o. Assim, quem estiver no exterior desembolsar\u00E1 uma taxa para que o dinheiro chegue ao destino pretendido, mesmo n\u00E3o sendo correntista do banco contatado. A tarifa \u00E9 conhecida como ordem de pagamento expedida. Uma vez no Brasil, a ag\u00EAncia que recebeu o montante tamb\u00E9m descontar\u00E1 uma determinada quantia do dinheiro que ir\u00E1 disponibilizar ao cliente.');
+      ie_close('p');
+      ie_open('h4');
+        itext('Dados necess\u00E1rios');
+      ie_close('h4');
+      ie_open('p');
+        itext('Apesar de nem todos serem precisos, \u00E9 legal enviar todos esses para que seu empregador tenha todas as informa\u00E7\u00F5es necess\u00E1rias:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Nome completo');
+        ie_close('li');
+        ie_open('li');
+          itext('Documento de Identifica\u00E7\u00E3o');
+        ie_close('li');
+        ie_open('li');
+          itext('Endere\u00E7o Residencial');
+        ie_close('li');
+        ie_open('li');
+          itext('Motivo da remessa');
+        ie_close('li');
+        ie_open('li');
+          itext('Banco + C\u00F3digo do banco');
+        ie_close('li');
+        ie_open('li');
+          itext('Ag\u00EAncia');
+        ie_close('li');
+        ie_open('li');
+          itext('N\u00FAmero da Conta');
+        ie_close('li');
+        ie_open('li');
+          itext('SWIFT Code (Referente a ag\u00EAncia autorizada a fazer c\u00E2mbio no Brasil) (Procure seu SWIFT code ');
+          ie_open('a', null, null,
+              'href', 'http://www.theswiftcodes.com/brazil/');
+            itext('aqui');
+          ie_close('a');
+          itext('. )');
+        ie_close('li');
+        ie_open('li');
+          itext('Sugiro que tamb\u00E9m envie o IBAN (Leia abaixo o que isso significa)');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('OBS: Para SWIFT Code, sugiro que procure o banco mais perto da sua cidade, caso precise resolver alguma burocracia.');
+      ie_close('p');
+      ie_open('h4');
+        itext('IBAN');
+      ie_close('h4');
+      ie_open('p');
+        itext('IBAN (International Bank Account Number) \u00E9 um sistema internacional de identifica\u00E7\u00E3o de bancos criado para facilitar a comunica\u00E7\u00E3o e processamento entre transa\u00E7\u00F5es com redu\u00E7\u00E3o de risco. Inicialmente utilizado na Europa, est\u00E1 cada vez mais sendo adotado por outros pa\u00EDses, alguns bancos nos Estados Unidos por exemplo j\u00E1 aceitam esse tipo de c\u00F3digo ao inv\u00E9s do SWIFT. At\u00E9 o fim de 2014, 66 pa\u00EDses estariam usando IBAN como sistema principal.');
       ie_close('p');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('Gere seu IBAN aqui: ');
+        ie_open('a', null, null,
+            'href', 'http://geradordeiban.detalhado.com/#/make');
+          itext('http://geradordeiban.detalhado.com/#/make');
+        ie_close('a');
       ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '2');
-      ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
-      ie_close('h2');
+      ie_open('h4');
+        itext('Desvantagens');
+      ie_close('h4');
       ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '3');
-      ie_open('h2');
-        itext('Lorem ipsum dolor sit amet');
-      ie_close('h2');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+        itext('A desvantagem deste tipo de opera\u00E7\u00E3o \u00E9 a cobran\u00E7a de custos dos dois lados da opera\u00E7\u00E3o. Outro ponto negativo \u00E9 o tempo de espera para conseguir liquidar a remessa, dependendo do banco pode demorar at\u00E9 3 dias.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11756,11 +11777,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param179}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param224}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'yOEaq.render';
+  $render.soyTemplateName = 'RBsIX.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11770,20 +11791,14 @@ return exports;
 
 });
 
-class yOEaq extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(yOEaq, templates);
+class RBsIX extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(RBsIX, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
 /* 104 */,
 /* 105 */,
 /* 106 */,
@@ -11820,7 +11835,13 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(yOEaq, templates);
 /* 137 */,
 /* 138 */,
 /* 139 */,
-/* 140 */
+/* 140 */,
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11848,9 +11869,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(97);
+var _swiftSoy = __webpack_require__(103);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _swiftSoy2 = _interopRequireDefault(_swiftSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11860,23 +11881,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var yOEaq = function (_Component) {
-  _inherits(yOEaq, _Component);
+var RBsIX = function (_Component) {
+  _inherits(RBsIX, _Component);
 
-  function yOEaq() {
-    _classCallCheck(this, yOEaq);
+  function RBsIX() {
+    _classCallCheck(this, RBsIX);
 
-    return _possibleConstructorReturn(this, (yOEaq.__proto__ || Object.getPrototypeOf(yOEaq)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (RBsIX.__proto__ || Object.getPrototypeOf(RBsIX)).apply(this, arguments));
   }
 
-  return yOEaq;
+  return RBsIX;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(yOEaq, _indexSoy2.default);
+_metalSoy2.default.register(RBsIX, _swiftSoy2.default);
 
-exports.default = yOEaq;
+exports.default = RBsIX;
 
 /***/ })
-],[140]);
+],[146]);

@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([2],[
+webpackJsonppageComponent([12],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2212,7 +2212,6 @@ function $guide(opt_data, opt_ignored, opt_ijData) {
             'class', 'title');
           var dyn0 = opt_data.page.title;
           if (typeof dyn0 == 'function') dyn0(); else if (dyn0 != null) itext(dyn0);
-          itext(' Guide');
         ie_close('h1');
       ie_close('div');
     ie_close('header');
@@ -2266,12 +2265,12 @@ function $contribute(opt_data, opt_ignored, opt_ijData) {
     ie_open('div', null, null,
         'class', 'contribute-text');
       ie_open('p');
-        itext('Contribute on Github! ');
+        itext('Contribua no Github! ');
         ie_open('a', null, null,
             'href', 'https://github.com/' + opt_data.site.githubRepo + '/tree/master/' + opt_data.page.srcFilePath,
             'class', 'contribute-link',
             'target', '_blank');
-          itext('Edit this section');
+          itext('Edite esta p\u00E1gina');
         ie_close('a');
         itext('.');
       ie_close('p');
@@ -11627,12 +11626,7 @@ module.exports = function(module) {
 /* 94 */,
 /* 95 */,
 /* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11730,15 +11724,9 @@ function $topics(opt_data, opt_ignored, opt_ijData) {
             'class', 'col-xs-16');
           ie_open('h1', null, null,
               'class', 'docs-home-top-title');
-            itext('Docs');
-          ie_close('h1');
-          ie_open('p', null, null,
-              'class', 'docs-home-top-description');
-            itext('Start learning how to leverage the power of ');
             var dyn7 = opt_data.site.title;
             if (typeof dyn7 == 'function') dyn7(); else if (dyn7 != null) itext(dyn7);
-            itext('.');
-          ie_close('p');
+          ie_close('h1');
         ie_close('div');
       ie_close('div');
       ie_open('div', null, null,
@@ -11775,12 +11763,8 @@ function $topics(opt_data, opt_ignored, opt_ijData) {
                 'class', 'docs-home-middle');
               ie_open('h2', null, null,
                   'class', 'docs-home-middle-subtitle');
-                itext('Choose a Guide');
+                itext('Escolha seu guia');
               ie_close('h2');
-              ie_open('p', null, null,
-                  'class', 'docs-home-middle-description');
-                itext('Each one provide step by step coverage for every core feature.');
-              ie_close('p');
             ie_close('section');
           ie_close('div');
         ie_close('div');
@@ -11844,6 +11828,11 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsIndex, templa
 
 
 /***/ }),
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
 /* 103 */,
 /* 104 */,
 /* 105 */,
@@ -11885,7 +11874,15 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsIndex, templa
 /* 141 */,
 /* 142 */,
 /* 143 */,
-/* 144 */
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11913,7 +11910,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(102);
+var _indexSoy = __webpack_require__(97);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -11944,4 +11941,4 @@ _metalSoy2.default.register(pageDocsIndex, _indexSoy2.default);
 exports.default = pageDocsIndex;
 
 /***/ })
-],[144]);
+],[152]);
