@@ -1,0 +1,31 @@
+$accent: #5F49AE;
+
+@import "marble";
+
+// Root
+@import "templates/root";
+
+// Landing
+@import "templates/landing";
+
+@media (min-width: 960px) {
+  .footer-description:last-child {
+      text-align: center;
+  }
+}
+
+
+// Docs
+@import "templates/docs";
+
+// Search
+@import "templates/search";
+
+// Updates
+@import "templates/updates";
+
+// Blog
+@import "templates/blog";
+
+// Tutorial
+@import "templates/tutorial";

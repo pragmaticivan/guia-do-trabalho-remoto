@@ -1,0 +1,48 @@
+---
+title: "Home"
+description: "Um guia para ajudar profissionais criativos na busca e execução de trabalhos remotos."
+---
+
+{namespace pageIndex}
+
+/**
+ * @param site
+ */
+{template .render}
+	{call main.render data="all"}
+		{param content kind="html"}
+			{call .header data="all" /}
+			{call .footer /}
+		{/param}
+	{/call}
+{/template}
+
+/**
+ * @param site
+ */
+{template .header}
+	<header class="header">
+		<div class="container">
+			<h1 class="header-title">{$site.title}</h1>
+			<h2 class="header-subtitle">{$site.index.description}</h2>
+			<div class="header-cta">
+				<a href="/guia/" class="btn btn-accent">Aprenda</a>
+			</div>
+		</div>
+	</header>
+{/template}
+
+/**
+ *
+ */
+{template .footer}
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<p class="footer-description col-xs-16">
+					Copyright © 2017 <a href="https://nomadsonrails.com">Nomads on Rails</a>
+				</p>
+			</div>
+		</div>
+	</footer>
+{/template}
