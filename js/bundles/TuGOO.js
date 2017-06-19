@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([8],[
+webpackJsonppageComponent([5],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11627,12 +11627,15 @@ module.exports = function(module) {
 /* 98 */,
 /* 99 */,
 /* 100 */,
-/* 101 */
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "etotL", function() { return etotL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TuGOO", function() { return TuGOO; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11644,15 +11647,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from payoneer.soy.
+// This file was automatically generated from transferwise.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace etotL.
+ * @fileoverview Templates in namespace TuGOO.
  * @public
  */
 
-goog.module('etotL.incrementaldom');
+goog.module('TuGOO.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11684,39 +11687,22 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param201 = function() {
+  var param234 = function() {
     ie_open('h6');
-      var dyn15 = opt_data.page.description;
-      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+      var dyn18 = opt_data.page.description;
+      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com Payoneer');
+        itext('Recebendo pagamentos com TransferWise');
       ie_close('h2');
       ie_open('p');
         ie_open('a', null, null,
-            'href', 'http://www.payoneer.com/');
-          itext('Payoneer');
+            'href', 'https://transferwise.com/u/344b08');
+          itext('TransferWise');
         ie_close('a');
-        itext(' \u00E9 uma forma de receber dinheiro sem precisar trazer o valor monet\u00E1rio para o Brasil. \u00C9 simplesmente criada uma conta no Bank of American que representa sua conta online. Voc\u00EA recebe um cart\u00E3o de cr\u00E9dito pr\u00E9-pago no qual est\u00E1 ligado a essa conta.');
-      ie_close('p');
-      ie_open('p');
-        itext('Empresas Americanas podem depositar dinheiro diretamente nesta conta, gerando cr\u00E9ditos no seu cart\u00E3o, que pode ser utilizado em ATMs e compras online.');
-      ie_close('p');
-      ie_open('p');
-        itext('Ao realizar saques em ATMs lhe ser\u00E1 cobrado uma taxa de conveni\u00EAncia, que nada mais \u00E9 que uma taxa de convers\u00E3o cambial. Esta taxa varia de acordo com o ATM no qual voc\u00EA est\u00E1 sacando, mas fica entre 12 a 20 reais por saque, fora que alguns ATMs tamb\u00E9m limitam o saque di\u00E1rio.');
-      ie_close('p');
-      ie_open('p');
-        itext('Outra desvantagem do Payoneer \u00E9 que alguns servi\u00E7os online como Dropbox e iTunes v\u00E3o rejeitar seu cart\u00E3o, nesses casos voc\u00EA pode vincul\u00E1-lo ao Paypal para contornar o problema.');
-      ie_close('p');
-      ie_open('p');
-        itext('Bem interessante essa forma de receber, por\u00E9m voc\u00EA n\u00E3o pode movimentar a conta livremente, apenas pode transferir dinheiro para outros usu\u00E1rios de Payoneer. \u00C9 um dos principais meios de pagamentos utilizado pelo ');
-        ie_open('a', null, null,
-            'href', 'https://www.odesk.com/');
-          itext('ODesk');
-        ie_close('a');
-        itext('.');
+        itext(' \u00E9 uma nova plataforma um pouco parecida com o Xoom. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente 1 dia depois caso a empresa seja Americana. Trata-se de um intermediador de envio entre pa\u00EDses, por\u00E9m o diferencial \u00E9 que esta empresa garante envio do dinheiro com cota\u00E7\u00F5es bem melhores. Retirando aquele monte de encargos criados por bancos. Voc\u00EA acaba econiomizando 90% em encargos "desnecess\u00E1rios".');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11728,11 +11714,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param201}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param234}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'etotL.render';
+  $render.soyTemplateName = 'TuGOO.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11742,17 +11728,14 @@ return exports;
 
 });
 
-class etotL extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(etotL, templates);
+class TuGOO extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(TuGOO, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 102 */,
-/* 103 */,
-/* 104 */,
 /* 105 */,
 /* 106 */,
 /* 107 */,
@@ -11824,9 +11807,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _payoneerSoy = __webpack_require__(101);
+var _transferwiseSoy = __webpack_require__(104);
 
-var _payoneerSoy2 = _interopRequireDefault(_payoneerSoy);
+var _transferwiseSoy2 = _interopRequireDefault(_transferwiseSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11836,23 +11819,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var etotL = function (_Component) {
-  _inherits(etotL, _Component);
+var TuGOO = function (_Component) {
+  _inherits(TuGOO, _Component);
 
-  function etotL() {
-    _classCallCheck(this, etotL);
+  function TuGOO() {
+    _classCallCheck(this, TuGOO);
 
-    return _possibleConstructorReturn(this, (etotL.__proto__ || Object.getPrototypeOf(etotL)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (TuGOO.__proto__ || Object.getPrototypeOf(TuGOO)).apply(this, arguments));
   }
 
-  return etotL;
+  return TuGOO;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(etotL, _payoneerSoy2.default);
+_metalSoy2.default.register(TuGOO, _transferwiseSoy2.default);
 
-exports.default = etotL;
+exports.default = TuGOO;
 
 /***/ })
 ],[148]);

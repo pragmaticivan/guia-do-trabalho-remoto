@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([6],[
+webpackJsonppageComponent([3],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11629,12 +11629,15 @@ module.exports = function(module) {
 /* 100 */,
 /* 101 */,
 /* 102 */,
-/* 103 */
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Cvexx", function() { return Cvexx; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sjqxA", function() { return sjqxA; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11646,15 +11649,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from swift.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace Cvexx.
+ * @fileoverview Templates in namespace sjqxA.
  * @public
  */
 
-goog.module('Cvexx.incrementaldom');
+goog.module('sjqxA.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11686,84 +11689,69 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param223 = function() {
+  var param256 = function() {
     ie_open('h6');
-      var dyn17 = opt_data.page.description;
-      if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
+      var dyn20 = opt_data.page.description;
+      if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com Swift');
+        itext('Sites com ofertas remotas');
       ie_close('h2');
       ie_open('p');
-        itext('Segundo um levantamento feito na comunidade, \u00E9 a mais comum entre as pessoas que trabalham remotamente para empresas no exterior. \u00C9 poss\u00EDvel receber dinheiro do exterior atrav\u00E9s de uma transfer\u00EAncia banc\u00E1ria aceita em qualquer ag\u00EAncia. \u00C9 necess\u00E1rio enviar todos os dados referentes a transa\u00E7\u00E3o para que a empresa possa efetuar uma transa\u00E7\u00E3o de envio de um banco no exterior para um banco no Brasil.');
-      ie_close('p');
-      ie_open('p');
-        itext('Ademais, ambas as institui\u00E7\u00F5es cobrar\u00E3o pelo servi\u00E7o. Assim, quem estiver no exterior desembolsar\u00E1 uma taxa para que o dinheiro chegue ao destino pretendido, mesmo n\u00E3o sendo correntista do banco contatado. A tarifa \u00E9 conhecida como ordem de pagamento expedida. Uma vez no Brasil, a ag\u00EAncia que recebeu o montante tamb\u00E9m descontar\u00E1 uma determinada quantia do dinheiro que ir\u00E1 disponibilizar ao cliente.');
-      ie_close('p');
-      ie_open('h4');
-        itext('Dados necess\u00E1rios');
-      ie_close('h4');
-      ie_open('p');
-        itext('Apesar de nem todos serem precisos, \u00E9 legal enviar todos esses para que seu empregador tenha todas as informa\u00E7\u00F5es necess\u00E1rias:');
+        itext('Fique atento: em algumas vagas, os candidatos devem morar no mesmo pa\u00EDs da vaga, limitando-se assim que o trabalho seja realmente remoto (nesses casos voc\u00EA precisa residir l\u00E1 ou ter autoriza\u00E7\u00E3o para trabalhar no pa\u00EDs onde a empresa est\u00E1 localizada).');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          itext('Nome completo');
-        ie_close('li');
-        ie_open('li');
-          itext('Documento de Identifica\u00E7\u00E3o');
-        ie_close('li');
-        ie_open('li');
-          itext('Endere\u00E7o Residencial');
-        ie_close('li');
-        ie_open('li');
-          itext('Motivo da remessa');
-        ie_close('li');
-        ie_open('li');
-          itext('Banco + C\u00F3digo do banco');
-        ie_close('li');
-        ie_open('li');
-          itext('Ag\u00EAncia');
-        ie_close('li');
-        ie_open('li');
-          itext('N\u00FAmero da Conta');
-        ie_close('li');
-        ie_open('li');
-          itext('SWIFT Code (Referente a ag\u00EAncia autorizada a fazer c\u00E2mbio no Brasil) (Procure seu SWIFT code ');
           ie_open('a', null, null,
-              'href', 'http://www.theswiftcodes.com/brazil/');
-            itext('aqui');
+              'href', 'https://jobs.github.com/positions?description=&location=Remote');
+            itext('Github Job board');
           ie_close('a');
-          itext('. )');
         ie_close('li');
         ie_open('li');
-          itext('Sugiro que tamb\u00E9m envie o IBAN (Leia abaixo o que isso significa)');
+          ie_open('a', null, null,
+              'href', 'http://www.jobsintech.io/jobs#q=&page=0&refinements=%5B%7B%22remote%22%3A%22can_work_remote%22%7D%5D');
+            itext('Jobs in Tech');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://landing.jobs/?custom_inviter=pragmaticivan');
+            itext('Landing.jobs');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://remoteok.io/remote-jobs');
+            itext('Remote Ok');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://stackoverflow.com/jobs/remote-developer-jobs');
+            itext('Stackoverflow Job board');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://staff.com/');
+            itext('Staff.com');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://weworkremotely.com/');
+            itext('We work remotely');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.wfh.io/');
+            itext('WFH.io');
+          ie_close('a');
         ie_close('li');
       ie_close('ul');
-      ie_open('p');
-        itext('OBS: Para SWIFT Code, sugiro que procure o banco mais perto da sua cidade, caso precise resolver alguma burocracia.');
-      ie_close('p');
-      ie_open('h4');
-        itext('IBAN');
-      ie_close('h4');
-      ie_open('p');
-        itext('IBAN (International Bank Account Number) \u00E9 um sistema internacional de identifica\u00E7\u00E3o de bancos criado para facilitar a comunica\u00E7\u00E3o e processamento entre transa\u00E7\u00F5es com redu\u00E7\u00E3o de risco. Inicialmente utilizado na Europa, est\u00E1 cada vez mais sendo adotado por outros pa\u00EDses, alguns bancos nos Estados Unidos por exemplo j\u00E1 aceitam esse tipo de c\u00F3digo ao inv\u00E9s do SWIFT. At\u00E9 o fim de 2014, 66 pa\u00EDses estariam usando IBAN como sistema principal.');
-      ie_close('p');
-      ie_open('p');
-        itext('Gere seu IBAN aqui: ');
-        ie_open('a', null, null,
-            'href', 'http://geradordeiban.detalhado.com/#/make');
-          itext('http://geradordeiban.detalhado.com/#/make');
-        ie_close('a');
-      ie_close('p');
-      ie_open('h4');
-        itext('Desvantagens');
-      ie_close('h4');
-      ie_open('p');
-        itext('A desvantagem deste tipo de opera\u00E7\u00E3o \u00E9 a cobran\u00E7a de custos dos dois lados da opera\u00E7\u00E3o. Outro ponto negativo \u00E9 o tempo de espera para conseguir liquidar a remessa, dependendo do banco pode demorar at\u00E9 3 dias.');
-      ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11774,11 +11762,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param223}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param256}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'Cvexx.render';
+  $render.soyTemplateName = 'sjqxA.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11788,17 +11776,14 @@ return exports;
 
 });
 
-class Cvexx extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Cvexx, templates);
+class sjqxA extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(sjqxA, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 104 */,
-/* 105 */,
-/* 106 */,
 /* 107 */,
 /* 108 */,
 /* 109 */,
@@ -11836,7 +11821,17 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Cvexx, templates);
 /* 141 */,
 /* 142 */,
 /* 143 */,
-/* 144 */
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11864,9 +11859,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _swiftSoy = __webpack_require__(103);
+var _indexSoy = __webpack_require__(106);
 
-var _swiftSoy2 = _interopRequireDefault(_swiftSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11876,23 +11871,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Cvexx = function (_Component) {
-  _inherits(Cvexx, _Component);
+var sjqxA = function (_Component) {
+  _inherits(sjqxA, _Component);
 
-  function Cvexx() {
-    _classCallCheck(this, Cvexx);
+  function sjqxA() {
+    _classCallCheck(this, sjqxA);
 
-    return _possibleConstructorReturn(this, (Cvexx.__proto__ || Object.getPrototypeOf(Cvexx)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (sjqxA.__proto__ || Object.getPrototypeOf(sjqxA)).apply(this, arguments));
   }
 
-  return Cvexx;
+  return sjqxA;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(Cvexx, _swiftSoy2.default);
+_metalSoy2.default.register(sjqxA, _indexSoy2.default);
 
-exports.default = Cvexx;
+exports.default = sjqxA;
 
 /***/ })
-],[144]);
+],[154]);

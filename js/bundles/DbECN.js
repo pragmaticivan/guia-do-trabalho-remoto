@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([4],[
+webpackJsonppageComponent([13],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11622,21 +11622,12 @@ module.exports = function(module) {
 /* 93 */,
 /* 94 */,
 /* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gYIkK", function() { return gYIkK; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DbECN", function() { return DbECN; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11648,15 +11639,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from xoom.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace gYIkK.
+ * @fileoverview Templates in namespace DbECN.
  * @public
  */
 
-goog.module('gYIkK.incrementaldom');
+goog.module('DbECN.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11688,28 +11679,18 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param245 = function() {
+  var param157 = function() {
     ie_open('h6');
-      var dyn19 = opt_data.page.description;
-      if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
+      var dyn11 = opt_data.page.description;
+      if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com Xoom');
+        itext('CLT ou Pessoa Jur\u00EDdica');
       ie_close('h2');
       ie_open('p');
-        ie_open('a', null, null,
-            'href', 'https://www.xoom.com');
-          itext('Xoom');
-        ie_close('a');
-        itext(' \u00E9 um dos mais adorados por todos os freelancers, \u00E9 t\u00E3o simples que parece at\u00E9 n\u00E3o ser de verdade. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente no mesmo dia, em algumas horas. Trata-se de um intermediador de envios entre pa\u00EDses, onde a empresa que lhe contratou paga o valor na sua moeda nacional e voc\u00EA recebe em reais na sua conta.');
-      ie_close('p');
-      ie_open('p');
-        itext('Depois de se cadastrar, a empresa pode enviar at\u00E9 US$ 2.900 dentro de um per\u00EDodo de 24 horas, at\u00E9 US$ 6.000 dentro de 30 dias e at\u00E9 US$ 9.999 em 180 dias. Os limites de envio aplicam-se \u00E0s atividades combinadas de todas as contas que tenham o mesmo endere\u00E7o f\u00EDsico. Por esse motivo, a Xoom recomenda manter uma conta por fam\u00EDlia para o limite de envio ser gerenciado com mais facilidade.');
-      ie_close('p');
-      ie_open('p');
-        itext('Cada transa\u00E7\u00E3o da Xoom tem um limite de US$ 2.999, mas a empresa pode enviar at\u00E9 US$ 6.000 em um per\u00EDodo de 30 dias (at\u00E9 $60.000 em 180 dias) ao fornecer informa\u00E7\u00F5es adicionais que nos ajudem a garantir uma transfer\u00EAncia de fundos segura, mantendo-se em conformidade com regulamentos federais e estaduais. Tais informa\u00E7\u00F5es ser\u00E3o solicitadas toda vez que voc\u00EA tentar enviar uma quantia maior que seu limite atual, por\u00E9m voc\u00EA pode economizar tempo contactando a Equipe do Xoom para Verifica\u00E7\u00E3o e fornecer essas informa\u00E7\u00F5es antecipadamente.');
+        itext('Para empresas no Brasil, voc\u00EA pode continuar com o modelo CLT ou PJ normalmente, mesmo n\u00E3o residindo no estado da empresa, embora seja necess\u00E1rio ir algumas vezes visitar a empresa para resolver burocracias. Para empresas no exterior \u00E9 recomendado que voc\u00EA tenha um contrato de presta\u00E7\u00E3o de servi\u00E7os, j\u00E1 que voc\u00EA n\u00E3o \u00E9 diretamente contratado no modelo formal. Este contrato ir\u00E1 comprovar a origem e legalidade do dinheiro que voc\u00EA ir\u00E1 receber.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11721,11 +11702,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param245}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param157}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'gYIkK.render';
+  $render.soyTemplateName = 'DbECN.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11735,14 +11716,23 @@ return exports;
 
 });
 
-class gYIkK extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(gYIkK, templates);
+class DbECN extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(DbECN, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
 /* 106 */,
 /* 107 */,
 /* 108 */,
@@ -11780,14 +11770,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(gYIkK, templates);
 /* 140 */,
 /* 141 */,
 /* 142 */,
-/* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11815,9 +11798,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _xoomSoy = __webpack_require__(105);
+var _indexSoy = __webpack_require__(96);
 
-var _xoomSoy2 = _interopRequireDefault(_xoomSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11827,23 +11810,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var gYIkK = function (_Component) {
-  _inherits(gYIkK, _Component);
+var DbECN = function (_Component) {
+  _inherits(DbECN, _Component);
 
-  function gYIkK() {
-    _classCallCheck(this, gYIkK);
+  function DbECN() {
+    _classCallCheck(this, DbECN);
 
-    return _possibleConstructorReturn(this, (gYIkK.__proto__ || Object.getPrototypeOf(gYIkK)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (DbECN.__proto__ || Object.getPrototypeOf(DbECN)).apply(this, arguments));
   }
 
-  return gYIkK;
+  return DbECN;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(gYIkK, _xoomSoy2.default);
+_metalSoy2.default.register(DbECN, _indexSoy2.default);
 
-exports.default = gYIkK;
+exports.default = DbECN;
 
 /***/ })
-],[150]);
+],[143]);

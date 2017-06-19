@@ -11737,14 +11737,14 @@ function $header(opt_data, opt_ignored, opt_ijData) {
       ie_open('p', null, null,
           'class', 'gh-btns');
         ie_void('iframe', null, null,
-            'src', 'http://ghbtns.com/github-btn.html?user=nomadsonrails&repo=guia-do-trabalho-remoto&type=watch&count=true&size=large',
+            'src', 'https://ghbtns.com/github-btn.html?user=nomadsonrails&repo=guia-do-trabalho-remoto&type=watch&count=true&size=large',
             'allowtransparency', 'true',
             'frameborder', '0',
             'scrolling', '0',
             'width', '150',
             'height', '30');
         ie_void('iframe', null, null,
-            'src', 'http://ghbtns.com/github-btn.html?user=nomadsonrails&repo=guia-do-trabalho-remoto&type=fork&count=true&size=large',
+            'src', 'https://ghbtns.com/github-btn.html?user=nomadsonrails&repo=guia-do-trabalho-remoto&type=fork&count=true&size=large',
             'allowtransparency', 'true',
             'frameborder', '0',
             'scrolling', '0',
