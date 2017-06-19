@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([13],[
+webpackJsonppageComponent([6],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2472,8 +2472,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11622,12 +11622,19 @@ module.exports = function(module) {
 /* 93 */,
 /* 94 */,
 /* 95 */,
-/* 96 */
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DbECN", function() { return DbECN; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fNILZ", function() { return fNILZ; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11639,15 +11646,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from swift.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace DbECN.
+ * @fileoverview Templates in namespace fNILZ.
  * @public
  */
 
-goog.module('DbECN.incrementaldom');
+goog.module('fNILZ.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11679,18 +11686,83 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param157 = function() {
+  var param223 = function() {
     ie_open('h6');
-      var dyn11 = opt_data.page.description;
-      if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
+      var dyn17 = opt_data.page.description;
+      if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('CLT ou Pessoa Jur\u00EDdica');
+        itext('Recebendo pagamentos com Swift');
       ie_close('h2');
       ie_open('p');
-        itext('Para empresas no Brasil, voc\u00EA pode continuar com o modelo CLT ou PJ normalmente, mesmo n\u00E3o residindo no estado da empresa, embora seja necess\u00E1rio ir algumas vezes visitar a empresa para resolver burocracias. Para empresas no exterior \u00E9 recomendado que voc\u00EA tenha um contrato de presta\u00E7\u00E3o de servi\u00E7os, j\u00E1 que voc\u00EA n\u00E3o \u00E9 diretamente contratado no modelo formal. Este contrato ir\u00E1 comprovar a origem e legalidade do dinheiro que voc\u00EA ir\u00E1 receber.');
+        itext('Segundo um levantamento feito na comunidade, \u00E9 a mais comum entre as pessoas que trabalham remotamente para empresas no exterior. \u00C9 poss\u00EDvel receber dinheiro do exterior atrav\u00E9s de uma transfer\u00EAncia banc\u00E1ria aceita em qualquer ag\u00EAncia. \u00C9 necess\u00E1rio enviar todos os dados referentes a transa\u00E7\u00E3o para que a empresa possa efetuar uma transa\u00E7\u00E3o de envio de um banco no exterior para um banco no Brasil.');
+      ie_close('p');
+      ie_open('p');
+        itext('Ademais, ambas as institui\u00E7\u00F5es cobrar\u00E3o pelo servi\u00E7o. Assim, quem estiver no exterior desembolsar\u00E1 uma taxa para que o dinheiro chegue ao destino pretendido, mesmo n\u00E3o sendo correntista do banco contatado. A tarifa \u00E9 conhecida como ordem de pagamento expedida. Uma vez no Brasil, a ag\u00EAncia que recebeu o montante tamb\u00E9m descontar\u00E1 uma determinada quantia do dinheiro que ir\u00E1 disponibilizar ao cliente.');
+      ie_close('p');
+      ie_open('h4');
+        itext('Dados necess\u00E1rios');
+      ie_close('h4');
+      ie_open('p');
+        itext('Apesar de nem todos serem precisos, \u00E9 legal enviar todos esses para que seu empregador tenha todas as informa\u00E7\u00F5es necess\u00E1rias:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Nome completo');
+        ie_close('li');
+        ie_open('li');
+          itext('Documento de Identifica\u00E7\u00E3o');
+        ie_close('li');
+        ie_open('li');
+          itext('Endere\u00E7o Residencial');
+        ie_close('li');
+        ie_open('li');
+          itext('Motivo da remessa');
+        ie_close('li');
+        ie_open('li');
+          itext('Banco + C\u00F3digo do banco');
+        ie_close('li');
+        ie_open('li');
+          itext('Ag\u00EAncia');
+        ie_close('li');
+        ie_open('li');
+          itext('N\u00FAmero da Conta');
+        ie_close('li');
+        ie_open('li');
+          itext('SWIFT Code (Referente a ag\u00EAncia autorizada a fazer c\u00E2mbio no Brasil) (Procure seu SWIFT code ');
+          ie_open('a', null, null,
+              'href', 'http://www.theswiftcodes.com/brazil/');
+            itext('aqui');
+          ie_close('a');
+          itext('. )');
+        ie_close('li');
+        ie_open('li');
+          itext('Sugiro que tamb\u00E9m envie o IBAN (Leia abaixo o que isso significa)');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('OBS: Para SWIFT Code, sugiro que procure o banco mais perto da sua cidade, caso precise resolver alguma burocracia.');
+      ie_close('p');
+      ie_open('h4');
+        itext('IBAN');
+      ie_close('h4');
+      ie_open('p');
+        itext('IBAN (International Bank Account Number) \u00E9 um sistema internacional de identifica\u00E7\u00E3o de bancos criado para facilitar a comunica\u00E7\u00E3o e processamento entre transa\u00E7\u00F5es com redu\u00E7\u00E3o de risco. Inicialmente utilizado na Europa, est\u00E1 cada vez mais sendo adotado por outros pa\u00EDses, alguns bancos nos Estados Unidos por exemplo j\u00E1 aceitam esse tipo de c\u00F3digo ao inv\u00E9s do SWIFT. At\u00E9 o fim de 2014, 66 pa\u00EDses estariam usando IBAN como sistema principal.');
+      ie_close('p');
+      ie_open('p');
+        itext('Gere seu IBAN aqui: ');
+        ie_open('a', null, null,
+            'href', 'http://geradordeiban.detalhado.com/#/make');
+          itext('http://geradordeiban.detalhado.com/#/make');
+        ie_close('a');
+      ie_close('p');
+      ie_open('h4');
+        itext('Desvantagens');
+      ie_close('h4');
+      ie_open('p');
+        itext('A desvantagem deste tipo de opera\u00E7\u00E3o \u00E9 a cobran\u00E7a de custos dos dois lados da opera\u00E7\u00E3o. Outro ponto negativo \u00E9 o tempo de espera para conseguir liquidar a remessa, dependendo do banco pode demorar at\u00E9 3 dias.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11702,11 +11774,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param157}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param223}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'DbECN.render';
+  $render.soyTemplateName = 'fNILZ.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11716,21 +11788,14 @@ return exports;
 
 });
 
-class DbECN extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(DbECN, templates);
+class fNILZ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(fNILZ, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
 /* 104 */,
 /* 105 */,
 /* 106 */,
@@ -11770,7 +11835,13 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(DbECN, templates);
 /* 140 */,
 /* 141 */,
 /* 142 */,
-/* 143 */
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11798,9 +11869,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(96);
+var _swiftSoy = __webpack_require__(103);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _swiftSoy2 = _interopRequireDefault(_swiftSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11810,23 +11881,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var DbECN = function (_Component) {
-  _inherits(DbECN, _Component);
+var fNILZ = function (_Component) {
+  _inherits(fNILZ, _Component);
 
-  function DbECN() {
-    _classCallCheck(this, DbECN);
+  function fNILZ() {
+    _classCallCheck(this, fNILZ);
 
-    return _possibleConstructorReturn(this, (DbECN.__proto__ || Object.getPrototypeOf(DbECN)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (fNILZ.__proto__ || Object.getPrototypeOf(fNILZ)).apply(this, arguments));
   }
 
-  return DbECN;
+  return fNILZ;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(DbECN, _indexSoy2.default);
+_metalSoy2.default.register(fNILZ, _swiftSoy2.default);
 
-exports.default = DbECN;
+exports.default = fNILZ;
 
 /***/ })
-],[143]);
+],[149]);

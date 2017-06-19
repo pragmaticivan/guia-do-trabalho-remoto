@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([14],[
+webpackJsonppageComponent([4],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2472,8 +2472,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11621,12 +11621,22 @@ module.exports = function(module) {
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KblbF", function() { return KblbF; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ejObb", function() { return ejObb; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11638,15 +11648,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from xoom.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace KblbF.
+ * @fileoverview Templates in namespace ejObb.
  * @public
  */
 
-goog.module('KblbF.incrementaldom');
+goog.module('ejObb.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11678,142 +11688,29 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param146 = function() {
+  var param245 = function() {
     ie_open('h6');
-      var dyn10 = opt_data.page.description;
-      if (typeof dyn10 == 'function') dyn10(); else if (dyn10 != null) itext(dyn10);
+      var dyn19 = opt_data.page.description;
+      if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recursos sobre trabalho remoto');
+        itext('Recebendo pagamentos com Xoom');
       ie_close('h2');
-      ie_open('h4');
-        itext('Artigos');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://medium.com/desenvolvimento-front-end-pt-br/o-que-eu-aprendi-em-quase-1-ano-de-home-office-7ed3cfee276a');
-            itext('O que eu aprendi em quase 1 ano de home-office');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('h4');
-        itext('Comunica\u00E7\u00E3o');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://slack.com/');
-            itext('Slack');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('h4');
-        itext('Comunidades');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://www.meetup.com/Belo-Horizonte-Remote-Workers/');
-            itext('Remote Workers - Belo Horizonte');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('h4');
-        itext('Diversos');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://github.com/lukasz-madon/awesome-remote-job');
-            itext('Awesome Remote Job');
-          ie_close('a');
-          itext(' - Uma compila\u00E7\u00E3o de informa\u00E7\u00F5es sobre trabalho remoto');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://github.com/lerrua/remote-jobs-brazil');
-            itext('Remote Jobs');
-          ie_close('a');
-          itext(' - Lista de empresas com trabalho remoto no Brasil');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://github.com/jessicard/remote-jobs');
-            itext('Remote Jobs Worldwide');
-          ie_close('a');
-          itext(' - Lista de empresas com trabalho remoto Worldwide');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('h4');
-        itext('Livros');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://37signals.com/remote/');
-            itext('Remote. Office Not Required.');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://scottberkun.com/yearwithoutpants/');
-            itext('The Year Without Pants: WordPress.com and the Future of Work');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('h4');
-        itext('Gest\u00E3o de Projetos');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://pivotaltracker.com');
-            itext('PivotalTracker');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('h4');
-        itext('M\u00E9trica de tempo');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://wakatime.com/');
-            itext('WakaTime');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('h4');
-        itext('Podcasts');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://www.grokpodcast.com/2013/04/02/episodio-86-trabalho-remoto-parte-1-de-4/');
-            itext('Grok Podcast - Trabalho Remoto');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://devnaestrada.com.br/2015/12/25/devnaestrada-remoto-da-depressao.html');
-            itext('DevNaEstrada - Remoto da depress\u00E3o');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('h4');
-        itext('Talks');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://www.youtube.com/watch?v=IT6z7VDueF8');
-            itext('Desafios e vantagens do trabalho remoto por Willian Fernandes');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
+      ie_open('p');
+        ie_open('a', null, null,
+            'href', 'https://www.xoom.com');
+          itext('Xoom');
+        ie_close('a');
+        itext(' \u00E9 um dos mais adorados por todos os freelancers, \u00E9 t\u00E3o simples que parece at\u00E9 n\u00E3o ser de verdade. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente no mesmo dia, em algumas horas. Trata-se de um intermediador de envios entre pa\u00EDses, onde a empresa que lhe contratou paga o valor na sua moeda nacional e voc\u00EA recebe em reais na sua conta.');
+      ie_close('p');
+      ie_open('p');
+        itext('Depois de se cadastrar, a empresa pode enviar at\u00E9 US$ 2.900 dentro de um per\u00EDodo de 24 horas, at\u00E9 US$ 6.000 dentro de 30 dias e at\u00E9 US$ 9.999 em 180 dias. Os limites de envio aplicam-se \u00E0s atividades combinadas de todas as contas que tenham o mesmo endere\u00E7o f\u00EDsico. Por esse motivo, a Xoom recomenda manter uma conta por fam\u00EDlia para o limite de envio ser gerenciado com mais facilidade.');
+      ie_close('p');
+      ie_open('p');
+        itext('Cada transa\u00E7\u00E3o da Xoom tem um limite de US$ 2.999, mas a empresa pode enviar at\u00E9 US$ 6.000 em um per\u00EDodo de 30 dias (at\u00E9 $60.000 em 180 dias) ao fornecer informa\u00E7\u00F5es adicionais que nos ajudem a garantir uma transfer\u00EAncia de fundos segura, mantendo-se em conformidade com regulamentos federais e estaduais. Tais informa\u00E7\u00F5es ser\u00E3o solicitadas toda vez que voc\u00EA tentar enviar uma quantia maior que seu limite atual, por\u00E9m voc\u00EA pode economizar tempo contactando a Equipe do Xoom para Verifica\u00E7\u00E3o e fornecer essas informa\u00E7\u00F5es antecipadamente.');
+      ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11824,11 +11721,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param146}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param245}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'KblbF.render';
+  $render.soyTemplateName = 'ejObb.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11838,24 +11735,14 @@ return exports;
 
 });
 
-class KblbF extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(KblbF, templates);
+class ejObb extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ejObb, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
 /* 106 */,
 /* 107 */,
 /* 108 */,
@@ -11892,7 +11779,12 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(KblbF, templates);
 /* 139 */,
 /* 140 */,
 /* 141 */,
-/* 142 */
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11920,9 +11812,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(95);
+var _xoomSoy = __webpack_require__(105);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _xoomSoy2 = _interopRequireDefault(_xoomSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11932,23 +11824,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var KblbF = function (_Component) {
-  _inherits(KblbF, _Component);
+var ejObb = function (_Component) {
+  _inherits(ejObb, _Component);
 
-  function KblbF() {
-    _classCallCheck(this, KblbF);
+  function ejObb() {
+    _classCallCheck(this, ejObb);
 
-    return _possibleConstructorReturn(this, (KblbF.__proto__ || Object.getPrototypeOf(KblbF)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ejObb.__proto__ || Object.getPrototypeOf(ejObb)).apply(this, arguments));
   }
 
-  return KblbF;
+  return ejObb;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(KblbF, _indexSoy2.default);
+_metalSoy2.default.register(ejObb, _xoomSoy2.default);
 
-exports.default = KblbF;
+exports.default = ejObb;
 
 /***/ })
-],[142]);
+],[147]);

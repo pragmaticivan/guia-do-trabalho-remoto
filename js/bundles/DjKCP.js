@@ -2472,8 +2472,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11639,7 +11639,7 @@ module.exports = function(module) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Qwsys", function() { return Qwsys; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DjKCP", function() { return DjKCP; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11655,11 +11655,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace Qwsys.
+ * @fileoverview Templates in namespace DjKCP.
  * @public
  */
 
-goog.module('Qwsys.incrementaldom');
+goog.module('DjKCP.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11766,7 +11766,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'Qwsys.render';
+  $render.soyTemplateName = 'DjKCP.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11776,8 +11776,8 @@ return exports;
 
 });
 
-class Qwsys extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Qwsys, templates);
+class DjKCP extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(DjKCP, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
@@ -11870,23 +11870,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Qwsys = function (_Component) {
-  _inherits(Qwsys, _Component);
+var DjKCP = function (_Component) {
+  _inherits(DjKCP, _Component);
 
-  function Qwsys() {
-    _classCallCheck(this, Qwsys);
+  function DjKCP() {
+    _classCallCheck(this, DjKCP);
 
-    return _possibleConstructorReturn(this, (Qwsys.__proto__ || Object.getPrototypeOf(Qwsys)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (DjKCP.__proto__ || Object.getPrototypeOf(DjKCP)).apply(this, arguments));
   }
 
-  return Qwsys;
+  return DjKCP;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(Qwsys, _indexSoy2.default);
+_metalSoy2.default.register(DjKCP, _indexSoy2.default);
 
-exports.default = Qwsys;
+exports.default = DjKCP;
 
 /***/ })
 ],[155]);
