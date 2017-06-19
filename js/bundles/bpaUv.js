@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([11],[
+webpackJsonppageComponent([3],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11624,12 +11624,20 @@ module.exports = function(module) {
 /* 95 */,
 /* 96 */,
 /* 97 */,
-/* 98 */
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GXQBJ", function() { return GXQBJ; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bpaUv", function() { return bpaUv; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11641,15 +11649,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from bitcoin.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace GXQBJ.
+ * @fileoverview Templates in namespace bpaUv.
  * @public
  */
 
-goog.module('GXQBJ.incrementaldom');
+goog.module('bpaUv.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11681,152 +11689,67 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param168 = function() {
+  var param256 = function() {
     ie_open('h6');
-      var dyn12 = opt_data.page.description;
-      if (typeof dyn12 == 'function') dyn12(); else if (dyn12 != null) itext(dyn12);
+      var dyn20 = opt_data.page.description;
+      if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com Bitcoin');
+        itext('Sites com ofertas remotas');
       ie_close('h2');
       ie_open('p');
-        itext('Bitcoin \u00E9 minha op\u00E7\u00E3o preferida, muitos profissionais de TI ainda n\u00E3o perceberam todas as vantagens, uma delas \u00E9 trafegar dinheiro de um pa\u00EDs para o outro sem precisar pagar tantas taxas e passar por tantas burocracias.');
-      ie_close('p');
-      ie_open('p');
-        itext('Segundo a Wikipedia, Bitcoin \u00E9 uma criptomoeda cuja cria\u00E7\u00E3o e transfer\u00EAncia \u00E9 baseada em protocolos c\u00F3digo fonte aberto de criptografia que \u00E9 independente de qualquer autoridade central. Um bitcoin pode ser transferido por um computador ou smartphone sem recurso a uma institui\u00E7\u00E3o financeira intermedi\u00E1ria.');
-      ie_close('p');
-      ie_open('p');
-        itext('Toda a rede \u00E9 sustentada pelos  usu\u00E1rios atrav\u00E9s de p2p, logo todo o processo de seguran\u00E7a, valida\u00E7\u00E3o e "minera\u00E7\u00E3o" \u00E9 feito atrav\u00E9s de v\u00E1rios computadores na grande rede.');
-      ie_close('p');
-      ie_open('p');
-        itext('\u00C9 necess\u00E1rio ter uma carteira(wallet) para guardar seus bitcoins. Abaixo segue algumas wallets que a comunidade costuma utilizar:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('Xapo - ');
-          ie_open('a', null, null,
-              'href', 'https://xapo.com/');
-            itext('https://xapo.com/');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          itext('Coinbase - ');
-          ie_open('a', null, null,
-              'href', 'https://www.coinbase.com/join/5637f7ae01653a4452000087');
-            itext('https://www.coinbase.com/');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          itext('Uphold - ');
-          ie_open('a', null, null,
-              'href', 'https://uphold.com/signup?utm_campaign=refprog&utm_medium=pragmaticivan');
-            itext('https://uphold.com/');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('O fluxo atual que se costuma utilizar \u00E9 bem simples:');
-      ie_close('p');
-      ie_open('p');
-        itext('A empresa compra bitcoins atrav\u00E9s do ');
-        ie_open('a', null, null,
-            'href', 'https://www.coinbase.com/join/5637f7ae01653a4452000087');
-          itext('Coinbase');
-        ie_close('a');
-        itext(' ou outro servi\u00E7o dispon\u00EDvel no pa\u00EDs em que a empresa est\u00E1 localizada, envia para sua wallet e automaticamente voc\u00EA detem criptomoedas equivalentes ao valor que voc\u00EA costuam receber como sal\u00E1rio.');
-      ie_close('p');
-      ie_open('p');
-        itext('Ap\u00F3s isso voc\u00EA pode trocar seus bitcoins em servi\u00E7os no Brasil, indico utilizar o ');
-        ie_open('a', null, null,
-            'href', 'https://foxbit.exchange');
-          itext('Foxbit');
-        ie_close('a');
-        itext('. Voc\u00EA envia seus bitcoins para uma wallet em um desses servi\u00E7os e solicita vender seus bitcoins, ap\u00F3s isso \u00E9 s\u00F3 solicitar enviar seu dinheiro em Reais para sua conta, bem r\u00E1pido e no mesmo dia, e as taxas s\u00E3o BEM mais amigu\u00E1veis que opera\u00E7\u00F5es entre bancos, quase que insignificantes comparadas a esses outros meios.');
-      ie_close('p');
-      ie_open('p');
-        itext('Segue alguns tutoriais ensinando como utilizar as funcionalidades da FOXBIT:');
+        itext('Fique atento: em algumas vagas, os candidatos devem morar no mesmo pa\u00EDs da vaga, limitando-se assim que o trabalho seja realmente remoto (nesses casos voc\u00EA precisa residir l\u00E1 ou ter autoriza\u00E7\u00E3o para trabalhar no pa\u00EDs onde a empresa est\u00E1 localizada).');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
           ie_open('a', null, null,
-              'href', 'https://www.youtube.com/watch?v=GCoe-thmHJk');
-            itext('Criar conta na FOXBIT');
+              'href', 'https://jobs.github.com/positions?description=&location=Remote');
+            itext('Github Job board');
           ie_close('a');
         ie_close('li');
         ie_open('li');
           ie_open('a', null, null,
-              'href', 'https://www.youtube.com/watch?v=loAJUYu9UHY');
-            itext('Sacar bitcoins na FOXBIT');
+              'href', 'http://www.jobsintech.io/jobs#q=&page=0&refinements=%5B%7B%22remote%22%3A%22can_work_remote%22%7D%5D');
+            itext('Jobs in Tech');
           ie_close('a');
         ie_close('li');
         ie_open('li');
           ie_open('a', null, null,
-              'href', 'https://www.youtube.com/watch?v=2xRDkFDyYQY');
-            itext('Comprar bitcoins na FOXBIT');
+              'href', 'https://landing.jobs/?custom_inviter=pragmaticivan');
+            itext('Landing.jobs');
           ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('Alguns servi\u00E7os no qual voc\u00EA pode utilizar seus bitcoins:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://www.gyft.com/bitcoin/');
-            itext('Gyft');
-          ie_close('a');
-          itext(' - Um dos mais interessantes, voc\u00EA compra v\u00E1rios coupons com bitcoin, bem interessante para quem viaja para os EUA e quer fazer umas compras.');
         ie_close('li');
         ie_open('li');
           ie_open('a', null, null,
-              'href', 'https://www.e-coin.io/?ref=1070214a1100452b810918b5030a994d#sthash.JMVP7M1H.dpuf');
-            itext('E-coin Card');
+              'href', 'https://remoteok.io/remote-jobs');
+            itext('Remote Ok');
           ie_close('a');
-          itext(' - Fant\u00E1stico sistema onde voc\u00EA deposita seus bitcoins e eles caem como cr\u00E9dito em um cart\u00E3o de debito prepago, onde voc\u00EA pode utilizar em qualquer lugar que aceite bandeira Visa, inclusive compras online.');
         ie_close('li');
         ie_open('li');
           ie_open('a', null, null,
-              'href', 'https://uphold.com/signup?utm_campaign=refprog&utm_medium=pragmaticivan');
-            itext('Uphold');
+              'href', 'https://stackoverflow.com/jobs/remote-developer-jobs');
+            itext('Stackoverflow Job board');
           ie_close('a');
-          itext(' - Permite enviar seus bitcoins e fazer com que eles permane\u00E7am com o valor atual, evitando a grande volatilidade da cripto moeda.');
         ie_close('li');
         ie_open('li');
           ie_open('a', null, null,
-              'href', 'https://bitpay.com/');
-            itext('Bitpay');
+              'href', 'https://staff.com/');
+            itext('Staff.com');
           ie_close('a');
-          itext(' - Integra\u00E7\u00E3o de pagamentos para aceitar bitcoin.');
         ie_close('li');
         ie_open('li');
           ie_open('a', null, null,
-              'href', 'http://usebitcoins.info/');
-            itext('Usecoin');
+              'href', 'https://weworkremotely.com/');
+            itext('We work remotely');
           ie_close('a');
-          itext(' -  Lista de sites no qual voc\u00EA pode gastar seus bitcoins.');
         ie_close('li');
         ie_open('li');
           ie_open('a', null, null,
-              'href', 'https://www.coinbase.com/join/5637f7ae01653a4452000087');
-            itext('Coinbase');
+              'href', 'https://www.wfh.io/');
+            itext('WFH.io');
           ie_close('a');
-          itext(' - Um dos pioneiros e mais seguros sistemas de compra e venda de bitcoins nos EUA.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://localbitcoins.com/');
-            itext('LocalBitcoins');
-          ie_close('a');
-          itext(' - Um sistema de compra e venda de bitcoins com v\u00E1rios meios de pagamento, inclusive em dinheiro vivo.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://www.paguecombitcoin.com');
-            itext('Pague com Bitcoin');
-          ie_close('a');
-          itext(' - Incr\u00EDvel! Pague qualquer boleto com Bitcoin. Desde compras em e-commerce, incluindo mercado livre, at\u00E9 fatura do cart\u00E3o do seu cr\u00E9dito.');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
@@ -11839,11 +11762,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param168}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param256}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'GXQBJ.render';
+  $render.soyTemplateName = 'bpaUv.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11853,22 +11776,14 @@ return exports;
 
 });
 
-class GXQBJ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(GXQBJ, templates);
+class bpaUv extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(bpaUv, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
 /* 107 */,
 /* 108 */,
 /* 109 */,
@@ -11908,7 +11823,15 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(GXQBJ, templates);
 /* 143 */,
 /* 144 */,
 /* 145 */,
-/* 146 */
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11936,9 +11859,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _bitcoinSoy = __webpack_require__(98);
+var _indexSoy = __webpack_require__(106);
 
-var _bitcoinSoy2 = _interopRequireDefault(_bitcoinSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11948,23 +11871,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var GXQBJ = function (_Component) {
-  _inherits(GXQBJ, _Component);
+var bpaUv = function (_Component) {
+  _inherits(bpaUv, _Component);
 
-  function GXQBJ() {
-    _classCallCheck(this, GXQBJ);
+  function bpaUv() {
+    _classCallCheck(this, bpaUv);
 
-    return _possibleConstructorReturn(this, (GXQBJ.__proto__ || Object.getPrototypeOf(GXQBJ)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (bpaUv.__proto__ || Object.getPrototypeOf(bpaUv)).apply(this, arguments));
   }
 
-  return GXQBJ;
+  return bpaUv;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(GXQBJ, _bitcoinSoy2.default);
+_metalSoy2.default.register(bpaUv, _indexSoy2.default);
 
-exports.default = GXQBJ;
+exports.default = bpaUv;
 
 /***/ })
-],[146]);
+],[154]);

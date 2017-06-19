@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([5],[
+webpackJsonppageComponent([10],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11625,17 +11625,12 @@ module.exports = function(module) {
 /* 96 */,
 /* 97 */,
 /* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "zZliO", function() { return zZliO; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UBAFL", function() { return UBAFL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11647,15 +11642,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from transferwise.soy.
+// This file was automatically generated from bitwage.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace zZliO.
+ * @fileoverview Templates in namespace UBAFL.
  * @public
  */
 
-goog.module('zZliO.incrementaldom');
+goog.module('UBAFL.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11687,23 +11682,91 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param234 = function() {
+  var param179 = function() {
     ie_open('h6');
-      var dyn18 = opt_data.page.description;
-      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
+      var dyn13 = opt_data.page.description;
+      if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com TransferWise');
+        itext('Recebendo pagamentos com Bitwage');
       ie_close('h2');
       ie_open('p');
         ie_open('a', null, null,
-            'href', 'https://transferwise.com/u/344b08');
-          itext('TransferWise');
+            'href', 'https://www.bitwage.com/referral/XZUSDRB366TE');
+          itext('Bitwage');
         ie_close('a');
-        itext(' \u00E9 uma nova plataforma um pouco parecida com o Xoom. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente 1 dia depois caso a empresa seja Americana. Trata-se de um intermediador de envio entre pa\u00EDses, por\u00E9m o diferencial \u00E9 que esta empresa garante envio do dinheiro com cota\u00E7\u00F5es bem melhores. Retirando aquele monte de encargos criados por bancos. Voc\u00EA acaba econiomizando 90% em encargos "desnecess\u00E1rios".');
+        itext(' \u00E9 um servi\u00E7o que permite o recebimento de pagamentos em Bitcoins de forma indireta ao empregador, ou seja, o empregador n\u00E3o compra Bitcoins e nem precisa ter conta na Bitwage, ele apenas deposita o pagamento em uma conta banc\u00E1ria dos EUA, do Canad\u00E1 e/ou da Europa e em aproximadamente 2 dias este montante, com uma redu\u00E7\u00E3o de apenas 1% por transa\u00E7\u00E3o, estar\u00E1 em sua ');
+        ie_open('a', null, null,
+            'href', '#bitcoins');
+          itext('carteira Bitcoin');
+        ie_close('a');
+        itext('.');
       ie_close('p');
+      ie_open('p');
+        itext('O fluxo para utiliza\u00E7\u00E3o \u00E9 bem simples, veja s\u00F3:');
+      ie_close('p');
+      ie_open('p');
+        itext('1] Voc\u00EA faz o cadastro no site da ');
+        ie_open('a', null, null,
+            'href', 'https://www.bitwage.com/referral/XZUSDRB366TE');
+          itext('Bitwage');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('2] Ap\u00F3s o cadastro, voc\u00EA precisa fazer o Set Up como um Worker. Neste momento voc\u00EA ir\u00E1 passar informa\u00E7\u00F5es pessoais para an\u00E1lise e aprova\u00E7\u00E3o dos seus dados, isso basicamente serve para segura\u00E7a da ferramenta.');
+      ie_close('p');
+      ie_open('p');
+        itext('3] Ap\u00F3s ser aprovado como um Worker, voc\u00EA ir\u00E1 cadastrar o seu Employer e tamb\u00E9m um Distribution, que basicamente \u00E9 a sua ');
+        ie_open('a', null, null,
+            'href', '#bitcoins');
+          itext('carteira Bitcoin');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('4] E finalmente, ap\u00F3s finalizar este processo de Set Up, que geralmente leva entre 2 e 3 dias \u00FAteis para ser finalizado completamente, voc\u00EA ir\u00E1 receber os dados de uma conta banc\u00E1ria criada para voc\u00EA, nos EUA, no Canad\u00E1 ou na Europa, e basicamente, ser\u00E3o estes os dados que voc\u00EA vai passar para seu empregador depositar os pagamentos.');
+      ie_close('p');
+      ie_open('p');
+        itext('Outra coisa legal \u00E9 que eles d\u00E3o bastante aten\u00E7\u00E3o para o p\u00FAblico do Brasil, sendo assim, basta solicitar atrav\u00E9s dos canais de comunica\u00E7\u00E3o deles para que o di\u00E1logo seja em Portugu\u00EAs, e prontamente ir\u00E3o colocar voc\u00EA em contato com o atendimento brasileiro.');
+      ie_close('p');
+      ie_open('p');
+        itext('E s\u00F3 para finalizar, segue abaixo alguns v\u00EDdeos explicativos:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=_JqTHW7X13Q');
+            itext('Bitwage & the future of payroll using bitcoin - YouTube');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=2ln6AiLrUjo');
+            itext('Recebendo pagamentos f\u00E1cil com a Bitwage! - YouTube');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=VqepklppjUU');
+            itext('O que \u00E9 a Bitwage - YouTube - Legendado');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=0v3Oe7spihs');
+            itext('Como trampar como freelancer nos EUA - YouTube');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=fxP0lc42xIY');
+            itext('Receba pagamentos do exterior por Bitcoin');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11714,11 +11777,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param234}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param179}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'zZliO.render';
+  $render.soyTemplateName = 'UBAFL.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11728,14 +11791,19 @@ return exports;
 
 });
 
-class zZliO extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(zZliO, templates);
+class UBAFL extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(UBAFL, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
 /* 105 */,
 /* 106 */,
 /* 107 */,
@@ -11778,11 +11846,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(zZliO, templates);
 /* 144 */,
 /* 145 */,
 /* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11810,9 +11874,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _transferwiseSoy = __webpack_require__(104);
+var _bitwageSoy = __webpack_require__(99);
 
-var _transferwiseSoy2 = _interopRequireDefault(_transferwiseSoy);
+var _bitwageSoy2 = _interopRequireDefault(_bitwageSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11822,23 +11886,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var zZliO = function (_Component) {
-  _inherits(zZliO, _Component);
+var UBAFL = function (_Component) {
+  _inherits(UBAFL, _Component);
 
-  function zZliO() {
-    _classCallCheck(this, zZliO);
+  function UBAFL() {
+    _classCallCheck(this, UBAFL);
 
-    return _possibleConstructorReturn(this, (zZliO.__proto__ || Object.getPrototypeOf(zZliO)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (UBAFL.__proto__ || Object.getPrototypeOf(UBAFL)).apply(this, arguments));
   }
 
-  return zZliO;
+  return UBAFL;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(zZliO, _transferwiseSoy2.default);
+_metalSoy2.default.register(UBAFL, _bitwageSoy2.default);
 
-exports.default = zZliO;
+exports.default = UBAFL;
 
 /***/ })
-],[151]);
+],[147]);

@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([3],[
+webpackJsonppageComponent([14],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11621,23 +11621,12 @@ module.exports = function(module) {
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FCvzl", function() { return FCvzl; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NnrXQ", function() { return NnrXQ; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11653,11 +11642,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace FCvzl.
+ * @fileoverview Templates in namespace NnrXQ.
  * @public
  */
 
-goog.module('FCvzl.incrementaldom');
+goog.module('NnrXQ.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11689,66 +11678,139 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param256 = function() {
+  var param146 = function() {
     ie_open('h6');
-      var dyn20 = opt_data.page.description;
-      if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
+      var dyn10 = opt_data.page.description;
+      if (typeof dyn10 == 'function') dyn10(); else if (dyn10 != null) itext(dyn10);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Sites com ofertas remotas');
+        itext('Recursos sobre trabalho remoto');
       ie_close('h2');
-      ie_open('p');
-        itext('Fique atento: em algumas vagas, os candidatos devem morar no mesmo pa\u00EDs da vaga, limitando-se assim que o trabalho seja realmente remoto (nesses casos voc\u00EA precisa residir l\u00E1 ou ter autoriza\u00E7\u00E3o para trabalhar no pa\u00EDs onde a empresa est\u00E1 localizada).');
-      ie_close('p');
+      ie_open('h4');
+        itext('Artigos');
+      ie_close('h4');
       ie_open('ul');
         ie_open('li');
           ie_open('a', null, null,
-              'href', 'https://jobs.github.com/positions?description=&location=Remote');
-            itext('Github Job board');
+              'href', 'https://medium.com/desenvolvimento-front-end-pt-br/o-que-eu-aprendi-em-quase-1-ano-de-home-office-7ed3cfee276a');
+            itext('O que eu aprendi em quase 1 ano de home-office');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Comunica\u00E7\u00E3o');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://slack.com/');
+            itext('Slack');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Comunidades');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://www.meetup.com/Belo-Horizonte-Remote-Workers/');
+            itext('Remote Workers - Belo Horizonte');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Diversos');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://github.com/lukasz-madon/awesome-remote-job');
+            itext('Awesome Remote Job');
+          ie_close('a');
+          itext(' - Uma compila\u00E7\u00E3o de informa\u00E7\u00F5es sobre trabalho remoto');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://github.com/lerrua/remote-jobs-brazil');
+            itext('Remote Jobs');
+          ie_close('a');
+          itext(' - Lista de empresas com trabalho remoto no Brasil');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://github.com/jessicard/remote-jobs');
+            itext('Remote Jobs Worldwide');
+          ie_close('a');
+          itext(' - Lista de empresas com trabalho remoto Worldwide');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Livros');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://37signals.com/remote/');
+            itext('Remote. Office Not Required.');
           ie_close('a');
         ie_close('li');
         ie_open('li');
           ie_open('a', null, null,
-              'href', 'http://www.jobsintech.io/jobs#q=&page=0&refinements=%5B%7B%22remote%22%3A%22can_work_remote%22%7D%5D');
-            itext('Jobs in Tech');
+              'href', 'http://scottberkun.com/yearwithoutpants/');
+            itext('The Year Without Pants: WordPress.com and the Future of Work');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Gest\u00E3o de Projetos');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://pivotaltracker.com');
+            itext('PivotalTracker');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('M\u00E9trica de tempo');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://wakatime.com/');
+            itext('WakaTime');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Podcasts');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://www.grokpodcast.com/2013/04/02/episodio-86-trabalho-remoto-parte-1-de-4/');
+            itext('Grok Podcast - Trabalho Remoto');
           ie_close('a');
         ie_close('li');
         ie_open('li');
           ie_open('a', null, null,
-              'href', 'https://landing.jobs/?custom_inviter=pragmaticivan');
-            itext('Landing.jobs');
+              'href', 'http://devnaestrada.com.br/2015/12/25/devnaestrada-remoto-da-depressao.html');
+            itext('DevNaEstrada - Remoto da depress\u00E3o');
           ie_close('a');
         ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Talks');
+      ie_close('h4');
+      ie_open('ul');
         ie_open('li');
           ie_open('a', null, null,
-              'href', 'https://remoteok.io/remote-jobs');
-            itext('Remote Ok');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://stackoverflow.com/jobs/remote-developer-jobs');
-            itext('Stackoverflow Job board');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://staff.com/');
-            itext('Staff.com');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://weworkremotely.com/');
-            itext('We work remotely');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://www.wfh.io/');
-            itext('WFH.io');
+              'href', 'https://www.youtube.com/watch?v=IT6z7VDueF8');
+            itext('Desafios e vantagens do trabalho remoto por Willian Fernandes');
           ie_close('a');
         ie_close('li');
       ie_close('ul');
@@ -11762,11 +11824,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param256}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param146}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'FCvzl.render';
+  $render.soyTemplateName = 'NnrXQ.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11776,14 +11838,25 @@ return exports;
 
 });
 
-class FCvzl extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(FCvzl, templates);
+class NnrXQ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(NnrXQ, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
 /* 107 */,
 /* 108 */,
 /* 109 */,
@@ -11819,19 +11892,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(FCvzl, templates);
 /* 139 */,
 /* 140 */,
 /* 141 */,
-/* 142 */,
-/* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11859,7 +11920,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(106);
+var _indexSoy = __webpack_require__(95);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -11871,23 +11932,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var FCvzl = function (_Component) {
-  _inherits(FCvzl, _Component);
+var NnrXQ = function (_Component) {
+  _inherits(NnrXQ, _Component);
 
-  function FCvzl() {
-    _classCallCheck(this, FCvzl);
+  function NnrXQ() {
+    _classCallCheck(this, NnrXQ);
 
-    return _possibleConstructorReturn(this, (FCvzl.__proto__ || Object.getPrototypeOf(FCvzl)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (NnrXQ.__proto__ || Object.getPrototypeOf(NnrXQ)).apply(this, arguments));
   }
 
-  return FCvzl;
+  return NnrXQ;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(FCvzl, _indexSoy2.default);
+_metalSoy2.default.register(NnrXQ, _indexSoy2.default);
 
-exports.default = FCvzl;
+exports.default = NnrXQ;
 
 /***/ })
-],[154]);
+],[142]);

@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([4],[
+webpackJsonppageComponent([5],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11630,13 +11630,12 @@ module.exports = function(module) {
 /* 101 */,
 /* 102 */,
 /* 103 */,
-/* 104 */,
-/* 105 */
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pYuQd", function() { return pYuQd; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gCqop", function() { return gCqop; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11648,15 +11647,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from xoom.soy.
+// This file was automatically generated from transferwise.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace pYuQd.
+ * @fileoverview Templates in namespace gCqop.
  * @public
  */
 
-goog.module('pYuQd.incrementaldom');
+goog.module('gCqop.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11688,28 +11687,22 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param245 = function() {
+  var param234 = function() {
     ie_open('h6');
-      var dyn19 = opt_data.page.description;
-      if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
+      var dyn18 = opt_data.page.description;
+      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com Xoom');
+        itext('Recebendo pagamentos com TransferWise');
       ie_close('h2');
       ie_open('p');
         ie_open('a', null, null,
-            'href', 'https://www.xoom.com');
-          itext('Xoom');
+            'href', 'https://transferwise.com/u/344b08');
+          itext('TransferWise');
         ie_close('a');
-        itext(' \u00E9 um dos mais adorados por todos os freelancers, \u00E9 t\u00E3o simples que parece at\u00E9 n\u00E3o ser de verdade. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente no mesmo dia, em algumas horas. Trata-se de um intermediador de envios entre pa\u00EDses, onde a empresa que lhe contratou paga o valor na sua moeda nacional e voc\u00EA recebe em reais na sua conta.');
-      ie_close('p');
-      ie_open('p');
-        itext('Depois de se cadastrar, a empresa pode enviar at\u00E9 US$ 2.900 dentro de um per\u00EDodo de 24 horas, at\u00E9 US$ 6.000 dentro de 30 dias e at\u00E9 US$ 9.999 em 180 dias. Os limites de envio aplicam-se \u00E0s atividades combinadas de todas as contas que tenham o mesmo endere\u00E7o f\u00EDsico. Por esse motivo, a Xoom recomenda manter uma conta por fam\u00EDlia para o limite de envio ser gerenciado com mais facilidade.');
-      ie_close('p');
-      ie_open('p');
-        itext('Cada transa\u00E7\u00E3o da Xoom tem um limite de US$ 2.999, mas a empresa pode enviar at\u00E9 US$ 6.000 em um per\u00EDodo de 30 dias (at\u00E9 $60.000 em 180 dias) ao fornecer informa\u00E7\u00F5es adicionais que nos ajudem a garantir uma transfer\u00EAncia de fundos segura, mantendo-se em conformidade com regulamentos federais e estaduais. Tais informa\u00E7\u00F5es ser\u00E3o solicitadas toda vez que voc\u00EA tentar enviar uma quantia maior que seu limite atual, por\u00E9m voc\u00EA pode economizar tempo contactando a Equipe do Xoom para Verifica\u00E7\u00E3o e fornecer essas informa\u00E7\u00F5es antecipadamente.');
+        itext(' \u00E9 uma nova plataforma um pouco parecida com o Xoom. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente 1 dia depois caso a empresa seja Americana. Trata-se de um intermediador de envio entre pa\u00EDses, por\u00E9m o diferencial \u00E9 que esta empresa garante envio do dinheiro com cota\u00E7\u00F5es bem melhores. Retirando aquele monte de encargos criados por bancos. Voc\u00EA acaba econiomizando 90% em encargos "desnecess\u00E1rios".');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11721,11 +11714,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param245}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param234}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'pYuQd.render';
+  $render.soyTemplateName = 'gCqop.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11735,14 +11728,15 @@ return exports;
 
 });
 
-class pYuQd extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pYuQd, templates);
+class gCqop extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(gCqop, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 105 */,
 /* 106 */,
 /* 107 */,
 /* 108 */,
@@ -11814,9 +11808,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _xoomSoy = __webpack_require__(105);
+var _transferwiseSoy = __webpack_require__(104);
 
-var _xoomSoy2 = _interopRequireDefault(_xoomSoy);
+var _transferwiseSoy2 = _interopRequireDefault(_transferwiseSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11826,23 +11820,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var pYuQd = function (_Component) {
-  _inherits(pYuQd, _Component);
+var gCqop = function (_Component) {
+  _inherits(gCqop, _Component);
 
-  function pYuQd() {
-    _classCallCheck(this, pYuQd);
+  function gCqop() {
+    _classCallCheck(this, gCqop);
 
-    return _possibleConstructorReturn(this, (pYuQd.__proto__ || Object.getPrototypeOf(pYuQd)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (gCqop.__proto__ || Object.getPrototypeOf(gCqop)).apply(this, arguments));
   }
 
-  return pYuQd;
+  return gCqop;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(pYuQd, _xoomSoy2.default);
+_metalSoy2.default.register(gCqop, _transferwiseSoy2.default);
 
-exports.default = pYuQd;
+exports.default = gCqop;
 
 /***/ })
 ],[149]);

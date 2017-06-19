@@ -11634,7 +11634,7 @@ module.exports = function(module) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "vFxIX", function() { return vFxIX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Cvexx", function() { return Cvexx; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11650,11 +11650,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace vFxIX.
+ * @fileoverview Templates in namespace Cvexx.
  * @public
  */
 
-goog.module('vFxIX.incrementaldom');
+goog.module('Cvexx.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11778,7 +11778,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'vFxIX.render';
+  $render.soyTemplateName = 'Cvexx.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11788,8 +11788,8 @@ return exports;
 
 });
 
-class vFxIX extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(vFxIX, templates);
+class Cvexx extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Cvexx, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
@@ -11836,13 +11836,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(vFxIX, templates);
 /* 141 */,
 /* 142 */,
 /* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11882,23 +11876,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var vFxIX = function (_Component) {
-  _inherits(vFxIX, _Component);
+var Cvexx = function (_Component) {
+  _inherits(Cvexx, _Component);
 
-  function vFxIX() {
-    _classCallCheck(this, vFxIX);
+  function Cvexx() {
+    _classCallCheck(this, Cvexx);
 
-    return _possibleConstructorReturn(this, (vFxIX.__proto__ || Object.getPrototypeOf(vFxIX)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Cvexx.__proto__ || Object.getPrototypeOf(Cvexx)).apply(this, arguments));
   }
 
-  return vFxIX;
+  return Cvexx;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(vFxIX, _swiftSoy2.default);
+_metalSoy2.default.register(Cvexx, _swiftSoy2.default);
 
-exports.default = vFxIX;
+exports.default = Cvexx;
 
 /***/ })
-],[150]);
+],[144]);
