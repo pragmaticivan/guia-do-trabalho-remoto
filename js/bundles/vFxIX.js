@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([4],[
+webpackJsonppageComponent([6],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2347,8 +2347,6 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Topbar.incrementaldom', 'render');
-
 
 /**
  * @param {Object<string, *>=} opt_data
@@ -2363,7 +2361,6 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       'class', ($$temp = opt_data.elementClasses) == null ? 'main' : $$temp);
     ie_open('main', null, null,
         'class', 'content');
-      $templateAlias1(opt_data, null, opt_ijData);
       var dyn2 = opt_data.content;
       if (typeof dyn2 == 'function') dyn2(); else if (dyn2 != null) itext(dyn2);
     ie_close('main');
@@ -11632,14 +11629,12 @@ module.exports = function(module) {
 /* 100 */,
 /* 101 */,
 /* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Idhiz", function() { return Idhiz; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "vFxIX", function() { return vFxIX; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11651,15 +11646,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from xoom.soy.
+// This file was automatically generated from swift.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace Idhiz.
+ * @fileoverview Templates in namespace vFxIX.
  * @public
  */
 
-goog.module('Idhiz.incrementaldom');
+goog.module('vFxIX.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11691,28 +11686,83 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param257 = function() {
+  var param223 = function() {
     ie_open('h6');
-      var dyn20 = opt_data.page.description;
-      if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
+      var dyn17 = opt_data.page.description;
+      if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com Xoom');
+        itext('Recebendo pagamentos com Swift');
       ie_close('h2');
       ie_open('p');
+        itext('Segundo um levantamento feito na comunidade, \u00E9 a mais comum entre as pessoas que trabalham remotamente para empresas no exterior. \u00C9 poss\u00EDvel receber dinheiro do exterior atrav\u00E9s de uma transfer\u00EAncia banc\u00E1ria aceita em qualquer ag\u00EAncia. \u00C9 necess\u00E1rio enviar todos os dados referentes a transa\u00E7\u00E3o para que a empresa possa efetuar uma transa\u00E7\u00E3o de envio de um banco no exterior para um banco no Brasil.');
+      ie_close('p');
+      ie_open('p');
+        itext('Ademais, ambas as institui\u00E7\u00F5es cobrar\u00E3o pelo servi\u00E7o. Assim, quem estiver no exterior desembolsar\u00E1 uma taxa para que o dinheiro chegue ao destino pretendido, mesmo n\u00E3o sendo correntista do banco contatado. A tarifa \u00E9 conhecida como ordem de pagamento expedida. Uma vez no Brasil, a ag\u00EAncia que recebeu o montante tamb\u00E9m descontar\u00E1 uma determinada quantia do dinheiro que ir\u00E1 disponibilizar ao cliente.');
+      ie_close('p');
+      ie_open('h4');
+        itext('Dados necess\u00E1rios');
+      ie_close('h4');
+      ie_open('p');
+        itext('Apesar de nem todos serem precisos, \u00E9 legal enviar todos esses para que seu empregador tenha todas as informa\u00E7\u00F5es necess\u00E1rias:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Nome completo');
+        ie_close('li');
+        ie_open('li');
+          itext('Documento de Identifica\u00E7\u00E3o');
+        ie_close('li');
+        ie_open('li');
+          itext('Endere\u00E7o Residencial');
+        ie_close('li');
+        ie_open('li');
+          itext('Motivo da remessa');
+        ie_close('li');
+        ie_open('li');
+          itext('Banco + C\u00F3digo do banco');
+        ie_close('li');
+        ie_open('li');
+          itext('Ag\u00EAncia');
+        ie_close('li');
+        ie_open('li');
+          itext('N\u00FAmero da Conta');
+        ie_close('li');
+        ie_open('li');
+          itext('SWIFT Code (Referente a ag\u00EAncia autorizada a fazer c\u00E2mbio no Brasil) (Procure seu SWIFT code ');
+          ie_open('a', null, null,
+              'href', 'http://www.theswiftcodes.com/brazil/');
+            itext('aqui');
+          ie_close('a');
+          itext('. )');
+        ie_close('li');
+        ie_open('li');
+          itext('Sugiro que tamb\u00E9m envie o IBAN (Leia abaixo o que isso significa)');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('OBS: Para SWIFT Code, sugiro que procure o banco mais perto da sua cidade, caso precise resolver alguma burocracia.');
+      ie_close('p');
+      ie_open('h4');
+        itext('IBAN');
+      ie_close('h4');
+      ie_open('p');
+        itext('IBAN (International Bank Account Number) \u00E9 um sistema internacional de identifica\u00E7\u00E3o de bancos criado para facilitar a comunica\u00E7\u00E3o e processamento entre transa\u00E7\u00F5es com redu\u00E7\u00E3o de risco. Inicialmente utilizado na Europa, est\u00E1 cada vez mais sendo adotado por outros pa\u00EDses, alguns bancos nos Estados Unidos por exemplo j\u00E1 aceitam esse tipo de c\u00F3digo ao inv\u00E9s do SWIFT. At\u00E9 o fim de 2014, 66 pa\u00EDses estariam usando IBAN como sistema principal.');
+      ie_close('p');
+      ie_open('p');
+        itext('Gere seu IBAN aqui: ');
         ie_open('a', null, null,
-            'href', 'https://www.xoom.com');
-          itext('Xoom');
+            'href', 'http://geradordeiban.detalhado.com/#/make');
+          itext('http://geradordeiban.detalhado.com/#/make');
         ie_close('a');
-        itext(' \u00E9 um dos mais adorados por todos os freelancers, \u00E9 t\u00E3o simples que parece at\u00E9 n\u00E3o ser de verdade. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente no mesmo dia, em algumas horas. Trata-se de um intermediador de envios entre pa\u00EDses, onde a empresa que lhe contratou paga o valor na sua moeda nacional e voc\u00EA recebe em reais na sua conta.');
       ie_close('p');
+      ie_open('h4');
+        itext('Desvantagens');
+      ie_close('h4');
       ie_open('p');
-        itext('Depois de se cadastrar, a empresa pode enviar at\u00E9 US$ 2.900 dentro de um per\u00EDodo de 24 horas, at\u00E9 US$ 6.000 dentro de 30 dias e at\u00E9 US$ 9.999 em 180 dias. Os limites de envio aplicam-se \u00E0s atividades combinadas de todas as contas que tenham o mesmo endere\u00E7o f\u00EDsico. Por esse motivo, a Xoom recomenda manter uma conta por fam\u00EDlia para o limite de envio ser gerenciado com mais facilidade.');
-      ie_close('p');
-      ie_open('p');
-        itext('Cada transa\u00E7\u00E3o da Xoom tem um limite de US$ 2.999, mas a empresa pode enviar at\u00E9 US$ 6.000 em um per\u00EDodo de 30 dias (at\u00E9 $60.000 em 180 dias) ao fornecer informa\u00E7\u00F5es adicionais que nos ajudem a garantir uma transfer\u00EAncia de fundos segura, mantendo-se em conformidade com regulamentos federais e estaduais. Tais informa\u00E7\u00F5es ser\u00E3o solicitadas toda vez que voc\u00EA tentar enviar uma quantia maior que seu limite atual, por\u00E9m voc\u00EA pode economizar tempo contactando a Equipe do Xoom para Verifica\u00E7\u00E3o e fornecer essas informa\u00E7\u00F5es antecipadamente.');
+        itext('A desvantagem deste tipo de opera\u00E7\u00E3o \u00E9 a cobran\u00E7a de custos dos dois lados da opera\u00E7\u00E3o. Outro ponto negativo \u00E9 o tempo de espera para conseguir liquidar a remessa, dependendo do banco pode demorar at\u00E9 3 dias.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11724,11 +11774,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param257}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param223}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'Idhiz.render';
+  $render.soyTemplateName = 'vFxIX.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11738,14 +11788,16 @@ return exports;
 
 });
 
-class Idhiz extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Idhiz, templates);
+class vFxIX extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(vFxIX, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 104 */,
+/* 105 */,
 /* 106 */,
 /* 107 */,
 /* 108 */,
@@ -11785,7 +11837,12 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Idhiz, templates);
 /* 142 */,
 /* 143 */,
 /* 144 */,
-/* 145 */
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11813,9 +11870,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _xoomSoy = __webpack_require__(105);
+var _swiftSoy = __webpack_require__(103);
 
-var _xoomSoy2 = _interopRequireDefault(_xoomSoy);
+var _swiftSoy2 = _interopRequireDefault(_swiftSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11825,23 +11882,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Idhiz = function (_Component) {
-  _inherits(Idhiz, _Component);
+var vFxIX = function (_Component) {
+  _inherits(vFxIX, _Component);
 
-  function Idhiz() {
-    _classCallCheck(this, Idhiz);
+  function vFxIX() {
+    _classCallCheck(this, vFxIX);
 
-    return _possibleConstructorReturn(this, (Idhiz.__proto__ || Object.getPrototypeOf(Idhiz)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (vFxIX.__proto__ || Object.getPrototypeOf(vFxIX)).apply(this, arguments));
   }
 
-  return Idhiz;
+  return vFxIX;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(Idhiz, _xoomSoy2.default);
+_metalSoy2.default.register(vFxIX, _swiftSoy2.default);
 
-exports.default = Idhiz;
+exports.default = vFxIX;
 
 /***/ })
-],[145]);
+],[150]);

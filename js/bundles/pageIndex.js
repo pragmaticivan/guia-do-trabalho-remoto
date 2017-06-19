@@ -2347,8 +2347,6 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Topbar.incrementaldom', 'render');
-
 
 /**
  * @param {Object<string, *>=} opt_data
@@ -2363,7 +2361,6 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       'class', ($$temp = opt_data.elementClasses) == null ? 'main' : $$temp);
     ie_open('main', null, null,
         'class', 'content');
-      $templateAlias1(opt_data, null, opt_ijData);
       var dyn2 = opt_data.content;
       if (typeof dyn2 == 'function') dyn2(); else if (dyn2 != null) itext(dyn2);
     ie_close('main');
@@ -11695,11 +11692,11 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param40 = function() {
+  var param39 = function() {
     $header(opt_data, null, opt_ijData);
     $footer(null, null, opt_ijData);
   };
-  $templateAlias1(soy.$$assignDefaults({content: param40}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param39}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
@@ -11764,7 +11761,7 @@ function $footer(opt_data, opt_ignored, opt_ijData) {
             'class', 'footer-description col-xs-16');
           itext('Copyright \u00A9 2017 ');
           ie_open('a', null, null,
-              'href', 'https://nomadsonrails.com');
+              'href', 'http://nomadsonrails.com');
             itext('Nomads on Rails');
           ie_close('a');
         ie_close('p');

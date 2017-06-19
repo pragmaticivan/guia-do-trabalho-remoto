@@ -9179,6 +9179,10 @@ li a:not([class]) {
   .footer-description:last-child {
     text-align: center; } }
 
+@media (min-width: 960px) {
+  .header {
+    min-height: calc(100vh - 107px); } }
+
 :root {
   font-size: 14px; }
   :root [class*='icon-12'] {

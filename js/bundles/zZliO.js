@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([14],[
+webpackJsonppageComponent([5],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2347,8 +2347,6 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Topbar.incrementaldom', 'render');
-
 
 /**
  * @param {Object<string, *>=} opt_data
@@ -2363,7 +2361,6 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       'class', ($$temp = opt_data.elementClasses) == null ? 'main' : $$temp);
     ie_open('main', null, null,
         'class', 'content');
-      $templateAlias1(opt_data, null, opt_ijData);
       var dyn2 = opt_data.content;
       if (typeof dyn2 == 'function') dyn2(); else if (dyn2 != null) itext(dyn2);
     ie_close('main');
@@ -11624,12 +11621,21 @@ module.exports = function(module) {
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mjPMx", function() { return mjPMx; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "zZliO", function() { return zZliO; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11641,15 +11647,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from transferwise.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace mjPMx.
+ * @fileoverview Templates in namespace zZliO.
  * @public
  */
 
-goog.module('mjPMx.incrementaldom');
+goog.module('zZliO.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11681,142 +11687,23 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param147 = function() {
+  var param234 = function() {
     ie_open('h6');
-      var dyn10 = opt_data.page.description;
-      if (typeof dyn10 == 'function') dyn10(); else if (dyn10 != null) itext(dyn10);
+      var dyn18 = opt_data.page.description;
+      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recursos sobre trabalho remoto');
+        itext('Recebendo pagamentos com TransferWise');
       ie_close('h2');
-      ie_open('h4');
-        itext('Artigos');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://medium.com/desenvolvimento-front-end-pt-br/o-que-eu-aprendi-em-quase-1-ano-de-home-office-7ed3cfee276a');
-            itext('O que eu aprendi em quase 1 ano de home-office');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('h4');
-        itext('Comunica\u00E7\u00E3o');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://slack.com/');
-            itext('Slack');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('h4');
-        itext('Comunidades');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://www.meetup.com/Belo-Horizonte-Remote-Workers/');
-            itext('Remote Workers - Belo Horizonte');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('h4');
-        itext('Diversos');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://github.com/lukasz-madon/awesome-remote-job');
-            itext('Awesome Remote Job');
-          ie_close('a');
-          itext(' - Uma compila\u00E7\u00E3o de informa\u00E7\u00F5es sobre trabalho remoto');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://github.com/lerrua/remote-jobs-brazil');
-            itext('Remote Jobs');
-          ie_close('a');
-          itext(' - Lista de empresas com trabalho remoto no Brasil');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://github.com/jessicard/remote-jobs');
-            itext('Remote Jobs Worldwide');
-          ie_close('a');
-          itext(' - Lista de empresas com trabalho remoto Worldwide');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('h4');
-        itext('Livros');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://37signals.com/remote/');
-            itext('Remote. Office Not Required.');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://scottberkun.com/yearwithoutpants/');
-            itext('The Year Without Pants: WordPress.com and the Future of Work');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('h4');
-        itext('Gest\u00E3o de Projetos');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://pivotaltracker.com');
-            itext('PivotalTracker');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('h4');
-        itext('M\u00E9trica de tempo');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://wakatime.com/');
-            itext('WakaTime');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('h4');
-        itext('Podcasts');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://www.grokpodcast.com/2013/04/02/episodio-86-trabalho-remoto-parte-1-de-4/');
-            itext('Grok Podcast - Trabalho Remoto');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://devnaestrada.com.br/2015/12/25/devnaestrada-remoto-da-depressao.html');
-            itext('DevNaEstrada - Remoto da depress\u00E3o');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('h4');
-        itext('Talks');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'https://www.youtube.com/watch?v=IT6z7VDueF8');
-            itext('Desafios e vantagens do trabalho remoto por Willian Fernandes');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
+      ie_open('p');
+        ie_open('a', null, null,
+            'href', 'https://transferwise.com/u/344b08');
+          itext('TransferWise');
+        ie_close('a');
+        itext(' \u00E9 uma nova plataforma um pouco parecida com o Xoom. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente 1 dia depois caso a empresa seja Americana. Trata-se de um intermediador de envio entre pa\u00EDses, por\u00E9m o diferencial \u00E9 que esta empresa garante envio do dinheiro com cota\u00E7\u00F5es bem melhores. Retirando aquele monte de encargos criados por bancos. Voc\u00EA acaba econiomizando 90% em encargos "desnecess\u00E1rios".');
+      ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11827,11 +11714,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param147}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param234}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'mjPMx.render';
+  $render.soyTemplateName = 'zZliO.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11841,23 +11728,14 @@ return exports;
 
 });
 
-class mjPMx extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(mjPMx, templates);
+class zZliO extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(zZliO, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
 /* 105 */,
 /* 106 */,
 /* 107 */,
@@ -11895,7 +11773,16 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(mjPMx, templates);
 /* 139 */,
 /* 140 */,
 /* 141 */,
-/* 142 */
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11923,9 +11810,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(95);
+var _transferwiseSoy = __webpack_require__(104);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _transferwiseSoy2 = _interopRequireDefault(_transferwiseSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11935,23 +11822,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var mjPMx = function (_Component) {
-  _inherits(mjPMx, _Component);
+var zZliO = function (_Component) {
+  _inherits(zZliO, _Component);
 
-  function mjPMx() {
-    _classCallCheck(this, mjPMx);
+  function zZliO() {
+    _classCallCheck(this, zZliO);
 
-    return _possibleConstructorReturn(this, (mjPMx.__proto__ || Object.getPrototypeOf(mjPMx)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (zZliO.__proto__ || Object.getPrototypeOf(zZliO)).apply(this, arguments));
   }
 
-  return mjPMx;
+  return zZliO;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(mjPMx, _indexSoy2.default);
+_metalSoy2.default.register(zZliO, _transferwiseSoy2.default);
 
-exports.default = mjPMx;
+exports.default = zZliO;
 
 /***/ })
-],[142]);
+],[151]);

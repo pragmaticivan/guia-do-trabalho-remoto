@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([13],[
+webpackJsonppageComponent([1],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2347,8 +2347,6 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Topbar.incrementaldom', 'render');
-
 
 /**
  * @param {Object<string, *>=} opt_data
@@ -2363,7 +2361,6 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       'class', ($$temp = opt_data.elementClasses) == null ? 'main' : $$temp);
     ie_open('main', null, null,
         'class', 'content');
-      $templateAlias1(opt_data, null, opt_ijData);
       var dyn2 = opt_data.content;
       if (typeof dyn2 == 'function') dyn2(); else if (dyn2 != null) itext(dyn2);
     ie_close('main');
@@ -11625,12 +11622,24 @@ module.exports = function(module) {
 /* 93 */,
 /* 94 */,
 /* 95 */,
-/* 96 */
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "iUJrr", function() { return iUJrr; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ieITK", function() { return ieITK; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11646,11 +11655,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace iUJrr.
+ * @fileoverview Templates in namespace ieITK.
  * @public
  */
 
-goog.module('iUJrr.incrementaldom');
+goog.module('ieITK.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11682,18 +11691,66 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param158 = function() {
+  var param267 = function() {
     ie_open('h6');
-      var dyn11 = opt_data.page.description;
-      if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
+      var dyn21 = opt_data.page.description;
+      if (typeof dyn21 == 'function') dyn21(); else if (dyn21 != null) itext(dyn21);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('CLT ou Pessoa Jur\u00EDdica');
+        itext('Introdu\u00E7\u00E3o');
       ie_close('h2');
       ie_open('p');
-        itext('Para empresas no Brasil, voc\u00EA pode continuar com o modelo CLT ou PJ normalmente, mesmo n\u00E3o residindo no estado da empresa, embora seja necess\u00E1rio ir algumas vezes visitar a empresa para resolver burocracias. Para empresas no exterior \u00E9 recomendado que voc\u00EA tenha um contrato de presta\u00E7\u00E3o de servi\u00E7os, j\u00E1 que voc\u00EA n\u00E3o \u00E9 diretamente contratado no modelo formal. Este contrato ir\u00E1 comprovar a origem e legalidade do dinheiro que voc\u00EA ir\u00E1 receber.');
+        itext('Trabalhar remotamente vem se tornando cada vez mais um objetivo de todos os trabalhadores na \u00E1rea de TI ao redor do mundo. Estar alinhado com suas necessidades, controlar seu hor\u00E1rio de trabalho, dispor de mais tempo com a fam\u00EDlia, viajar e conhecer novos horizontes e principalmente se livrar do stress causado pelo tr\u00E2nsito nas grandes cidades. Estes s\u00E3o alguns dos motivos que fazem um funcion\u00E1rio questionar sua empresa e negociar uma jornada de trabalho remoto.');
+      ie_close('p');
+      ie_open('p');
+        itext('Ap\u00F3s completar 2 anos de trabalho remoto, decidi compartilhar um pouco da minha experi\u00EAncia relativa a como come\u00E7ar a trabalhar remotamente tanto para empresas no Brasil, quanto para empresas no exterior.');
+      ie_close('p');
+      ie_open('p');
+        itext('Todas as informa\u00E7\u00F5es s\u00E3o inicialmente focadas a profissionais de TI, por\u00E9m tamb\u00E9m podem ser aplicadas a profissionais de outras \u00E1reas.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '2');
+      ie_open('h2');
+        itext('Trabalho remoto \u00E9 a coisa certa para voc\u00EA?');
+      ie_close('h2');
+      ie_open('p');
+        itext('Algo que percebi trabalhando com v\u00E1rias pessoas, de v\u00E1rios estados e pa\u00EDses, foi que cada um tem suas caracter\u00EDsticas as quais fazem voc\u00EA se dar bem ou n\u00E3o no trabalho remoto:');
+      ie_close('p');
+      ie_open('h4');
+        itext('Disciplina');
+      ie_close('h4');
+      ie_open('p');
+        itext('\u00C9 bem dif\u00EDcil controlar sua aten\u00E7\u00E3o quando se tem milhares de problemas, servi\u00E7os dom\u00E9sticos para fazer, cachorro para dar banho, filhos para levar na escola e outras coisas do tipo. Se voc\u00EA \u00E9 do tipo que procrastina seu trabalho para resolver seus problemas de forma desorganizada, talvez trabalho remoto seja dif\u00EDcil para voc\u00EA.');
+      ie_close('p');
+      ie_open('h4');
+        itext('Motiva\u00E7\u00E3o');
+      ie_close('h4');
+      ie_open('p');
+        itext('\u00C0s vezes fica dif\u00EDcil acordar cedo, estar dispon\u00EDvel para uma reuni\u00E3o, ou at\u00E9 mesmo se sentir lento por n\u00E3o ter ningu\u00E9m te ajudando pessoalmente. Pessoas com auto-motiva\u00E7\u00E3o fazem um trabalho remoto melhor. \u00C0s vezes \u00E9 realmente necess\u00E1rio um Gestor de projetos pegando no p\u00E9 para manter os funcion\u00E1rios focados no trabalho.');
+      ie_close('p');
+      ie_open('h4');
+        itext('Local de trabalho');
+      ie_close('h4');
+      ie_open('p');
+        itext('O local de trabalho \u00E9 muito importante para quem trabalha remoto. \u00C0s vezes por achar que a liberdade \u00E9 grande, voc\u00EA acaba caindo na tenta\u00E7\u00E3o de trabalhar na cama, \u00E0s vezes at\u00E9 caindo no sono, ligar a TV e trabalhar enquanto assiste, ser atrapalhado por interfer\u00EAncias familiares como esposa pedindo pra ir fazer compras no supermercado. \u00C0s vezes \u00E9 realmente necess\u00E1rio definir um bom local de trabalho no qual voc\u00EA se sinta na obriga\u00E7\u00E3o de, ao sentar para trabalhar, estar focado e esquecer o m\u00E1ximo do ambiente externo que pode tirar seu foco.');
+      ie_close('p');
+      ie_open('h4');
+        itext('Personalidade');
+      ie_close('h4');
+      ie_open('p');
+        itext('Algumas pessoas conseguem trabalhar tranquilamente em sua casa, outras, necessitam de um escrit\u00F3rio espec\u00EDfico pra isso, onde conseguem ter contato com outros profissionais. Existem pessoas que utilizam essa oportunidade de trabalho para viajar pelo mundo virando \'n\u00F4mades digitais\'.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '3');
+      ie_open('h2');
+        itext('Necessidades');
+      ie_close('h2');
+      ie_open('p');
+        itext('Inicialmente tudo que voc\u00EA precisa \u00E9 ter seus instrumentos de trabalho, "computador, smartphone (caso seja desenvolvimento mobile), post-it(<3)", um lugar para plugar a tomada do seu computador e uma boa internet. Para algumas empresas tamb\u00E9m \u00E9 necess\u00E1rio que fique sempre online em alguma ferramenta de comunica\u00E7\u00E3o determinada pela empresa.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11705,11 +11762,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param158}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param267}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'iUJrr.render';
+  $render.soyTemplateName = 'ieITK.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11719,26 +11776,14 @@ return exports;
 
 });
 
-class iUJrr extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(iUJrr, templates);
+class ieITK extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ieITK, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
 /* 109 */,
 /* 110 */,
 /* 111 */,
@@ -11773,7 +11818,19 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(iUJrr, templates);
 /* 140 */,
 /* 141 */,
 /* 142 */,
-/* 143 */
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11801,7 +11858,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(96);
+var _indexSoy = __webpack_require__(108);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -11813,23 +11870,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var iUJrr = function (_Component) {
-  _inherits(iUJrr, _Component);
+var ieITK = function (_Component) {
+  _inherits(ieITK, _Component);
 
-  function iUJrr() {
-    _classCallCheck(this, iUJrr);
+  function ieITK() {
+    _classCallCheck(this, ieITK);
 
-    return _possibleConstructorReturn(this, (iUJrr.__proto__ || Object.getPrototypeOf(iUJrr)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ieITK.__proto__ || Object.getPrototypeOf(ieITK)).apply(this, arguments));
   }
 
-  return iUJrr;
+  return ieITK;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(iUJrr, _indexSoy2.default);
+_metalSoy2.default.register(ieITK, _indexSoy2.default);
 
-exports.default = iUJrr;
+exports.default = ieITK;
 
 /***/ })
-],[143]);
+],[155]);

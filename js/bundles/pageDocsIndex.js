@@ -2347,8 +2347,6 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Topbar.incrementaldom', 'render');
-
 
 /**
  * @param {Object<string, *>=} opt_data
@@ -2363,7 +2361,6 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       'class', ($$temp = opt_data.elementClasses) == null ? 'main' : $$temp);
     ie_open('main', null, null,
         'class', 'content');
-      $templateAlias1(opt_data, null, opt_ijData);
       var dyn2 = opt_data.content;
       if (typeof dyn2 == 'function') dyn2(); else if (dyn2 != null) itext(dyn2);
     ie_close('main');
@@ -11774,25 +11771,25 @@ function $topics(opt_data, opt_ignored, opt_ijData) {
               'class', 'col-md-12 col-md-offset-2 col-xs-16');
             ie_open('div', null, null,
                 'class', 'row');
-              var childIdList127 = opt_data.page.childIds;
-              var childIdListLen127 = childIdList127.length;
-              for (var childIdIndex127 = 0; childIdIndex127 < childIdListLen127; childIdIndex127++) {
-                var childIdData127 = childIdList127[childIdIndex127];
-                var topic__soy117 = opt_data.page.children[childIdData127];
-                if (! topic__soy117.hidden) {
+              var childIdList126 = opt_data.page.childIds;
+              var childIdListLen126 = childIdList126.length;
+              for (var childIdIndex126 = 0; childIdIndex126 < childIdListLen126; childIdIndex126++) {
+                var childIdData126 = childIdList126[childIdIndex126];
+                var topic__soy116 = opt_data.page.children[childIdData126];
+                if (! topic__soy116.hidden) {
                   ie_open('div', null, null,
                       'class', 'col-md-8 col-md-offset-0 col-xs-14 col-xs-offset-1');
                     ie_open('a', null, null,
                         'class', 'topic radial-out',
-                        'href', topic__soy117.url);
+                        'href', topic__soy116.url);
                       ie_open('div', null, null,
                           'class', 'topic-icon');
                         ie_void('span', null, null,
-                            'class', 'icon-16-' + topic__soy117.icon);
+                            'class', 'icon-16-' + topic__soy116.icon);
                       ie_close('div');
                       ie_open('h3', null, null,
                           'class', 'topic-title');
-                        var dyn8 = topic__soy117.title;
+                        var dyn8 = topic__soy116.title;
                         if (typeof dyn8 == 'function') dyn8(); else if (dyn8 != null) itext(dyn8);
                       ie_close('h3');
                     ie_close('a');
