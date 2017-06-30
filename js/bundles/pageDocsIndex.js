@@ -2472,8 +2472,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11740,7 +11740,7 @@ function $topics(opt_data, opt_ignored, opt_ijData) {
                   'class', 'col-xs-14 col-xs-offset-1 col-md-10 col-md-offset-3 col-lg-6 col-lg-offset-5');
                 ie_open('div', null, null,
                     'class', 'search');
-                  $templateAlias3({maxResults: 3, path: '/guia/', placeholder: 'Search Docs'}, null, opt_ijData);
+                  $templateAlias3({maxResults: 3, path: '/guia/', placeholder: 'Pesquisar'}, null, opt_ijData);
                 ie_close('div');
               ie_close('div');
             ie_close('div');

@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([13],[
+webpackJsonppageComponent([9],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2472,8 +2472,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11622,12 +11622,16 @@ module.exports = function(module) {
 /* 93 */,
 /* 94 */,
 /* 95 */,
-/* 96 */
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QxxML", function() { return QxxML; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "eMXgW", function() { return eMXgW; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11643,11 +11647,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace QxxML.
+ * @fileoverview Templates in namespace eMXgW.
  * @public
  */
 
-goog.module('QxxML.incrementaldom');
+goog.module('eMXgW.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11679,18 +11683,18 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param157 = function() {
+  var param190 = function() {
     ie_open('h6');
-      var dyn11 = opt_data.page.description;
-      if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
+      var dyn14 = opt_data.page.description;
+      if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('CLT ou Pessoa Jur\u00EDdica');
+        itext('Recebendo pagamentos');
       ie_close('h2');
       ie_open('p');
-        itext('Para empresas no Brasil, voc\u00EA pode continuar com o modelo CLT ou PJ normalmente, mesmo n\u00E3o residindo no estado da empresa, embora seja necess\u00E1rio ir algumas vezes visitar a empresa para resolver burocracias. Para empresas no exterior \u00E9 recomendado que voc\u00EA tenha um contrato de presta\u00E7\u00E3o de servi\u00E7os, j\u00E1 que voc\u00EA n\u00E3o \u00E9 diretamente contratado no modelo formal. Este contrato ir\u00E1 comprovar a origem e legalidade do dinheiro que voc\u00EA ir\u00E1 receber.');
+        itext('Uma das partes mais importantes, que al\u00E9m de garantir toda a seguran\u00E7a do processo, podem lhe ajudar de algumas maneiras na hora de declarar todo o imposto referente ao valor recebido.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11702,11 +11706,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param157}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param190}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'QxxML.render';
+  $render.soyTemplateName = 'eMXgW.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11716,18 +11720,14 @@ return exports;
 
 });
 
-class QxxML extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(QxxML, templates);
+class eMXgW extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(eMXgW, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
 /* 101 */,
 /* 102 */,
 /* 103 */,
@@ -11770,7 +11770,13 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(QxxML, templates);
 /* 140 */,
 /* 141 */,
 /* 142 */,
-/* 143 */
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11798,7 +11804,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(96);
+var _indexSoy = __webpack_require__(100);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -11810,23 +11816,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var QxxML = function (_Component) {
-  _inherits(QxxML, _Component);
+var eMXgW = function (_Component) {
+  _inherits(eMXgW, _Component);
 
-  function QxxML() {
-    _classCallCheck(this, QxxML);
+  function eMXgW() {
+    _classCallCheck(this, eMXgW);
 
-    return _possibleConstructorReturn(this, (QxxML.__proto__ || Object.getPrototypeOf(QxxML)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (eMXgW.__proto__ || Object.getPrototypeOf(eMXgW)).apply(this, arguments));
   }
 
-  return QxxML;
+  return eMXgW;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(QxxML, _indexSoy2.default);
+_metalSoy2.default.register(eMXgW, _indexSoy2.default);
 
-exports.default = QxxML;
+exports.default = eMXgW;
 
 /***/ })
-],[143]);
+],[149]);

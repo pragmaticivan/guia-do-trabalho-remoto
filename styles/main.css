@@ -9183,6 +9183,13 @@ li a:not([class]) {
   .header {
     min-height: calc(100vh - 107px); } }
 
+.header {
+  background: url("../images/world_bg.png") no-repeat top right; }
+
+.sidebar-offset {
+  background: url("../images/world_bg.png") no-repeat top right;
+  background-size: 390px; }
+
 .gh-btns {
   padding-left: 20px;
   margin-top: 20px; }

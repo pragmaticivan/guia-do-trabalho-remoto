@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([8],[
+webpackJsonppageComponent([13],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2472,8 +2472,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11622,17 +11622,12 @@ module.exports = function(module) {
 /* 93 */,
 /* 94 */,
 /* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fGroT", function() { return fGroT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VwSPQ", function() { return VwSPQ; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11644,15 +11639,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from payoneer.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace fGroT.
+ * @fileoverview Templates in namespace VwSPQ.
  * @public
  */
 
-goog.module('fGroT.incrementaldom');
+goog.module('VwSPQ.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11684,39 +11679,18 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param201 = function() {
+  var param157 = function() {
     ie_open('h6');
-      var dyn15 = opt_data.page.description;
-      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+      var dyn11 = opt_data.page.description;
+      if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com Payoneer');
+        itext('CLT ou Pessoa Jur\u00EDdica');
       ie_close('h2');
       ie_open('p');
-        ie_open('a', null, null,
-            'href', 'http://www.payoneer.com/');
-          itext('Payoneer');
-        ie_close('a');
-        itext(' \u00E9 uma forma de receber dinheiro sem precisar trazer o valor monet\u00E1rio para o Brasil. \u00C9 simplesmente criada uma conta no Bank of American que representa sua conta online. Voc\u00EA recebe um cart\u00E3o de cr\u00E9dito pr\u00E9-pago no qual est\u00E1 ligado a essa conta.');
-      ie_close('p');
-      ie_open('p');
-        itext('Empresas Americanas podem depositar dinheiro diretamente nesta conta, gerando cr\u00E9ditos no seu cart\u00E3o, que pode ser utilizado em ATMs e compras online.');
-      ie_close('p');
-      ie_open('p');
-        itext('Ao realizar saques em ATMs lhe ser\u00E1 cobrado uma taxa de conveni\u00EAncia, que nada mais \u00E9 que uma taxa de convers\u00E3o cambial. Esta taxa varia de acordo com o ATM no qual voc\u00EA est\u00E1 sacando, mas fica entre 12 a 20 reais por saque, fora que alguns ATMs tamb\u00E9m limitam o saque di\u00E1rio.');
-      ie_close('p');
-      ie_open('p');
-        itext('Outra desvantagem do Payoneer \u00E9 que alguns servi\u00E7os online como Dropbox e iTunes v\u00E3o rejeitar seu cart\u00E3o, nesses casos voc\u00EA pode vincul\u00E1-lo ao Paypal para contornar o problema.');
-      ie_close('p');
-      ie_open('p');
-        itext('Bem interessante essa forma de receber, por\u00E9m voc\u00EA n\u00E3o pode movimentar a conta livremente, apenas pode transferir dinheiro para outros usu\u00E1rios de Payoneer. \u00C9 um dos principais meios de pagamentos utilizado pelo ');
-        ie_open('a', null, null,
-            'href', 'https://www.odesk.com/');
-          itext('ODesk');
-        ie_close('a');
-        itext('.');
+        itext('Para empresas no Brasil, voc\u00EA pode continuar com o modelo CLT ou PJ normalmente, mesmo n\u00E3o residindo no estado da empresa, embora seja necess\u00E1rio ir algumas vezes visitar a empresa para resolver burocracias. Para empresas no exterior \u00E9 recomendado que voc\u00EA tenha um contrato de presta\u00E7\u00E3o de servi\u00E7os, j\u00E1 que voc\u00EA n\u00E3o \u00E9 diretamente contratado no modelo formal. Este contrato ir\u00E1 comprovar a origem e legalidade do dinheiro que voc\u00EA ir\u00E1 receber.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11728,11 +11702,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param201}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param157}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'fGroT.render';
+  $render.soyTemplateName = 'VwSPQ.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11742,14 +11716,19 @@ return exports;
 
 });
 
-class fGroT extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(fGroT, templates);
+class VwSPQ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(VwSPQ, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
 /* 102 */,
 /* 103 */,
 /* 104 */,
@@ -11791,12 +11770,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(fGroT, templates);
 /* 140 */,
 /* 141 */,
 /* 142 */,
-/* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11824,9 +11798,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _payoneerSoy = __webpack_require__(101);
+var _indexSoy = __webpack_require__(96);
 
-var _payoneerSoy2 = _interopRequireDefault(_payoneerSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11836,23 +11810,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var fGroT = function (_Component) {
-  _inherits(fGroT, _Component);
+var VwSPQ = function (_Component) {
+  _inherits(VwSPQ, _Component);
 
-  function fGroT() {
-    _classCallCheck(this, fGroT);
+  function VwSPQ() {
+    _classCallCheck(this, VwSPQ);
 
-    return _possibleConstructorReturn(this, (fGroT.__proto__ || Object.getPrototypeOf(fGroT)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (VwSPQ.__proto__ || Object.getPrototypeOf(VwSPQ)).apply(this, arguments));
   }
 
-  return fGroT;
+  return VwSPQ;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(fGroT, _payoneerSoy2.default);
+_metalSoy2.default.register(VwSPQ, _indexSoy2.default);
 
-exports.default = fGroT;
+exports.default = VwSPQ;
 
 /***/ })
-],[148]);
+],[143]);

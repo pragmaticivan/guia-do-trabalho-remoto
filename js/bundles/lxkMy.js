@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([1],[
+webpackJsonppageComponent([7],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2472,8 +2472,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11628,18 +11628,12 @@ module.exports = function(module) {
 /* 99 */,
 /* 100 */,
 /* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DjKCP", function() { return DjKCP; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lxkMy", function() { return lxkMy; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11651,15 +11645,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from paypal.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace DjKCP.
+ * @fileoverview Templates in namespace lxkMy.
  * @public
  */
 
-goog.module('DjKCP.incrementaldom');
+goog.module('lxkMy.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11691,66 +11685,26 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param267 = function() {
+  var param212 = function() {
     ie_open('h6');
-      var dyn21 = opt_data.page.description;
-      if (typeof dyn21 == 'function') dyn21(); else if (dyn21 != null) itext(dyn21);
+      var dyn16 = opt_data.page.description;
+      if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Introdu\u00E7\u00E3o');
+        itext('Recebendo pagamentos com Paypal');
       ie_close('h2');
       ie_open('p');
-        itext('Trabalhar remotamente vem se tornando cada vez mais um objetivo de todos os trabalhadores na \u00E1rea de TI ao redor do mundo. Estar alinhado com suas necessidades, controlar seu hor\u00E1rio de trabalho, dispor de mais tempo com a fam\u00EDlia, viajar e conhecer novos horizontes e principalmente se livrar do stress causado pelo tr\u00E2nsito nas grandes cidades. Estes s\u00E3o alguns dos motivos que fazem um funcion\u00E1rio questionar sua empresa e negociar uma jornada de trabalho remoto.');
+        itext('O primeiro e mais conhecido por todos \u00E9 o ');
+        ie_open('a', null, null,
+            'href', 'https://www.paypal.com');
+          itext('Paypal');
+        ie_close('a');
+        itext(', embora MUITAS pessoas falem de hist\u00F3rias, medos ao usar para receber pagamentos do exterior e coisas do tipo... \u00C9 uma ferramenta muito boa, segura e eficiente. Existem alguns relatos de pessoas que tiveram problemas e todo o seu dinheiro foi congelado sem volta. O que eu tenho a dizer sobre isso \u00E9: Tome cuidado com a empresa que voc\u00EA est\u00E1 fazendo neg\u00F3cio, \u00E9 justamente ela que pode bloquear ou criar uma disputa pelo seu pagamento.');
       ie_close('p');
       ie_open('p');
-        itext('Ap\u00F3s completar 2 anos de trabalho remoto, decidi compartilhar um pouco da minha experi\u00EAncia relativa a como come\u00E7ar a trabalhar remotamente tanto para empresas no Brasil, quanto para empresas no exterior.');
-      ie_close('p');
-      ie_open('p');
-        itext('Todas as informa\u00E7\u00F5es s\u00E3o inicialmente focadas a profissionais de TI, por\u00E9m tamb\u00E9m podem ser aplicadas a profissionais de outras \u00E1reas.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '2');
-      ie_open('h2');
-        itext('Trabalho remoto \u00E9 a coisa certa para voc\u00EA?');
-      ie_close('h2');
-      ie_open('p');
-        itext('Algo que percebi trabalhando com v\u00E1rias pessoas, de v\u00E1rios estados e pa\u00EDses, foi que cada um tem suas caracter\u00EDsticas as quais fazem voc\u00EA se dar bem ou n\u00E3o no trabalho remoto:');
-      ie_close('p');
-      ie_open('h4');
-        itext('Disciplina');
-      ie_close('h4');
-      ie_open('p');
-        itext('\u00C9 bem dif\u00EDcil controlar sua aten\u00E7\u00E3o quando se tem milhares de problemas, servi\u00E7os dom\u00E9sticos para fazer, cachorro para dar banho, filhos para levar na escola e outras coisas do tipo. Se voc\u00EA \u00E9 do tipo que procrastina seu trabalho para resolver seus problemas de forma desorganizada, talvez trabalho remoto seja dif\u00EDcil para voc\u00EA.');
-      ie_close('p');
-      ie_open('h4');
-        itext('Motiva\u00E7\u00E3o');
-      ie_close('h4');
-      ie_open('p');
-        itext('\u00C0s vezes fica dif\u00EDcil acordar cedo, estar dispon\u00EDvel para uma reuni\u00E3o, ou at\u00E9 mesmo se sentir lento por n\u00E3o ter ningu\u00E9m te ajudando pessoalmente. Pessoas com auto-motiva\u00E7\u00E3o fazem um trabalho remoto melhor. \u00C0s vezes \u00E9 realmente necess\u00E1rio um Gestor de projetos pegando no p\u00E9 para manter os funcion\u00E1rios focados no trabalho.');
-      ie_close('p');
-      ie_open('h4');
-        itext('Local de trabalho');
-      ie_close('h4');
-      ie_open('p');
-        itext('O local de trabalho \u00E9 muito importante para quem trabalha remoto. \u00C0s vezes por achar que a liberdade \u00E9 grande, voc\u00EA acaba caindo na tenta\u00E7\u00E3o de trabalhar na cama, \u00E0s vezes at\u00E9 caindo no sono, ligar a TV e trabalhar enquanto assiste, ser atrapalhado por interfer\u00EAncias familiares como esposa pedindo pra ir fazer compras no supermercado. \u00C0s vezes \u00E9 realmente necess\u00E1rio definir um bom local de trabalho no qual voc\u00EA se sinta na obriga\u00E7\u00E3o de, ao sentar para trabalhar, estar focado e esquecer o m\u00E1ximo do ambiente externo que pode tirar seu foco.');
-      ie_close('p');
-      ie_open('h4');
-        itext('Personalidade');
-      ie_close('h4');
-      ie_open('p');
-        itext('Algumas pessoas conseguem trabalhar tranquilamente em sua casa, outras, necessitam de um escrit\u00F3rio espec\u00EDfico pra isso, onde conseguem ter contato com outros profissionais. Existem pessoas que utilizam essa oportunidade de trabalho para viajar pelo mundo virando \'n\u00F4mades digitais\'.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '3');
-      ie_open('h2');
-        itext('Necessidades');
-      ie_close('h2');
-      ie_open('p');
-        itext('Inicialmente tudo que voc\u00EA precisa \u00E9 ter seus instrumentos de trabalho, "computador, smartphone (caso seja desenvolvimento mobile), post-it(<3)", um lugar para plugar a tomada do seu computador e uma boa internet. Para algumas empresas tamb\u00E9m \u00E9 necess\u00E1rio que fique sempre online em alguma ferramenta de comunica\u00E7\u00E3o determinada pela empresa.');
+        itext('\u00C9 poss\u00EDvel ter uma conta facilmente no Brasil. Por\u00E9m voc\u00EA s\u00F3 pode cadastrar cart\u00F5es Brasileiros. Caso voc\u00EA tenha conta nos EUA, \u00E9 necess\u00E1rio ter uma conta extra de Paypal para trabalhar e transitar facilmente o dinheiro com mais regalias.  \u00C9 necess\u00E1rio lembrar que ter uma conta nos EUA n\u00E3o significa que voc\u00EA legalmente pode receber dinheiro de empresas sem permiss\u00E3o para trabalho, ent\u00E3o pense duas vezes.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11762,11 +11716,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param267}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param212}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'DjKCP.render';
+  $render.soyTemplateName = 'lxkMy.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11776,14 +11730,20 @@ return exports;
 
 });
 
-class DjKCP extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(DjKCP, templates);
+class lxkMy extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(lxkMy, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
 /* 109 */,
 /* 110 */,
 /* 111 */,
@@ -11825,12 +11785,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(DjKCP, templates);
 /* 147 */,
 /* 148 */,
 /* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */,
-/* 155 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11858,9 +11813,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(108);
+var _paypalSoy = __webpack_require__(102);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _paypalSoy2 = _interopRequireDefault(_paypalSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11870,23 +11825,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var DjKCP = function (_Component) {
-  _inherits(DjKCP, _Component);
+var lxkMy = function (_Component) {
+  _inherits(lxkMy, _Component);
 
-  function DjKCP() {
-    _classCallCheck(this, DjKCP);
+  function lxkMy() {
+    _classCallCheck(this, lxkMy);
 
-    return _possibleConstructorReturn(this, (DjKCP.__proto__ || Object.getPrototypeOf(DjKCP)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (lxkMy.__proto__ || Object.getPrototypeOf(lxkMy)).apply(this, arguments));
   }
 
-  return DjKCP;
+  return lxkMy;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(DjKCP, _indexSoy2.default);
+_metalSoy2.default.register(lxkMy, _paypalSoy2.default);
 
-exports.default = DjKCP;
+exports.default = lxkMy;
 
 /***/ })
-],[155]);
+],[150]);
