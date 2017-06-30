@@ -12,11 +12,11 @@ weight: 1
 
 ## Introdução
 
-Trabalhar remotamente vem se tornando cada vez mais um objetivo de todos os trabalhadores na área de TI ao redor do mundo. Estar alinhado com suas necessidades, controlar seu horário de trabalho, dispor de mais tempo com a família, viajar e conhecer novos horizontes e principalmente se livrar do stress causado pelo trânsito nas grandes cidades. Estes são alguns dos motivos que fazem um funcionário questionar sua empresa e negociar uma jornada de trabalho remoto.
+Trabalhar remotamente cada vez mais vem se tornando o objetivo de muitos profissionais na área de TI ao redor do mundo. Estar alinhado com suas necessidades, controlar seu horário de trabalho, dispor de mais tempo com a família, viajar e conhecer novos horizontes e principalmente se livrar do stress causado pelo trânsito nas grandes cidades. Estes são alguns dos motivos que fazem um indivíduo questionar sua empresa e negociar uma jornada de trabalho remoto.
 
-Após completar 2 anos de trabalho remoto, decidi compartilhar um pouco da minha experiência relativa a como começar a trabalhar remotamente tanto para empresas no Brasil, quanto para empresas no exterior.
+Após completar 4 anos de trabalho remoto, decidi compartilhar um pouco da minha experiência relativa a como começar a trabalhar remotamente tanto para empresas no Brasil, quanto para empresas no exterior.
 
-Todas as informações são inicialmente focadas a profissionais de TI, porém também podem ser aplicadas a profissionais de outras áreas.
+Todas as informações são inicialmente direcionadas a profissionais de TI, porém também podem ser aplicadas a profissionais de outras áreas.
 
 </article>
 
@@ -24,15 +24,15 @@ Todas as informações são inicialmente focadas a profissionais de TI, porém t
 
 ## Trabalho remoto é a coisa certa para você?
 
-Algo que percebi trabalhando com várias pessoas, de vários estados e países, foi que cada um tem suas características as quais fazem você se dar bem ou não no trabalho remoto:
+Após trabalhar com várias pessoas, de vários estados e países, constatei que cada pessoa tem suas próprias caracteristicas e influências exteriores no qual contribuem com um bom desempenho ou não em seu trabalho remoto:
 
 #### Disciplina
 
-É bem difícil controlar sua atenção quando se tem milhares de problemas, serviços domésticos para fazer, cachorro para dar banho, filhos para levar na escola e outras coisas do tipo. Se você é do tipo que procrastina seu trabalho para resolver seus problemas de forma desorganizada, talvez trabalho remoto seja difícil para você.
+É difícil controlar sua atenção quando se tem milhares de problemas, serviços domésticos para fazer, cachorro para dar banho, filhos para levar na escola e outras coisas do tipo. Se você é o tipo de pessoa que deixa a resolução dos seus problemas pra depois de forma desorganizada e sem planejamento, talvez trabalho remoto seja algo muito difícil pra você.
 
 #### Motivação
 
-Às vezes fica difícil acordar cedo, estar disponível para uma reunião, ou até mesmo se sentir lento por não ter ninguém te ajudando pessoalmente. Pessoas com auto-motivação fazem um trabalho remoto melhor. Às vezes é realmente necessário um Gestor de projetos pegando no pé para manter os funcionários focados no trabalho.
+Às vezes acordar cedo é algo difícil, estar disponível para uma reunião, ou até mesmo se sentir lento por não ter ninguém te ajudando pessoalmente. Pessoas com auto-motivação fazem um trabalho remoto melhor. Às vezes é realmente necessário um Gestor de projetos pegando no pé para manter os funcionários focados no trabalho.
 
 #### Local de trabalho
 
