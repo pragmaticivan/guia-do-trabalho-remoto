@@ -11630,7 +11630,7 @@ module.exports = function(module) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VKQQj", function() { return VKQQj; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GXBPu", function() { return GXBPu; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11646,11 +11646,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace VKQQj.
+ * @fileoverview Templates in namespace GXBPu.
  * @public
  */
 
-goog.module('VKQQj.incrementaldom');
+goog.module('GXBPu.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11781,7 +11781,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'VKQQj.render';
+  $render.soyTemplateName = 'GXBPu.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11791,8 +11791,8 @@ return exports;
 
 });
 
-class VKQQj extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(VKQQj, templates);
+class GXBPu extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(GXBPu, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
@@ -11845,8 +11845,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(VKQQj, templates);
 /* 143 */,
 /* 144 */,
 /* 145 */,
-/* 146 */,
-/* 147 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11886,23 +11885,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var VKQQj = function (_Component) {
-  _inherits(VKQQj, _Component);
+var GXBPu = function (_Component) {
+  _inherits(GXBPu, _Component);
 
-  function VKQQj() {
-    _classCallCheck(this, VKQQj);
+  function GXBPu() {
+    _classCallCheck(this, GXBPu);
 
-    return _possibleConstructorReturn(this, (VKQQj.__proto__ || Object.getPrototypeOf(VKQQj)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (GXBPu.__proto__ || Object.getPrototypeOf(GXBPu)).apply(this, arguments));
   }
 
-  return VKQQj;
+  return GXBPu;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(VKQQj, _bitwageSoy2.default);
+_metalSoy2.default.register(GXBPu, _bitwageSoy2.default);
 
-exports.default = VKQQj;
+exports.default = GXBPu;
 
 /***/ })
-],[147]);
+],[146]);

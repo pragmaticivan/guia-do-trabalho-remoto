@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([5],[
+webpackJsonppageComponent([3],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11630,12 +11630,14 @@ module.exports = function(module) {
 /* 101 */,
 /* 102 */,
 /* 103 */,
-/* 104 */
+/* 104 */,
+/* 105 */,
+/* 106 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FZxAl", function() { return FZxAl; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "qzBNV", function() { return qzBNV; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11647,15 +11649,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from transferwise.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace FZxAl.
+ * @fileoverview Templates in namespace qzBNV.
  * @public
  */
 
-goog.module('FZxAl.incrementaldom');
+goog.module('qzBNV.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11687,23 +11689,69 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param234 = function() {
+  var param256 = function() {
     ie_open('h6');
-      var dyn18 = opt_data.page.description;
-      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
+      var dyn20 = opt_data.page.description;
+      if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com TransferWise');
+        itext('Sites com ofertas remotas');
       ie_close('h2');
       ie_open('p');
-        ie_open('a', null, null,
-            'href', 'https://transferwise.com/u/344b08');
-          itext('TransferWise');
-        ie_close('a');
-        itext(' \u00E9 uma nova plataforma um pouco parecida com o Xoom. A empresa efetua o envio do dinheiro e cai direto na sua conta, geralmente 1 dia depois caso a empresa seja Americana. Trata-se de um intermediador de envio entre pa\u00EDses, por\u00E9m o diferencial \u00E9 que esta empresa garante envio do dinheiro com cota\u00E7\u00F5es bem melhores. Retirando aquele monte de encargos criados por bancos. Voc\u00EA acaba econiomizando 90% em encargos "desnecess\u00E1rios".');
+        itext('Fique atento: em algumas vagas, os candidatos devem morar no mesmo pa\u00EDs da vaga, limitando-se assim que o trabalho seja realmente remoto (nesses casos voc\u00EA precisa residir l\u00E1 ou ter autoriza\u00E7\u00E3o para trabalhar no pa\u00EDs onde a empresa est\u00E1 localizada).');
       ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://jobs.github.com/positions?description=&location=Remote');
+            itext('Github Job board');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://www.jobsintech.io/jobs#q=&page=0&refinements=%5B%7B%22remote%22%3A%22can_work_remote%22%7D%5D');
+            itext('Jobs in Tech');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://landing.jobs/?custom_inviter=pragmaticivan');
+            itext('Landing.jobs');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://remoteok.io/remote-jobs');
+            itext('Remote Ok');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://stackoverflow.com/jobs/remote-developer-jobs');
+            itext('Stackoverflow Job board');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://staff.com/');
+            itext('Staff.com');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://weworkremotely.com/');
+            itext('We work remotely');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.wfh.io/');
+            itext('WFH.io');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11714,11 +11762,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param234}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param256}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'FZxAl.render';
+  $render.soyTemplateName = 'qzBNV.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11728,16 +11776,14 @@ return exports;
 
 });
 
-class FZxAl extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(FZxAl, templates);
+class qzBNV extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(qzBNV, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 105 */,
-/* 106 */,
 /* 107 */,
 /* 108 */,
 /* 109 */,
@@ -11775,7 +11821,17 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(FZxAl, templates);
 /* 141 */,
 /* 142 */,
 /* 143 */,
-/* 144 */
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11803,9 +11859,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _transferwiseSoy = __webpack_require__(104);
+var _indexSoy = __webpack_require__(106);
 
-var _transferwiseSoy2 = _interopRequireDefault(_transferwiseSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11815,23 +11871,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var FZxAl = function (_Component) {
-  _inherits(FZxAl, _Component);
+var qzBNV = function (_Component) {
+  _inherits(qzBNV, _Component);
 
-  function FZxAl() {
-    _classCallCheck(this, FZxAl);
+  function qzBNV() {
+    _classCallCheck(this, qzBNV);
 
-    return _possibleConstructorReturn(this, (FZxAl.__proto__ || Object.getPrototypeOf(FZxAl)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (qzBNV.__proto__ || Object.getPrototypeOf(qzBNV)).apply(this, arguments));
   }
 
-  return FZxAl;
+  return qzBNV;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(FZxAl, _transferwiseSoy2.default);
+_metalSoy2.default.register(qzBNV, _indexSoy2.default);
 
-exports.default = FZxAl;
+exports.default = qzBNV;
 
 /***/ })
-],[144]);
+],[154]);

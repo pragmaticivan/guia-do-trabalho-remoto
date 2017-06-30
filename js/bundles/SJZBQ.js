@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([8],[
+webpackJsonppageComponent([6],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11627,12 +11627,14 @@ module.exports = function(module) {
 /* 98 */,
 /* 99 */,
 /* 100 */,
-/* 101 */
+/* 101 */,
+/* 102 */,
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "aEnpV", function() { return aEnpV; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SJZBQ", function() { return SJZBQ; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11644,15 +11646,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from payoneer.soy.
+// This file was automatically generated from swift.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace aEnpV.
+ * @fileoverview Templates in namespace SJZBQ.
  * @public
  */
 
-goog.module('aEnpV.incrementaldom');
+goog.module('SJZBQ.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11684,39 +11686,83 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param201 = function() {
+  var param223 = function() {
     ie_open('h6');
-      var dyn15 = opt_data.page.description;
-      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+      var dyn17 = opt_data.page.description;
+      if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com Payoneer');
+        itext('Recebendo pagamentos com Swift');
       ie_close('h2');
       ie_open('p');
+        itext('Segundo um levantamento feito na comunidade, \u00E9 a mais comum entre as pessoas que trabalham remotamente para empresas no exterior. \u00C9 poss\u00EDvel receber dinheiro do exterior atrav\u00E9s de uma transfer\u00EAncia banc\u00E1ria aceita em qualquer ag\u00EAncia. \u00C9 necess\u00E1rio enviar todos os dados referentes a transa\u00E7\u00E3o para que a empresa possa efetuar uma transa\u00E7\u00E3o de envio de um banco no exterior para um banco no Brasil.');
+      ie_close('p');
+      ie_open('p');
+        itext('Ademais, ambas as institui\u00E7\u00F5es cobrar\u00E3o pelo servi\u00E7o. Assim, quem estiver no exterior desembolsar\u00E1 uma taxa para que o dinheiro chegue ao destino pretendido, mesmo n\u00E3o sendo correntista do banco contatado. A tarifa \u00E9 conhecida como ordem de pagamento expedida. Uma vez no Brasil, a ag\u00EAncia que recebeu o montante tamb\u00E9m descontar\u00E1 uma determinada quantia do dinheiro que ir\u00E1 disponibilizar ao cliente.');
+      ie_close('p');
+      ie_open('h4');
+        itext('Dados necess\u00E1rios');
+      ie_close('h4');
+      ie_open('p');
+        itext('Apesar de nem todos serem precisos, \u00E9 legal enviar todos esses para que seu empregador tenha todas as informa\u00E7\u00F5es necess\u00E1rias:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Nome completo');
+        ie_close('li');
+        ie_open('li');
+          itext('Documento de Identifica\u00E7\u00E3o');
+        ie_close('li');
+        ie_open('li');
+          itext('Endere\u00E7o Residencial');
+        ie_close('li');
+        ie_open('li');
+          itext('Motivo da remessa');
+        ie_close('li');
+        ie_open('li');
+          itext('Banco + C\u00F3digo do banco');
+        ie_close('li');
+        ie_open('li');
+          itext('Ag\u00EAncia');
+        ie_close('li');
+        ie_open('li');
+          itext('N\u00FAmero da Conta');
+        ie_close('li');
+        ie_open('li');
+          itext('SWIFT Code (Referente a ag\u00EAncia autorizada a fazer c\u00E2mbio no Brasil) (Procure seu SWIFT code ');
+          ie_open('a', null, null,
+              'href', 'http://www.theswiftcodes.com/brazil/');
+            itext('aqui');
+          ie_close('a');
+          itext('. )');
+        ie_close('li');
+        ie_open('li');
+          itext('Sugiro que tamb\u00E9m envie o IBAN (Leia abaixo o que isso significa)');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('OBS: Para SWIFT Code, sugiro que procure o banco mais perto da sua cidade, caso precise resolver alguma burocracia.');
+      ie_close('p');
+      ie_open('h4');
+        itext('IBAN');
+      ie_close('h4');
+      ie_open('p');
+        itext('IBAN (International Bank Account Number) \u00E9 um sistema internacional de identifica\u00E7\u00E3o de bancos criado para facilitar a comunica\u00E7\u00E3o e processamento entre transa\u00E7\u00F5es com redu\u00E7\u00E3o de risco. Inicialmente utilizado na Europa, est\u00E1 cada vez mais sendo adotado por outros pa\u00EDses, alguns bancos nos Estados Unidos por exemplo j\u00E1 aceitam esse tipo de c\u00F3digo ao inv\u00E9s do SWIFT. At\u00E9 o fim de 2014, 66 pa\u00EDses estariam usando IBAN como sistema principal.');
+      ie_close('p');
+      ie_open('p');
+        itext('Gere seu IBAN aqui: ');
         ie_open('a', null, null,
-            'href', 'http://www.payoneer.com/');
-          itext('Payoneer');
+            'href', 'http://geradordeiban.detalhado.com/#/make');
+          itext('http://geradordeiban.detalhado.com/#/make');
         ie_close('a');
-        itext(' \u00E9 uma forma de receber dinheiro sem precisar trazer o valor monet\u00E1rio para o Brasil. \u00C9 simplesmente criada uma conta no Bank of American que representa sua conta online. Voc\u00EA recebe um cart\u00E3o de cr\u00E9dito pr\u00E9-pago no qual est\u00E1 ligado a essa conta.');
       ie_close('p');
+      ie_open('h4');
+        itext('Desvantagens');
+      ie_close('h4');
       ie_open('p');
-        itext('Empresas Americanas podem depositar dinheiro diretamente nesta conta, gerando cr\u00E9ditos no seu cart\u00E3o, que pode ser utilizado em ATMs e compras online.');
-      ie_close('p');
-      ie_open('p');
-        itext('Ao realizar saques em ATMs lhe ser\u00E1 cobrado uma taxa de conveni\u00EAncia, que nada mais \u00E9 que uma taxa de convers\u00E3o cambial. Esta taxa varia de acordo com o ATM no qual voc\u00EA est\u00E1 sacando, mas fica entre 12 a 20 reais por saque, fora que alguns ATMs tamb\u00E9m limitam o saque di\u00E1rio.');
-      ie_close('p');
-      ie_open('p');
-        itext('Outra desvantagem do Payoneer \u00E9 que alguns servi\u00E7os online como Dropbox e iTunes v\u00E3o rejeitar seu cart\u00E3o, nesses casos voc\u00EA pode vincul\u00E1-lo ao Paypal para contornar o problema.');
-      ie_close('p');
-      ie_open('p');
-        itext('Bem interessante essa forma de receber, por\u00E9m voc\u00EA n\u00E3o pode movimentar a conta livremente, apenas pode transferir dinheiro para outros usu\u00E1rios de Payoneer. \u00C9 um dos principais meios de pagamentos utilizado pelo ');
-        ie_open('a', null, null,
-            'href', 'https://www.odesk.com/');
-          itext('ODesk');
-        ie_close('a');
-        itext('.');
+        itext('A desvantagem deste tipo de opera\u00E7\u00E3o \u00E9 a cobran\u00E7a de custos dos dois lados da opera\u00E7\u00E3o. Outro ponto negativo \u00E9 o tempo de espera para conseguir liquidar a remessa, dependendo do banco pode demorar at\u00E9 3 dias.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11728,11 +11774,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param201}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param223}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'aEnpV.render';
+  $render.soyTemplateName = 'SJZBQ.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11742,16 +11788,14 @@ return exports;
 
 });
 
-class aEnpV extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(aEnpV, templates);
+class SJZBQ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(SJZBQ, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 102 */,
-/* 103 */,
 /* 104 */,
 /* 105 */,
 /* 106 */,
@@ -11795,8 +11839,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(aEnpV, templates);
 /* 144 */,
 /* 145 */,
 /* 146 */,
-/* 147 */,
-/* 148 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11824,9 +11867,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _payoneerSoy = __webpack_require__(101);
+var _swiftSoy = __webpack_require__(103);
 
-var _payoneerSoy2 = _interopRequireDefault(_payoneerSoy);
+var _swiftSoy2 = _interopRequireDefault(_swiftSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11836,23 +11879,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var aEnpV = function (_Component) {
-  _inherits(aEnpV, _Component);
+var SJZBQ = function (_Component) {
+  _inherits(SJZBQ, _Component);
 
-  function aEnpV() {
-    _classCallCheck(this, aEnpV);
+  function SJZBQ() {
+    _classCallCheck(this, SJZBQ);
 
-    return _possibleConstructorReturn(this, (aEnpV.__proto__ || Object.getPrototypeOf(aEnpV)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (SJZBQ.__proto__ || Object.getPrototypeOf(SJZBQ)).apply(this, arguments));
   }
 
-  return aEnpV;
+  return SJZBQ;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(aEnpV, _payoneerSoy2.default);
+_metalSoy2.default.register(SJZBQ, _swiftSoy2.default);
 
-exports.default = aEnpV;
+exports.default = SJZBQ;
 
 /***/ })
-],[148]);
+],[147]);

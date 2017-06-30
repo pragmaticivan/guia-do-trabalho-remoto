@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([7],[
+webpackJsonppageComponent([9],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11626,14 +11626,12 @@ module.exports = function(module) {
 /* 97 */,
 /* 98 */,
 /* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */
+/* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lxkMy", function() { return lxkMy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DhnhG", function() { return DhnhG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11645,15 +11643,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from paypal.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace lxkMy.
+ * @fileoverview Templates in namespace DhnhG.
  * @public
  */
 
-goog.module('lxkMy.incrementaldom');
+goog.module('DhnhG.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11685,26 +11683,18 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param212 = function() {
+  var param190 = function() {
     ie_open('h6');
-      var dyn16 = opt_data.page.description;
-      if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
+      var dyn14 = opt_data.page.description;
+      if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com Paypal');
+        itext('Recebendo pagamentos');
       ie_close('h2');
       ie_open('p');
-        itext('O primeiro e mais conhecido por todos \u00E9 o ');
-        ie_open('a', null, null,
-            'href', 'https://www.paypal.com');
-          itext('Paypal');
-        ie_close('a');
-        itext(', embora MUITAS pessoas falem de hist\u00F3rias, medos ao usar para receber pagamentos do exterior e coisas do tipo... \u00C9 uma ferramenta muito boa, segura e eficiente. Existem alguns relatos de pessoas que tiveram problemas e todo o seu dinheiro foi congelado sem volta. O que eu tenho a dizer sobre isso \u00E9: Tome cuidado com a empresa que voc\u00EA est\u00E1 fazendo neg\u00F3cio, \u00E9 justamente ela que pode bloquear ou criar uma disputa pelo seu pagamento.');
-      ie_close('p');
-      ie_open('p');
-        itext('\u00C9 poss\u00EDvel ter uma conta facilmente no Brasil. Por\u00E9m voc\u00EA s\u00F3 pode cadastrar cart\u00F5es Brasileiros. Caso voc\u00EA tenha conta nos EUA, \u00E9 necess\u00E1rio ter uma conta extra de Paypal para trabalhar e transitar facilmente o dinheiro com mais regalias.  \u00C9 necess\u00E1rio lembrar que ter uma conta nos EUA n\u00E3o significa que voc\u00EA legalmente pode receber dinheiro de empresas sem permiss\u00E3o para trabalho, ent\u00E3o pense duas vezes.');
+        itext('Uma das partes mais importantes, que al\u00E9m de garantir toda a seguran\u00E7a do processo, podem lhe ajudar de algumas maneiras na hora de declarar todo o imposto referente ao valor recebido.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11716,11 +11706,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param212}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param190}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'lxkMy.render';
+  $render.soyTemplateName = 'DhnhG.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11730,14 +11720,16 @@ return exports;
 
 });
 
-class lxkMy extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(lxkMy, templates);
+class DhnhG extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(DhnhG, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 101 */,
+/* 102 */,
 /* 103 */,
 /* 104 */,
 /* 105 */,
@@ -11780,12 +11772,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(lxkMy, templates);
 /* 142 */,
 /* 143 */,
 /* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11813,9 +11800,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _paypalSoy = __webpack_require__(102);
+var _indexSoy = __webpack_require__(100);
 
-var _paypalSoy2 = _interopRequireDefault(_paypalSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11825,23 +11812,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var lxkMy = function (_Component) {
-  _inherits(lxkMy, _Component);
+var DhnhG = function (_Component) {
+  _inherits(DhnhG, _Component);
 
-  function lxkMy() {
-    _classCallCheck(this, lxkMy);
+  function DhnhG() {
+    _classCallCheck(this, DhnhG);
 
-    return _possibleConstructorReturn(this, (lxkMy.__proto__ || Object.getPrototypeOf(lxkMy)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (DhnhG.__proto__ || Object.getPrototypeOf(DhnhG)).apply(this, arguments));
   }
 
-  return lxkMy;
+  return DhnhG;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(lxkMy, _paypalSoy2.default);
+_metalSoy2.default.register(DhnhG, _indexSoy2.default);
 
-exports.default = lxkMy;
+exports.default = DhnhG;
 
 /***/ })
-],[150]);
+],[145]);

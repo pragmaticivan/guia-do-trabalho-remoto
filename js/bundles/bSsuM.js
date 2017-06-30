@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([6],[
+webpackJsonppageComponent([1],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11629,12 +11629,17 @@ module.exports = function(module) {
 /* 100 */,
 /* 101 */,
 /* 102 */,
-/* 103 */
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SCmxK", function() { return SCmxK; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bSsuM", function() { return bSsuM; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11646,15 +11651,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from swift.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace SCmxK.
+ * @fileoverview Templates in namespace bSsuM.
  * @public
  */
 
-goog.module('SCmxK.incrementaldom');
+goog.module('bSsuM.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11686,83 +11691,66 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param223 = function() {
+  var param267 = function() {
     ie_open('h6');
-      var dyn17 = opt_data.page.description;
-      if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
+      var dyn21 = opt_data.page.description;
+      if (typeof dyn21 == 'function') dyn21(); else if (dyn21 != null) itext(dyn21);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Recebendo pagamentos com Swift');
+        itext('Introdu\u00E7\u00E3o');
       ie_close('h2');
       ie_open('p');
-        itext('Segundo um levantamento feito na comunidade, \u00E9 a mais comum entre as pessoas que trabalham remotamente para empresas no exterior. \u00C9 poss\u00EDvel receber dinheiro do exterior atrav\u00E9s de uma transfer\u00EAncia banc\u00E1ria aceita em qualquer ag\u00EAncia. \u00C9 necess\u00E1rio enviar todos os dados referentes a transa\u00E7\u00E3o para que a empresa possa efetuar uma transa\u00E7\u00E3o de envio de um banco no exterior para um banco no Brasil.');
+        itext('Trabalhar remotamente cada vez mais vem se tornando o objetivo de muitos profissionais na \u00E1rea de TI ao redor do mundo. Estar alinhado com suas necessidades, controlar seu hor\u00E1rio de trabalho, dispor de mais tempo com a fam\u00EDlia, viajar e conhecer novos horizontes e principalmente se livrar do stress causado pelo tr\u00E2nsito nas grandes cidades. Estes s\u00E3o alguns dos motivos que fazem um indiv\u00EDduo questionar sua empresa e negociar uma jornada de trabalho remoto.');
       ie_close('p');
       ie_open('p');
-        itext('Ademais, ambas as institui\u00E7\u00F5es cobrar\u00E3o pelo servi\u00E7o. Assim, quem estiver no exterior desembolsar\u00E1 uma taxa para que o dinheiro chegue ao destino pretendido, mesmo n\u00E3o sendo correntista do banco contatado. A tarifa \u00E9 conhecida como ordem de pagamento expedida. Uma vez no Brasil, a ag\u00EAncia que recebeu o montante tamb\u00E9m descontar\u00E1 uma determinada quantia do dinheiro que ir\u00E1 disponibilizar ao cliente.');
+        itext('Ap\u00F3s completar 4 anos de trabalho remoto, decidi compartilhar um pouco da minha experi\u00EAncia relativa a como come\u00E7ar a trabalhar remotamente tanto para empresas no Brasil, quanto para empresas no exterior.');
       ie_close('p');
-      ie_open('h4');
-        itext('Dados necess\u00E1rios');
-      ie_close('h4');
       ie_open('p');
-        itext('Apesar de nem todos serem precisos, \u00E9 legal enviar todos esses para que seu empregador tenha todas as informa\u00E7\u00F5es necess\u00E1rias:');
+        itext('Todas as informa\u00E7\u00F5es s\u00E3o inicialmente direcionadas a profissionais de TI, por\u00E9m tamb\u00E9m podem ser aplicadas a profissionais de outras \u00E1reas.');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('Nome completo');
-        ie_close('li');
-        ie_open('li');
-          itext('Documento de Identifica\u00E7\u00E3o');
-        ie_close('li');
-        ie_open('li');
-          itext('Endere\u00E7o Residencial');
-        ie_close('li');
-        ie_open('li');
-          itext('Motivo da remessa');
-        ie_close('li');
-        ie_open('li');
-          itext('Banco + C\u00F3digo do banco');
-        ie_close('li');
-        ie_open('li');
-          itext('Ag\u00EAncia');
-        ie_close('li');
-        ie_open('li');
-          itext('N\u00FAmero da Conta');
-        ie_close('li');
-        ie_open('li');
-          itext('SWIFT Code (Referente a ag\u00EAncia autorizada a fazer c\u00E2mbio no Brasil) (Procure seu SWIFT code ');
-          ie_open('a', null, null,
-              'href', 'http://www.theswiftcodes.com/brazil/');
-            itext('aqui');
-          ie_close('a');
-          itext('. )');
-        ie_close('li');
-        ie_open('li');
-          itext('Sugiro que tamb\u00E9m envie o IBAN (Leia abaixo o que isso significa)');
-        ie_close('li');
-      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '2');
+      ie_open('h2');
+        itext('Trabalho remoto \u00E9 a coisa certa para voc\u00EA?');
+      ie_close('h2');
       ie_open('p');
-        itext('OBS: Para SWIFT Code, sugiro que procure o banco mais perto da sua cidade, caso precise resolver alguma burocracia.');
+        itext('Ap\u00F3s trabalhar com v\u00E1rias pessoas, de v\u00E1rios estados e pa\u00EDses, constatei que cada pessoa tem suas pr\u00F3prias caracteristicas e influ\u00EAncias exteriores no qual contribuem com um bom desempenho ou n\u00E3o em seu trabalho remoto:');
       ie_close('p');
       ie_open('h4');
-        itext('IBAN');
+        itext('Disciplina');
       ie_close('h4');
       ie_open('p');
-        itext('IBAN (International Bank Account Number) \u00E9 um sistema internacional de identifica\u00E7\u00E3o de bancos criado para facilitar a comunica\u00E7\u00E3o e processamento entre transa\u00E7\u00F5es com redu\u00E7\u00E3o de risco. Inicialmente utilizado na Europa, est\u00E1 cada vez mais sendo adotado por outros pa\u00EDses, alguns bancos nos Estados Unidos por exemplo j\u00E1 aceitam esse tipo de c\u00F3digo ao inv\u00E9s do SWIFT. At\u00E9 o fim de 2014, 66 pa\u00EDses estariam usando IBAN como sistema principal.');
-      ie_close('p');
-      ie_open('p');
-        itext('Gere seu IBAN aqui: ');
-        ie_open('a', null, null,
-            'href', 'http://geradordeiban.detalhado.com/#/make');
-          itext('http://geradordeiban.detalhado.com/#/make');
-        ie_close('a');
+        itext('\u00C9 dif\u00EDcil controlar sua aten\u00E7\u00E3o quando se tem milhares de problemas, servi\u00E7os dom\u00E9sticos para fazer, cachorro para dar banho, filhos para levar na escola e outras coisas do tipo. Se voc\u00EA \u00E9 o tipo de pessoa que deixa a resolu\u00E7\u00E3o dos seus problemas pra depois de forma desorganizada e sem planejamento, talvez trabalho remoto seja algo muito dif\u00EDcil pra voc\u00EA.');
       ie_close('p');
       ie_open('h4');
-        itext('Desvantagens');
+        itext('Motiva\u00E7\u00E3o');
       ie_close('h4');
       ie_open('p');
-        itext('A desvantagem deste tipo de opera\u00E7\u00E3o \u00E9 a cobran\u00E7a de custos dos dois lados da opera\u00E7\u00E3o. Outro ponto negativo \u00E9 o tempo de espera para conseguir liquidar a remessa, dependendo do banco pode demorar at\u00E9 3 dias.');
+        itext('\u00C0s vezes acordar cedo \u00E9 algo dif\u00EDcil, estar dispon\u00EDvel para uma reuni\u00E3o, ou at\u00E9 mesmo se sentir lento por n\u00E3o ter ningu\u00E9m te ajudando pessoalmente. Pessoas com auto-motiva\u00E7\u00E3o fazem um trabalho remoto melhor. \u00C0s vezes \u00E9 realmente necess\u00E1rio um Gestor de projetos pegando no p\u00E9 para manter os funcion\u00E1rios focados no trabalho.');
+      ie_close('p');
+      ie_open('h4');
+        itext('Local de trabalho');
+      ie_close('h4');
+      ie_open('p');
+        itext('O local de trabalho \u00E9 muito importante para quem trabalha remoto. \u00C0s vezes por achar que a liberdade \u00E9 grande, voc\u00EA acaba caindo na tenta\u00E7\u00E3o de trabalhar na cama, \u00E0s vezes at\u00E9 caindo no sono, ligar a TV e trabalhar enquanto assiste, ser atrapalhado por interfer\u00EAncias familiares como esposa pedindo pra ir fazer compras no supermercado. \u00C0s vezes \u00E9 realmente necess\u00E1rio definir um bom local de trabalho no qual voc\u00EA se sinta na obriga\u00E7\u00E3o de, ao sentar para trabalhar, estar focado e esquecer o m\u00E1ximo do ambiente externo que pode tirar seu foco.');
+      ie_close('p');
+      ie_open('h4');
+        itext('Personalidade');
+      ie_close('h4');
+      ie_open('p');
+        itext('Algumas pessoas conseguem trabalhar tranquilamente em sua casa, outras, necessitam de um escrit\u00F3rio espec\u00EDfico pra isso, onde conseguem ter contato com outros profissionais. Existem pessoas que utilizam essa oportunidade de trabalho para viajar pelo mundo virando \'n\u00F4mades digitais\'.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '3');
+      ie_open('h2');
+        itext('Necessidades');
+      ie_close('h2');
+      ie_open('p');
+        itext('Inicialmente tudo que voc\u00EA precisa \u00E9 ter seus instrumentos de trabalho, "computador, smartphone (caso seja desenvolvimento mobile), post-it(<3)", um lugar para plugar a tomada do seu computador e uma boa internet. Para algumas empresas tamb\u00E9m \u00E9 necess\u00E1rio que fique sempre online em alguma ferramenta de comunica\u00E7\u00E3o determinada pela empresa.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11774,11 +11762,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param223}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param267}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'SCmxK.render';
+  $render.soyTemplateName = 'bSsuM.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11788,19 +11776,14 @@ return exports;
 
 });
 
-class SCmxK extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(SCmxK, templates);
+class bSsuM extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(bSsuM, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
 /* 109 */,
 /* 110 */,
 /* 111 */,
@@ -11837,7 +11820,17 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(SCmxK, templates);
 /* 142 */,
 /* 143 */,
 /* 144 */,
-/* 145 */
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11865,9 +11858,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _swiftSoy = __webpack_require__(103);
+var _indexSoy = __webpack_require__(108);
 
-var _swiftSoy2 = _interopRequireDefault(_swiftSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11877,23 +11870,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var SCmxK = function (_Component) {
-  _inherits(SCmxK, _Component);
+var bSsuM = function (_Component) {
+  _inherits(bSsuM, _Component);
 
-  function SCmxK() {
-    _classCallCheck(this, SCmxK);
+  function bSsuM() {
+    _classCallCheck(this, bSsuM);
 
-    return _possibleConstructorReturn(this, (SCmxK.__proto__ || Object.getPrototypeOf(SCmxK)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (bSsuM.__proto__ || Object.getPrototypeOf(bSsuM)).apply(this, arguments));
   }
 
-  return SCmxK;
+  return bSsuM;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(SCmxK, _swiftSoy2.default);
+_metalSoy2.default.register(bSsuM, _indexSoy2.default);
 
-exports.default = SCmxK;
+exports.default = bSsuM;
 
 /***/ })
-],[145]);
+],[155]);
