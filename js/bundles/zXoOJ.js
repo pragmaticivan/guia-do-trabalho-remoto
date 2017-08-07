@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([0],[
+webpackJsonppageComponent([14],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11621,26 +11621,12 @@ module.exports = Uri;
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageIndex", function() { return pageIndex; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "zXoOJ", function() { return zXoOJ; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11656,11 +11642,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace pageIndex.
+ * @fileoverview Templates in namespace zXoOJ.
  * @public
  */
 
-goog.module('pageIndex.incrementaldom');
+goog.module('zXoOJ.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11681,7 +11667,7 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('main.incrementaldom', 'render');
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
 /**
@@ -11692,139 +11678,189 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param39 = function() {
-    $header(opt_data, null, opt_ijData);
-    $footer(null, null, opt_ijData);
+  var param146 = function() {
+    ie_open('h6');
+      var dyn10 = opt_data.page.description;
+      if (typeof dyn10 == 'function') dyn10(); else if (dyn10 != null) itext(dyn10);
+    ie_close('h6');
+    ie_open('article', null, null,
+        'id', '1');
+      ie_open('h2');
+        itext('Recursos sobre trabalho remoto');
+      ie_close('h2');
+      ie_open('h4');
+        itext('Artigos');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://medium.com/desenvolvimento-front-end-pt-br/o-que-eu-aprendi-em-quase-1-ano-de-home-office-7ed3cfee276a');
+            itext('O que eu aprendi em quase 1 ano de home-office');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Comunica\u00E7\u00E3o');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://slack.com/');
+            itext('Slack');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Comunidades');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://www.meetup.com/Belo-Horizonte-Remote-Workers/');
+            itext('Remote Workers - Belo Horizonte');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Diversos');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://github.com/lukasz-madon/awesome-remote-job');
+            itext('Awesome Remote Job');
+          ie_close('a');
+          itext(' - Uma compila\u00E7\u00E3o de informa\u00E7\u00F5es sobre trabalho remoto');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://github.com/lerrua/remote-jobs-brazil');
+            itext('Remote Jobs');
+          ie_close('a');
+          itext(' - Lista de empresas com trabalho remoto no Brasil');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://github.com/jessicard/remote-jobs');
+            itext('Remote Jobs Worldwide');
+          ie_close('a');
+          itext(' - Lista de empresas com trabalho remoto Worldwide');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Livros');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://37signals.com/remote/');
+            itext('Remote. Office Not Required.');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://scottberkun.com/yearwithoutpants/');
+            itext('The Year Without Pants: WordPress.com and the Future of Work');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Gest\u00E3o de Projetos');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://pivotaltracker.com');
+            itext('PivotalTracker');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('M\u00E9trica de tempo');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://wakatime.com/');
+            itext('WakaTime');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Podcasts');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://www.grokpodcast.com/2013/04/02/episodio-86-trabalho-remoto-parte-1-de-4/');
+            itext('Grok Podcast - Trabalho Remoto');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://devnaestrada.com.br/2015/12/25/devnaestrada-remoto-da-depressao.html');
+            itext('DevNaEstrada - Remoto da depress\u00E3o');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Talks');
+      ie_close('h4');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=IT6z7VDueF8');
+            itext('Desafios e vantagens do trabalho remoto por Willian Fernandes');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.page.title);
+    ie_close('input');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.site.title);
+    ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param39}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param146}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'pageIndex.render';
+  $render.soyTemplateName = 'zXoOJ.render';
 }
 
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $header(opt_data, opt_ignored, opt_ijData) {
-  ie_open('header', null, null,
-      'class', 'header');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('h1', null, null,
-          'class', 'header-title');
-        var dyn3 = opt_data.site.title;
-        if (typeof dyn3 == 'function') dyn3(); else if (dyn3 != null) itext(dyn3);
-      ie_close('h1');
-      ie_open('h2', null, null,
-          'class', 'header-subtitle');
-        var dyn4 = opt_data.site.index.description;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
-      ie_close('h2');
-      ie_open('div', null, null,
-          'class', 'header-cta');
-        ie_open('a', null, null,
-            'href', '/guia/',
-            'class', 'btn btn-accent');
-          itext('Aprenda');
-        ie_close('a');
-      ie_close('div');
-      ie_open('p', null, null,
-          'class', 'gh-btns');
-        ie_void('iframe', null, null,
-            'src', 'https://ghbtns.com/github-btn.html?user=nomadsonrails&repo=guia-do-trabalho-remoto&type=watch&count=true&size=large',
-            'allowtransparency', 'true',
-            'frameborder', '0',
-            'scrolling', '0',
-            'width', '150',
-            'height', '30');
-        ie_void('iframe', null, null,
-            'src', 'https://ghbtns.com/github-btn.html?user=nomadsonrails&repo=guia-do-trabalho-remoto&type=fork&count=true&size=large',
-            'allowtransparency', 'true',
-            'frameborder', '0',
-            'scrolling', '0',
-            'width', '150',
-            'height', '30');
-      ie_close('p');
-    ie_close('div');
-  ie_close('header');
-}
-exports.header = $header;
-if (goog.DEBUG) {
-  $header.soyTemplateName = 'pageIndex.header';
-}
-
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $footer(opt_data, opt_ignored, opt_ijData) {
-  ie_open('footer', null, null,
-      'class', 'footer');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('div', null, null,
-          'class', 'row');
-        ie_open('p', null, null,
-            'class', 'footer-description col-xs-16');
-          itext('Copyright \u00A9 2017 ');
-          ie_open('a', null, null,
-              'href', 'http://nomadsonrails.com');
-            itext('Nomads on Rails');
-          ie_close('a');
-        ie_close('p');
-      ie_close('div');
-    ie_close('div');
-  ie_close('footer');
-}
-exports.footer = $footer;
-if (goog.DEBUG) {
-  $footer.soyTemplateName = 'pageIndex.footer';
-}
-
-exports.render.params = ["site"];
-exports.render.types = {"site":"any"};
-exports.header.params = ["site"];
-exports.header.types = {"site":"any"};
-exports.footer.params = [];
-exports.footer.types = {};
+exports.render.params = ["page","site"];
+exports.render.types = {"page":"any","site":"any"};
 templates = exports;
 return exports;
 
 });
 
-class pageIndex extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageIndex, templates);
+class zXoOJ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(zXoOJ, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 110 */,
-/* 111 */,
-/* 112 */,
-/* 113 */,
-/* 114 */,
-/* 115 */,
-/* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11852,7 +11888,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(109);
+var _indexSoy = __webpack_require__(95);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -11864,23 +11900,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var pageIndex = function (_Component) {
-  _inherits(pageIndex, _Component);
+var zXoOJ = function (_Component) {
+  _inherits(zXoOJ, _Component);
 
-  function pageIndex() {
-    _classCallCheck(this, pageIndex);
+  function zXoOJ() {
+    _classCallCheck(this, zXoOJ);
 
-    return _possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (zXoOJ.__proto__ || Object.getPrototypeOf(zXoOJ)).apply(this, arguments));
   }
 
-  return pageIndex;
+  return zXoOJ;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(pageIndex, _indexSoy2.default);
+_metalSoy2.default.register(zXoOJ, _indexSoy2.default);
 
-exports.default = pageIndex;
+exports.default = zXoOJ;
 
 /***/ })
-],[124]);
+],[110]);

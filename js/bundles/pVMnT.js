@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([0],[
+webpackJsonppageComponent([7],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11624,23 +11624,12 @@ module.exports = Uri;
 /* 95 */,
 /* 96 */,
 /* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageIndex", function() { return pageIndex; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pVMnT", function() { return pVMnT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11652,15 +11641,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from bitcoin.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace pageIndex.
+ * @fileoverview Templates in namespace pVMnT.
  * @public
  */
 
-goog.module('pageIndex.incrementaldom');
+goog.module('pVMnT.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11681,7 +11670,7 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('main.incrementaldom', 'render');
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
 /**
@@ -11692,124 +11681,197 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param39 = function() {
-    $header(opt_data, null, opt_ijData);
-    $footer(null, null, opt_ijData);
+  var param168 = function() {
+    ie_open('h6');
+      var dyn12 = opt_data.page.description;
+      if (typeof dyn12 == 'function') dyn12(); else if (dyn12 != null) itext(dyn12);
+    ie_close('h6');
+    ie_open('article', null, null,
+        'id', '1');
+      ie_open('h2');
+        itext('Recebendo pagamentos com Bitcoin');
+      ie_close('h2');
+      ie_open('p');
+        itext('Bitcoin \u00E9 minha op\u00E7\u00E3o preferida, muitos profissionais de TI ainda n\u00E3o perceberam todas as vantagens, uma delas \u00E9 trafegar dinheiro de um pa\u00EDs para o outro sem precisar pagar tantas taxas e passar por tantas burocracias.');
+      ie_close('p');
+      ie_open('p');
+        itext('Segundo a Wikipedia, Bitcoin \u00E9 uma criptomoeda cuja cria\u00E7\u00E3o e transfer\u00EAncia \u00E9 baseada em protocolos c\u00F3digo fonte aberto de criptografia que \u00E9 independente de qualquer autoridade central. Um bitcoin pode ser transferido por um computador ou smartphone sem recurso a uma institui\u00E7\u00E3o financeira intermedi\u00E1ria.');
+      ie_close('p');
+      ie_open('p');
+        itext('Toda a rede \u00E9 sustentada pelos  usu\u00E1rios atrav\u00E9s de p2p, logo todo o processo de seguran\u00E7a, valida\u00E7\u00E3o e "minera\u00E7\u00E3o" \u00E9 feito atrav\u00E9s de v\u00E1rios computadores na grande rede.');
+      ie_close('p');
+      ie_open('p');
+        itext('\u00C9 necess\u00E1rio ter uma carteira(wallet) para guardar seus bitcoins. Abaixo segue algumas wallets que a comunidade costuma utilizar:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Xapo - ');
+          ie_open('a', null, null,
+              'href', 'https://xapo.com/');
+            itext('https://xapo.com/');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          itext('Coinbase - ');
+          ie_open('a', null, null,
+              'href', 'https://www.coinbase.com/join/5637f7ae01653a4452000087');
+            itext('https://www.coinbase.com/');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          itext('Uphold - ');
+          ie_open('a', null, null,
+              'href', 'https://uphold.com/signup?utm_campaign=refprog&utm_medium=pragmaticivan');
+            itext('https://uphold.com/');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('O fluxo atual que se costuma utilizar \u00E9 bem simples:');
+      ie_close('p');
+      ie_open('p');
+        itext('A empresa compra bitcoins atrav\u00E9s do ');
+        ie_open('a', null, null,
+            'href', 'https://www.coinbase.com/join/5637f7ae01653a4452000087');
+          itext('Coinbase');
+        ie_close('a');
+        itext(' ou outro servi\u00E7o dispon\u00EDvel no pa\u00EDs em que a empresa est\u00E1 localizada, envia para sua wallet e automaticamente voc\u00EA detem criptomoedas equivalentes ao valor que voc\u00EA costuam receber como sal\u00E1rio.');
+      ie_close('p');
+      ie_open('p');
+        itext('Ap\u00F3s isso voc\u00EA pode trocar seus bitcoins em servi\u00E7os no Brasil, indico utilizar o ');
+        ie_open('a', null, null,
+            'href', 'https://foxbit.exchange');
+          itext('Foxbit');
+        ie_close('a');
+        itext('. Voc\u00EA envia seus bitcoins para uma wallet em um desses servi\u00E7os e solicita vender seus bitcoins, ap\u00F3s isso \u00E9 s\u00F3 solicitar enviar seu dinheiro em Reais para sua conta, bem r\u00E1pido e no mesmo dia, e as taxas s\u00E3o BEM mais amigu\u00E1veis que opera\u00E7\u00F5es entre bancos, quase que insignificantes comparadas a esses outros meios.');
+      ie_close('p');
+      ie_open('p');
+        itext('Segue alguns tutoriais ensinando como utilizar as funcionalidades da FOXBIT:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=GCoe-thmHJk');
+            itext('Criar conta na FOXBIT');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=loAJUYu9UHY');
+            itext('Sacar bitcoins na FOXBIT');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.youtube.com/watch?v=2xRDkFDyYQY');
+            itext('Comprar bitcoins na FOXBIT');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Alguns servi\u00E7os no qual voc\u00EA pode utilizar seus bitcoins:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://www.gyft.com/bitcoin/');
+            itext('Gyft');
+          ie_close('a');
+          itext(' - Um dos mais interessantes, voc\u00EA compra v\u00E1rios coupons com bitcoin, bem interessante para quem viaja para os EUA e quer fazer umas compras.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.e-coin.io/?ref=1070214a1100452b810918b5030a994d#sthash.JMVP7M1H.dpuf');
+            itext('E-coin Card');
+          ie_close('a');
+          itext(' - Fant\u00E1stico sistema onde voc\u00EA deposita seus bitcoins e eles caem como cr\u00E9dito em um cart\u00E3o de debito prepago, onde voc\u00EA pode utilizar em qualquer lugar que aceite bandeira Visa, inclusive compras online.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://uphold.com/signup?utm_campaign=refprog&utm_medium=pragmaticivan');
+            itext('Uphold');
+          ie_close('a');
+          itext(' - Permite enviar seus bitcoins e fazer com que eles permane\u00E7am com o valor atual, evitando a grande volatilidade da cripto moeda.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://bitpay.com/');
+            itext('Bitpay');
+          ie_close('a');
+          itext(' - Integra\u00E7\u00E3o de pagamentos para aceitar bitcoin.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://usebitcoins.info/');
+            itext('Usecoin');
+          ie_close('a');
+          itext(' -  Lista de sites no qual voc\u00EA pode gastar seus bitcoins.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://www.coinbase.com/join/5637f7ae01653a4452000087');
+            itext('Coinbase');
+          ie_close('a');
+          itext(' - Um dos pioneiros e mais seguros sistemas de compra e venda de bitcoins nos EUA.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'https://localbitcoins.com/');
+            itext('LocalBitcoins');
+          ie_close('a');
+          itext(' - Um sistema de compra e venda de bitcoins com v\u00E1rios meios de pagamento, inclusive em dinheiro vivo.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://www.paguecombitcoin.com');
+            itext('Pague com Bitcoin');
+          ie_close('a');
+          itext(' - Incr\u00EDvel! Pague qualquer boleto com Bitcoin. Desde compras em e-commerce, incluindo mercado livre, at\u00E9 fatura do cart\u00E3o do seu cr\u00E9dito.');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.page.title);
+    ie_close('input');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.site.title);
+    ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param39}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param168}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'pageIndex.render';
+  $render.soyTemplateName = 'pVMnT.render';
 }
 
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $header(opt_data, opt_ignored, opt_ijData) {
-  ie_open('header', null, null,
-      'class', 'header');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('h1', null, null,
-          'class', 'header-title');
-        var dyn3 = opt_data.site.title;
-        if (typeof dyn3 == 'function') dyn3(); else if (dyn3 != null) itext(dyn3);
-      ie_close('h1');
-      ie_open('h2', null, null,
-          'class', 'header-subtitle');
-        var dyn4 = opt_data.site.index.description;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
-      ie_close('h2');
-      ie_open('div', null, null,
-          'class', 'header-cta');
-        ie_open('a', null, null,
-            'href', '/guia/',
-            'class', 'btn btn-accent');
-          itext('Aprenda');
-        ie_close('a');
-      ie_close('div');
-      ie_open('p', null, null,
-          'class', 'gh-btns');
-        ie_void('iframe', null, null,
-            'src', 'https://ghbtns.com/github-btn.html?user=nomadsonrails&repo=guia-do-trabalho-remoto&type=watch&count=true&size=large',
-            'allowtransparency', 'true',
-            'frameborder', '0',
-            'scrolling', '0',
-            'width', '150',
-            'height', '30');
-        ie_void('iframe', null, null,
-            'src', 'https://ghbtns.com/github-btn.html?user=nomadsonrails&repo=guia-do-trabalho-remoto&type=fork&count=true&size=large',
-            'allowtransparency', 'true',
-            'frameborder', '0',
-            'scrolling', '0',
-            'width', '150',
-            'height', '30');
-      ie_close('p');
-    ie_close('div');
-  ie_close('header');
-}
-exports.header = $header;
-if (goog.DEBUG) {
-  $header.soyTemplateName = 'pageIndex.header';
-}
-
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $footer(opt_data, opt_ignored, opt_ijData) {
-  ie_open('footer', null, null,
-      'class', 'footer');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('div', null, null,
-          'class', 'row');
-        ie_open('p', null, null,
-            'class', 'footer-description col-xs-16');
-          itext('Copyright \u00A9 2017 ');
-          ie_open('a', null, null,
-              'href', 'http://nomadsonrails.com');
-            itext('Nomads on Rails');
-          ie_close('a');
-        ie_close('p');
-      ie_close('div');
-    ie_close('div');
-  ie_close('footer');
-}
-exports.footer = $footer;
-if (goog.DEBUG) {
-  $footer.soyTemplateName = 'pageIndex.footer';
-}
-
-exports.render.params = ["site"];
-exports.render.types = {"site":"any"};
-exports.header.params = ["site"];
-exports.header.types = {"site":"any"};
-exports.footer.params = [];
-exports.footer.types = {};
+exports.render.params = ["page","site"];
+exports.render.types = {"page":"any","site":"any"};
 templates = exports;
 return exports;
 
 });
 
-class pageIndex extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageIndex, templates);
+class pVMnT extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pVMnT, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
 /* 110 */,
 /* 111 */,
 /* 112 */,
@@ -11817,14 +11879,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageIndex, templates)
 /* 114 */,
 /* 115 */,
 /* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11852,9 +11907,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(109);
+var _bitcoinSoy = __webpack_require__(98);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _bitcoinSoy2 = _interopRequireDefault(_bitcoinSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11864,23 +11919,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var pageIndex = function (_Component) {
-  _inherits(pageIndex, _Component);
+var pVMnT = function (_Component) {
+  _inherits(pVMnT, _Component);
 
-  function pageIndex() {
-    _classCallCheck(this, pageIndex);
+  function pVMnT() {
+    _classCallCheck(this, pVMnT);
 
-    return _possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (pVMnT.__proto__ || Object.getPrototypeOf(pVMnT)).apply(this, arguments));
   }
 
-  return pageIndex;
+  return pVMnT;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(pageIndex, _indexSoy2.default);
+_metalSoy2.default.register(pVMnT, _bitcoinSoy2.default);
 
-exports.default = pageIndex;
+exports.default = pVMnT;
 
 /***/ })
-],[124]);
+],[117]);

@@ -1,14 +1,14 @@
 /**
  * Senna.js - A blazing-fast Single Page Application engine
  * @author Liferay, Inc.
- * @version v2.3.0
+ * @version v2.4.0
  * @link http://sennajs.com
  * @license BSD-3-Clause
  */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	(factory((global.senna = global.senna || {})));
+	(factory((global.senna = {})));
 }(this, (function (exports) { 'use strict';
 
 var globals = globals || {};
@@ -451,6 +451,16 @@ function isString(val) {
 }
 
 /**
+ * Sets to true if running inside Node.js environment with extra check for
+ * `process.browser` to skip Karma runner environment. Karma environment has
+ * `process` defined even though it runs on the browser.
+ * @return {boolean}
+ */
+function isServerSide() {
+  return typeof process !== 'undefined' && typeof process.env !== 'undefined' && process.env.NODE_ENV !== 'test' && !process.browser;
+}
+
+/**
  * Null function used for default values of callbacks, etc.
  * @return {void} Nothing.
  */
@@ -481,6 +491,7 @@ var core$2 = Object.freeze({
 	isObject: isObject,
 	isPromise: isPromise,
 	isString: isString,
+	isServerSide: isServerSide,
 	nullFunction: nullFunction
 });
 
@@ -2251,6 +2262,29 @@ var utils = function () {
 		key: 'getCurrentBrowserPathWithoutHash',
 		value: function getCurrentBrowserPathWithoutHash() {
 			return globals.window.location.pathname + globals.window.location.search;
+		}
+
+		/**
+   * Gets the given node offset coordinates.
+   * @return {!object}
+   * @static
+   */
+
+	}, {
+		key: 'getNodeOffset',
+		value: function getNodeOffset(node) {
+			var offsetLeft = 0,
+			    offsetTop = 0;
+
+			do {
+				offsetLeft += node.offsetLeft;
+				offsetTop += node.offsetTop;
+				node = node.offsetParent;
+			} while (node);
+			return {
+				offsetLeft: offsetLeft,
+				offsetTop: offsetTop
+			};
 		}
 
 		/**
@@ -6593,7 +6627,7 @@ var App$1 = function (_EventEmitter) {
    * @default a:not([data-senna-off])
    * @protected
    */
-		_this.linkSelector = 'a:not([data-senna-off])';
+		_this.linkSelector = 'a:not([data-senna-off]):not([target="_blank"])';
 
 		/**
    * Holds the loading css class.
@@ -7130,10 +7164,15 @@ var App$1 = function (_EventEmitter) {
 
 	}, {
 		key: 'handleNavigateError_',
-		value: function handleNavigateError_(path, nextScreen, err) {
+		value: function handleNavigateError_(path, nextScreen, error) {
 			var _this6 = this;
 
 			void 0;
+			this.emit('navigationError', {
+				error: error,
+				nextScreen: nextScreen,
+				path: path
+			});
 			if (!utils.isCurrentBrowserPath(path)) {
 				if (this.isNavigationPending && this.pendingNavigate) {
 					this.pendingNavigate.thenAlways(function () {
@@ -7271,7 +7310,11 @@ var App$1 = function (_EventEmitter) {
 			if (hash) {
 				var anchorElement = globals.document.getElementById(hash.substring(1));
 				if (anchorElement) {
-					globals.window.scrollTo(anchorElement.offsetLeft, anchorElement.offsetTop);
+					var _utils$getNodeOffset = utils.getNodeOffset(anchorElement),
+					    offsetLeft = _utils$getNodeOffset.offsetLeft,
+					    offsetTop = _utils$getNodeOffset.offsetTop;
+
+					globals.window.scrollTo(offsetLeft, offsetTop);
 				}
 			}
 		}
@@ -7318,7 +7361,11 @@ var App$1 = function (_EventEmitter) {
 			var hash = globals.window.location.hash;
 			var anchorElement = globals.document.getElementById(hash.substring(1));
 			if (anchorElement) {
-				this.saveHistoryCurrentPageScrollPosition_(anchorElement.offsetTop, anchorElement.offsetLeft);
+				var _utils$getNodeOffset2 = utils.getNodeOffset(anchorElement),
+				    offsetLeft = _utils$getNodeOffset2.offsetLeft,
+				    offsetTop = _utils$getNodeOffset2.offsetTop;
+
+				this.saveHistoryCurrentPageScrollPosition_(offsetTop, offsetLeft);
 			}
 		}
 
@@ -7930,6 +7977,7 @@ var Ajax = function () {
 			method = method || 'GET';
 
 			var request = new XMLHttpRequest();
+			var previousReadyState = 0;
 
 			var promise = new CancellablePromise(function (resolve, reject) {
 				request.onload = function () {
@@ -7939,8 +7987,18 @@ var Ajax = function () {
 					}
 					resolve(request);
 				};
+				request.onreadystatechange = function () {
+					if (previousReadyState && previousReadyState < 3 && 4 === request.readyState) {
+						request.terminatedPrematurely = true;
+					}
+					previousReadyState = request.readyState;
+				};
 				request.onerror = function () {
-					var error = new Error('Request error');
+					var message = 'Request error';
+					if (request.terminatedPrematurely) {
+						message = 'Request terminated prematurely';
+					}
+					var error = new Error(message);
 					error.request = request;
 					reject(error);
 				};
@@ -8016,6 +8074,13 @@ errors.REQUEST_ERROR = 'Request error';
  * @static
  */
 errors.REQUEST_TIMEOUT = 'Request timeout';
+
+/**
+ * Request is blocked by CORS issue message.
+ * @type {string}
+ * @static
+ */
+errors.REQUEST_PREMATURE_TERMINATION = 'Request terminated prematurely';
 
 /**
  * Metal.js browser user agent detection. It's extremely recommended the usage
@@ -8442,7 +8507,7 @@ var RequestScreen = function (_Screen) {
 			});
 			if (globals.capturedFormElement) {
 				body = new FormData(globals.capturedFormElement);
-				this.maybeAppendSubmitButtonValue(body);
+				this.maybeAppendSubmitButtonValue_(body);
 				httpMethod = RequestScreen.POST;
 				if (UA.isIeOrEdge) {
 					headers.add('If-None-Match', '"0"');
@@ -8465,6 +8530,10 @@ var RequestScreen = function (_Screen) {
 					case errors.REQUEST_ERROR:
 						reason.requestError = true;
 						break;
+					case errors.REQUEST_PREMATURE_TERMINATION:
+						reason.requestError = true;
+						reason.requestPrematureTermination = true;
+						break;
 				}
 				throw reason;
 			});
@@ -8474,11 +8543,12 @@ var RequestScreen = function (_Screen) {
    * Adds aditional data to the body of the request in case a submit button
    * is captured during form submission.
    * @param {!FormData} body The FormData containing the request body.
+   * @protected
    */
 
 	}, {
-		key: 'maybeAppendSubmitButtonValue',
-		value: function maybeAppendSubmitButtonValue(body) {
+		key: 'maybeAppendSubmitButtonValue_',
+		value: function maybeAppendSubmitButtonValue_(body) {
 			var button = globals.capturedFormButtonElement;
 			if (button && button.name) {
 				body.append(button.name, button.value);
