@@ -39,6 +39,7 @@ weight: 5
 #### Podcasts
   - [Grok Podcast - Trabalho Remoto](http://www.grokpodcast.com/2013/04/02/episodio-86-trabalho-remoto-parte-1-de-4/)
   - [DevNaEstrada - Remoto da depressão](http://devnaestrada.com.br/2015/12/25/devnaestrada-remoto-da-depressao.html)
+  - [NerdTech - Trabalho Remoto](https://jovemnerd.com.br/nerdcast/nerdtech/trabalho-remoto/)
 
 #### Talks
   - [Desafios e vantagens do trabalho remoto por Willian Fernandes](https://www.youtube.com/watch?v=IT6z7VDueF8)
