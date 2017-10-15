@@ -36,7 +36,7 @@ OBS: Para SWIFT Code, sugiro que procure o banco mais perto da sua cidade, caso 
 
 IBAN (International Bank Account Number) é um sistema internacional de identificação de bancos criado para facilitar a comunicação e processamento entre transações com redução de risco. Inicialmente utilizado na Europa, está cada vez mais sendo adotado por outros países, alguns bancos nos Estados Unidos por exemplo já aceitam esse tipo de código ao invés do SWIFT. Até o fim de 2014, 66 países estariam usando IBAN como sistema principal.
 
-Gere seu IBAN aqui: [http://geradordeiban.detalhado.com/#/make](http://geradordeiban.detalhado.com/#/make)
+Gere seu IBAN aqui: [http://geradoriban.com.br/](http://geradoriban.com.br/)
 
 #### Desvantagens
 
