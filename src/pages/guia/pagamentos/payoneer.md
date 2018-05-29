@@ -22,4 +22,6 @@ Outra desvantagem do Payoneer é que alguns serviços online como Dropbox e iTun
 
 Bem interessante essa forma de receber, porém você não pode movimentar a conta livremente, apenas pode transferir dinheiro para outros usuários de Payoneer. É um dos principais meios de pagamentos utilizado pelo [ODesk](https://www.odesk.com/).
 
+Atualmente o serviço permite a transferência para contas CNPJ a taxa bem atrativas e geralmente mais interessantes que o cambio de bancos tradicionais. Uma vez feita a transferência a contabilidade se torna simples.
+
 </article>
