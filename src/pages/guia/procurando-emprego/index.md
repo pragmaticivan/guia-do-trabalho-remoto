@@ -24,5 +24,6 @@ Fique atento: em algumas vagas, os candidatos devem morar no mesmo país da vaga
 * [We work remotely](https://weworkremotely.com/)
 * [WFH.io](https://www.wfh.io/)
 * [frontendbr](https://github.com/frontendbr/vagas/issues?q=is%3Aissue+is%3Aopen+label%3A%22Remoto+-+Total%22)
+* [AKOP](https://www.akop.com.br)
 
 </article>
