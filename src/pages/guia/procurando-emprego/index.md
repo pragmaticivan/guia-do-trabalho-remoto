@@ -15,6 +15,7 @@ weight: 4
 Fique atento: em algumas vagas, os candidatos devem morar no mesmo país da vaga, limitando-se assim que o trabalho seja realmente remoto (nesses casos você precisa residir lá ou ter autorização para trabalhar no país onde a empresa está localizada).
 
 * [Github Job board](https://jobs.github.com/positions?description=&location=Remote)
+* [Hipsters Ponto Jobs](https://hipsters.jobs/jobs/?q=Remoto&l=)
 * [Jobs in Tech](http://www.jobsintech.io/jobs#q=&page=0&refinements=%5B%7B%22remote%22%3A%22can_work_remote%22%7D%5D)
 * [Landing.jobs](https://landing.jobs/?custom_inviter=pragmaticivan)
 * [Toptal (freelancing profissional)](https://www.toptal.com/developers/join/#obtain-only-eye-opening-coders-now)
